@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<LandingPageLayout />}>
           <Route index element={<HomePage />} />
           <Route path="sectors" element={<SectorsPage />} />
+          <Route path="incentives" element={<IncentivesPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
