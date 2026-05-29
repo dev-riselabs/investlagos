@@ -1,43 +1,42 @@
 import React from 'react'
 
+export const InstitutionIcon = ({ className = 'h-5 w-5' }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M12 1L1 6.5V8h22V6.5L12 1zM3 10v8h2v-8H3zm5.5 0v8h2v-8h-2zm5 0v8h2v-8h-2zm5.5 0v8h2v-8h-2zM1 20v2h22v-2H1z" />
+  </svg>
+)
+
 const SpeakersHero = () => {
   return (
-    <section className="relative overflow-hidden bg-green100 px-6 pt-16 pb-0 lg:pt-20">
-      {/* subtle pattern overlay */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-green100 via-green100 to-green200/40" />
-
-      <div className="relative mx-auto max-w-[1240px] text-center">
-        <span className="inline-block rounded-sm bg-white/15 px-4 py-2 text-[11px] font-black uppercase tracking-[0.3em] text-yellow">
-          Featured Speakers
-        </span>
-
-        <h1 className="mt-6 mx-auto max-w-3xl text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
-          Meet the Leaders Shaping <br className="hidden sm:block" />
-          <span className="text-yellow">Africa&apos;s Investment Decade</span>
-        </h1>
-
-        <p className="mt-5 mx-auto max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
-          Heads of state, ministers, captains of industry and global investors gathering in Lagos for
-          three days of high-level conversations, deal-making and partnerships.
-        </p>
-
-        {/* Featured keynote speaker */}
-        <div className="mt-12 mx-auto max-w-3xl">
-          <div className="relative overflow-hidden rounded-md shadow-2xl ring-1 ring-black/10">
-            <img
-              src="/speakers/MR_Babajide_Olusola_Sanwo_Olu.png"
-              alt="H.E. Governor Babajide Sanwo-Olu"
-              className="h-[420px] w-full object-cover object-top sm:h-[520px]"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-green200 via-green200/85 to-transparent p-6 text-left text-white">
-              <span className="inline-flex items-center gap-2 rounded-sm bg-yellow px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.25em] text-green200">
-                Keynote
-              </span>
-              <h3 className="mt-3 text-xl font-black sm:text-2xl">H.E. Gov. Babajide Sanwo-Olu</h3>
-              <p className="mt-1 text-xs text-white/80 sm:text-sm">Executive Governor, Lagos State</p>
+    <section className="bg-green100 px-6 pt-16 pb-12 lg:pt-20 lg:pb-16">
+      <div className="mx-auto w-full max-w-md">
+        <article className="overflow-hidden">
+          <img
+            src="/speakers/Asiwaju Bola Ahmed Tinubu, GCFR.png"
+            alt="Asiwaju Bola Ahmed Tinubu, GCFR"
+            className="block aspect-[4/5] w-full object-cover"
+          />
+          <div className="flex items-start gap-4 bg-green200 px-5 py-5">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-white/15 text-white">
+              <InstitutionIcon />
+            </div>
+            <div className="text-left text-white">
+              <h3 className="text-[13px] font-black uppercase tracking-wide leading-tight">
+                Asiwaju Bola Ahmed Tinubu, GCFR
+              </h3>
+              <p className="mt-1.5 text-[12px] leading-snug text-white/80">
+                President of the Federal Republic of Nigeria
+              </p>
             </div>
           </div>
-        </div>
+          <div className="h-[3px] bg-red" />
+        </article>
       </div>
     </section>
   )
