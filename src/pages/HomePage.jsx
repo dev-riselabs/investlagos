@@ -10,6 +10,10 @@ import LibraryStats from '../components/HomePage/LibraryStats'
 import AdvantageSection from '../components/HomePage/AdvantageSection'
 import DealBookSection from '../components/HomePage/DealBookSection'
 import PebecSection from '../components/HomePage/PebecSection'
+import FutureSection from '../components/HomePage/FutureSection'
+import SubscribeSection from '../components/HomePage/SubscribeSection'
+import InformationSection from '../components/HomePage/InformationSection'
+import InvestmentSection from '../components/HomePage/InvestmentSection'
 
 
 const HomePage = () => {
@@ -19,13 +23,18 @@ const HomePage = () => {
       <AdvantageSection/>
       <DealBookSection/>
       <PebecSection/>
-      <StreamSection />
+      <img src='/home-img.png' className='w-full'/>
       <TestimonialsSection />
       <SpeakersSection />
       <SessionsSection />
       <PressSection />
       <MediaSection />
-      <LibraryStats />
+      <InvestmentSection/>
+      <InformationSection/>
+      <SubscribeSection/>
+      <StreamSection />
+      <FutureSection/>
+
     </>
   )
 }
