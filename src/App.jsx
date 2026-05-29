@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import SectorsPage from './pages/SectorsPage'
+import IncentivesPage from './pages/IncentivesPage'
+import AgendaPage from './pages/AgendaPage'
 
 /* ─────────────────────────── DATA ─────────────────────────── */
 
@@ -52,12 +54,14 @@ const speakers = [
     title: 'Secretary-General, African Continental Free Trade Area',
     photo: null,
     initials: 'WM',
+    logoOverlay: null,
   },
   {
     name: 'Mrs. Kanayo Awani',
     title: 'Executive Vice President, Afreximbank',
     photo: null,
     initials: 'KA',
+    logoOverlay: '/African_Export–Import_Bank_logo.svg-1 1.png',
   },
 ]
 
@@ -135,8 +139,9 @@ const tickerItems = [
 
 const navLinks = [
   { label: 'Home', page: 'home' },
-  { label: 'The Summit', page: 'home', dropdown: true },
+  { label: 'The Summit', page: 'agenda', dropdown: true },
   { label: 'Investment In LA', page: 'sectors', dropdown: true },
+  { label: 'Incentives', page: 'incentives', dropdown: true },
   { label: 'Media Center', page: 'home', dropdown: true },
   { label: 'Pressroom', page: 'home', dropdown: true },
   { label: 'Contact Us', page: 'home' },
@@ -226,7 +231,7 @@ function NavBar({ mobileOpen, setMobileOpen, currentPage, setCurrentPage }) {
           {/* Desktop nav */}
           <nav className="hidden items-center gap-7 text-[13px] font-semibold text-white lg:flex">
             {navLinks.map((l) => {
-              const active = currentPage === l.page && l.label === (currentPage === 'sectors' ? 'Investment In LA' : 'Home')
+              const active = currentPage === l.page
               return (
                 <a
                   key={l.label}
@@ -344,24 +349,50 @@ function HeroSection() {
 
 function StreamSection() {
   return (
-    <section id="stream" className="bg-white py-16">
-      <div className="mx-auto max-w-4xl px-6 text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#007B5E]">Live Broadcast</p>
-        <h2 className="mt-3 text-3xl font-black text-gray-900 sm:text-4xl">
-          Stream the Summit Live
-        </h2>
-        <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-600">
-          Join Invest Lagos 3.0 live and experience keynote sessions, investor showcases,
-          strategic conversations and landmark partnerships shaping the future of investment
-          and economic transformation in Lagos.
-        </p>
-        <a
-          href="#"
-          className="mt-8 inline-flex items-center gap-3 rounded bg-[#007B5E] px-8 py-4 text-sm font-bold text-white hover:bg-[#005f48] transition"
-        >
-          Watch Online
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20">→</span>
-        </a>
+    <section id="stream" className="bg-white py-16 lg:py-24">
+      <div className="mx-auto grid max-w-[1240px] gap-12 px-6 lg:grid-cols-2 lg:items-center">
+        {/* Left: text content */}
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#007B5E]">Live Broadcast</p>
+          <h2 className="mt-3 text-3xl font-black text-gray-900 sm:text-4xl">
+            Stream the Summit Live
+          </h2>
+          <p className="mt-5 text-base leading-7 text-gray-600">
+            Join Invest Lagos 3.0 live and experience keynote sessions, investor showcases,
+            strategic conversations and landmark partnerships shaping the future of investment
+            and economic transformation in Lagos.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#"
+              className="inline-flex items-center gap-3 rounded bg-[#007B5E] px-8 py-4 text-sm font-bold text-white hover:bg-[#005f48] transition"
+            >
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20">▶</span>
+              Watch Online
+            </a>
+            <a
+              href="#speakers"
+              className="inline-flex items-center gap-2 rounded border border-[#007B5E] px-8 py-4 text-sm font-bold text-[#007B5E] hover:bg-[#007B5E] hover:text-white transition"
+            >
+              View Speakers
+            </a>
+          </div>
+        </div>
+
+        {/* Right: Governor photo */}
+        <div className="relative overflow-hidden rounded-xl shadow-2xl">
+          <img
+            src="/Sanwolu.png"
+            alt="H.E. Gov. Babajide Sanwo-Olu at Invest Lagos 3.0"
+            className="w-full h-[420px] object-cover object-top"
+          />
+          {/* Caption overlay */}
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#06120e]/90 to-transparent px-6 pb-6 pt-12">
+            <p className="text-xs font-bold uppercase tracking-wider text-[#F4C430]">Invest Lagos 3.0</p>
+            <p className="mt-1 text-base font-black text-white">H.E. Gov. Babajide Sanwo-Olu</p>
+            <p className="text-xs text-gray-300">Governor, Lagos State</p>
+          </div>
+        </div>
       </div>
     </section>
   )
@@ -371,6 +402,33 @@ function TestimonialsSection() {
   return (
     <section className="bg-[#06120e] py-20 text-white lg:py-28">
       <div className="mx-auto max-w-[1240px] px-6">
+
+        {/* Featured testimonial — Folashade Ambrose-Medebem */}
+        <div className="mb-16 grid gap-0 overflow-hidden rounded-xl lg:grid-cols-[420px_1fr]">
+          {/* Photo */}
+          <div className="relative h-80 overflow-hidden lg:h-auto">
+            <img
+              src="/Folashade.png"
+              alt="Folashade Ambrose-Medebem"
+              className="h-full w-full object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#06120e]/40 lg:bg-gradient-to-t lg:from-transparent lg:to-transparent" />
+          </div>
+          {/* Quote */}
+          <div className="flex flex-col justify-center bg-[#0a1e15] p-8 lg:p-12">
+            <span className="block text-6xl font-black leading-none text-[#F4C430] opacity-50">&ldquo;</span>
+            <p className="mt-3 text-lg leading-8 text-gray-200 lg:text-xl">
+              Lagos is not just a city — it is an investment destination that rewards bold vision,
+              strategic planning, and long-term commitment. We are open for business.
+            </p>
+            <div className="mt-8 border-l-2 border-[#007B5E] pl-5">
+              <p className="text-base font-black text-white">Folashade Ambrose-Medebem</p>
+              <p className="mt-1 text-xs text-[#F4C430]">Commissioner, Commerce, Cooperatives, Trade &amp; Investment, Lagos State</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Section heading */}
         <div className="flex items-end justify-between">
           <div>
             <h2 className="text-2xl font-black uppercase tracking-wider text-white sm:text-3xl lg:text-4xl">
@@ -384,7 +442,8 @@ function TestimonialsSection() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        {/* Other testimonial cards */}
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {testimonials.map((t) => (
             <div
               key={t.name}
@@ -434,7 +493,7 @@ function SpeakersSection() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {speakers.map((s) => (
             <article key={s.name} className="overflow-hidden rounded-sm bg-white shadow-sm ring-1 ring-gray-100 hover:shadow-lg transition">
-              {/* Photo or gradient fallback */}
+              {/* Photo, logo overlay, or initials fallback */}
               {s.photo ? (
                 <div className="relative h-72 overflow-hidden bg-gray-100">
                   <img
@@ -444,9 +503,17 @@ function SpeakersSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#06120e]/60 to-transparent" />
                 </div>
+              ) : s.logoOverlay ? (
+                <div className="flex h-72 flex-col items-center justify-center gap-4 bg-gradient-to-b from-[#007B5E] to-[#06120e] p-6">
+                  <img
+                    src={s.logoOverlay}
+                    alt={s.title}
+                    className="h-24 w-auto object-contain brightness-0 invert"
+                  />
+                </div>
               ) : (
-                <div className="flex h-72 items-end bg-gradient-to-b from-[#007B5E] to-[#06120e] p-6">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20 text-2xl font-black text-white">
+                <div className="flex h-72 items-center justify-center bg-gradient-to-b from-[#007B5E] to-[#06120e] p-6">
+                  <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white/20 text-3xl font-black text-white">
                     {s.initials}
                   </div>
                 </div>
@@ -575,13 +642,22 @@ function PressSection() {
               className="w-full object-cover"
             />
           </div>
-          {/* Investment Deal Book */}
-          <div className="overflow-hidden rounded-sm shadow-lg">
-            <img
-              src="/investment_deal.png"
-              alt="Lagos Investment Deal Book"
-              className="w-full object-cover"
-            />
+          {/* Bottom row: Investment Deal Book + PEBEC */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="overflow-hidden rounded-sm shadow-lg">
+              <img
+                src="/investment_deal.png"
+                alt="Lagos Investment Deal Book"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex items-center justify-center overflow-hidden rounded-sm bg-white shadow-lg p-4 ring-1 ring-gray-100">
+              <img
+                src="/PEBEC.jpg 1.png"
+                alt="PEBEC – Presidential Enabling Business Environment Council"
+                className="w-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -639,6 +715,72 @@ function MediaSection() {
               className={`block h-2.5 w-2.5 rounded-full ${i === 0 ? 'bg-[#007B5E]' : 'bg-gray-200'}`}
             />
           ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function LagosCtaSection() {
+  return (
+    <section
+      className="relative overflow-hidden py-24 text-white lg:py-32"
+      style={{
+        backgroundImage: 'url(/lagos.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center bottom',
+      }}
+    >
+      {/* Dark green overlay */}
+      <div className="absolute inset-0 bg-[#007B5E]/88" />
+
+      <div className="relative z-10 mx-auto max-w-[1240px] px-6">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          {/* Left: headline + CTA */}
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#F4C430]">
+              Africa&apos;s Gateway City
+            </p>
+            <h2 className="mt-4 text-4xl font-black leading-tight sm:text-5xl">
+              Lagos: Where Investment <br />
+              <span className="text-[#F4C430]">Meets Opportunity</span>
+            </h2>
+            <p className="mt-6 max-w-lg text-base leading-7 text-white/80">
+              With over 20 million people and a GDP rivalling many African nations, Lagos is the
+              continent&apos;s most dynamic investment destination — and Invest Lagos 3.0 is your
+              gateway to its full potential.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#"
+                className="inline-flex items-center gap-3 rounded bg-[#F4C430] px-8 py-4 text-sm font-bold text-gray-900 hover:bg-yellow-400 transition"
+              >
+                Download Investment Deal Book
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gray-900/15">→</span>
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center gap-3 rounded border border-white/30 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition"
+              >
+                Explore Lagos
+              </a>
+            </div>
+          </div>
+
+          {/* Right: stat cards */}
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              { value: 'N4T+', label: 'Projected Investment Opportunities' },
+              { value: '20M+', label: 'Population — Africa\'s Largest City' },
+              { value: '6', label: 'Priority Investment Sectors' },
+              { value: '3 Days', label: 'Summit — June 8–10, 2026' },
+            ].map((s) => (
+              <div key={s.label} className="rounded-lg bg-white/10 p-6 backdrop-blur ring-1 ring-white/10">
+                <p className="text-3xl font-black text-[#F4C430]">{s.value}</p>
+                <p className="mt-2 text-xs leading-5 text-white/75">{s.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -796,6 +938,7 @@ function HomePage() {
       <SessionsSection />
       <PressSection />
       <MediaSection />
+      <LagosCtaSection />
       <LibraryStats />
     </>
   )
@@ -814,7 +957,10 @@ function App() {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
-      {currentPage === 'sectors' ? <SectorsPage /> : <HomePage />}
+      {currentPage === 'sectors' && <SectorsPage />}
+      {currentPage === 'incentives' && <IncentivesPage />}
+      {currentPage === 'agenda' && <AgendaPage />}
+      {currentPage === 'home' && <HomePage />}
       <Footer />
     </div>
   )
