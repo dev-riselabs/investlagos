@@ -34,16 +34,10 @@ const HomePage = () => {
       <PressSection />
       <InvestmentSection />
       <MediaSection />
-<<<<<<< HEAD
       <ReasonSection/>
       <InvestmentSection/>
       <InformationSection/>
       <SubscribeSection/>
-=======
-      <ReasonSection />
-      <InformationSection />
-      <SubscribeSection />
->>>>>>> mybranch
       <StreamSection />
       <FutureSection />
     </>
