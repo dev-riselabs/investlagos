@@ -6,6 +6,7 @@ import SectorsPage from './pages/SectorsPage'
 import IncentivesPage from './pages/IncentivesPage'
 import AgendaPage from './pages/AgendaPage'
 import SpeakersPage from './pages/SpeakersPage'
+import DealRoomPage from './pages/DealRoomPage'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="sectors" element={<SectorsPage />} />
           <Route path="incentives" element={<IncentivesPage />} />
           <Route path="speakers" element={<SpeakersPage />} />
+          <Route path="deal-room" element={<DealRoomPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

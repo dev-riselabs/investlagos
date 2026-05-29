@@ -49,9 +49,12 @@ const Footer = () => {
 
             <div className="flex-1 flex sm:justify-end">
               <div className="flex items-center justify-center px-8 py-6.5 bg-white rounded-full gap-5">
-                <a href="#" className="text-sm sm:text-base font-bold text-red!">
+                <a
+                  href="/DealBook for Invest Lagos 3.0.pdf"
+                  download
+                  className="text-sm sm:text-base font-bold text-red!"
+                >
                   Download Investment Deal Book
-                  
                 </a>
                 <LuCircleArrowRight className="text-green100 w-8 h-8"/>
               </div>
