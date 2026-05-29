@@ -1,99 +1,139 @@
+<<<<<<< HEAD
 /* 1. @import rules MUST come first (CSS spec) */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
 @import 'tailwindcss';
 
 /* 2. Local font faces */
+=======
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap");
+/* 1. Local font faces – declared before any @import rules */
+>>>>>>> mybranch
 @font-face {
-  font-family: 'Consolas';
-  src: url('./assets/fonts/CONSOLA.TTF') format('truetype');
+  font-family: "Consolas";
+  src: url("./assets/fonts/CONSOLA.TTF") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Consolas';
-  src: url('./assets/fonts/CONSOLAB.TTF') format('truetype');
+  font-family: "Consolas";
+  src: url("./assets/fonts/CONSOLAB.TTF") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Consolas';
-  src: url('./assets/fonts/consolai.ttf') format('truetype');
+  font-family: "Consolas";
+  src: url("./assets/fonts/consolai.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Consolas';
-  src: url('./assets/fonts/consolaz.ttf') format('truetype');
+  font-family: "Consolas";
+  src: url("./assets/fonts/consolaz.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 
+<<<<<<< HEAD
+=======
+/* 2. Google Fonts Import */
+
+@import "tailwindcss";
+
+>>>>>>> mybranch
 /* 2. Configure Tailwind v4 to map 'font-sans' utility classes to Jost */
-@theme{
-  --font-sans: 'Jost', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-jost : "Jost", sans-serif;
+@theme {
+  --font-jost: "Jost", sans-serif;
   --font-manrope: "Manrope", sans-serif;
   --font-dmSans: "DM Sans", sans-serif;
   --font-inter: "Inter", sans-serif;
   --font-consolas: "Consolas", ui-monospace, monospace;
-  --color-red : #ED212B;
-  --colro-blue: #3B7FCD;
-  --color-yellow: #FDEC3F;
-  --color-green : #10845B;
-  --color-green50 : #63CAA8;
-  --color-purple : #562579;
-  --color-green100 : #099567;
-  --color-green150: #11A892;
-  --color-green200: #0D5539;
-  --color-green300 : #186C48;
-  --color-green400: #1C5C47;
-  --color-green500:#50d8c1;
-  --color-green600 : #1C5C47;
-  --color-green700: #F1FAF2;
-  --color-black100: #04191D;
-  --color-black200: #05163F;
-  --color-black300: #2A1E33;
-  --color-slate100 :#333333;
-  --color-slate200: #A4A4A4;
-  --color-orange : #F9A04D;
-  
+  --color-red: #ed212b;
+  --colro-blue: #3b7fcd;
+  --color-yellow: #fdec3f;
+  --color-green: #10845b;
+  --color-green50: #63caa8;
+  --color-purple: #562579;
+  --color-green100: #099567;
+  --color-green150: #11a892;
+  --color-green200: #0d5539;
+  --color-green250: #24a95f;
+  --color-green300: #186c48;
+  --color-green400: #1c5c47;
+  --color-green500: #50d8c1;
+  --color-green600: #1c5c47;
+  --color-green700: #f1faf2;
+  --color-green800: #2c2c2c;
+  --color-green900: #038f5d;
+  --color-black100: #04191d;
+  --color-black200: #05163f;
+  --color-black300: #2a1e33;
+  --color-slate100: #333333;
+  --color-slate200: #a4a4a4;
+  --color-slate300: #f9faf9;
+  --color-slate400: #f8f9fb;
+  --color-slate500: #f3f6fa;
+  --color-slate600: #fffefe;
+  --color-slate700: #cacacb;
+  --color-orange: #f9a04d;
 
-  --shadow-footer : 0px 2px 4px 0px #099567;
-  --shadow-form-input : 0px 1px 2px rgba(0,0,0,0.09);
-  --shadow-reason : 0px 0px 4px 0px rgba(0,0,0,0.15);
+  --shadow-footer: 0px 2px 4px 0px #099567;
+  --shadow-form-input: 0px 1px 2px rgba(0, 0, 0, 0.09);
+  --shadow-reason: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  --shadow-business: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+<<<<<<< HEAD
 .hero-bg{
   background: url('/hero-bg.png');
+=======
+.hero-bg {
+  background: url("/public/hero-bg.png");
+>>>>>>> mybranch
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+<<<<<<< HEAD
 .advantage-bg{
   background: url('/advantage-bg.png');
+=======
+.advantage-bg {
+  background: url("/public/advantage-bg.png");
+>>>>>>> mybranch
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+<<<<<<< HEAD
 .dealbook-bg{
   background: url('/deal-book-bg.png');
+=======
+.dealbook-bg {
+  background: url("/public/deal-book-bg.png");
+>>>>>>> mybranch
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+<<<<<<< HEAD
 .invest-bg{
   background: url('/invest-bg.png');
+=======
+.invest-bg {
+  background: url("/public/invest-bg.png");
+>>>>>>> mybranch
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+<<<<<<< HEAD
 .future-bg{
   background: url('/bg_third_mainland_bridge.png');
   background-repeat: no-repeat;
@@ -101,12 +141,21 @@
 }
 .skyline-bg{
   background: url('/skyline-bg.png');
+=======
+.future-bg {
+  background: url("/public/bg_third_mainland_bridge.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.skyline-bg {
+  background: url("/public/skyline-bg.png");
+>>>>>>> mybranch
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top;
 }
 
-.text-stroke{
+.text-stroke {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
 html {
@@ -119,12 +168,22 @@ body {
   background: #fff;
   color: #111;
   /* 3. Apply Jost as the default base font for standard HTML tags */
-  font-family: 'Jost', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family:
+    "Jost",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

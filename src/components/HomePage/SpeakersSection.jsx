@@ -1,52 +1,176 @@
-import React from 'react'
+export const speakers = [
+  {
+    id: 1,
+    name: "HIS EXCELLENCY WAMKELE MENE",
+    title: "Secretary-General, AfCFTA",
+    image: "/speakers/His Excellency Wamkele Mene.png",
+    accent: "bg-emerald-500",
+  },
+  {
+    id: 2,
+    name: "MRS. KANAYO AWANI",
+    title: "Executive Vice President, Afreximbank",
+    image: "/speakers/Mrs. Kanayo Awani.png",
+    accent: "bg-yellow-500",
+  },
+  {
+    id: 3,
+    name: "LORD MARLAND",
+    title: "Chairman, CWEIC",
+    image: "/speakers/LORD MARLAND.png",
+    accent: "bg-red-500",
+  },
+  {
+    id: 4,
+    name: "Asiwaju Bola Ahmed Tinubu",
+    title: "President, of Nigeria",
+    image: "/speakers/Asiwaju Bola Ahmed Tinubu, GCFR.png",
+    accent: "bg-blue-500",
+  },
+  {
+    id: 5,
+    name: "Olajumoke Omoniyi Oduwole",
+    title: "Minister of Industry, Trade and Investment",
+    image: "/speakers/Dr. Jumoke Oduwole.png",
+    accent: "bg-purple-500",
+  },
+];
 
-const SpeakersSection = () => {
-    const speakers = [
-  { name: 'H.E. Gov. Babajide Sanwo-Olu', title: 'Governor, Lagos State', photo: '/Sanwolu.png', initials: 'BS' },
-  { name: 'Lord Marland', title: 'Chairman, Commonwealth Enterprise and Investment Council', photo: '/Marland.png', initials: 'LM' },
-  { name: 'Folashade Ambrose-Medebem', title: 'Commissioner, Commerce, Cooperatives, Trade & Investment, Lagos State', photo: '/Folashade.png', initials: 'FA' },
-  { name: 'His Excellency, Mr. Wamkele Mena', title: 'Secretary-General, African Continental Free Trade Area', photo: null, initials: 'WM' },
-  { name: 'Mrs. Kanayo Awani', title: 'Executive Vice President, Afreximbank', photo: null, initials: 'KA' }
-]
+import { PiBank } from "react-icons/pi";
+
+function SpeakerCard({ speaker }) {
+  return (
+    <article className="overflow-hidden rounded-xl bg-slate400/5 flex flex-col h-full">
+      <img
+        src={speaker.image}
+        alt={speaker.name}
+        className="h-92 w-full object-cover"
+      />
+
+      <div className="relative flex gap-4 px-5 py-12.5">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white/15">
+          <PiBank className="text-2xl text-white" />
+        </div>
+
+        <div>
+          <h3 className="font-jost text-sm font-semibold uppercase text-white">
+            {speaker.name}
+          </h3>
+
+          <p className="mt-1 text-sm text-white/80">{speaker.title}</p>
+        </div>
+      </div>
+
+      <div className={`h-1 ${speaker.accent} mt-auto`} />
+    </article>
+  );
+}
+
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
+
+function ConfirmedSpeakers() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: true,
+    containScroll: "trimSnaps",
+  });
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollTo = useCallback(
+    (index) => emblaApi?.scrollTo(index),
+    [emblaApi],
+  );
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    };
+
+    emblaApi.on("select", onSelect);
+    onSelect();
+
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
 
   return (
-   <section id="speakers" className="bg-gray-50 py-20 lg:py-28">
-      <div className="mx-auto max-w-[1240px] px-6">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+    <section className="bg-green400 py-24">
+      <div className="mx-auto max-w-7xl px-4 md:px-10">
+        {/* Top */}
+        <div className="mb-14 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <span className="rounded-sm bg-[#007B5E]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.25em] text-[#007B5E]">Featured Speakers</span>
-            <h2 className="mt-4 max-w-2xl text-3xl font-black text-gray-900 sm:text-4xl">Meet the leaders shaping Africa&apos;s most dynamic investment landscape</h2>
-            <div className="mt-3 h-0.5 w-24 bg-[#007B5E]" />
+            <div className="mb-8 flex items-center gap-3">
+              <span className="h-10 w-0.5 bg-white" />
+
+              <p className="text-sm font-bold uppercase tracking-[6px] text-green500 font-inter">
+                Confirmed Speakers
+              </p>
+            </div>
+
+            <h2 className="max-w-2xl text-3xl font-medium font-inter text-white md:text-4xl">
+              Meet the leaders shaping Africa's most dynamic investment
+              landscape
+            </h2>
+
+            <div className="mt-6 h-1 w-16 bg-slate200" />
           </div>
-          <div className="flex items-center gap-4">
-            <a href="#" className="flex items-center gap-2 text-sm font-black uppercase tracking-wider text-[#007B5E] hover:underline">View All Speakers →</a>
-            <span className="text-sm text-gray-400">1 of 7</span>
+
+          <div className="flex items-center gap-6">
+            <button className="text-sm font-bold font-inter uppercase text-white">
+              View All Speakers
+            </button>
+
+            <button className="flex h-9 w-9 items-center justify-center rounded-full border border-yellow text-yellow">
+              <FaArrowRight />
+            </button>
+
+            <span className="text-sm text-white/80 font-inter">
+              {selectedIndex + 1} of {speakers.length}
+            </span>
           </div>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {speakers.map((s) => (
-            <article key={s.name} className="overflow-hidden rounded-sm bg-white shadow-sm ring-1 ring-gray-100 hover:shadow-lg transition">
-              {s.photo ? (
-                <div className="relative h-72 overflow-hidden bg-gray-100">
-                  <img src={s.photo} alt={s.name} className="h-full w-full object-cover object-top" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#06120e]/60 to-transparent" />
-                </div>
-              ) : (
-                <div className="flex h-72 items-end bg-gradient-to-b from-[#007B5E] to-[#06120e] p-6">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20 text-2xl font-black text-white">{s.initials}</div>
-                </div>
-              )}
-              <div className="p-6">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded bg-[#007B5E]/10 text-[#007B5E]">★</div>
-                <h3 className="text-lg font-black leading-snug text-gray-900">{s.name}</h3>
-                <p className="mt-2 text-sm leading-6 text-gray-500">{s.title}</p>
+
+        {/* Carousel */}
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            {speakers.map((speaker) => (
+              <div
+                key={speaker.id}
+                className="min-w-full flex pl-0 md:min-w-[50%] md:pr-5 lg:min-w-[33.333%] lg:pr-6"
+              >
+                <SpeakerCard speaker={speaker} />
               </div>
-            </article>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Dots */}
+        <div className="mt-10 flex justify-center">
+          <div className="flex gap-3 rounded-full bg-white/20 px-5 py-3">
+            {speakers.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`h-2.5 w-2.5 rounded-full transition ${
+                  selectedIndex === index ? "bg-green500" : "bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default SpeakersSection
+function SpeakersSection() {
+  return <ConfirmedSpeakers />;
+}
+
+export default SpeakersSection;

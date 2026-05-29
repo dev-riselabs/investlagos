@@ -1,49 +1,134 @@
-import React from 'react'
-import { useState } from 'react'
+import { useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
-   const sessionDays = [
-  { label: 'Day 1', date: '8 June 2026', items: ['Opening Ceremony & Welcome Address', "Keynote: Africa's Investment Decade", 'Strategic Dialogues on Trade & Finance', 'Gala Dinner & Cultural Evening'] },
-  { label: 'Day 2', date: '9 June 2026', items: ['High-Level Panels: Infrastructure & Energy', 'Deal Rooms & Investment Showcases', 'AfCFTA & Lagos Business Opportunities', 'Music & Networking Evening'] },
-  { label: 'Day 3', date: '10 June 2026', items: ['Tolaram / Lagos Free Zone', 'Lekki Free Trade Zone', 'Dangote Fertilizer Plant', 'Dangote Petroleum Refinery', 'Russell Smith 3D Printing & Manufacturing Factory'], note: 'Industrial & Infrastructure Site Tour' }
-]
+const sessions = [
+  {
+    id: 1,
+    speaker:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+    name: "Mrs. Folashade Ambrose-Medebem",
+    role: "Honourable Commissioner",
+    title: "Welcome Address",
+  },
+  {
+    id: 2,
+    speaker:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400",
+    name: "Mr. Babajide Sanwo-Olu",
+    role: "Governor of Lagos State",
+    title: "Opening Address",
+  },
+  {
+    id: 3,
+    speaker:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400",
+    name: "Rt. Hon. Lord Marland",
+    role: "Chair, CWIC",
+    title: "Opening Remarks",
+  },
+  {
+    id: 4,
+    speaker:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
+    name: "Guest Speaker",
+    role: "Industry Leader",
+    title: "Keynote Session",
+  },
+];
 
-const SessionsSection = () => {
+export default function SummitSessions() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: true,
+  });
 
-    
-   const [active, setActive] = useState(0)
-   const day = sessionDays[active]
+  const scrollPrev = useCallback(() => {
+    emblaApi?.scrollPrev();
+  }, [emblaApi]);
 
+  const scrollNext = useCallback(() => {
+    emblaApi?.scrollNext();
+  }, [emblaApi]);
 
+  return (
+    <section className="bg-slate-100 py-20">
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Header */}
+        <div className="mb-12 flex items-center justify-between">
+          <div>
+            <p className="mb-3 text-xs font-bold tracking-[0.5em] text-emerald-600">
+              SUMMIT SESSIONS
+            </p>
 
-   return (
-     <section id="sectors" className="bg-white py-20 lg:py-28">
-       <div className="mx-auto max-w-[1240px] px-6">
-         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-           <div>
-             <span className="rounded-sm bg-[#007B5E]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.25em] text-[#007B5E]">Summit Sessions</span>
-             <h2 className="mt-4 max-w-3xl text-2xl font-black text-gray-900 sm:text-3xl">Keynotes. Strategic Dialogues. High-Level Panels. Deal Rooms. Gala Dinner. Cultural Experiences. Music &amp; Networking.</h2>
-           </div>
-         </div>
-         <div className="mt-10 flex gap-2 rounded-sm border border-gray-100 bg-gray-50 p-1 w-fit">
-           {sessionDays.map((d, i) => (
-             <button key={d.label} onClick={() => setActive(i)} className={`rounded-sm px-6 py-2 text-sm font-bold transition ${active === i ? 'bg-[#007B5E]' : 'text-gray-600 hover:bg-gray-100'}`}>{d.label}</button>
-           ))}
-         </div>
-         <div className="mt-8 rounded-sm border border-gray-100 bg-gray-50 p-8">
-           <div>
-             <span className="inline-block rounded bg-[#F4C430] px-3 py-1 text-xs font-black text-gray-900">{day.label}</span>
-             <h3 className="mt-4 text-2xl font-black text-gray-900">{day.date}</h3>
-             {day.note && <p className="mt-1 text-sm font-semibold text-[#007B5E]">{day.note}</p>}
-           </div>
-           <ul className="mt-8 space-y-4">
-             {day.items.map((item) => (
-               <li key={item} className="flex items-center gap-4 rounded-sm border border-gray-200 bg-white px-6 py-4 text-sm font-medium text-gray-800 shadow-sm"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-[#007B5E]/10 text-[#007B5E]">✦</span>{item}</li>
-             ))}
-           </ul>
-         </div>
-       </div>
-     </section>
-   )
+            <h2 className="max-w-3xl text-xl font-medium leading-relaxed text-slate-900">
+              Keynotes. Strategic Dialogues. High-Level Panels. Deal Rooms. Gala
+              Dinner. Cultural Experiences. Music & Networking.
+            </h2>
+
+            <div className="mt-5 h-1.5 w-16 bg-gray-400" />
+          </div>
+
+          <div className="hidden gap-3 md:flex">
+            <button
+              onClick={scrollPrev}
+              className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-emerald-600 text-emerald-600 transition hover:bg-emerald-600 hover:text-white"
+            >
+              <ArrowLeft size={18} />
+            </button>
+
+            <button
+              onClick={scrollNext}
+              className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-emerald-600 text-emerald-600 transition hover:bg-emerald-600 hover:text-white"
+            >
+              <ArrowRight size={18} />
+            </button>
+          </div>
+        </div>
+
+        {/* Embla */}
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="-ml-6 flex">
+            {sessions.map((session) => (
+              <div
+                key={session.id}
+                className="min-w-0 flex-[0_0_100%] pl-6 md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
+              >
+                <div className="relative overflow-hidden rounded-3xl bg-white shadow-lg">
+                  {/* Poster */}
+                  <img
+                    src="/hero_investlagos_flier.png"
+                    alt={session.title}
+                    className="h-[430px] w-full object-cover"
+                  />
+
+                  {/* Speaker Image Overlay */}
+                  <div className="absolute bottom-0 left-0 z-10">
+                    <img
+                      src={session.speaker}
+                      alt={session.name}
+                      className="h-40 w-36 rounded-tr-2xl object-cover shadow-xl"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-5">
+                    <div className="ml-36">
+                      <p className="text-sm text-amber-300">{session.title}</p>
+
+                      <h3 className="mt-2 text-lg font-bold text-white">
+                        {session.name}
+                      </h3>
+
+                      <p className="text-sm text-white/80">{session.role}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default SessionsSection
