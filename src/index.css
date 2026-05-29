@@ -1,4 +1,37 @@
-/* 1. Google Fonts Import MUST go at the very top of the file */
+/* 1. Local font faces – declared before any @import rules */
+@font-face {
+  font-family: 'Consolas';
+  src: url('./assets/fonts/CONSOLA.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('./assets/fonts/CONSOLAB.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('./assets/fonts/consolai.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('./assets/fonts/consolaz.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* 2. Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
 @import 'tailwindcss';
 
@@ -9,6 +42,7 @@
   --font-manrope: "Manrope", sans-serif;
   --font-dmSans: "DM Sans", sans-serif;
   --font-inter: "Inter", sans-serif;
+  --font-consolas: "Consolas", ui-monospace, monospace;
   --color-red : #ED212B;
   --colro-blue: #3B7FCD;
   --color-yellow: #FDEC3F;
