@@ -1,10 +1,11 @@
 import React from "react";
 import { FaPlay } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import CountdownTimer from "../Countdown";
 
 
 const buttons = [
-  {title : 'Register Now', isDot: false},
+  {title : 'Register Now', isDot: false, path: '/register'},
   {title : 'View Agenda', isDot: false},
   {title : 'Watch Online', isDot: true},
   {title : 'View LIVE Dashboard', isDot: true},
@@ -32,27 +33,33 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-wrap gap-4">
             {
-              buttons.map(({title, isDot}, i ) => <button key={title} className={`p-1.5 md:p-2.5 pl-4 md:pl-8 flex items-center gap-2 md:gap-4 rounded-sm
-                ${
-                  i === 0 ? 'bg-red':
-                  i === 1 ? 'bg-yellow':
-                  i === 2 ? 'bg-black100' :
-                  'bg-green100'
-                 }
-              `}>
-                <div className="flex items-center gap-1.5">
-                  {isDot && <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-white"/>}
-                  <span className={`text-xs font-jost font-bold
-                  ${i === 1 ? 'text-black' : 'text-white'}
-                    `}>{title}</span>
-
-                </div>
-                <div className="bg-white/20 backdrop-blur-md backdrop-brightness-90 rounded-sm flex w-8 h-8 md:w-9 md:h-9 items-center justify-center ">
-                  <FaPlay className={`w-4 h-4 md:w-5 md:h-5 ${
-                    i === 1 ? 'text-black' : 'text-white'
-                  }`}/>
-                </div>
-              </button>)
+              buttons.map(({title, isDot, path}, i ) => {
+                const inner = (
+                  <>
+                    <div className="flex items-center gap-1.5">
+                      {isDot && <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-white"/>}
+                      <span className={`text-xs font-jost font-bold
+                      ${i === 1 ? 'text-black' : 'text-white'}
+                        `}>{title}</span>
+                    </div>
+                    <div className="bg-white/20 backdrop-blur-md backdrop-brightness-90 rounded-sm flex w-8 h-8 md:w-9 md:h-9 items-center justify-center ">
+                      <FaPlay className={`w-4 h-4 md:w-5 md:h-5 ${
+                        i === 1 ? 'text-black' : 'text-white'
+                      }`}/>
+                    </div>
+                  </>
+                );
+                const cls = `p-1.5 md:p-2.5 pl-4 md:pl-8 flex items-center gap-2 md:gap-4 rounded-sm
+                  ${
+                    i === 0 ? 'bg-red':
+                    i === 1 ? 'bg-yellow':
+                    i === 2 ? 'bg-black100' :
+                    'bg-green100'
+                  }`;
+                return path
+                  ? <Link key={title} to={path} className={cls}>{inner}</Link>
+                  : <button key={title} className={cls}>{inner}</button>;
+              })
             }
           </div>
 

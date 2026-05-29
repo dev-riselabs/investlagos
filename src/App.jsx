@@ -7,6 +7,7 @@ import IncentivesPage from './pages/IncentivesPage'
 import AgendaPage from './pages/AgendaPage'
 import SpeakersPage from './pages/SpeakersPage'
 import DealRoomPage from './pages/DealRoomPage'
+import RegisterPage from './pages/RegisterPage'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="agenda" element={<AgendaPage />} />
           <Route path="speakers" element={<SpeakersPage />} />
           <Route path="deal-room" element={<DealRoomPage />} />
+          <Route path="register" element={<RegisterPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
