@@ -1,16 +1,36 @@
-import React from 'react'
+import { FaPlay } from "react-icons/fa";
 
 const StreamSection = () => {
   return (
-    <section id="stream" className="bg-white py-16">
-      <div className="mx-auto max-w-4xl px-6 text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#007B5E]">Live Broadcast</p>
-        <h2 className="mt-3 text-3xl font-black text-gray-900 sm:text-4xl">Stream the Summit Live</h2>
-        <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-600">Join Invest Lagos 3.0 live and experience keynote sessions, investor showcases, strategic conversations and landmark partnerships shaping the future of investment and economic transformation in Lagos.</p>
-        <a href="#" className="mt-8 inline-flex items-center gap-3 rounded bg-[#007B5E] px-8 py-4 text-sm font-bold text-white hover:bg-[#005f48] transition">Watch Online<span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20">→</span></a>
+    <section
+      id="stream"
+      className="px-4 md:px-10 lg:px-20 py-10 md:py-20 flex justify-center bg-green100"
+    >
+      <div className="max-w-4xl flex flex-col items-center gap-6">
+        <h2 className="text-3xl font-medium font-jost text-white sm:text-4xl">
+          Stream the Summit Live
+        </h2>
+        <p className="font-jost font-medium text-center text-base md:text-lg leading-7 text-white">
+          Join Invest Lagos 3.0 live and experience keynote sessions, investor
+          showcases, strategic conversations and landmark partnerships shaping
+          the future of investment and economic transformation in Lagos.
+        </p>
+        <button
+          className={`p-1.5 md:p-2.5 pl-4 md:px-8 flex items-center gap-2 md:gap-4 rounded-sm bg-red `}
+        >
+          <span
+            className={`text-xs font-jost font-bold text-white`}
+          >
+            Watch online
+          </span>
+
+          <div className="bg-white/20 backdrop-blur-md backdrop-brightness-100 rounded-sm flex w-8 h-8 md:w-9 md:h-9 items-center justify-center ">
+            <FaPlay className={`w-4 h-4 md:w-5 md:h-5 text-white`} />
+          </div>
+        </button>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default StreamSection
+export default StreamSection;
