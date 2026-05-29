@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const PlayIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -35,12 +36,12 @@ const SpeakersCTA = () => {
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
 
           {/* Register Now — dark */}
-          <button className="group flex items-center justify-between gap-6 rounded-sm bg-black100 pl-6 pr-2 py-2 text-sm font-bold text-white transition hover:opacity-90">
+          <Link to="/register" className="group flex items-center justify-between gap-6 rounded-sm bg-black100 pl-6 pr-2 py-2 text-sm font-bold text-white transition hover:opacity-90">
             <span>Register Now</span>
             <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-white/15 transition-transform group-hover:translate-x-0.5">
               <PlayIcon />
             </span>
-          </button>
+          </Link>
 
           {/* View Agenda — yellow */}
           <button className="group flex items-center justify-between gap-6 rounded-sm bg-yellow pl-6 pr-2 py-2 text-sm font-bold text-black100 transition hover:opacity-90">
