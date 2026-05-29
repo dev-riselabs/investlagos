@@ -13,7 +13,7 @@ const navLinks = [
     children: [
       { label: "Governance Structure", path: "/the-summit/overview" },
       { label: "IL 1.0 & 2.0 Highlights", path: "/the-summit/agenda" },
-      { label: "IL 3.0 Programme Flow", path: "/the-summit/speakers" },
+      { label: "IL 3.0 Programme Flow", path: "/agenda" },
       { label: "Administration", path: "/the-summit/speakers" },
     ],
   },
@@ -23,14 +23,14 @@ const navLinks = [
     path: "/sectors",
     dropdown: true,
     children: [
-      { label: "Deal Room", path: "/sectors/agriculture" },
+      { label: "Deal Room", path: "/deal-room" },
       { label: "Future Leaders Corps", path: "/sectors/technology" },
       {
         label: "Business Exhibition & Cultural Showcase",
         path: "/sectors/technology",
       },
       { label: "Sectors", path: "/sectors/technology" },
-      { label: "Incentives", path: "/sectors/technology" },
+      { label: "Incentives", path: "/incentives" },
     ],
   },
 

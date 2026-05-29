@@ -91,13 +91,14 @@ function AgendaHero() {
     >
       <div className="absolute inset-0 bg-gradient-to-r from-[#06120e]/95 via-[#06120e]/85 to-[#06120e]/50" />
       <div className="relative mx-auto max-w-[1240px]">
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#F4C430]">Programme &amp; Agenda</p>
+        {/* <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#F4C430]">Programme &amp; Agenda</p> */}
         <h1 className="mt-4 max-w-3xl text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
-          Programme from <span className="text-[#F4C430]">Explorations</span> and build your engagement checklist
+          Programme flow: Explore sessions and build your unique schedule
+          {/* <span className="text-[#F4C430]">Explorations</span> and build your engagement checklist */}
         </h1>
         <p className="mt-5 max-w-2xl text-sm leading-7 text-gray-300 sm:text-base">
-          Three days of curated keynotes, deal rooms, panels, site tours and networking — designed to help
-          you prioritise the sessions that matter most to your investment thesis.
+          Through keynote addresses, sector sessions, deal rooms, exhibitions, networking engagements and cultural experiences,
+          participants will engage directly with the people and institutions shaping Lagos' future.
         </p>
       </div>
     </section>
@@ -109,7 +110,7 @@ function AgendaSearch() {
     <section className="bg-[#007B5E] px-6 py-6">
       <div className="mx-auto flex max-w-[1240px] flex-col gap-3 sm:flex-row sm:items-center">
         <div className="flex flex-1 items-center gap-3 rounded bg-white px-4 py-3 ring-1 ring-black/5">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-gray-400"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-gray-400"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
           <input
             type="text"
             placeholder="Search sessions, speakers or topics…"
