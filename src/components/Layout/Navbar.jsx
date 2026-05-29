@@ -11,7 +11,7 @@ const navLinks = [
     path: "/the-summit",
     dropdown: true,
     children: [
-      { label: "Governance Structure", path: "/the-summit/overview" },
+      { label: "Governance Structure", path: "/governance" },
       { label: "IL 1.0 & 2.0 Highlights", path: "/the-summit/agenda" },
       { label: "IL 3.0 Programme Flow", path: "/agenda" },
       { label: "Administration", path: "/the-summit/speakers" },

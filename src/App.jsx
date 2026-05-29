@@ -8,6 +8,7 @@ import AgendaPage from './pages/AgendaPage'
 import SpeakersPage from './pages/SpeakersPage'
 import DealRoomPage from './pages/DealRoomPage'
 import RegisterPage from './pages/RegisterPage'
+import GovernancePage from './pages/GovernancePage'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="speakers" element={<SpeakersPage />} />
           <Route path="deal-room" element={<DealRoomPage />} />
           <Route path="register" element={<RegisterPage />} />
+          <Route path="governance" element={<GovernancePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
