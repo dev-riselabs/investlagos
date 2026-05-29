@@ -6,9 +6,9 @@ import CountdownTimer from "../Countdown";
 
 const buttons = [
   {title : 'Register Now', isDot: false, path: '/register'},
-  {title : 'View Agenda', isDot: false},
+  {title : 'View Agenda', isDot: false, path: '/agenda'},
   {title : 'Watch Online', isDot: true},
-  {title : 'View LIVE Dashboard', isDot: true},
+  {title : 'View LIVE Dashboard', isDot: true, href: 'https://eventsintel.com/investlagos'},
 ]
 
 const HeroSection = () => {
@@ -33,7 +33,7 @@ const HeroSection = () => {
           </div>
           <div className="flex flex-wrap gap-4">
             {
-              buttons.map(({title, isDot, path}, i ) => {
+              buttons.map(({title, isDot, path, href}, i ) => {
                 const inner = (
                   <>
                     <div className="flex items-center gap-1.5">
@@ -58,7 +58,9 @@ const HeroSection = () => {
                   }`;
                 return path
                   ? <Link key={title} to={path} className={cls}>{inner}</Link>
-                  : <button key={title} className={cls}>{inner}</button>;
+                  : href
+                    ? <a key={title} href={href} target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>
+                    : <button key={title} className={cls}>{inner}</button>;
               })
             }
           </div>

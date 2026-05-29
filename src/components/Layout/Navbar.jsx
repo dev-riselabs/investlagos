@@ -29,7 +29,7 @@ const navLinks = [
         label: "Business Exhibition & Cultural Showcase",
         path: "/sectors/technology",
       },
-      { label: "Sectors", path: "/sectors/technology" },
+      { label: "Sectors", path: "/sectors" },
       { label: "Incentives", path: "/incentives" },
     ],
   },

@@ -37,7 +37,7 @@ const HomePage = () => {
 <<<<<<< HEAD
       <ReasonSection/>
       <InvestmentSection/>
-      <InformationSection/>a
+      <InformationSection/>
       <SubscribeSection/>
 =======
       <ReasonSection />
