@@ -1,15 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
 @import 'tailwindcss';
 
 @theme{
   --font-jost : "Jost", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-dmSans: "DM Sans", sans-serif;
+  --font-inter: "Inter", sans-serif;
   --color-red : #ED212B;
   --colro-blue: #3B7FCD;
   --color-yellow: #FDEC3F;
   --color-green : #10845B;
   --color-purple : #562579;
   --color-green100 : #099567;
+  --color-green200: #0D5539;
+  --color-green300 : #186C48;
+
+  --shadow-footer : 0px 2px 4px 0px #099567;
 }
+
+
 
 html {
   scroll-behavior: smooth;
