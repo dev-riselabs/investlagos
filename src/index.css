@@ -1,4 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+
+@theme{
+  --font-jost : "Jost", sans-serif;
+  --color-red : #ED212B;
+  --colro-blue: #3B7FCD;
+  --color-yellow: #FDEC3F;
+  --color-green : #10845B;
+  --color-purple : #562579;
+  --color-green100 : #099567;
+}
 
 html {
   scroll-behavior: smooth;
