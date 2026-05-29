@@ -37,18 +37,18 @@ const Footer = () => {
       <div className="bg-white rounded-2xl">
         <div className="mx-auto max-w-310 px-6 pt-10 pb-8">
           {/* ── Dark green CTA card ── */}
-          <div className="flex flex-col items-stretch gap-0 overflow-hidden rounded-xl bg-green200 shadow-footer sm:flex-row sm:items-center px-6 py-6 md:px-9 md:py-7.5 sm:divide-x-2 divide-white">
-            <div className="flex sm:flex-1 items-center gap-4 px-8 py-7">
+          <div className="flex flex-col items-stretch gap-0 overflow-hidden rounded-xl bg-green200 shadow-footer sm:flex-row sm:items-center px-4 py-6 md:px-9 md:py-7.5 sm:divide-x-2 divide-white">
+            <div className="flex sm:flex-1 md:items-center gap-4 md:px-8 py-7">
               <div className="flex h-12 w-12 sm:h-17.5 sm:w-17.5 shrink-0 items-center justify-center rounded-md bg-green300">
-                <FaRegCalendarAlt className="text-white w-10 h-10" />
+                <FaRegCalendarAlt className="text-white w-7 h-7 md:w-10 md:h-10" />
               </div>
-              <span className="text-base text-white sm:text-lg font-inter">
+              <span className="text-sm text-white sm:text-lg font-inter">
                 Partnerships. Growth. Lagos. Africa.
               </span>
             </div>
 
             <div className="flex-1 flex sm:justify-end">
-              <div className="flex items-center justify-center px-8 py-6.5 bg-white rounded-full gap-5">
+              <div className="flex flex-col items-center justify-center px-4 md:px-8 py-4 md:py-6.5 bg-white rounded-2xl md:rounded-full gap-5">
                 <a
                   href="/DealBook for Invest Lagos 3.0.pdf"
                   download
@@ -75,7 +75,7 @@ const Footer = () => {
           </nav>
 
           {/* ── Logo + social icons ── */}
-          <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-8 flex flex-col gap-6 items-start sm:flex-row sm:items-center sm:justify-between">
             <img
               src="/logo.png"
               alt="Invest Lagos"

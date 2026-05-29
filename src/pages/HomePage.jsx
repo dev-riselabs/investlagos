@@ -14,6 +14,7 @@ import FutureSection from '../components/HomePage/FutureSection'
 import SubscribeSection from '../components/HomePage/SubscribeSection'
 import InformationSection from '../components/HomePage/InformationSection'
 import InvestmentSection from '../components/HomePage/InvestmentSection'
+import ReasonSection from '../components/HomePage/ReasonSection'
 
 
 const HomePage = () => {
@@ -29,6 +30,7 @@ const HomePage = () => {
       <SessionsSection />
       <PressSection />
       <MediaSection />
+      <ReasonSection/>
       <InvestmentSection/>
       <InformationSection/>
       <SubscribeSection/>

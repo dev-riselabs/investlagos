@@ -56,13 +56,18 @@
   --color-green400: #1C5C47;
   --color-green500:#50d8c1;
   --color-green600 : #1C5C47;
+  --color-green700: #F1FAF2;
   --color-black100: #04191D;
   --color-black200: #05163F;
+  --color-black300: #2A1E33;
   --color-slate100 :#333333;
+  --color-slate200: #A4A4A4;
+  --color-orange : #F9A04D;
   
 
   --shadow-footer : 0px 2px 4px 0px #099567;
   --shadow-form-input : 0px 1px 2px rgba(0,0,0,0.09);
+  --shadow-reason : 0px 0px 4px 0px rgba(0,0,0,0.15);
 }
 
 .hero-bg{

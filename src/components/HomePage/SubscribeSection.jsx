@@ -202,9 +202,9 @@ const countries = [
 
 function SubscribeSection() {
   return (
-    <section className="bg-white skyline-bg px-4 md:px-10 lg:px-20 py-10 md:py-20 md:pt-80 flex justify-center">
+    <section className="bg-white skyline-bg px-4 md:px-10 lg:px-20 py-10 pt-60 md:py-20 md:pt-80 flex justify-center">
       <div className="flex flex-col gap-6 items-center">
-        <h3 className="text-2xl font-bold font-jost text-black">
+        <h3 className="text-xl md:text-2xl font-bold font-jost text-black text-center">
           Subscribe for exclusive updates, investor insights partnership &
           opportunities
         </h3>
@@ -274,7 +274,7 @@ function SubscribeSection() {
               placeholder="Company Name"
             />
           </div>
-          <button className="flex items-center gap-5 px-20 py-2.5 rounded-md bg-green100  border border-black/30 self-center">
+          <button className="flex items-center gap-5 px-20 py-1.5 md:py-2.5 rounded-md bg-green100  border border-black/30 self-center">
             <span className="text-sm font-bold font-jost text-white">
               Subscribe
             </span>
