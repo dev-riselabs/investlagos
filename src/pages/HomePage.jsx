@@ -32,7 +32,7 @@ const HomePage = () => {
       <MediaSection />
       <ReasonSection/>
       <InvestmentSection/>
-      <InformationSection/>
+      <InformationSection/>a
       <SubscribeSection/>
       <StreamSection />
       <FutureSection/>
