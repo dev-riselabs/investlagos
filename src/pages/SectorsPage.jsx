@@ -3,43 +3,43 @@
 const sectors = [
   {
     title: 'Manufacturing & Industrial Processing',
-    desc: 'Scaling production, value-addition and export-ready industries that anchor Lagos as a manufacturing hub.',
+    desc: 'Scale production near Nigeria\'s largest consumer and distribution base.',
     image: '/bg_third_mainland_bridge.png',
   },
   {
-    title: 'Technology & Innovation',
-    desc: 'Building Africa\u2019s leading digital economy through fintech, AI, deep-tech and creative software.',
+    title: 'Health and Life Sciences',
+    desc: 'Leverage Lagos\' deep talent pool, startup momentum, and digital demand.',
     image: '/bg_third_mainland_bridge.png',
   },
   {
     title: 'Agribusiness & Food Systems',
-    desc: 'Modernising the entire food value chain \u2013 from farm gate to processing to retail and export.',
+    desc: 'Capture import substitution and value-chain expansion opportunities.',
     image: '/bg_third_mainland_bridge.png',
   },
   {
     title: 'Energy & Utilities',
-    desc: 'Powering Lagos with cleaner, smarter and more reliable energy and utility infrastructure.',
+    desc: 'Support rising demand through grid, off-grid, and industrial solutions.',
     image: '/bg_third_mainland_bridge.png',
   },
   {
-    title: 'Real Estate & Infrastructure',
-    desc: 'Unlocking land, housing, transport and urban infrastructure for a 21st-century mega-city.',
+    title: 'Housing and Urban Development',
+    desc: 'Develop logistics, commercial, and mixed-use assets for rapid urban growth.',
     image: '/bg_third_mainland_bridge.png',
   },
   {
     title: 'Tourism & Creative Economy',
-    desc: 'Positioning Lagos as the cultural, entertainment and hospitality capital of Africa.',
+    desc: 'Invest in hospitality, events, media, and cultural export-driven sectors.',
     image: '/bg_third_mainland_bridge.png',
   },
 ]
 
 const features = [
-  { title: 'Sector Overview', desc: 'Snapshot of opportunities, key trends, and outlook.', accent: '#C0392B' },
-  { title: 'Policy & Regulatory Support', desc: 'Active reforms, incentives, and government priorities.', accent: '#F4C430' },
-  { title: 'Sector Opportunities', desc: 'Investment-ready projects matched to investor needs.', accent: '#007B5E' },
-  { title: 'Catalytic Opportunities', desc: 'Flagship projects with cross-sector and economy-wide impact.', accent: '#7A4FBF' },
-  { title: 'Investment Calculator', desc: 'Estimate potential returns, capital needs and timelines.', accent: '#2D89DB' },
-  { title: 'Career Forms', desc: 'Career pipelines, talent matching and workforce links.', accent: '#E8722A' },
+  { title: 'Sector Overview', desc: 'Market opportunity, key data, and competitive advantages.', accent: '#ED212B' },
+  { title: 'Policy & Regulatory Support', desc: 'Relevant government frameworks and reform initiatives.', accent: '#DEA310' },
+  { title: 'Sector Opportunities', desc: 'Tax advantages, free zone relevance, and targeted programs.', accent: '#3B7FCD' },
+  { title: 'Catalytic Opportunities', desc: 'Approved investment projects ready for engagement.', accent: '#099567' },
+  { title: 'Investment Calculator', desc: 'Model potential returns based on sector benchmarks.', accent: '#562579' },
+  { title: 'Career Forms', desc: 'Direct contact with sector-specific advisory teams.', accent: '#E8722A' },
 ]
 
 /* ─────────────────── SECTIONS ─────────────────── */
@@ -99,22 +99,22 @@ function WhatToExpect() {
     <section className="bg-white py-16 lg:py-20">
       <div className="mx-auto max-w-[1240px] px-6">
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#007B5E]">What to Expect</p>
-        <h2 className="mt-3 text-3xl font-black text-gray-900 sm:text-4xl">
-          Each Sector Page <span className="text-[#C0392B]">Includes</span>
+        <h2 className="mt-3 text-3xl font-normal text-gray-900 sm:text-4xl">
+          <span className="text-[#ED212B]">Each Sector</span> Page Includes
         </h2>
         <p className="mt-3 max-w-2xl text-sm text-gray-500">
-          Each sector page comes with curated, easy-to-navigate and investor-ready information.
+          Detailed sector pages are being developed with comprehensive investor information.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
             <div
               key={f.title}
-              className="rounded-md bg-white p-5 shadow-sm ring-1 ring-gray-100 border-t-4 hover:shadow-md transition"
-              style={{ borderTopColor: f.accent }}
+              className="rounded-md bg-white p-6 shadow-sm ring-1 ring-gray-100 border-b-4 hover:shadow-md transition"
+              style={{ borderBottomColor: f.accent }}
             >
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded" style={{ background: `${f.accent}1a`, color: f.accent }}>★</span>
+                <span className="flex h-9 w-9 items-center justify-center rounded" style={{ background: '#0995671a', color: '#099567'}}>★</span>
                 <h3 className="text-sm font-black text-gray-900">{f.title}</h3>
               </div>
               <p className="mt-3 text-xs leading-5 text-gray-500">{f.desc}</p>
