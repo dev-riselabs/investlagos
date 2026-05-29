@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 /* 1. @import rules MUST come first (CSS spec) */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
 @import 'tailwindcss';
 
 /* 2. Local font faces */
-=======
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap");
-/* 1. Local font faces – declared before any @import rules */
->>>>>>> mybranch
 @font-face {
   font-family: "Consolas";
   src: url("./assets/fonts/CONSOLA.TTF") format("truetype");
@@ -40,13 +35,7 @@
   font-display: swap;
 }
 
-<<<<<<< HEAD
-=======
-/* 2. Google Fonts Import */
 
-@import "tailwindcss";
-
->>>>>>> mybranch
 /* 2. Configure Tailwind v4 to map 'font-sans' utility classes to Jost */
 @theme {
   --font-jost: "Jost", sans-serif;
@@ -89,67 +78,38 @@
   --shadow-business: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-<<<<<<< HEAD
-.hero-bg{
-  background: url('/hero-bg.png');
-=======
 .hero-bg {
-  background: url("/public/hero-bg.png");
->>>>>>> mybranch
+  background: url('/hero-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-<<<<<<< HEAD
-.advantage-bg{
-  background: url('/advantage-bg.png');
-=======
 .advantage-bg {
-  background: url("/public/advantage-bg.png");
->>>>>>> mybranch
+  background: url('/advantage-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-<<<<<<< HEAD
-.dealbook-bg{
-  background: url('/deal-book-bg.png');
-=======
 .dealbook-bg {
-  background: url("/public/deal-book-bg.png");
->>>>>>> mybranch
+  background: url('/deal-book-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-<<<<<<< HEAD
-.invest-bg{
-  background: url('/invest-bg.png');
-=======
 .invest-bg {
-  background: url("/public/invest-bg.png");
->>>>>>> mybranch
+  background: url('/invest-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-<<<<<<< HEAD
-.future-bg{
+.future-bg {
   background: url('/bg_third_mainland_bridge.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
-.skyline-bg{
-  background: url('/skyline-bg.png');
-=======
-.future-bg {
-  background: url("/public/bg_third_mainland_bridge.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .skyline-bg {
-  background: url("/public/skyline-bg.png");
->>>>>>> mybranch
+  background: url('/skyline-bg.png');
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top;
@@ -158,6 +118,7 @@
 .text-stroke {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
+
 html {
   scroll-behavior: smooth;
 }
