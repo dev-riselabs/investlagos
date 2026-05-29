@@ -15,7 +15,7 @@ const SpeakersCTA = () => {
         {/* Left — text */}
         <div>
           <div className="flex items-center gap-3">
-            <span className="block h-5 w-px bg-green100" />
+            <span className="block h-5 w-[3px] bg-green100" />
             <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-green100">
               Welcome to the Future
             </span>
@@ -32,35 +32,35 @@ const SpeakersCTA = () => {
           </p>
         </div>
 
-        {/* Right — buttons */}
-        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
+        {/* Right — buttons (always single row) */}
+        <div className="flex flex-row flex-wrap items-center gap-3 lg:justify-end">
 
           {/* Register Now — dark */}
-          <Link to="/register" className="group flex items-center justify-between gap-6 rounded-sm bg-black100 pl-6 pr-2 py-2 text-sm font-bold text-white transition hover:opacity-90">
-            <span>Register Now</span>
-            <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-white/15 transition-transform group-hover:translate-x-0.5">
+          <Link to="/register" className="group flex items-center justify-between gap-4 rounded-md bg-black100 pl-5 pr-2 py-2 text-sm font-bold text-white transition hover:opacity-90">
+            <span className="text-white">Register Now</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 text-white transition-transform group-hover:translate-x-0.5">
               <PlayIcon />
             </span>
           </Link>
 
           {/* View Agenda — yellow */}
-          <button className="group flex items-center justify-between gap-6 rounded-sm bg-yellow pl-6 pr-2 py-2 text-sm font-bold text-black100 transition hover:opacity-90">
+          <Link to="/agenda" className="group flex items-center justify-between gap-4 rounded-md bg-yellow pl-5 pr-2 py-2 text-sm font-bold text-black100 transition hover:opacity-90">
             <span>View Agenda</span>
-            <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-black/10 transition-transform group-hover:translate-x-0.5">
+            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-black/15 transition-transform group-hover:translate-x-0.5">
               <PlayIcon />
             </span>
-          </button>
+          </Link>
 
           {/* View LIVE Dashboard — green */}
-          <button className="group flex items-center justify-between gap-6 rounded-sm bg-green100 pl-5 pr-2 py-2 text-sm font-bold text-white transition hover:opacity-90">
+          <a href="https://eventsintel.com/investlagos" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between gap-4 rounded-md bg-green100 pl-5 pr-2 py-2 text-sm font-bold text-white transition hover:opacity-90">
             <span className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-white" />
               View LIVE Dashboard
             </span>
-            <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-white/15 transition-transform group-hover:translate-x-0.5">
+            <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/20 text-white transition-transform group-hover:translate-x-0.5">
               <PlayIcon />
             </span>
-          </button>
+          </a>
 
         </div>
       </div>
