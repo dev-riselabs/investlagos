@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="mx-auto max-w-310 px-6 pt-10 pb-8">
           {/* ── Dark green CTA card ── */}
           <div className="flex flex-col items-stretch gap-0 overflow-hidden rounded-xl bg-green200 shadow-footer sm:flex-row sm:items-center px-4 py-6 md:px-9 md:py-7.5 sm:divide-x-2 divide-white">
-            <div className="flex sm:flex-1 md:items-center gap-4 md:px-8 py-7">
+            <div className="flex sm:flex-1 md:items-center gap-4 lg:px-8 py-7">
               <div className="flex h-12 w-12 sm:h-17.5 sm:w-17.5 shrink-0 items-center justify-center rounded-md bg-green300">
                 <FaRegCalendarAlt className="text-white w-7 h-7 md:w-10 md:h-10" />
               </div>
@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
 
             <div className="flex-1 flex sm:justify-end">
-              <div className="flex flex-col items-center justify-center px-4 md:px-8 py-4 md:py-6.5 bg-white rounded-2xl md:rounded-full gap-5">
+              <div className="flex flex-col items-center justify-center md:flex-row px-4 md:px-8 py-4 md:py-6.5 bg-white rounded-2xl md:rounded-full gap-5">
                 <a
                   href="/DealBook for Invest Lagos 3.0.pdf"
                   download
@@ -56,7 +56,7 @@ const Footer = () => {
                 >
                   Download Investment Deal Book
                 </a>
-                <LuCircleArrowRight className="text-green100 w-8 h-8"/>
+                <LuCircleArrowRight className="text-green100 w-8 h-8" />
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Footer = () => {
               <Link
                 key={l}
                 to={l}
-                className=" transition text-black hover:text-green"
+                className=" transition text-black hover:text-green!"
               >
                 {l}
               </Link>
