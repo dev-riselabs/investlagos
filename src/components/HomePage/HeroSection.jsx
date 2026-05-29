@@ -1,24 +1,66 @@
-import React from 'react'
+import React from "react";
+import { FaPlay } from "react-icons/fa";
+import CountdownTimer from "../Countdown";
+
+
+const buttons = [
+  {title : 'Register Now', isDot: false},
+  {title : 'View Agenda', isDot: false},
+  {title : 'Watch Online', isDot: true},
+  {title : 'View LIVE Dashboard', isDot: true},
+]
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative flex min-h-[640px] flex-col items-center justify-center overflow-hidden px-6 py-20 text-center text-white lg:py-36" style={{ backgroundImage: 'url(/bg_third_mainland_bridge.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="absolute inset-0 bg-[#06120e]/75" />
-      <div className="pointer-events-none absolute bottom-0 left-1/2 h-64 w-[800px] -translate-x-1/2 rounded-full bg-[#007B5E]/25 blur-[100px]" />
-      <div className="relative z-10 max-w-4xl">
-        <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#F4C430]">June 8 – 10, 2026 · Lagos, Nigeria</p>
-        <h1 className="text-4xl font-black leading-tight sm:text-5xl lg:text-7xl">Invest Lagos <span className="text-[#F4C430]">3.0</span></h1>
-        <p className="mt-6 text-lg leading-8 text-gray-300 sm:text-xl">The flagship investment engagement summit connecting global capital with the opportunities shaping Africa&apos;s most dynamic economy.</p>
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a href="#stream" className="flex items-center gap-3 rounded bg-[#007B5E] px-8 py-4 text-sm font-bold text-white hover:bg-[#005f48] transition"><span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20">▶</span>Watch Online</a>
-          <a href="#speakers" className="rounded border border-white/30 px-8 py-4 text-sm font-bold text-white hover:bg-white/10 transition">View Speakers</a>
+    <section
+      id="hero"
+      className="relative overflow-hidden bg-green100"
+    >
+      <div className="bg-white! rounded-4xl hero-bg flex flex-col gap-10 md:gap-20 justify-center px-4 md:px-10 lg:px-20 py-10 md:py-20 text-center lg:py-25">
+        <p className="mb-4 text-xs font-bold font-jost uppercase tracking-[6px] text-black text-center">
+          8th to 10th, June 2026 | eko hotel & Suites, Victoria Island, Lagos,
+          Nigeria
+        </p>
+        <div className="flex flex-col gap-8 md:gap-15 items-start">
+          <div className="flex flex-col gap-3 md:gap-6 items-start">
+            <h1 className="text-4xl font-black leading-tight sm:text-5xl lg:text-6xl text-green100 font-jost">
+              Invest in Lagos 3.0
+            </h1>
+            <p className="text-lg leading-8 text-black100 sm:text-3xl font-bold font-jost text-left">
+             Theme: LAGOS: The Business Gateway to Africa
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            {
+              buttons.map(({title, isDot}, i ) => <button key={title} className={`p-1.5 md:p-2.5 pl-4 md:pl-8 flex items-center gap-2 md:gap-4 rounded-sm
+                ${
+                  i === 0 ? 'bg-red':
+                  i === 1 ? 'bg-yellow':
+                  i === 2 ? 'bg-black100' :
+                  'bg-green100'
+                 }
+              `}>
+                <div className="flex items-center gap-1.5">
+                  {isDot && <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-white"/>}
+                  <span className={`text-xs font-jost font-bold
+                  ${i === 1 ? 'text-black' : 'text-white'}
+                    `}>{title}</span>
+
+                </div>
+                <div className="bg-white/20 backdrop-blur-md backdrop-brightness-90 rounded-sm flex w-8 h-8 md:w-9 md:h-9 items-center justify-center ">
+                  <FaPlay className={`w-4 h-4 md:w-5 md:h-5 ${
+                    i === 1 ? 'text-black' : 'text-white'
+                  }`}/>
+                </div>
+              </button>)
+            }
+          </div>
+
+          <CountdownTimer/>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-12 fill-white"><path d="M0,60 C360,0 1080,60 1440,10 L1440,60 Z" /></svg>
-      </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

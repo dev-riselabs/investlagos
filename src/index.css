@@ -47,16 +47,42 @@
   --colro-blue: #3B7FCD;
   --color-yellow: #FDEC3F;
   --color-green : #10845B;
+  --color-green50 : #63CAA8;
   --color-purple : #562579;
   --color-green100 : #099567;
+  --color-green150: #11A892;
   --color-green200: #0D5539;
   --color-green300 : #186C48;
+  --color-green400: #1C5C47;
+  --color-green500:#50d8c1;
+  --color-black100: #04191D;
+  --color-black200: #05163F;
+  
 
   --shadow-footer : 0px 2px 4px 0px #099567;
 }
 
+.hero-bg{
+  background: url('/public/hero-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.advantage-bg{
+  background: url('/public/advantage-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.dealbook-bg{
+  background: url('/public/deal-book-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-stroke{
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
 html {
   scroll-behavior: smooth;
 }
@@ -84,7 +110,6 @@ a {
 button {
   cursor: pointer;
   font: inherit;
-
 }
 
 #root {
