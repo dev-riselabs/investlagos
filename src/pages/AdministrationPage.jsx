@@ -8,6 +8,7 @@ import {
   LuTruck,
 } from 'react-icons/lu'
 import InformationSection from '../components/HomePage/InformationSection'
+import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
 
 /* ─────────────────── HERO ─────────────────── */
 
@@ -50,11 +51,13 @@ function AdministrationIntro() {
           </p>
         </div>
         <div className="w-full">
-          <img
-            src="/governance_structure_hero_image.png"
-            alt="Administrative Secretariat at work"
-            className="w-full rounded-2xl object-cover shadow-sm"
-          />
+          <MouseTilt intensity={6}>
+            <img
+              src="/governance_structure_hero_image.png"
+              alt="Administrative Secretariat at work"
+              className="w-full rounded-2xl object-cover shadow-sm"
+            />
+          </MouseTilt>
         </div>
       </div>
     </section>
@@ -114,14 +117,18 @@ function CoreResponsibilities() {
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {responsibilities.map(({ icon: Icon, title, desc, accent }) => (
-            <article key={title} className="rounded-lg bg-white p-6 shadow-sm">
-              <span className={`inline-flex h-10 w-10 items-center justify-center rounded-md ${accent}`}>
-                <Icon className="h-5 w-5" />
-              </span>
-              <h3 className="mt-4 text-sm font-bold text-slate-900">{title}</h3>
-              <p className="mt-2 text-xs leading-relaxed text-slate-500">{desc}</p>
-            </article>
+          {responsibilities.map(({ icon: Icon, title, desc, accent }, i) => (
+            <Reveal key={title} direction="up" delay={i * 90} distance={26}>
+              <MouseTilt intensity={6}>
+                <article className="rounded-lg bg-white p-6 shadow-sm">
+                  <span className={`inline-flex h-10 w-10 items-center justify-center rounded-md ${accent}`}>
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-4 text-sm font-bold text-slate-900">{title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-500">{desc}</p>
+                </article>
+              </MouseTilt>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -187,12 +194,16 @@ function AdministrationSearchCTA() {
 export default function AdministrationPage() {
   return (
     <>
-      <AdministrationHero />
-      <AdministrationIntro />
-      <CoreResponsibilities />
-      <ConnectCTA />
-      <InformationSection />
-      <AdministrationSearchCTA />
+      <Spotlight color="rgba(253, 236, 63, 0.16)" size={560}>
+        <Reveal direction="fade" duration={900}>
+          <AdministrationHero />
+        </Reveal>
+      </Spotlight>
+      <Reveal direction="up"><AdministrationIntro /></Reveal>
+      <Reveal direction="up"><CoreResponsibilities /></Reveal>
+      <Reveal direction="up"><ConnectCTA /></Reveal>
+      <Reveal direction="up"><InformationSection /></Reveal>
+      <Reveal direction="up"><AdministrationSearchCTA /></Reveal>
     </>
   )
 }

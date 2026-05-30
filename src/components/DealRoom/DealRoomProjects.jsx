@@ -1,4 +1,5 @@
 import React from 'react'
+import { Reveal, MouseTilt } from '../../lib/animations'
 
 const projects = [
   {
@@ -148,8 +149,12 @@ const DealRoomProjects = () => {
       {/* Project cards */}
       <section className="bg-slate-50 px-6 py-12 lg:py-14">
         <div className="mx-auto grid max-w-[1240px] gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <ProjectCard key={p.title} {...p} />
+          {projects.map((p, i) => (
+            <Reveal key={p.title} direction="up" delay={i * 110} distance={28}>
+              <MouseTilt intensity={5}>
+                <ProjectCard {...p} />
+              </MouseTilt>
+            </Reveal>
           ))}
         </div>
       </section>

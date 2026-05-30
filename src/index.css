@@ -161,3 +161,33 @@ button {
 #root {
   min-height: 100vh;
 }
+
+/* ─── Route change transition (used by <PageTransition>) ─── */
+@keyframes ilPageEnter {
+  0%   { opacity: 0; transform: scale(0.985) translateY(8px); }
+  100% { opacity: 1; transform: none; }
+}
+.page-transition-in {
+  animation: ilPageEnter 480ms cubic-bezier(.22, .61, .36, 1);
+  will-change: opacity, transform;
+}
+
+/* ─── CTA hover pulse ───
+   Targets <button>/<a> elements that explicitly set a coloured background
+   via Tailwind utilities (e.g. bg-green100, bg-red, bg-yellow). Neutral
+   surfaces (white, transparent, slate, gray) are excluded so dropdown
+   triggers, filter pills and icon-only chrome stay calm. */
+@keyframes ilBtnPulse {
+  0%   { box-shadow: 0 0 0 0   rgba(16, 168, 146, 0.55); }
+  70%  { box-shadow: 0 0 0 10px rgba(16, 168, 146, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(16, 168, 146, 0); }
+}
+button[class*="bg-"]:not(:disabled):not([class*="bg-white"]):not([class*="bg-transparent"]):not([class*="bg-slate"]):not([class*="bg-gray"]):hover,
+a[class*="bg-"]:not([class*="bg-white"]):not([class*="bg-transparent"]):not([class*="bg-slate"]):not([class*="bg-gray"]):hover {
+  animation: ilBtnPulse 1.2s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition-in { animation: none; }
+  button:hover, a:hover { animation: none !important; }
+}

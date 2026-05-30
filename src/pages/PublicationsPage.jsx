@@ -5,6 +5,7 @@ import { FiArrowUpRight } from 'react-icons/fi'
 import { FaPlay } from 'react-icons/fa'
 import { fetchPublications, fetchPublicationFilters } from '../lib/api'
 import { slugify, FALLBACK_PUBLICATION_CONTENT } from '../lib/publications'
+import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
 
 /* ─────────────────── STATIC FALLBACK ─────────────────── */
 // Used only when the API is unreachable or empty so the marketing
@@ -209,7 +210,16 @@ function PublicationsGrid({ items, loading, error }) {
         {!loading && !error && items.length > 0 && (
           <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((pub, i) => (
-              <PublicationCard key={`${pub.title}-${i}`} pub={pub} />
+              <Reveal
+                key={`${pub.title}-${i}`}
+                direction="up"
+                delay={(i % 6) * 90}
+                distance={26}
+              >
+                <MouseTilt intensity={5}>
+                  <PublicationCard pub={pub} />
+                </MouseTilt>
+              </Reveal>
             ))}
           </div>
         )}
@@ -335,20 +345,32 @@ export default function PublicationsPage() {
 
   return (
     <>
-      <PublicationsHero />
-      <PublicationsFilterBar
-        query={query}
-        onQueryChange={setQuery}
-        category={category}
-        onCategoryChange={setCategory}
-        year={year}
-        onYearChange={setYear}
-        categories={categories}
-        years={years}
-      />
-      <PublicationsGrid items={visibleItems} loading={loading} error={error} />
-      <PublicationsDealBook />
-      <PublicationsSearchCTA />
+      <Spotlight color="rgba(99, 202, 168, 0.20)" size={600}>
+        <Reveal direction="fade" duration={900}>
+          <PublicationsHero />
+        </Reveal>
+      </Spotlight>
+      <Reveal direction="down" duration={600}>
+        <PublicationsFilterBar
+          query={query}
+          onQueryChange={setQuery}
+          category={category}
+          onCategoryChange={setCategory}
+          year={year}
+          onYearChange={setYear}
+          categories={categories}
+          years={years}
+        />
+      </Reveal>
+      <Reveal direction="up">
+        <PublicationsGrid items={visibleItems} loading={loading} error={error} />
+      </Reveal>
+      <Reveal direction="up">
+        <PublicationsDealBook />
+      </Reveal>
+      <Reveal direction="up">
+        <PublicationsSearchCTA />
+      </Reveal>
     </>
   )
 }

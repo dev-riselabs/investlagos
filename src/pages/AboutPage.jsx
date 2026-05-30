@@ -2,6 +2,7 @@ import { IoMdSearch } from 'react-icons/io'
 import { FiArrowUpRight } from 'react-icons/fi'
 import InvestmentSection from '../components/HomePage/InvestmentSection'
 import FutureSection from '../components/HomePage/FutureSection'
+import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
 
 /* ─────────────────── HERO ─────────────────── */
 
@@ -60,22 +61,26 @@ function ExecutiveSummary() {
             </p>
           </div>
           <div className="mt-8 lg:mt-0">
-            <img
-              src="/Vision for a 21st-Century Economy.png"
-              alt="Lagos cityscape"
-              className="aspect-[4/3] w-full rounded-md object-cover shadow-md"
-            />
+            <MouseTilt intensity={6}>
+              <img
+                src="/Vision for a 21st-Century Economy.png"
+                alt="Lagos cityscape"
+                className="aspect-[4/3] w-full rounded-md object-cover shadow-md"
+              />
+            </MouseTilt>
           </div>
         </div>
 
         {/* Second block: image left, text right */}
         <div className="mt-10 lg:grid lg:grid-cols-[360px_1fr] lg:gap-10">
           <div>
-            <img
-              src="/bg_third_mainland_bridge.png"
-              alt="Lagos infrastructure"
-              className="aspect-[4/3] w-full rounded-md object-cover shadow-md"
-            />
+            <MouseTilt intensity={6}>
+              <img
+                src="/bg_third_mainland_bridge.png"
+                alt="Lagos infrastructure"
+                className="aspect-[4/3] w-full rounded-md object-cover shadow-md"
+              />
+            </MouseTilt>
           </div>
           <div className="mt-8 space-y-5 text-[13px] leading-7 text-slate-600 sm:text-sm lg:mt-0">
             <p>
@@ -146,11 +151,17 @@ function AboutSearchCTA() {
 export default function AboutPage() {
   return (
     <>
-      <AboutHero />
-      <ExecutiveSummary />
-      <InvestmentSection />
-      <FutureSection />
-      <AboutSearchCTA />
+      <Spotlight color="rgba(255, 255, 255, 0.16)" size={620}>
+        <Reveal direction="fade" duration={900}>
+          <AboutHero />
+        </Reveal>
+      </Spotlight>
+      <Reveal direction="up"><ExecutiveSummary /></Reveal>
+      <Reveal direction="up"><InvestmentSection /></Reveal>
+      <Spotlight color="rgba(99, 202, 168, 0.20)" size={560}>
+        <Reveal direction="up"><FutureSection /></Reveal>
+      </Spotlight>
+      <Reveal direction="up"><AboutSearchCTA /></Reveal>
     </>
   )
 }

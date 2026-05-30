@@ -6,17 +6,22 @@ import GovernanceSubCommittees from '../components/Governance/GovernanceSubCommi
 import GovernanceAdditionalCommittees from '../components/Governance/GovernanceAdditionalCommittees'
 import GovernancePartnerships from '../components/Governance/GovernancePartnerships'
 import SpeakersCTA from '../components/Speakers/SpeakersCTA'
+import { Reveal, Spotlight } from '../lib/animations'
 
 const GovernancePage = () => {
   return (
     <>
-      <GovernanceBanner />
-      <GovernanceLeadership />
-      <GovernanceLOC />
-      <GovernanceSubCommittees />
-      <GovernanceAdditionalCommittees />
-      <GovernancePartnerships />
-      <SpeakersCTA />
+      <Spotlight color="rgba(255, 255, 255, 0.16)" size={580}>
+        <Reveal direction="fade" duration={900}>
+          <GovernanceBanner />
+        </Reveal>
+      </Spotlight>
+      <Reveal direction="up"><GovernanceLeadership /></Reveal>
+      <Reveal direction="up"><GovernanceLOC /></Reveal>
+      <Reveal direction="up"><GovernanceSubCommittees /></Reveal>
+      <Reveal direction="up"><GovernanceAdditionalCommittees /></Reveal>
+      <Reveal direction="up"><GovernancePartnerships /></Reveal>
+      <Reveal direction="up"><SpeakersCTA /></Reveal>
     </>
   )
 }

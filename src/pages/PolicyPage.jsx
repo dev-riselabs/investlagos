@@ -12,6 +12,7 @@ import {
   LuHeartPulse,
 } from 'react-icons/lu'
 import InformationSection from '../components/HomePage/InformationSection'
+import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
 
 /* ─────────────────── HERO ─────────────────── */
 
@@ -101,14 +102,18 @@ function ResearchFocusAreas() {
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {focusAreas.map(({ icon: Icon, title, desc, accent }) => (
-            <article key={title} className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-100">
-              <span className={`inline-flex h-10 w-10 items-center justify-center rounded-md ${accent}`}>
-                <Icon className="h-5 w-5" />
-              </span>
-              <h3 className="mt-4 text-sm font-bold text-slate-900">{title}</h3>
-              <p className="mt-2 text-xs leading-relaxed text-slate-500">{desc}</p>
-            </article>
+          {focusAreas.map(({ icon: Icon, title, desc, accent }, i) => (
+            <Reveal key={title} direction="up" delay={i * 90} distance={26}>
+              <MouseTilt intensity={6}>
+                <article className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                  <span className={`inline-flex h-10 w-10 items-center justify-center rounded-md ${accent}`}>
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-4 text-sm font-bold text-slate-900">{title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-500">{desc}</p>
+                </article>
+              </MouseTilt>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -242,7 +247,16 @@ function PolicyBriefsGrid() {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {policyBriefs.map((brief, i) => (
-            <PolicyBriefCard key={`${brief.title}-${i}`} brief={brief} />
+            <Reveal
+              key={`${brief.title}-${i}`}
+              direction="up"
+              delay={(i % 4) * 90}
+              distance={26}
+            >
+              <MouseTilt intensity={5}>
+                <PolicyBriefCard brief={brief} />
+              </MouseTilt>
+            </Reveal>
           ))}
         </div>
 
@@ -293,13 +307,17 @@ function PolicySearchCTA() {
 export default function PolicyPage() {
   return (
     <>
-      <PolicyHero />
-      <PolicyStats />
-      <ResearchFocusAreas />
-      <PolicyFilterBar />
-      <PolicyBriefsGrid />
-      <InformationSection />
-      <PolicySearchCTA />
+      <Spotlight color="rgba(255, 255, 255, 0.16)" size={620}>
+        <Reveal direction="fade" duration={900}>
+          <PolicyHero />
+        </Reveal>
+      </Spotlight>
+      <Reveal direction="up"><PolicyStats /></Reveal>
+      <Reveal direction="up"><ResearchFocusAreas /></Reveal>
+      <Reveal direction="down" duration={600}><PolicyFilterBar /></Reveal>
+      <Reveal direction="up"><PolicyBriefsGrid /></Reveal>
+      <Reveal direction="up"><InformationSection /></Reveal>
+      <Reveal direction="up"><PolicySearchCTA /></Reveal>
     </>
   )
 }

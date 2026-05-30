@@ -1,4 +1,5 @@
 import React from 'react'
+import { Reveal, MouseTilt } from '../../lib/animations'
 
 const sectors = [
   { title: 'Agribusiness & Food System', image: '/Agribusiness & Food System.png' },
@@ -46,8 +47,12 @@ const DealRoomSectors = () => {
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {sectors.map((s) => (
-            <SectorCard key={s.title} {...s} />
+          {sectors.map((s, i) => (
+            <Reveal key={s.title} direction="up" delay={(i % 3) * 100} distance={26}>
+              <MouseTilt intensity={5}>
+                <SectorCard {...s} />
+              </MouseTilt>
+            </Reveal>
           ))}
         </div>
       </div>

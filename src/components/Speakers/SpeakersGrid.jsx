@@ -1,5 +1,6 @@
 import React from 'react'
 import { InstitutionIcon } from './SpeakersHero'
+import { Reveal, MouseTilt } from '../../lib/animations'
 
 const speakers = [
   { name: 'Mr. Babajide Olusola Sanwo-Olu', title: 'Governor of Lagos State', photo: '/speakers/MR_Babajide_Olusola_Sanwo_Olu.png' },
@@ -82,11 +83,16 @@ const SpeakersGrid = () => {
       <div className="mx-auto max-w-[1240px]">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {speakers.map((s, i) => (
-            <SpeakerCard
+            <Reveal
               key={s.name}
-              {...s}
-              accent={accents[i % accents.length]}
-            />
+              direction="up"
+              delay={(i % 6) * 90}
+              distance={28}
+            >
+              <MouseTilt intensity={5}>
+                <SpeakerCard {...s} accent={accents[i % accents.length]} />
+              </MouseTilt>
+            </Reveal>
           ))}
         </div>
       </div>
