@@ -117,6 +117,14 @@ export function fetchPublicationFilters() {
   return request("/publications/filters");
 }
 
+/**
+ * Fetch a single published publication by its slug.
+ * Returns Laravel's `{ data: publication }` shape.
+ */
+export function fetchPublication(slug) {
+  return request(`/publications/${encodeURIComponent(slug)}`);
+}
+
 /* ─────────────────── Admin: auth ─────────────────── */
 
 export function adminLogin({ email, password }) {
@@ -246,6 +254,7 @@ export const api = {
   subscribe,
   fetchPublications,
   fetchPublicationFilters,
+  fetchPublication,
   adminLogin,
   adminRegister,
   adminMe,

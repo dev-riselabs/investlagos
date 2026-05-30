@@ -14,7 +14,7 @@ const navLinks = [
       { label: "Governance Structure", path: "/governance" },
       { label: "IL 1.0 & 2.0 Highlights", path: "/the-summit/agenda" },
       { label: "IL 3.0 Programme Flow", path: "/agenda" },
-      { label: "Administration", path: "/the-summit/speakers" },
+      { label: "Administration", path: "/administration" },
     ],
   },
 
@@ -40,7 +40,7 @@ const navLinks = [
     dropdown: true,
     children: [
       { label: "Gallery", path: "/media/news" },
-      { label: "Media Kits", path: "/media/gallery" },
+      { label: "Media Kits", path: "/media-kit" },
       { label: "Press Releases", path: "/media/gallery" },
     ],
   },

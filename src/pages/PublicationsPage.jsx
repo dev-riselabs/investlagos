@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { IoMdSearch, IoIosArrowDown } from 'react-icons/io'
 import { FiArrowUpRight } from 'react-icons/fi'
 import { FaPlay } from 'react-icons/fa'
 import { fetchPublications, fetchPublicationFilters } from '../lib/api'
+import { slugify, FALLBACK_PUBLICATION_CONTENT } from '../lib/publications'
 
 /* ─────────────────── STATIC FALLBACK ─────────────────── */
 // Used only when the API is unreachable or empty so the marketing
 // page never renders an empty grid in local/preview environments.
 
-const fallbackPublications = [
+const RAW_FALLBACK_PUBLICATIONS = [
   {
     img: '/Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy.png',
     tag: 'Report',
@@ -27,7 +29,7 @@ const fallbackPublications = [
   },
   {
     img: '/Century Economy.png',
-    tag: 'Report',
+    tag: 'Policy',
     date: '2024',
     title: 'Policy Briefs',
     desc: 'A concise analysis of recent legislation, reforms and emerging policies shaping the business environment in Lagos.',
@@ -43,7 +45,7 @@ const fallbackPublications = [
   },
   {
     img: '/Vision for a 21st-Century Economy.png',
-    tag: 'Report',
+    tag: 'Case Study',
     date: '2024',
     title: 'Investment Case Studies',
     desc: 'Real-world examples of successful investments, partnerships and projects contributing to Lagos\u2019 economic transformation.',
@@ -51,13 +53,19 @@ const fallbackPublications = [
   },
   {
     img: '/Century Economy.png',
-    tag: 'Report',
+    tag: 'Communiqué',
     date: '2024',
     title: 'Summit Reports & Communiqués',
     desc: 'Official summit outcomes, communiqués, key takeaways, thought leadership pieces and resources from past Invest Lagos engagements.',
     accent: 'bg-yellow',
   },
 ]
+
+export const fallbackPublications = RAW_FALLBACK_PUBLICATIONS.map((p) => ({
+  ...p,
+  slug: slugify(p.title),
+  content: FALLBACK_PUBLICATION_CONTENT,
+}))
 
 const ACCENT_CYCLE = ['bg-red', 'bg-[#3B7FCD]', 'bg-yellow']
 
@@ -74,7 +82,11 @@ function mapApiPublication(row, index) {
     title: row.title,
     desc: row.description,
     accent: row.accent || ACCENT_CYCLE[index % ACCENT_CYCLE.length],
-    href: row.file_url || row.external_url || '#',
+    slug: row.slug || slugify(row.title || ''),
+    category: row.category || '',
+    content: row.content || '',
+    fileUrl: row.file_url || '',
+    externalUrl: row.external_url || '',
   }
 }
 
@@ -150,11 +162,12 @@ function PublicationsFilterBar({ query, onQueryChange, category, onCategoryChang
 }
 
 function PublicationCard({ pub }) {
+  const to = pub.slug ? `/publications/${pub.slug}` : '#'
   return (
     <article className="flex flex-col overflow-hidden rounded-md bg-white shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
-      <div className="aspect-[4/3] w-full overflow-hidden">
-        <img src={pub.img} alt={pub.title} className="h-full w-full object-cover" />
-      </div>
+      <Link to={to} className="block aspect-[4/3] w-full overflow-hidden">
+        <img src={pub.img} alt={pub.title} className="h-full w-full object-cover transition duration-300 hover:scale-[1.02]" />
+      </Link>
       <div className="flex flex-1 flex-col gap-3 px-6 pt-5 pb-6">
         <div className="flex items-center gap-3 text-[11px] font-medium text-slate-500">
           <span className="rounded-sm bg-slate-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-600">
@@ -163,16 +176,16 @@ function PublicationCard({ pub }) {
           <span className="text-slate-400">•</span>
           <span>{pub.date}</span>
         </div>
-        <h3 className="text-base font-bold text-black100">{pub.title}</h3>
+        <h3 className="text-base font-bold text-black100">
+          <Link to={to} className="transition hover:text-green100">{pub.title}</Link>
+        </h3>
         <p className="text-[13px] leading-6 text-slate-500">{pub.desc}</p>
-        <a
-          href={pub.href || '#'}
-          target={pub.href && pub.href !== '#' ? '_blank' : undefined}
-          rel={pub.href && pub.href !== '#' ? 'noopener noreferrer' : undefined}
+        <Link
+          to={to}
           className="mt-auto inline-flex w-fit items-center gap-1 pt-2 text-xs font-semibold text-green100 transition hover:opacity-80"
         >
-          Read <span aria-hidden="true">»</span>
-        </a>
+          {pub.tag || 'Read'} <span aria-hidden="true">»</span>
+        </Link>
       </div>
       <div className={`h-1 w-full ${pub.accent}`} />
     </article>
