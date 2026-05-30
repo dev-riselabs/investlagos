@@ -37,7 +37,7 @@ function Partners() {
           Our Partners & Sponsors
         </h2>
         <p className="text-white font-medium font-jost text-base text-center md:text-lg">
-          Working together to transform Lagos's economy
+          Working together to transform Lagos' economy
         </p>
       </div>
       {/* Carousel */}

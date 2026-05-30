@@ -6,7 +6,7 @@ const reasons = [
     {title : 'Sector-Specific     Insights', description: 'Deep-dive plenaries across technology, infrastructure, manufacturing, and the creative economy — each curated by sector leaders.'},
     {title : 'Global Networking', description: 'Connect with institutional investors, development finance institutions, and Commonwealth business leaders from 20+ countries.'},
     {title : 'Visa on Arrival       Support', description: 'Approved international delegates receive full visa assistance. Our team coordinates directly with immigration authorities on your behalf.'},
-    {title : "Africa's Commonwealth Gateway", description: "Leverage Lagos's position within the African Continental Free Trade Area and its role as the Commonwealth's fastest-growing economic hub."},
+    {title : "Africa's Commonwealth Gateway", description: "Leverage Lagos' position within the African Continental Free Trade Area and its role as the Commonwealth's fastest-growing economic hub."},
 ]
 
 function ReasonSection() {

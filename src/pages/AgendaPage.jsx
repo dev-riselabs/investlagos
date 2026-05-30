@@ -197,7 +197,7 @@ const days = [
         timeEnd: "16:30PM",
         tag: "PLENARY",
         title: "Plenary 2 — The Future of Technology & Innovation",
-        desc: "This session explores how emerging technologies and innovation ecosystems are shaping the next generation of African enterprise and economic transformation. With Lagos hosting Africa's most active startup ecosystem, panelists examine the convergence of artificial intelligence, digital infrastructure and fintech as drivers of inclusive growth. The discussion will identify the talent, regulatory and capital conditions needed to scale Lagos's technology sector to global competitiveness.",
+        desc: "This session explores how emerging technologies and innovation ecosystems are shaping the next generation of African enterprise and economic transformation. With Lagos hosting Africa's most active startup ecosystem, panelists examine the convergence of artificial intelligence, digital infrastructure and fintech as drivers of inclusive growth. The discussion will identify the talent, regulatory and capital conditions needed to scale Lagos' technology sector to global competitiveness.",
         subsections: [
           {
             label: "OPENING REMARKS",
