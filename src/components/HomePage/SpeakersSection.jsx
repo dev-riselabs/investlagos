@@ -123,7 +123,10 @@ function ConfirmedSpeakers() {
           </div>
 
           <div className="flex items-center gap-6">
-            <Link to="/speakers" className="text-sm font-bold font-inter uppercase text-white no-underline">
+            <Link
+              to="/speakers"
+              className="text-sm font-bold font-inter uppercase text-yellow! no-underline"
+            >
               View All Speakers
             </Link>
 

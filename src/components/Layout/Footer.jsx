@@ -48,15 +48,15 @@ const Footer = () => {
             </div>
 
             <div className="flex-1 flex sm:justify-end">
-              <div className="flex flex-col items-center justify-center md:flex-row px-4 md:px-8 py-4 md:py-6.5 bg-white rounded-2xl md:rounded-full gap-5">
+              <div className="flex  items-center justify-center md:flex-row px-2 md:px-8 py-4 md:py-6.5 bg-white rounded-xl md:rounded-full gap-2 md:gap-5">
                 <a
                   href="/DealBook for Invest Lagos 3.0.pdf"
                   download
-                  className="text-sm sm:text-base font-bold text-red!"
+                  className="text-xs sm:text-base font-bold text-red!"
                 >
                   Download Investment Deal Book
                 </a>
-                <LuCircleArrowRight className="text-green100 w-8 h-8" />
+                <LuCircleArrowRight className="text-green100 w-6 md:w-8 h-6  md:h-8" />
               </div>
             </div>
           </div>
