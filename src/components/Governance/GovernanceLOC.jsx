@@ -52,7 +52,7 @@ const locMembers = [
   },
   {
     name: "Babatunde Onigbanjo",
-    role: "Member, Technical & Programmes Committee",
+    role: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment of Lagos State Government & Member, Technical & Programmes Committee",
     photo: "/governance-images/Babatunde Onigbanjo.png",
     bio: [],
   },

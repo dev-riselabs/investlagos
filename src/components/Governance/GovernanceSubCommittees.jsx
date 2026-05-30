@@ -50,22 +50,22 @@ const mediaSmallCards = [
   },
   {
     name: "Charlotte Bailey",
-    role: "Member, Media and Communications Department",
+    role: "Member, Media and Communications Committee",
     photo: "/governance-images/Charlotte Bailey (CWEIC).png",
   },
   {
     name: "AQ Hamza (CWEIC)",
-    role: "Member, Media and Communications Department",
+    role: "Member, Media and Communications Committee",
     photo: "/governance-images/AQ Hamza (CWEIC).png",
   },
   {
     name: "Pride Azefor (CWEIC)",
-    role: "Member, Media and Communications Department",
+    role: "Member, Media and Communications Committee",
     photo: "/governance-images/Pride Azefor (CWEIC).png",
   },
   {
     name: "Sean Leno (CWEIC)",
-    role: "Member, Media and Communications Department",
+    role: "Member, Media and Communications Committee",
     photo: "/governance-images/Sean Leno.jpeg",
   },
 ];
