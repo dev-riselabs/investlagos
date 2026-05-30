@@ -25,6 +25,18 @@ const MailIcon = () => (
 /* ─── Data ───────────────────────────────────────────────────────────────── */
 const locMembers = [
   {
+    name: "Mr. Sam Egube",
+    role: "Co-Chair, Local Organizing Committee",
+    photo: "/governance-images/Mr. Sam Egube.png",
+    bio: [
+      "Samuel Egube, FNSE, FICA, HCIB, MNIM, MIoD, COREN, is a  seasoned public sector leader and corporate executive with over 34  years of experience spanning banking, governance, economic  policy and institutional transformation.",
+
+      "He currently serves as  Deputy Chief of Staff to the Governor of Lagos State, following his  tenure as Commissioner for Economic Planning and Budget, where  he led strategic policy development, fiscal planning, resource  allocation and state-wide performance management.",
+
+      "A Civil  Engineering graduate of the University of Benin, he also holds an  Executive MBA from IESE Business School, University of Navarra,  Spain, and has completed executive programmes at Harvard,  INSEAD, Wharton and Columbia. Widely respected for his  leadership and reform-driven approach, he has built a distinguished  career across both the private and public sectors.",
+    ],
+  },
+  {
     name: "HON Folashade Ambrose Medebem",
     role: "Co-Chair, Local Organizing Committee",
     photo: "/governance-images/HON Folashade Ambrose Medebem.png",
@@ -39,16 +51,10 @@ const locMembers = [
     ],
   },
   {
-    name: "Mr. Sam Egube",
-    role: "Co-Chair, Local Organizing Committee",
-    photo: "/governance-images/Mr. Sam Egube.png",
-    bio: [
-      "Samuel Egube, FNSE, FICA, HCIB, MNIM, MIoD, COREN, is a  seasoned public sector leader and corporate executive with over 34  years of experience spanning banking, governance, economic  policy and institutional transformation.",
-
-      "He currently serves as  Deputy Chief of Staff to the Governor of Lagos State, following his  tenure as Commissioner for Economic Planning and Budget, where  he led strategic policy development, fiscal planning, resource  allocation and state-wide performance management.",
-
-      "A Civil  Engineering graduate of the University of Benin, he also holds an  Executive MBA from IESE Business School, University of Navarra,  Spain, and has completed executive programmes at Harvard,  INSEAD, Wharton and Columbia. Widely respected for his  leadership and reform-driven approach, he has built a distinguished  career across both the private and public sectors.",
-    ],
+    name: "Babatunde Onigbanjo",
+    role: "Member, Technical & Programmes Committee",
+    photo: "/governance-images/Babatunde Onigbanjo.png",
+    bio: [],
   },
 ];
 
