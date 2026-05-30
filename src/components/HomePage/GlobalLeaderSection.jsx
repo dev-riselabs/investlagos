@@ -18,10 +18,10 @@ export const testimonials = [
   {
     id: 3,
     quote:
-      "The world pays attention to places that create opportunities, stories, and growth. Lagos stands out.",
-    name: "Folorunso Alakija",
-    title: "Business Leader",
-    image: "/Stella.png",
+      "The world is increasingly looking toward African stories, African talent, and African markets and Lagos sits at the center of that transformation.",
+    name: "Mo Abudu",
+    title: "CEO, Ebony Life Group",
+    image: "/Mo_Abudu.png",
   },
 ];
 

@@ -556,9 +556,7 @@ export default function AgendaPage() {
       <Reveal direction="down" duration={600}>
         <ProgrammeDownloadBar />
       </Reveal>
-      <Reveal direction="up">
-        <AgendaTimeline />
-      </Reveal>
+      <AgendaTimeline />
       <Reveal direction="up">
         <ContactCards />
       </Reveal>
