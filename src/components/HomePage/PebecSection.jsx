@@ -92,9 +92,9 @@ function PebecSection() {
         </div>
       </div>
       <div className="flex flex-col gap-4 md:flex-row md:items-center">
-        <img src="./PEBEC.jpg 1.png" alt="" className="h-20 max-w-60"/>
-        <p className="text-white font-medium text-lg md:text-xl font-jost">
-          2025 Winner | Ease of Doing Business | Best Subnational | Investment
+        <img src="./PEBEC.jpg 1.png" alt="" className="h-10 max-w-30"/>
+        <p className="text-white font-medium text-lg md:text-sm font-jost">
+          2025 Winner Ease of Doing Business Best Subnational Investment
           Environment
         </p>
       </div>
