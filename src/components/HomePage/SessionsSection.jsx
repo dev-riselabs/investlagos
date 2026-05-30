@@ -11,7 +11,10 @@ const sessions = [
     id: 2,
     speaker: "/Sanwolu.png",
   },
-  { id: 3, speaker: "/Marland.png" },
+  {
+    id: 3,
+    speaker: "/Marland.png",
+  },
   {
     id: 4,
     speaker: "/Sanwolu.png",
@@ -75,7 +78,7 @@ export default function SummitSessions() {
                 key={session.id}
                 className="min-w-0 flex-[0_0_100%] pl-6 md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
               >
-                <img src={session.speaker} alt="" />
+                <img src={session.speaker} />
               </div>
             ))}
           </div>
