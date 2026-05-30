@@ -4,10 +4,16 @@ function DealBookSection() {
   return (
     <section className="dealbook-bg flex flex-col px-4 py-8 md:px-10  lg:px-20 md:flex-row gap-2 md:gap-4 md:items-center">
       <div className="md:flex-1 ">
-        <img src="/lagos.png" alt="" className="max-h-130" />
+        <img
+          src="/Screenshot_20260530_135109_Drive.jpg"
+          alt=""
+          className="max-h-130"
+        />
       </div>
-      <div className="flex flex-col gap-6 max-w-sm md:items-center md:flex-1">
-        <h3 className="text-green100 font-jost font-medium text-2xl md:text-center md:text-4xl">Download Our Investment Deal Book</h3>
+      <div className="flex flex-col gap-6 max-w-xl md:items-center md:flex-1">
+        <h3 className="text-green100 font-jost font-medium text-2xl md:text-center md:text-4xl">
+          Download the Lagos State 2025 - 2030 Industrial Policy
+        </h3>
         <a
           href="/DealBook for Invest Lagos 3.0.pdf"
           download

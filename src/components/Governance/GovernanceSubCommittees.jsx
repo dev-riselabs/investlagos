@@ -25,21 +25,20 @@ const MailIcon = () => (
 
 /* ─── DATA ───────────────────────────────────────────────────────────────── */
 const financeMembers = [
-<<<<<<< HEAD
   {
     name: "Yomi Oluyomi",
     role: "Chair",
-    photo: "/governance/Yomi Oluyomi.png",
+    photo: "/governance-images/Yomi Oluyomi.png",
   },
   {
     name: "Ope George",
     role: "Member",
-    photo: "/governance/Ope George.png",
+    photo: "/governance-images/Ope George.png",
   },
   {
     name: "Biola Alabi",
     role: "Member",
-    photo: "/governance/Biola Alabi.png",
+    photo: "/governance-images/Biola Alabi.png",
   },
 ];
 
@@ -47,27 +46,27 @@ const mediaSmallCards = [
   {
     name: "Gbenga Omotosho",
     role: "Chair",
-    photo: "/governance/Gbenga Omotosho.png",
+    photo: "/governance-images/Gbenga Omotosho.png",
   },
   {
     name: "Charlotte Bailey",
     role: "Member, Media and Communications Department",
-    photo: "/governance/Charlotte Bailey (CWEIC).png",
+    photo: "/governance-images/Charlotte Bailey (CWEIC).png",
   },
   {
     name: "AQ Hamza (CWEIC)",
     role: "Member, Media and Communications Department",
-    photo: "/governance/AQ Hamza (CWEIC).png",
+    photo: "/governance-images/AQ Hamza (CWEIC).png",
   },
   {
     name: "Pride Azefor (CWEIC)",
     role: "Member, Media and Communications Department",
-    photo: "/governance/Pride Azefor (CWEIC).png",
+    photo: "/governance-images/Pride Azefor (CWEIC).png",
   },
   {
     name: "Sean Leno (CWEIC)",
     role: "Member, Media and Communications Department",
-    photo: "/governance/Sean Leno (CWEIC).png",
+    photo: "/governance-images/Sean Leno (CWEIC).png",
   },
 ];
 
@@ -75,27 +74,7 @@ const mediaBioCards = [
   {
     name: "Mr. Abdeen Bolaji Abimbola",
     role: "Member, Media, Communications & Publicity Sub-Committee",
-    photo: "/governance/Mr Abdeen Bolaji Abimbola.png",
-=======
-  { name: 'Mr. Yomi Oluyomi', role: 'Member', photo: '/governance-images/Yomi Oluyomi.png' },
-  { name: 'Mr. Ope George', role: 'Member', photo: '/governance-images/Ope George.png' },
-  { name: 'Ms. Biola Alabi', role: 'Member', photo: '/governance-images/Biola Alabi.png' },
-]
-
-const mediaSmallCards = [
-  { name: 'Mr. Gbenga Omotosho', role: 'Chair', photo: '/governance-images/Gbenga Omotosho.png' },
-  { name: 'Ms. Charlotte Bailey', role: 'Member, Media and Communications Department', photo: '/governance-images/Charlotte Bailey (CWEIC).png' },
-  { name: 'Mr. AQ Hamza', role: 'Member, Media and Communications Department', photo: '/governance-images/AQ Hamza (CWEIC).png' },
-  { name: 'Mr. Pride Azefor', role: 'Member, Media and Communications Department', photo: '/governance-images/Pride Azefor (CWEIC).png' },
-  { name: 'Mr. Sean Leno', role: 'Member, Media and Communications Department', photo: '/governance-images/Sean Leno (CWEIC).png' },
-]
-
-const mediaBioCards = [
-  {
-    name: 'Mr. Abdeen Bolaji Abimbola',
-    role: 'Member, Media, Communications & Publicity Sub-Committee',
-    photo: '/governance-images/Mr Abdeen Bolaji Abimbola.png',
->>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
+    photo: "/governance-images/Mr Abdeen Bolaji Abimbola.png",
     bio: [
       "Bolaji Abimbola is the Managing Director/CEO of Integrated Indigo, Limited,  one of Nigeria’s leading PR/Strategic Communications Consultancy firms. He has vast experience cutting across Public Relations, Advertising, Events &  Experiential Marketing. He worked with MC Seeks Associates, an Advertising  Agency, as a Copywriter/Client Service Executive. He also worked with  Consumer Goods & Services Ltd. before joining MediaCraft Associates as  Senior Executive/Business Development. He later joined BD Consult Limited as  a Media Relations Manager and rose to Head of Media Relations and Strategy.",
 
@@ -109,15 +88,9 @@ const mediaBioCards = [
     ],
   },
   {
-<<<<<<< HEAD
     name: "Mr Gboyega Akosile",
     role: "Member, Media, Communications & Publicity Sub-Committee",
-    photo: "/governance/Mr Gboyega Akosile.png",
-=======
-    name: 'Mr. Obinna Anyanwu',
-    role: 'Member, Media, Communications & Publicity Sub-Committee',
-    photo: '/governance-images/Obinna Anyanwu.png',
->>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
+    photo: "/governance-images/Mr Gboyega Akosile.png",
     bio: [
       "Mr. Gboyega Akosile is a seasoned journalist, theatre practitioner,  public relations expert, and entrepreneur with over two decades of  experience in journalism, media, and strategic communication. He  currently serves as Special Adviser on Media and Publicity to the  Governor of Lagos State, Mr. Babajide Sanwo-Olu, a position he  assumed on 13th March 2024.",
 
@@ -127,7 +100,7 @@ const mediaBioCards = [
   {
     name: "Mr Lami Adekola",
     role: "Member, Media, Communications & Publicity Sub-Committee",
-    photo: "/governance/Mr Lami Adekola.png",
+    photo: "/governance-images/Mr Lami Adekola.png",
     bio: [
       "Lami Adekola is a senior finance and public policy executive with  over two decades of leadership experience across banking,  investment, and economic development. He currently serves as  Director of Policy and Public Affairs at EnterpriseNGR, where he  plays a strategic role in shaping reforms that strengthen Nigeria’s  competitiveness as a global investment destination.",
 
@@ -139,7 +112,7 @@ const mediaBioCards = [
   {
     name: "Mrs. Nana Hauwa Adeeyo",
     role: "Member, Media, Communications & Publicity Sub-Committee",
-    photo: "/governance/Mrs. Nana Hauwa Adeeyo.png",
+    photo: "/governance-images/Mrs. Nana Hauwa Adeeyo.png",
     bio: [
       "Senior Special Assistant to the governor on Commerce Cooperatives Trade  and investment",
     ],
@@ -147,23 +120,17 @@ const mediaBioCards = [
 ];
 
 const mediaBottomCards = [
-<<<<<<< HEAD
   {
     name: "Mr. Lami Adekola",
     role: "Member, Media, Communications & Publicity Sub-Committee",
-    photo: "/governance/Mr Lami Adekola.png",
+    photo: "/governance-images/Mr Lami Adekola.png",
   },
   {
     name: "Mrs. Mary Aderinola Ojulari",
     role: "Member, Media, Communications & Publicity Sub-Committee",
-    photo: "/governance/Mrs Mary Aderinola Ojulari.png",
+    photo: "/governance-images/Mrs Mary Aderinola Ojulari.png",
   },
 ];
-=======
-  { name: 'Mr. Lami Adekola', role: 'Member, Media, Communications & Publicity Sub-Committee', photo: '/governance-images/Mr Lami Adekola.png' },
-  { name: 'Mrs. Mary Aderinola Ojulari', role: 'Member, Media, Communications & Publicity Sub-Committee', photo: '/governance-images/Mrs Mary Aderinola Ojulari.png' },
-]
->>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
 
 /* ─── MEMBER CARD (same size as LOC card, no bio) ────────────────────────── */
 function MemberCard({ name, role, photo }) {

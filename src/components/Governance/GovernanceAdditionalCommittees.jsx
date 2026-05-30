@@ -26,15 +26,9 @@ const MailIcon = () => (
 /* ─── DATA: Technical & Programmes Committee ─────────────────────────────── */
 const techBioTop = [
   {
-<<<<<<< HEAD
     name: "Dr. Toyosi Akerele-Ogunsiji",
     role: "Co- Chair, Technical and Programmes Committee",
-    photo: "/governance/Dr. Toyosi Akerele-Ogunsiji.png",
-=======
-    name: 'Dr. Toyosi Akerele-Ogunsiji',
-    role: 'Member, Technical & Programmes Committee',
-    photo: '/governance-images/Dr. Toyosi Akerele-Ogunsiji.png',
->>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
+    photo: "/governance-images/Dr. Toyosi Akerele-Ogunsiji.png",
     bio: [
       "Dr. Toyosi Akerele-Ogunsiji is the Founder of Rise Networks and Rise  Interactive Studios, Africa, and a globally respected multidisciplinary  professional in Artificial Intelligence for Development, Media  Innovation, Youth Development, EdTech and Public Policy. Named  by Forbes as one of the 20 Most Powerful Young Women in Africa  and listed among the Top 30 Global Artificial Intelligence  Ambassadors by Swiss Cognitive, she also serves on the UNDP  #AI4Dev Reference Group. She holds a master’s in public  administration from the Harvard Kennedy School, has completed  Executive Education at the University of Cambridge, University of  New Hampshire and Pan-Atlantic University, an undergrad degree in  Civil Law.",
 
@@ -48,10 +42,9 @@ const techBioTop = [
     ],
   },
   {
-<<<<<<< HEAD
     name: "Dr. Olamide Adekunle Okulaja",
     role: "Member, Technical & Programmes Committee",
-    photo: "/governance/Dr. Olamide Adekunle Okulaja.png",
+    photo: "/governance-images/Dr. Olamide Adekunle Okulaja.png",
     principle:
       "GUIDING PRINCIPLES  Institutional coherence.   Financial sustainability.   Measurable scale.",
     appointments: [
@@ -71,11 +64,6 @@ const techBioTop = [
       "Governance and institutional reform ",
       "Digital health and interoperability",
     ],
-=======
-    name: 'Dr. Olamide Adekunle Okulaja',
-    role: 'Member, Technical & Programmes Committee',
-    photo: '/governance-images/Dr. Olamide Adekunle Okulaja.png',
->>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
     bio: [
       "Dr. Olamide Okulaja serves as Technical Adviser to the Honourable  Commissioner at the Lagos State Ministry of Commerce, Cooperatives, Trade  and Investment, and at the Lagos State Ministry of Health. Across both portfolios,  his work supports the development of durable institutional architecture and the  design of mechanisms that allow markets to function more equitably, public  systems to operate more efficiently, and financing to reach productive actors at  scale. He combines training in medicine and health economics with applied  experience in governance reform, financing design, and digital transformation.",
     ],
@@ -83,11 +71,10 @@ const techBioTop = [
 ];
 
 const techMembers = [
-<<<<<<< HEAD
   {
     name: "Mrs. Ajibola Yewande Ponnle",
     role: "Member, Technical and Programmes Committee",
-    photo: "/governance/Mrs. Ajibola Yewande Ponnle.png",
+    photo: "/governance-images/Mrs. Ajibola Yewande Ponnle.png",
     bio: [
       "Ajibola Ponnle is a transformational leader with a cross-sector background in economics, organisational psychology, and public administration. She is a Fellow of the Institute of Chartered Accountants of Nigeria and the Chartered Institute of Personnel Management, and a certified leadership coach. Her career covers both public and private sectors, with expertise in finance, human capital management, and organisational development.",
       "She is the Founder and CEO of Human Investment Group and previously served as Honourable Commissioner for Establishments, Training, and Pensions in Lagos State. Her professional experience includes roles at Arthur Andersen (now KPMG) and British American Tobacco. ",
@@ -97,7 +84,7 @@ const techMembers = [
   {
     name: "Babatunde Onigbanjo",
     role: "Member, Technical & Programmes Committee",
-    photo: "/governance/Babatunde Onigbanjo.png",
+    photo: "/governance-images/Babatunde Onigbanjo.png",
     bio: [],
   },
 ];
@@ -106,18 +93,7 @@ const techBioBottom = [
   {
     name: "Peju Ibekwe",
     role: "Member, Technical & Programmes Committee",
-    photo: "/governance/Peju Ibekwe.png",
-=======
-  { name: 'Mrs. Adesuwa Ladoja', role: 'Member, Technical & Programmes Committee', photo: '/governance-images/Adesuwa Ladoja.png' },
-  { name: 'Mr. Charles Edosomwan', role: 'Member, Technical & Programmes Committee', photo: '/governance-images/Charles Edosomwan.png' },
-]
-
-const techBioBottom = [
-  {
-    name: 'Mr. Ayo Otuyalo',
-    role: 'Member, Technical & Programmes Committee',
-    photo: '/governance-images/Ayo Otuyalo.png',
->>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
+    photo: "/governance-images/Peju Ibekwe.png",
     bio: [
       "Commonwealth Enterprise and Investment Olapeju Ibekwe is a distinguished social impact leader and sustainability advocate, widely recognised for her visionary leadership in advancing the Sustainable Development Goals (SDGs) across Africa. As the CEO of Sterling One Foundation, Olapeju has led transformative initiatives that address critical challenges in healthcare, education, gender equality, climate action, and food security. Under her guidance, the Foundation has emerged as a catalyst for systemic change, leveraging strategic partnerships and innovative solutions to create measurable and sustainable impact.",
 
@@ -131,15 +107,9 @@ const techBioBottom = [
     ],
   },
   {
-<<<<<<< HEAD
     name: "Obinna Anyanwu",
     role: "Member, Technical & Programmes Committee",
-    photo: "/governance/Obinna Anyanwu.png",
-=======
-    name: 'Mr. Babatunde Onigbanjo',
-    role: 'Member, Technical & Programmes Committee',
-    photo: '/governance-images/Babatunde Onigbanjo.png',
->>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
+    photo: "/governance-images/Obinna Anyanwu.png",
     bio: [
       "Obinna has distinguished himself in his chosen career with great academic and professional qualifications from prestigious institutions across the world.",
 
@@ -147,35 +117,24 @@ const techBioBottom = [
     ],
   },
   {
-<<<<<<< HEAD
     name: "Ayo Otuyalo",
     role: "Member, Technical & Programmes Committee",
-    photo: "/governance/Ayo Otuyalo.png",
+    photo: "/governance-images/Ayo Otuyalo.png",
     bio: [],
-=======
-    name: 'Mr. Ayiri Oladunmoye',
-    role: 'Member, Technical & Programmes Committee',
-    photo: '/governance-images/Ayiri Oladunmoye.png',
-    bio: [
-      'Ayiri Oladunmoye is an experienced executive with a strong background in finance, business development and economic strategy. He has held senior leadership roles across financial services and consulting firms in Nigeria and abroad.',
-      'He advises governments and corporates on investment promotion, market entry and economic policy design.',
-    ],
->>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
   },
 ];
 
 /* ─── DATA: Other sub-committees ─────────────────────────────────────────── */
 const legalMembers = [
-<<<<<<< HEAD
   {
     name: "Bukola Odoe",
     role: "Chair, Legal & Compliance Sub-Committee",
-    photo: "/governance/Bukola Odoe.png",
+    photo: "/governance-images/Bukola Odoe.png",
   },
   {
     name: "Michael Ojomo",
     role: "Member, Legal & Compliance Sub-Committee",
-    photo: "/governance/Michael Ojomo.png",
+    photo: "/governance-images/Michael Ojomo.png",
   },
 ];
 
@@ -183,12 +142,12 @@ const eventMembers = [
   {
     name: "Ayiri Oladunmoye",
     role: "Co-Chair, Events and Guest Management Committee",
-    photo: "/governance/Ayiri Oladunmoye.png",
+    photo: "/governance-images/Ayiri Oladunmoye.png",
   },
   {
     name: "Biola Alabi",
     role: "Co-Chair, Events and Guest Management Committee",
-    photo: "/governance/Biola Alabi.png",
+    photo: "/governance-images/Biola Alabi.png",
   },
 ];
 
@@ -196,30 +155,14 @@ const logisticsMembers = [
   {
     name: "Mr. Taiye Nelson",
     role: "Chair",
-    photo: "/governance/Mr. Taiye Nelson.png",
+    photo: "/governance-images/Mr. Taiye Nelson.png",
   },
   {
     name: "Kunle Fagbemi",
     role: "Member",
-    photo: "/governance/Kunle Fagbemi.png",
+    photo: "/governance-images/Kunle Fagbemi.png",
   },
 ];
-=======
-  { name: 'Ms. Lola Talabi-Oni', role: 'Member, Legal & Compliance Sub-Committee', photo: '/governance-images/Ms Lola Talabi-Oni.png' },
-  { name: 'Mr. Gboyega Akosile', role: 'Member, Legal & Compliance Sub-Committee', photo: '/governance-images/Mr Gboyega Akosile.png' },
-]
-
-const eventMembers = [
-  { name: 'Mrs. Ajibola Yewande Ponnle', role: 'Member, Event & Guest Management Committee', photo: '/governance-images/Mrs. Ajibola Yewande Ponnle.png' },
-  { name: 'Mrs. Moji Hunponu-Wusu', role: 'Member, Event & Guest Management Committee', photo: '/governance-images/Mrs. Moji Hunponu-Wusu.png' },
-]
-
-const logisticsMembers = [
-  { name: 'Mr. Kunle Fagbemi', role: 'Member, Logistics, Security, Protocol & Transportation Sub-Committee', photo: '/governance-images/Kunle Fagbemi.png' },
-  { name: 'Mr. Akintayo Sanwo-Olu', role: 'Member, Logistics, Security, Protocol & Transportation Sub-Committee', photo: '/governance-images/Akintayo Sanwo-Olu.png' },
-  { name: 'Mr. Taiye Nelson', role: 'Member, Logistics, Security, Protocol & Transportation Sub-Committee', photo: '/governance-images/Mr. Taiye Nelson.png' },
-]
->>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
 
 /* ─── MEMBER CARD (same size as LOC card, no bio) ────────────────────────── */
 function MemberCard({ name, role, photo }) {
@@ -269,7 +212,7 @@ function BioCard({
 }) {
   return (
     <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 h-full">
-      <div className="overflow-hidden rounded-t-xl il-card-media">
+      <div className="overflow-hidden rounded-t-xl bg-slate150 il-card-media">
         <img
           src={photo}
           alt={name}
