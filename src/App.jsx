@@ -22,6 +22,7 @@ const AboutPage             = lazy(() => import('./pages/AboutPage'))
 const AdministrationPage    = lazy(() => import('./pages/AdministrationPage'))
 const PolicyPage            = lazy(() => import('./pages/PolicyPage'))
 const MediaKitPage          = lazy(() => import('./pages/MediaKitPage'))
+const MaintenancePage       = lazy(() => import('./pages/MaintenancePage'))
 
 // Admin console — kept in its own group of chunks; never loaded on
 // the public marketing site.
@@ -68,6 +69,9 @@ function App() {
               <Route path="media/kits" element={<MediaKitPage />} />
               <Route path="pressroom/publications" element={<PublicationsPage />} />
             </Route>
+
+            {/* Standalone maintenance page (no site chrome) */}
+            <Route path="/maintenance" element={<MaintenancePage />} />
 
             {/* Admin auth (public) */}
             <Route path="/admin/login" element={<AdminLogin />} />
