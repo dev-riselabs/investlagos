@@ -51,7 +51,7 @@ const cweicPartners = [
   { name: 'Ms. Charlotte Bailey', role: 'CWEIC Partner', photo: '/governance-images/Charlotte Bailey (CWEIC).png' },
   { name: 'Ms. Megan Wright', role: 'CWEIC Partner', photo: '/governance-images/Ms.Megan Wright (CWEIC).png' },
   { name: 'Mr. Pride Azefor', role: 'CWEIC Partner', photo: '/governance-images/Pride Azefor (CWEIC).png' },
-  { name: 'Mr. Sean Leno', role: 'CWEIC Partner', photo: '/governance-images/Sean Leno (CWEIC).png' },
+  { name: 'Mr. Sean Leno', role: 'CWEIC Partner', photo: '/governance-images/Sean Leno.jpeg' },
 ]
 
 /* ─── COMPONENTS ────────────────────────────────────────────────────────── */

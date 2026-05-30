@@ -171,7 +171,7 @@ function MemberCard({ name, role, photo }) {
     <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 h-full">
       <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150">
         <img
-          src={photo ? photo : "/governance-images/Sean Leno (CWEIC).png"}
+          src={photo ? photo : "/governance-images/Sean Leno.jpeg"}
           alt={name}
           className="block w-full object-cover object-top max-h-100 h-full"
           loading="lazy"

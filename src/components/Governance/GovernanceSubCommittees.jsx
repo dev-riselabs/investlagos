@@ -66,7 +66,7 @@ const mediaSmallCards = [
   {
     name: "Sean Leno (CWEIC)",
     role: "Member, Media and Communications Department",
-    photo: "/governance-images/Sean Leno (CWEIC).png",
+    photo: "/governance-images/Sean Leno.jpeg",
   },
 ];
 
