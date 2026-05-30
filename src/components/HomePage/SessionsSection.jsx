@@ -5,28 +5,44 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const sessions = [
   {
     id: 1,
+<<<<<<< HEAD
+    speaker: "/speakers/Mrs. Folashade KaosaratBada Ambrose-Medebem.png",
+=======
     speaker:"",
+>>>>>>> 55704bac2ebb013627015976db4c24e11c1e9eba
     name: "Mrs. Folashade Ambrose-Medebem",
     role: "Honourable Commissioner",
     title: "Welcome Address",
   },
   {
     id: 2,
+<<<<<<< HEAD
+    speaker: "/speakers/MR_Babajide_Olusola_Sanwo_Olu.png",
+=======
     speaker:"",
+>>>>>>> 55704bac2ebb013627015976db4c24e11c1e9eba
     name: "Mr. Babajide Sanwo-Olu",
     role: "Governor of Lagos State",
     title: "Opening Address",
   },
   {
     id: 3,
+<<<<<<< HEAD
+    speaker: "/speakers/LORD MARLAND.png",
+=======
     speaker:"",
+>>>>>>> 55704bac2ebb013627015976db4c24e11c1e9eba
     name: "Rt. Hon. Lord Marland",
     role: "Chair, CWIC",
     title: "Opening Remarks",
   },
   {
     id: 4,
+<<<<<<< HEAD
+    speaker: "/speakers/Mr. Osahon Akpata.png",
+=======
     speaker:"",
+>>>>>>> 55704bac2ebb013627015976db4c24e11c1e9eba
     name: "Guest Speaker",
     role: "Industry Leader",
     title: "Keynote Session",
@@ -99,24 +115,28 @@ export default function SummitSessions() {
                   />
 
                   {/* Speaker Image Overlay */}
-                  <div className="absolute bottom-0 left-0 z-10">
+                  <div className="absolute bottom-4 left-2.5 z-10">
                     <img
                       src={session.speaker}
                       alt={session.name}
-                      className="h-40 w-36 rounded-tr-2xl object-cover shadow-xl"
+                      className="h-70 w-50 rounded-2xl object-cover shadow-xl"
                     />
                   </div>
 
                   {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-5">
-                    <div className="ml-36">
-                      <p className="text-sm text-amber-300">{session.title}</p>
+                  <div className="absolute bottom-4 left-2.5 right-auto bg-linear-to-t from-black/70 via-black/20 to-transparent backdrop-blur pl-3 pb-2 z-20 font-jost w-50 rounded-b-2xl">
+                    <div className="">
+                      <p className="text-sm text-yellow font-medium">
+                        {session.title}
+                      </p>
 
-                      <h3 className="mt-2 text-lg font-bold text-white">
+                      <h3 className="mt-0.5 text-sm font-bold text-white uppercase">
                         {session.name}
                       </h3>
 
-                      <p className="text-sm text-white/80">{session.role}</p>
+                      <p className="text-xs text-white/90 uppercase">
+                        {session.role}
+                      </p>
                     </div>
                   </div>
                 </div>

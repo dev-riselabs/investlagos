@@ -51,9 +51,9 @@ export default function SummitAgenda() {
             Not just conversations, decisions that move markets.
           </p>
 
-          <button className="mt-8 flex items-center gap-4 text-sm md:text-lg font-jost font-semibold uppercase tracking-wider text-white">
+          <button className="mt-8 flex items-center justify-start  gap-4 text-sm md:text-lg font-jost font-semibold uppercase tracking-wider text-white">
             View Full Detailed Programme
-            <span className="h-px w-12 bg-white" />
+            <span className="h-px w-6 sm:w-12 bg-white" />
           </button>
         </div>
 
@@ -62,9 +62,9 @@ export default function SummitAgenda() {
           {agendaData.map((agenda) => (
             <div
               key={agenda.day}
-              className="rounded-4xl bg-black/19 p-8 md:p-13 text-white"
+              className="rounded-4xl bg-black/19 p-8 md:p-13 text-white flex flex-col gap-8"
             >
-              <div className="mb-8 flex items-center justify-between">
+              <div className="flex items-center justify-between">
                 <span className="rounded-full bg-white/20 px-3 py-1 text-[10px] font-medium tracking-widest">
                   {agenda.day}
                 </span>
@@ -77,14 +77,14 @@ export default function SummitAgenda() {
                 </div>
               </div>
 
-              <div className="mb-8">
+              <div className="">
                 <h3 className="text-4xl font-bold">{agenda.date}</h3>
               </div>
 
               <div className="space-y-4">
                 {agenda.activities.map((item, index) => (
                   <div key={item} className="flex items-center gap-4">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 shrink-0">
                       {index % 3 === 0 ? (
                         <CalendarDays size={16} />
                       ) : index % 3 === 1 ? (
@@ -137,6 +137,7 @@ export default function SummitAgenda() {
 
           <div className="space-y-4">
             {[
+              "Tolaram / Lagos Free Zone",
               "Lekki Free Trade Zone",
               "Dangote Fertilizer Plant",
               "Dangote Petroleum Refinery",

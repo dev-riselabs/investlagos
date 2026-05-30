@@ -1,6 +1,6 @@
 /* 1. @import rules MUST come first (CSS spec) */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap");
+@import "tailwindcss";
 
 /* 2. Local font faces */
 @font-face {
@@ -34,7 +34,6 @@
   font-style: italic;
   font-display: swap;
 }
-
 
 /* 2. Configure Tailwind v4 to map 'font-sans' utility classes to Jost */
 @theme {
@@ -79,37 +78,37 @@
 }
 
 .hero-bg {
-  background: url('/hero-bg.png');
+  background: url("/hero-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .advantage-bg {
-  background: url('/advantage-bg.png');
+  background: url("/advantage-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .dealbook-bg {
-  background: url('/deal-book-bg.png');
+  background: url("/deal-book-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .invest-bg {
-  background: url('/invest-bg.png');
+  background: url("/invest-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .future-bg {
-  background: url('/bg_third_mainland_bridge.png');
+  background: url("/bg_third_mainland_bridge.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .skyline-bg {
-  background: url('/skyline-bg.png');
+  background: url("/skyline-bg.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top;
@@ -164,11 +163,17 @@ button {
 
 /* ─── Route change transition (used by <PageTransition>) ─── */
 @keyframes ilPageEnter {
-  0%   { opacity: 0; transform: scale(0.985) translateY(8px); }
-  100% { opacity: 1; transform: none; }
+  0% {
+    opacity: 0;
+    transform: scale(0.985) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 .page-transition-in {
-  animation: ilPageEnter 480ms cubic-bezier(.22, .61, .36, 1);
+  animation: ilPageEnter 480ms cubic-bezier(0.22, 0.61, 0.36, 1);
   will-change: opacity, transform;
 }
 
@@ -178,31 +183,49 @@ button {
    surfaces (white, transparent, slate, gray) are excluded so dropdown
    triggers, filter pills and icon-only chrome stay calm. */
 @keyframes ilBtnPulse {
-  0%   { box-shadow: 0 0 0 0   rgba(16, 168, 146, 0.55); }
-  70%  { box-shadow: 0 0 0 10px rgba(16, 168, 146, 0); }
-  100% { box-shadow: 0 0 0 0   rgba(16, 168, 146, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 168, 146, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 168, 146, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 168, 146, 0);
+  }
 }
-button[class*="bg-"]:not(:disabled):not([class*="bg-white"]):not([class*="bg-transparent"]):not([class*="bg-slate"]):not([class*="bg-gray"]):hover,
-a[class*="bg-"]:not([class*="bg-white"]):not([class*="bg-transparent"]):not([class*="bg-slate"]):not([class*="bg-gray"]):hover {
+button[class*="bg-"]:not(:disabled):not([class*="bg-white"]):not(
+    [class*="bg-transparent"]
+  ):not([class*="bg-slate"]):not([class*="bg-gray"]):hover,
+a[class*="bg-"]:not([class*="bg-white"]):not([class*="bg-transparent"]):not(
+    [class*="bg-slate"]
+  ):not([class*="bg-gray"]):hover {
   animation: ilBtnPulse 1.2s ease-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .page-transition-in { animation: none; }
-  button:hover, a:hover { animation: none !important; }
+  .page-transition-in {
+    animation: none;
+  }
+  button:hover,
+  a:hover {
+    animation: none !important;
+  }
 }
 
 /* ─── Card hover effect ─── */
 /* Apply .il-card to any card root element for lift + green-tinted shadow on hover.
    Apply .il-card-media to the overflow-hidden image wrapper inside the card for zoom. */
 .il-card {
-  transition: transform 300ms cubic-bezier(.22,.61,.36,1),
-              box-shadow 300ms cubic-bezier(.22,.61,.36,1);
+  transition:
+    transform 300ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 300ms cubic-bezier(0.22, 0.61, 0.36, 1);
   will-change: transform;
 }
 .il-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(9, 149, 103, 0.13), 0 4px 12px rgba(0, 0, 0, 0.07);
+  box-shadow:
+    0 12px 30px rgba(9, 149, 103, 0.13),
+    0 4px 12px rgba(0, 0, 0, 0.07);
 }
 .il-card-media img {
   transition: transform 480ms ease;
@@ -212,7 +235,14 @@ a[class*="bg-"]:not([class*="bg-white"]):not([class*="bg-transparent"]):not([cla
   transform: scale(1.06);
 }
 @media (prefers-reduced-motion: reduce) {
-  .il-card { transition: none; }
-  .il-card:hover { transform: none; box-shadow: inherit; }
-  .il-card:hover .il-card-media img { transform: none; }
+  .il-card {
+    transition: none;
+  }
+  .il-card:hover {
+    transform: none;
+    box-shadow: inherit;
+  }
+  .il-card:hover .il-card-media img {
+    transform: none;
+  }
 }
