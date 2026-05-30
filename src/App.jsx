@@ -18,6 +18,7 @@ import AdminSignup from './admin/pages/AdminSignup'
 import AdminDashboard from './admin/pages/AdminDashboard'
 import AdminPublications from './admin/pages/AdminPublications'
 import AdminRegistrations from './admin/pages/AdminRegistrations'
+import AdminSubscribers from './admin/pages/AdminSubscribers'
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
             <Route index element={<AdminDashboard />} />
             <Route path="publications" element={<AdminPublications />} />
             <Route path="registrations" element={<AdminRegistrations />} />
+            <Route path="subscribers" element={<AdminSubscribers />} />
           </Route>
         </Routes>
       </AuthProvider>

@@ -91,6 +91,15 @@ export function submitRegistration(formData) {
 }
 
 /**
+ * Subscribe to Invest Lagos updates (newsletter + publication notifications).
+ * Accepts the camelCase shape produced by the SubscribeSection form; Laravel's
+ * StoreSubscriberRequest normalizes the keys on its side.
+ */
+export function subscribe(formData) {
+  return request("/subscribers", { method: "POST", body: formData });
+}
+
+/**
  * Fetch the public list of publications. Optional filters:
  *   { q, category, year, per_page }
  * Returns Laravel's paginator payload: { data, current_page, last_page, ... }
@@ -214,8 +223,27 @@ export function adminRegistrationStats() {
   return request("/admin/registrations/stats", { auth: true });
 }
 
+/* ─────────────────── Admin: subscribers ─────────────────── */
+
+export function adminListSubscribers(params = {}) {
+  return request(`/admin/subscribers${buildQuery(params)}`, { auth: true });
+}
+
+export function adminGetSubscriber(id) {
+  return request(`/admin/subscribers/${id}`, { auth: true });
+}
+
+export function adminDeleteSubscriber(id) {
+  return request(`/admin/subscribers/${id}`, { method: "DELETE", auth: true });
+}
+
+export function adminSubscriberStats() {
+  return request("/admin/subscribers/stats", { auth: true });
+}
+
 export const api = {
   submitRegistration,
+  subscribe,
   fetchPublications,
   fetchPublicationFilters,
   adminLogin,
@@ -232,4 +260,8 @@ export const api = {
   adminUpdateRegistration,
   adminDeleteRegistration,
   adminRegistrationStats,
+  adminListSubscribers,
+  adminGetSubscriber,
+  adminDeleteSubscriber,
+  adminSubscriberStats,
 };

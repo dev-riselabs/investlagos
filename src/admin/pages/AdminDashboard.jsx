@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FiFileText, FiUsers } from 'react-icons/fi'
+import { FiBell, FiFileText, FiUsers } from 'react-icons/fi'
 import { adminListPublications, adminRegistrationStats } from '../../lib/api'
 import { Alert, Card } from '../ui'
 
@@ -109,6 +109,16 @@ export default function AdminDashboard() {
               <div>
                 <p className="text-sm font-semibold text-green200">Review registrations</p>
                 <p className="text-xs text-slate-500">View and update attendees.</p>
+              </div>
+            </Link>
+            <Link
+              to="/admin/subscribers"
+              className="flex items-center gap-3 rounded-md border border-slate-200 p-4 transition hover:border-green100 hover:bg-green700"
+            >
+              <FiBell className="h-5 w-5 text-green100" />
+              <div>
+                <p className="text-sm font-semibold text-green200">Manage subscribers</p>
+                <p className="text-xs text-slate-500">View and remove newsletter subscribers.</p>
               </div>
             </Link>
           </div>
