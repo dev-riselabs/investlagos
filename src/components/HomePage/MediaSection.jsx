@@ -5,32 +5,35 @@ const news = [
   {
     id: 1,
     category: "COMMERCE",
-    image: "/meeting.jpg",
+    image: "/Sanwoolu and CWEIC.jpeg",
     title:
-      "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
+      "CWEIC CEO And Lagos State Governor Announce Lagos Trade And Investment Summit",
     description:
       "Lagos State Government has unveiled its much-awaited Lagos Investment Deal Book, an unprecedented compendium of de-risked projects.",
     border: "border-red-500",
+    url: "https://www.cweic.org/cweic-ceo-and-lagos-state-governor-announce-lagos-trade-and-investment-summit/",
   },
   {
     id: 2,
     category: "COMMERCE",
     image: "/Century Economy.png",
     title:
-      "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
+      "Lagos pitches investment opportunities at summit",
     description:
       "Lagos State Government has unveiled its much-awaited Lagos Investment Deal Book, an unprecedented compendium of de-risked projects.",
     border: "border-blue-500",
+    url:"https://guardian.ng/business-services/lagos-pitches-investment-opportunities-at-summit/"
   },
   {
     id: 3,
     category: "COMMERCE",
-    image: "/Vision for a 21st-Century Economy.png",
+    image: "/Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy.png",
     title:
       "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
     description:
       "Lagos State Government has unveiled its much-awaited Lagos Investment Deal Book, an unprecedented compendium of de-risked projects.",
     border: "border-yellow-400",
+    url:"https://lagosstate.gov.ng/news/all/view/686ece795e4c9d6cecaf061e",
   },
   {
     id: 4,

@@ -11,7 +11,7 @@ function DealBookSection() {
         />
       </div>
       <div className="flex flex-col gap-6 max-w-xl md:items-center md:flex-1">
-        <h3 className="text-green100 font-jost font-medium text-2xl md:text-center md:text-4xl">
+        <h3 className=" font-jost font-medium text-1xl md:text-center md:text-xl">
           Download the Lagos State 2025 - 2030 Industrial Policy
         </h3>
         <a

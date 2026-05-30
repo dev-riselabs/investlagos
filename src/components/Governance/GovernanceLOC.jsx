@@ -115,7 +115,7 @@ const GovernanceLOC = () => {
           <h2 className="text-xl font-bold text-green400 font-jost sm:text-2xl lg:text-[28px]">
             Local Organising Committee (LOC)
           </h2>
-          <p className="mt-2 text-sm text-mint">Committee Members</p>
+          {/* <p className="mt-2 text-sm text-mint">Committee Members</p> */}
         </div>
 
         {/* Cards grid */}

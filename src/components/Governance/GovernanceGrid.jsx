@@ -16,7 +16,7 @@ const MailIcon = () => (
 
 /* ─── DATA ─────────────────────────────────────────────────────────────── */
 const committeeMembers = [
-  { name: 'Mr. Babatunde Onigbanjo', role: 'Member, Local Organising Committee', photo: '/governance-images/Babatunde Onigbanjo.png' },
+  { name: 'Mr. Babatunde Onigbanjo', role: 'Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment of Lagos State Government & Member, Technical & Programmes Committee', photo: '/governance-images/Babatunde Onigbanjo.png' },
   { name: 'Mr. Ope George', role: 'Member, Local Organising Committee', photo: '/governance-images/Ope George.png' },
   { name: 'Mrs. Solape Hammond', role: 'Member, Local Organising Committee', photo: '/governance-images/Solape Hammond.png' },
   { name: 'Mrs. Adesuwa Ladoja', role: 'Member, Local Organising Committee', photo: '/governance-images/Adesuwa Ladoja.png' },

@@ -26,7 +26,7 @@ const MailIcon = () => (
 const locMembers = [
   {
     name: "Mr. Babatunde Onigbanjo",
-    role: "Member, Local Organising Committee",
+    role: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment of Lagos State Government & Member, Technical & Programmes Committee",
     photo: "/governance-images/Babatunde Onigbanjo.png",
   },
   {
