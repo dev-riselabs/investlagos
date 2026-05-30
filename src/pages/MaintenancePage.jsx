@@ -106,7 +106,7 @@ export default function MaintenancePage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <LuClock className="mt-0.5 h-5 w-5 flex-shrink-0 text-green50" />
-                    <span>Expected downtime: a few hours.</span>
+                    <span>Expected downtime: 60 minutes.</span>
                   </li>
                 </ul>
               </Reveal>
@@ -158,10 +158,20 @@ export default function MaintenancePage() {
                 <p className="mt-6 text-xs leading-relaxed text-white/60">
                   For urgent enquiries, please reach out to{' '}
                   <a
-                    href="mailto:info@investlagos.gov.ng"
+                    href="mailto:investinlagos@lagosmccti.com"
                     className="font-semibold text-green50 hover:underline"
                   >
-                    info@investlagos.gov.ng
+                    investinlagos@lagosmccti.com
+                  </a>
+                  .
+                </p>
+                <p className="mt-6 text-xs leading-relaxed text-white/60">
+                  For urgent enquiries, please reach out to{' '}
+                  <a
+                    href="tel:+2347076623338"
+                    className="font-semibold text-green50 hover:underline"
+                  >
+                    +234.707.662.3338
                   </a>
                   .
                 </p>
