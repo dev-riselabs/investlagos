@@ -15,7 +15,7 @@ const StreamSection = () => {
           showcases, strategic conversations and landmark partnerships shaping
           the future of investment and economic transformation in Lagos.
         </p>
-        <button
+        <a href="https://www.youtube.com/@invest-lagos" target='_blank'
           className={`p-1.5 md:p-2.5 pl-4 md:px-8 flex items-center gap-2 md:gap-4 rounded-sm bg-red `}
         >
           <span
@@ -27,7 +27,7 @@ const StreamSection = () => {
           <div className="bg-white/20 backdrop-blur-md backdrop-brightness-100 rounded-sm flex w-8 h-8 md:w-9 md:h-9 items-center justify-center ">
             <FaPlay className={`w-4 h-4 md:w-5 md:h-5 text-white`} />
           </div>
-        </button>
+        </a>
       </div>
     </section>
   );

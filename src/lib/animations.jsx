@@ -438,7 +438,10 @@ function FoldStackItem({ children, index, total, topOffset }) {
     // visible (pinned at `top`) while the user scrolls through a distance
     // equal to the section's own height before the next card appears.
     const applyScrollBudget = () => {
-      outer.style.paddingBottom = `${inner.offsetHeight}px`
+      // Use only 15 % of the section height as scroll budget — just enough
+      // for the section to stay fully pinned and readable before the next
+      // card slides in, without creating a visible blank gap.
+      outer.style.paddingBottom = `${Math.round(inner.offsetHeight * 0.19)}px`
     }
     applyScrollBudget()
     const ro = new ResizeObserver(applyScrollBudget)
