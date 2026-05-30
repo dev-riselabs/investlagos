@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           {/* ── Navigation links ── */}
-          <ul className="mt-8 flex flex-wrap justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
+          <ul className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
             {footerLinks.map((l) => (
               <li
                 key={l}

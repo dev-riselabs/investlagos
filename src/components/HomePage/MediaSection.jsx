@@ -5,7 +5,7 @@ const news = [
   {
     id: 1,
     category: "COMMERCE",
-    image: "https://images.unsplash.com/photo-1573164574572-cb89e39749b4",
+    image: "/meeting.jpg",
     title:
       "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
     description:
@@ -15,7 +15,7 @@ const news = [
   {
     id: 2,
     category: "COMMERCE",
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+    image: "/Century Economy.png",
     title:
       "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
     description:
@@ -25,7 +25,7 @@ const news = [
   {
     id: 3,
     category: "COMMERCE",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    image: "/Vision for a 21st-Century Economy.png",
     title:
       "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
     description:
@@ -35,7 +35,7 @@ const news = [
   {
     id: 4,
     category: "COMMERCE",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    image: "/meeting.jpg",
     title: "Another Investment Story",
     description: "Additional article for demonstrating carousel movement.",
     border: "border-green-500",
