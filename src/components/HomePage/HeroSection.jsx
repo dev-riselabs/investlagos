@@ -18,9 +18,9 @@ const HeroSection = () => {
   return (
     <section id="hero" className="relative overflow-hidden bg-green100">
       <div className="bg-white! rounded-4xl hero-bg flex flex-col gap-10 md:gap-20 justify-center px-4 md:px-10 lg:px-20 py-10 md:py-20 text-center lg:py-25">
-        <p className="mb-4 text-[10px] sm:text-xs font-bold font-jost uppercase tracking-[6px] text-black text-center">
-          8th to 10th, June 2026 | eko hotel & Suites, Victoria Island, Lagos,
-          Nigeria
+        <p className="mb-4 text-[10px] sm:text-xs font-bold font-jost  tracking-[6px] text-black text-center">
+          8th to 10th, <span className="uppercase">June 2026 | eko hotel & Suites, Victoria Island, Lagos,
+          Nigeria</span> 
         </p>
         <div className="flex flex-col gap-8 md:gap-15 items-start">
           <div className="flex flex-col gap-3 md:gap-6 items-start">
