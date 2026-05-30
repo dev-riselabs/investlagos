@@ -16,12 +16,12 @@ const GovernancePage = () => {
           <GovernanceBanner />
         </Reveal>
       </Spotlight>
-      <Reveal direction="up"><GovernanceLeadership /></Reveal>
-      <Reveal direction="up"><GovernanceLOC /></Reveal>
-      <Reveal direction="up"><GovernanceSubCommittees /></Reveal>
-      <Reveal direction="up"><GovernanceAdditionalCommittees /></Reveal>
-      <Reveal direction="up"><GovernancePartnerships /></Reveal>
-      <Reveal direction="up"><SpeakersCTA /></Reveal>
+      <GovernanceLeadership />
+      <GovernanceLOC />
+      <GovernanceSubCommittees />
+      <GovernanceAdditionalCommittees />
+      <GovernancePartnerships />
+      <SpeakersCTA />
     </>
   )
 }
