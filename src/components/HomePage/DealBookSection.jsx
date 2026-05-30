@@ -4,7 +4,7 @@ function DealBookSection() {
   return (
     <section className="dealbook-bg flex flex-col px-4 py-8 md:px-10  lg:px-20 md:flex-row gap-6 md:gap-10 md:items-center">
       <div className="md:flex-1 ">
-        <img src="./public\lagos.png" alt="" className="max-h-130" />
+        <img src="/lagos.png" alt="" className="max-h-130" />
       </div>
       <div className="flex flex-col gap-6 max-w-sm md:items-center md:flex-1">
         <h3 className="text-green100 font-jost font-medium text-2xl md:text-center md:text-4xl">Download Our Investment Deal Book</h3>
