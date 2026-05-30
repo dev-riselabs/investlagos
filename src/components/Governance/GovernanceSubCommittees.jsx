@@ -1,4 +1,5 @@
 import React from 'react'
+import { Reveal, MouseTilt } from '../../lib/animations'
 
 /* ─── Icons ─────────────────────────────────────────────────────────────── */
 const LinkedInIcon = () => (
@@ -60,8 +61,8 @@ const mediaBottomCards = [
 /* ─── MEMBER CARD (same size as LOC card, no bio) ────────────────────────── */
 function MemberCard({ name, role, photo }) {
   return (
-    <article className="flex flex-col">
-      <div className="overflow-hidden rounded-xl bg-slate-100">
+    <article className="flex flex-col il-card">
+      <div className="overflow-hidden rounded-xl bg-slate-100 il-card-media">
         <img
           src={photo}
           alt={name}
@@ -95,8 +96,8 @@ function MemberCard({ name, role, photo }) {
 /* ─── BIO CARD ───────────────────────────────────────────────────────────── */
 function BioCard({ name, role, photo, bio }) {
   return (
-    <article className="flex flex-col">
-      <div className="overflow-hidden rounded-xl bg-slate-100">
+    <article className="flex flex-col il-card">
+      <div className="overflow-hidden rounded-xl bg-slate-100 il-card-media">
         <img src={photo} alt={name} className="block w-full object-cover object-top" style={{ aspectRatio: '3/4' }} loading="lazy" />
       </div>
       <div className="mt-6 flex flex-1 flex-col">
@@ -136,7 +137,13 @@ const GovernanceSubCommittees = () => {
         <div>
           <SubSectionHeading title="Finance Sub-Committee" />
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
-            {financeMembers.map((m) => <MemberCard key={m.name} {...m} />)}
+            {financeMembers.map((m, i) => (
+              <Reveal key={m.name} direction="up" delay={(i % 3) * 110} distance={26}>
+                <MouseTilt intensity={4}>
+                  <MemberCard {...m} />
+                </MouseTilt>
+              </Reveal>
+            ))}
           </div>
         </div>
 
@@ -146,17 +153,29 @@ const GovernanceSubCommittees = () => {
 
           {/* Top member cards */}
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16 mb-20">
-            {mediaSmallCards.map((m) => <MemberCard key={m.name} {...m} />)}
+            {mediaSmallCards.map((m, i) => (
+              <Reveal key={m.name} direction="up" delay={(i % 3) * 100} distance={26}>
+                <MouseTilt intensity={4}><MemberCard {...m} /></MouseTilt>
+              </Reveal>
+            ))}
           </div>
 
           {/* Bio cards */}
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:gap-16 mb-20">
-            {mediaBioCards.map((m) => <BioCard key={m.name} {...m} />)}
+            {mediaBioCards.map((m, i) => (
+              <Reveal key={m.name} direction="up" delay={i * 130} distance={28}>
+                <MouseTilt intensity={4}><BioCard {...m} /></MouseTilt>
+              </Reveal>
+            ))}
           </div>
 
           {/* Bottom member cards */}
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
-            {mediaBottomCards.map((m) => <MemberCard key={m.name} {...m} />)}
+            {mediaBottomCards.map((m, i) => (
+              <Reveal key={m.name} direction="up" delay={i * 110} distance={26}>
+                <MouseTilt intensity={4}><MemberCard {...m} /></MouseTilt>
+              </Reveal>
+            ))}
           </div>
         </div>
 

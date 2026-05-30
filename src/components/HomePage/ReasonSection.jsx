@@ -18,7 +18,7 @@ function ReasonSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {
-                reasons.map(({title, description}, i) => <div key={title} className="flex gap-3 p-5 shadow-reason md:px-7.5 md:py-12.5 rounded-2xl bg-white">
+                reasons.map(({title, description}, i) => <div key={title} className="flex gap-3 p-5 shadow-reason md:px-7.5 md:py-12.5 rounded-2xl bg-white il-card">
                     <div className="w-10 h-10 bg-green700 rounded-md flex items-center justify-center shrink-0">
                         <TbChartAreaLineFilled className="text-green100 w-5 h-5"/>
                     </div>

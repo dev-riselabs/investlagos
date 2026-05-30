@@ -40,7 +40,7 @@ import { PiBank } from "react-icons/pi";
 
 function SpeakerCard({ speaker }) {
   return (
-    <article className="overflow-hidden rounded-xl bg-slate400/5 flex flex-col h-full">
+    <article className="overflow-hidden rounded-xl bg-slate400/5 flex flex-col h-full il-card">
       <img
         src={speaker.image}
         alt={speaker.name}

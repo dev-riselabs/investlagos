@@ -84,8 +84,8 @@ const secretariatMembers = [
 /* ─── MEMBER CARD ────────────────────────────────────────────────────────── */
 function MemberCard({ name, role, photo }) {
   return (
-    <article className="flex flex-col">
-      <div className="overflow-hidden rounded-xl bg-slate-100">
+    <article className="flex flex-col il-card">
+      <div className="overflow-hidden rounded-xl bg-slate-100 il-card-media">
         <img src={photo} alt={name} className="block w-full object-cover object-top" style={{ aspectRatio: '3/4' }} loading="lazy" />
       </div>
       <div className="mt-6 flex flex-1 flex-col">
@@ -103,8 +103,8 @@ function MemberCard({ name, role, photo }) {
 /* ─── BIO CARD ───────────────────────────────────────────────────────────── */
 function BioCard({ name, role, photo, bio }) {
   return (
-    <article className="flex flex-col">
-      <div className="overflow-hidden rounded-xl bg-slate-100">
+    <article className="flex flex-col il-card">
+      <div className="overflow-hidden rounded-xl bg-slate-100 il-card-media">
         <img src={photo} alt={name} className="block w-full object-cover object-top" style={{ aspectRatio: '3/4' }} loading="lazy" />
       </div>
       <div className="mt-6 flex flex-1 flex-col">

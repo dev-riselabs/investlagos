@@ -191,3 +191,28 @@ a[class*="bg-"]:not([class*="bg-white"]):not([class*="bg-transparent"]):not([cla
   .page-transition-in { animation: none; }
   button:hover, a:hover { animation: none !important; }
 }
+
+/* ─── Card hover effect ─── */
+/* Apply .il-card to any card root element for lift + green-tinted shadow on hover.
+   Apply .il-card-media to the overflow-hidden image wrapper inside the card for zoom. */
+.il-card {
+  transition: transform 300ms cubic-bezier(.22,.61,.36,1),
+              box-shadow 300ms cubic-bezier(.22,.61,.36,1);
+  will-change: transform;
+}
+.il-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(9, 149, 103, 0.13), 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+.il-card-media img {
+  transition: transform 480ms ease;
+  display: block;
+}
+.il-card:hover .il-card-media img {
+  transform: scale(1.06);
+}
+@media (prefers-reduced-motion: reduce) {
+  .il-card { transition: none; }
+  .il-card:hover { transform: none; box-shadow: inherit; }
+  .il-card:hover .il-card-media img { transform: none; }
+}

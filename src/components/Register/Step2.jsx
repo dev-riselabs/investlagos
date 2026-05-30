@@ -105,7 +105,7 @@ const Step2 = ({ data, update }) => {
 
       {/* Attendance Mode */}
       <section>
-        <SectionHeading>Attendance Mood</SectionHeading>
+        <SectionHeading>Mode of Attendance</SectionHeading>
         <SubQuestion>How will you participate?</SubQuestion>
         <div className="flex items-center gap-8">
           {ATTENDANCE_MODE.map((mode) => (

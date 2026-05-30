@@ -52,7 +52,7 @@ const accents = ['bg-yellow', 'bg-red']
 
 function SpeakerCard({ name, title, photo, accent }) {
   return (
-    <article className="overflow-hidden rounded-b-lg">
+    <article className="overflow-hidden rounded-b-lg il-card">
       <img
         src={photo}
         alt={name}

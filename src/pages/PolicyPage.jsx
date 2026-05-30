@@ -105,7 +105,7 @@ function ResearchFocusAreas() {
           {focusAreas.map(({ icon: Icon, title, desc, accent }, i) => (
             <Reveal key={title} direction="up" delay={i * 90} distance={26}>
               <MouseTilt intensity={6}>
-                <article className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                <article className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-100 il-card">
                   <span className={`inline-flex h-10 w-10 items-center justify-center rounded-md ${accent}`}>
                     <Icon className="h-5 w-5" />
                   </span>
@@ -210,7 +210,7 @@ const policyBriefs = [
 function PolicyBriefCard({ brief }) {
   const { icon: Icon, tag, year, title, desc, accent } = brief
   return (
-    <article className="flex flex-col gap-4 rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
+    <article className="flex flex-col gap-4 rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-100 il-card">
       <div className="flex items-center justify-between">
         <span className={`inline-flex h-11 w-11 items-center justify-center rounded-md ${accent}`}>
           <Icon className="h-5 w-5" />

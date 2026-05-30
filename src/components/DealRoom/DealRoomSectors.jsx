@@ -19,8 +19,8 @@ const TagIcon = () => (
 
 function SectorCard({ title, image }) {
   return (
-    <article className="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
-      <div className="aspect-[16/9] overflow-hidden">
+    <article className="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-slate-100 il-card">
+      <div className="aspect-[16/9] overflow-hidden il-card-media">
         <img
           src={image}
           alt={title}

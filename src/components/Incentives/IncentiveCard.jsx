@@ -5,7 +5,7 @@ const IncentiveCard = ({ item }) => {
   const imageRight = item.layout === 'imageRight'
 
   const Image = (
-    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] shadow-sm lg:h-[340px]">
+    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[2rem] shadow-sm lg:h-[340px] il-card-media">
       <img 
         src={item.image} 
         alt={item.title} 
@@ -56,9 +56,9 @@ const IncentiveCard = ({ item }) => {
 
   return (
     <section className={`w-full px-4 py-8 md:px-8 ${isGreen ? 'bg-[#007B5E]' : 'bg-slate-50/50'}`}>
-      <div className={`mx-auto grid max-w-[1240px] items-center gap-8 rounded-4xl p-6 md:p-10 lg:grid-cols-2 lg:gap-16 ${
-        isGreen 
-          ? 'bg-white shadow' 
+      <div className={`mx-auto grid max-w-[1240px] items-center gap-8 rounded-4xl p-6 md:p-10 lg:grid-cols-2 lg:gap-16 il-card ${
+        isGreen
+          ? 'bg-white shadow'
           : 'bg-slate-100/80 shadow'
       }`}>
         {imageRight ? (

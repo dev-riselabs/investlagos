@@ -58,8 +58,8 @@ const cweicPartners = [
 
 function MemberCard({ name, role, photo }) {
   return (
-    <article className="flex flex-col">
-      <div className="overflow-hidden rounded-xl bg-slate-100">
+    <article className="flex flex-col il-card">
+      <div className="overflow-hidden rounded-xl bg-slate-100 il-card-media">
         <img
           src={photo}
           alt={name}

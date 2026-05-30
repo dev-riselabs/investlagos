@@ -165,8 +165,8 @@ function PublicationsFilterBar({ query, onQueryChange, category, onCategoryChang
 function PublicationCard({ pub }) {
   const to = pub.slug ? `/publications/${pub.slug}` : '#'
   return (
-    <article className="flex flex-col overflow-hidden rounded-md bg-white shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
-      <Link to={to} className="block aspect-[4/3] w-full overflow-hidden">
+    <article className="flex flex-col overflow-hidden rounded-md bg-white shadow-[0_4px_12px_rgba(0,0,0,0.06)] il-card">
+      <Link to={to} className="block aspect-[4/3] w-full overflow-hidden il-card-media">
         <img src={pub.img} alt={pub.title} className="h-full w-full object-cover transition duration-300 hover:scale-[1.02]" />
       </Link>
       <div className="flex flex-1 flex-col gap-3 px-6 pt-5 pb-6">

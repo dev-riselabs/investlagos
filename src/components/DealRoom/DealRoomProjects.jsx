@@ -67,9 +67,9 @@ function FilterPill({ label }) {
 
 function ProjectCard({ title, subtitle, tags, required, raised, image }) {
   return (
-    <article className="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-slate-200">
+    <article className="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-slate-200 il-card">
       {/* Image */}
-      <div className="aspect-[16/9] overflow-hidden">
+      <div className="aspect-[16/9] overflow-hidden il-card-media">
         <img src={image} alt={title} className="h-full w-full object-cover" loading="lazy" />
       </div>
 

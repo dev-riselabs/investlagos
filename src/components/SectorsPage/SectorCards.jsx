@@ -1,4 +1,5 @@
 import React from 'react'
+import { Reveal, MouseTilt } from '../../lib/animations'
 
 const sectors = [
   {
@@ -44,14 +45,15 @@ const SectorCards = () => {
       }}
     >
       <div className="mx-auto grid max-w-[1240px] gap-6 px-6 lg:px-8 sm:grid-cols-2 lg:grid-cols-3">
-        {sectors.map((s) => (
+        {sectors.map((s, idx) => (
+          <Reveal key={s.title} direction="up" delay={(idx % 3) * 110} distance={28}>
+          <MouseTilt intensity={5}>
           <article
-            key={s.title}
             className="group relative h-[300px] overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            style={{ 
-              backgroundImage: `url(${s.image})`, 
-              backgroundSize: 'cover', 
-              backgroundPosition: 'center' 
+            style={{
+              backgroundImage: `url(${s.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
             }}
           >
             {/* Multi-layered dark linear overlay for clean title contrasting */}
@@ -89,6 +91,8 @@ const SectorCards = () => {
               </div>
             </div>
           </article>
+          </MouseTilt>
+          </Reveal>
         ))}
       </div>
     </section>
