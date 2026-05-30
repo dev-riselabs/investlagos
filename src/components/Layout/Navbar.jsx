@@ -76,7 +76,7 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className=" bg-white shadow-sm">
       <TopStripe />
 
       {/* Top white bar with partner branding */}

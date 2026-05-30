@@ -108,7 +108,7 @@ function LOCCard({ name, role, photo, bio }) {
 /* ─── Main export ────────────────────────────────────────────────────────── */
 const GovernanceLOC = () => {
   return (
-    <section className="bg-white px-6 py-16 lg:py-24">
+    <section className="bg-white px-4 md:px-10 lg:px-20 py-16 lg:py-24">
       <div className="mx-auto max-w-310">
         {/* Heading */}
         <div className="mb-12 text-center">

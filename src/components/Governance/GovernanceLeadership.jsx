@@ -35,7 +35,7 @@ function LeaderCard({ name, title, photo }) {
 
 const GovernanceLeadership = () => {
   return (
-    <section className="bg-white px-6 pb-16 lg:pb-24">
+    <section className="bg-white px-4 md:px-10 lg:px-20 pb-16 lg:pb-24">
       <div className="mx-auto max-w-310">
         <h2 className="text-center text-xl font-bold text-green400 font-jost sm:text-2xl lg:text-[28px]">
           Lagos State Government Leadership
