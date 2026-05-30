@@ -213,8 +213,10 @@ function BioCard({ name, role, photo, bio }) {
 function SectionHeading({ title }) {
   return (
     <div className="mb-10">
-      <h2 className="text-lg font-black text-slate-800 sm:text-xl">{title}</h2>
-      <div className="mt-2 h-1 w-10 rounded-full bg-green200" />
+      <h2 className="text-lg font-bold text-black font-jost sm:text-2xl">
+        {title}
+      </h2>
+      <div className="mt-2 h-1 md:h-2 w-16 bg-slate200" />
     </div>
   );
 }
