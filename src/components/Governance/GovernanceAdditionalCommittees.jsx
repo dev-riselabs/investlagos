@@ -26,22 +26,6 @@ const MailIcon = () => (
 /* ─── DATA: Technical & Programmes Committee ─────────────────────────────── */
 const techBioTop = [
   {
-    name: "Dr. Toyosi Akerele-Ogunsiji",
-    role: "Co- Chair, Technical and Programmes Committee",
-    photo: "/governance-images/Dr. Toyosi Akerele-Ogunsiji.png",
-    bio: [
-      "Dr. Toyosi Akerele-Ogunsiji is the Founder of Rise Networks and Rise  Interactive Studios, Africa, and a globally respected multidisciplinary  professional in Artificial Intelligence for Development, Media  Innovation, Youth Development, EdTech and Public Policy. Named  by Forbes as one of the 20 Most Powerful Young Women in Africa  and listed among the Top 30 Global Artificial Intelligence  Ambassadors by Swiss Cognitive, she also serves on the UNDP  #AI4Dev Reference Group. She holds a master’s in public  administration from the Harvard Kennedy School, has completed  Executive Education at the University of Cambridge, University of  New Hampshire and Pan-Atlantic University, an undergrad degree in  Civil Law.",
-
-      "She earned a PhD in Defence and Strategic Studies from the Nigerian  Defence Academy, where her Dissertation examined the impact of AI  on Nigeria’s national and economic security in the Fourth Industrial  Revolution, highlighting the nexus between emerging technologies,  governance and human behaviour.",
-
-      "At Rise Networks, a foremost Data and AI for Development  organization, she leads efforts to empower Nigerians with world-class  digital skills, foster inclusive opportunities and build a future-ready  workforce. Rise Networks is Nigeria’s representative in the Microsoft  Global TVET AI Community of Practice and built West Africa’s first  career job chatbot, recognized by the UN’s AI for Good initiative.",
-
-      "She’s led pioneering AI and technology initiatives across Africa and  with her leadership, the organization also executed the landmark UK  Government FCDO-commissioned AI for Border Governance study. ",
-
-      "Through Rise Interactive Studios, a creative innovation company  working at the intersection of Fil, Music, Culture & Tech, Dr. Toyosi  created and produced MAKEMATION, Africa’s first feature film on  Artificial Intelligence.",
-    ],
-  },
-  {
     name: "Dr. Olamide Adekunle Okulaja",
     role: "Member, Technical & Programmes Committee",
     photo: "/governance-images/Dr. Olamide Adekunle Okulaja.png",
@@ -66,6 +50,22 @@ const techBioTop = [
     ],
     bio: [
       "Dr. Olamide Okulaja serves as Technical Adviser to the Honourable  Commissioner at the Lagos State Ministry of Commerce, Cooperatives, Trade  and Investment, and at the Lagos State Ministry of Health. Across both portfolios,  his work supports the development of durable institutional architecture and the  design of mechanisms that allow markets to function more equitably, public  systems to operate more efficiently, and financing to reach productive actors at  scale. He combines training in medicine and health economics with applied  experience in governance reform, financing design, and digital transformation.",
+    ],
+  },
+  {
+    name: "Dr. Toyosi Akerele-Ogunsiji",
+    role: "Co- Chair, Technical and Programmes Committee",
+    photo: "/governance-images/Dr. Toyosi Akerele-Ogunsiji.png",
+    bio: [
+      "Dr. Toyosi Akerele-Ogunsiji is the Founder of Rise Networks and Rise  Interactive Studios, Africa, and a globally respected multidisciplinary  professional in Artificial Intelligence for Development, Media  Innovation, Youth Development, EdTech and Public Policy. Named  by Forbes as one of the 20 Most Powerful Young Women in Africa  and listed among the Top 30 Global Artificial Intelligence  Ambassadors by Swiss Cognitive, she also serves on the UNDP  #AI4Dev Reference Group. She holds a master’s in public  administration from the Harvard Kennedy School, has completed  Executive Education at the University of Cambridge, University of  New Hampshire and Pan-Atlantic University, an undergrad degree in  Civil Law.",
+
+      "She earned a PhD in Defence and Strategic Studies from the Nigerian  Defence Academy, where her Dissertation examined the impact of AI  on Nigeria’s national and economic security in the Fourth Industrial  Revolution, highlighting the nexus between emerging technologies,  governance and human behaviour.",
+
+      "At Rise Networks, a foremost Data and AI for Development  organization, she leads efforts to empower Nigerians with world-class  digital skills, foster inclusive opportunities and build a future-ready  workforce. Rise Networks is Nigeria’s representative in the Microsoft  Global TVET AI Community of Practice and built West Africa’s first  career job chatbot, recognized by the UN’s AI for Good initiative.",
+
+      "She’s led pioneering AI and technology initiatives across Africa and  with her leadership, the organization also executed the landmark UK  Government FCDO-commissioned AI for Border Governance study. ",
+
+      "Through Rise Interactive Studios, a creative innovation company  working at the intersection of Fil, Music, Culture & Tech, Dr. Toyosi  created and produced MAKEMATION, Africa’s first feature film on  Artificial Intelligence.",
     ],
   },
 ];
@@ -134,7 +134,7 @@ const legalMembers = [
   {
     name: "Michael Ojomo",
     role: "Member, Legal & Compliance Sub-Committee",
-    photo: "/governance-images/Michael Ojomo.png",
+    photo: "/governance-images/Sean Leno (CWEIC).png",
   },
 ];
 
@@ -166,13 +166,14 @@ const logisticsMembers = [
 
 /* ─── MEMBER CARD (same size as LOC card, no bio) ────────────────────────── */
 function MemberCard({ name, role, photo }) {
+  console.log(photo);
   return (
     <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 h-full">
-      <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150 max-h-120 h-full">
+      <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150">
         <img
-          src={photo}
+          src={photo ? photo : "/governance-images/Sean Leno (CWEIC).png"}
           alt={name}
-          className="block w-full object-cover object-top max-h-120 h-full"
+          className="block w-full object-cover object-top max-h-100 h-full"
           loading="lazy"
         />
       </div>
@@ -215,7 +216,7 @@ function BioCard({
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-120"
+          className="block w-full object-cover object-top max-h-100"
           loading="lazy"
         />
       </div>
@@ -305,7 +306,7 @@ const GovernanceAdditionalCommittees = () => {
         <div>
           <SubSectionHeading title="Technical & Programmes Committee" />
           {/* Top two bio cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9 mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16 mb-20">
             {techBioTop.map((m, i) => (
               <Reveal key={m.name} direction="up" delay={i * 130} distance={28}>
                 <MouseTilt intensity={4} className="h-full">
@@ -315,7 +316,7 @@ const GovernanceAdditionalCommittees = () => {
             ))}
           </div>
           {/* Middle two member cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9 mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16 mb-20">
             {techMembers.map((m, i) => (
               <Reveal key={m.name} direction="up" delay={i * 120} distance={26}>
                 <MouseTilt intensity={4} className="h-full">
@@ -344,7 +345,7 @@ const GovernanceAdditionalCommittees = () => {
         {/* Legal & Compliance Sub-Committee */}
         <div>
           <SubSectionHeading title="Legal & Compliance Sub-Committee" />
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16">
             {legalMembers.map((m, i) => (
               <Reveal key={m.name} direction="up" delay={i * 120} distance={26}>
                 <MouseTilt intensity={4} className="h-full">
@@ -358,7 +359,7 @@ const GovernanceAdditionalCommittees = () => {
         {/* Event & Guest Management Committee */}
         <div>
           <SubSectionHeading title="Event & Guest Management Committee" />
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16">
             {eventMembers.map((m, i) => (
               <Reveal key={m.name} direction="up" delay={i * 120} distance={26}>
                 <MouseTilt intensity={4} className="h-full">

@@ -2,7 +2,7 @@ import { FaPlay } from "react-icons/fa";
 
 function DealBookSection() {
   return (
-    <section className="dealbook-bg flex flex-col px-4 py-8 md:px-10 md:justify-evenly lg:px-20 md:flex-row gap-2 md:gap-4 lg:gap-8 md:items-center">
+    <section className="dealbook-bg flex flex-col px-4 py-8 md:px-10 md:justify-evenly lg:px-20 md:flex-row gap-5 md:gap-4 lg:gap-8 md:items-center">
       <div className=" ">
         <img
           src="/Screenshot_20260530_135109_Drive.jpg"

@@ -107,7 +107,7 @@ const secretariatBios = [
   {
     name: "Ms Lola Talabi-Oni",
     role: "Co-Chair, LOC Secretariat",
-    photo: "/governance-images/Ms Lola Talabi-Oni.png",
+    photo: "/governance-images/Lola Talabi Oni.jpg.jpeg",
     bio: [
       "Lola Talabi-Oni is a governance and public policy professional  with over 20 years of experience across the public and private  sectors in Africa, Europe, and North America. She currently  serves as Senior Special Assistant to the Governor of Lagos State  in the Office of the Deputy Chief of Staff. Previously, she held  advisory and consulting roles with the Lagos State Ministry of  Economic Planning & Budget, Global Citizen, Rockefeller  Philanthropy Advisors, and the National Bureau of Statistics,  where she led stakeholder engagement, policy coordination, and  data governance initiatives. She has also served in key secretariat  and coordination roles, including as Secretariat Lead for E1  Lagos and as a member of the Secretariat Team for the 2014  World Economic Forum Africa meeting. Lola holds an Executive  master’s in public administration from the London School of  Economics, with a focus on Public Economics.",
     ],
@@ -135,7 +135,7 @@ function MemberCard({ name, role, photo }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-120"
+          className="block w-full object-cover object-top max-h-100"
           loading="lazy"
         />
       </div>
@@ -170,7 +170,7 @@ function BioCard({ name, role, photo, bio }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-120"
+          className="block w-full object-cover object-top max-h-100"
           loading="lazy"
         />
       </div>
@@ -229,21 +229,21 @@ const GovernancePartnerships = () => {
           <SectionHeading title="Partnerships & Sponsorships Committee" />
 
           {/* Top row: 3 member cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-9  mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16  mb-20">
             {partnershipsTop.map((m) => (
               <MemberCard key={m.name} {...m} />
             ))}
           </div>
 
           {/* Middle row: 2 bio cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9 mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16 mb-20">
             {partnershipsBios.map((m) => (
               <BioCard key={m.name} {...m} />
             ))}
           </div>
 
           {/* Bottom row: 1 wide lead bio card */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16">
             <BioCard {...partnershipsWideBio} />
           </div>
         </div>
@@ -253,14 +253,14 @@ const GovernancePartnerships = () => {
           <SectionHeading title="Secretariat" />
 
           {/* Top row: 2 bio cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9 mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16 mb-20">
             {secretariatBios.map((m) => (
               <BioCard key={m.name} {...m} />
             ))}
           </div>
 
           {/* Bottom row: 2 member cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16">
             {secretariatMembers.map((m) => (
               <MemberCard key={m.name} {...m} />
             ))}
