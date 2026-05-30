@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           {/* ── Navigation links ── */}
-          <ul className="mt-8 flex flex-wrap gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
+          <ul className="mt-8 flex flex-wrap justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
             {footerLinks.map((l) => (
               <li
                 key={l}
@@ -79,7 +79,7 @@ const Footer = () => {
           </ul>
 
           {/* ── Logo + social icons ── */}
-          <div className="mt-8 flex flex-col gap-6 items-start sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-8 flex flex-col gap-6 items-center sm:flex-row sm:items-center sm:justify-between">
             <img
               src="/logo.png"
               alt="Invest Lagos"
@@ -97,7 +97,7 @@ const Footer = () => {
           <div className="mt-6 border-t border-black" />
 
           {/* ── Legal links ── */}
-          <ul className="mt-5 space-y-1 text-xs text-black font-manrope font-light">
+          <ul className="mt-5 space-y-1.5 text-xs text-black text-center sm:text-left font-manrope font-light">
             <li>
               •{" "}
               <a href="#" className="hover:underline">
@@ -119,15 +119,15 @@ const Footer = () => {
           </ul>
 
           {/* ── Bottom Info Row ── */}
-          <div className="mt-6 flex flex-col font-manrope gap-5 text-[11px] leading-5 text-black font-light sm:flex-row sm:justify-between">
-            <p className="max-w-xs">
+          <div className="mt-6 flex flex-col items-center sm:items-start font-manrope gap-5 text-[11px] leading-5 text-black font-light sm:flex-row sm:justify-between">
+            <p className="max-w-xs text-center sm:text-left">
               Invest in Lagos is the flagship investment engagement platform
               designed to connect investors with opportunities across key
               sectors of the Lagos economy. The 3.0 edition is structured to
               drive partnerships that translate into measurable economic
               outcomes.
             </p>
-            <div className="flex flex-col gap-px">
+            <div className="flex flex-col gap-px items-center text-center sm:text-left sm:items-start">
               <p>
                 Ministry of Commerce, Cooperatives, Trade and Investment [MCCTI]
               </p>

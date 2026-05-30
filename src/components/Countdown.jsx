@@ -84,22 +84,35 @@ export default function CountdownTimer() {
   return (
     <div className="flex items-center gap-6 text-center font-jost text-green100">
       <div>
-        <p className="text-4xl md:text-5xl font-bold">{format(timeLeft.days)}</p>
+        <p className="text-4xl md:text-5xl font-bold">
+          {format(timeLeft.days)}
+        </p>
         <span className="text-[10px] font-medium">Days</span>
       </div>
 
-      <div>
-        <p className="text-4xl md:text-5xl font-bold">{format(timeLeft.hours)}</p>
-        <span className="text-[10px] font-medium">Hours</span>
-      </div>
+      <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
 
       <div>
-        <p className="text-4xl md:text-5xl font-bold">{format(timeLeft.minutes)}</p>
+        <p className="text-4xl md:text-5xl font-bold">
+          {format(timeLeft.hours)}
+        </p>
+        <span className="text-[10px] font-medium">Hours</span>
+      </div>
+      <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
+
+      <div>
+        <p className="text-4xl md:text-5xl font-bold">
+          {format(timeLeft.minutes)}
+        </p>
         <span className="text-[10px] font-medium">Mins</span>
       </div>
 
+      <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
+
       <div>
-        <p className="text-4xl md:text-5xl font-bold">{format(timeLeft.seconds)}</p>
+        <p className="text-4xl md:text-5xl font-bold">
+          {format(timeLeft.seconds)}
+        </p>
         <span className="text-[10px] font-medium">Secs</span>
       </div>
     </div>

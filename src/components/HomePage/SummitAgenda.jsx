@@ -6,6 +6,7 @@ import {
   Award,
   Star,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const agendaData = [
   {
@@ -51,10 +52,12 @@ export default function SummitAgenda() {
             Not just conversations, decisions that move markets.
           </p>
 
-          <button className="mt-8 flex items-center justify-start  gap-4 text-sm md:text-lg font-jost font-semibold uppercase tracking-wider text-yellow">
+          <Link
+            to="/agenda"
+            className="mt-8 flex items-center justify-start  gap-4 text-sm md:text-lg font-jost font-bold uppercase tracking-wider text-yellow! transition hover:text-yellow/80!"
+          >
             View Full Detailed Programme
-            <span className="h-px w-6 sm:w-12 bg-white" />
-          </button>
+          </Link>
         </div>
 
         {/* Top Cards */}
@@ -78,7 +81,9 @@ export default function SummitAgenda() {
               </div>
 
               <div className="">
-                <h3 className="text-4xl font-bold text-yellow">{agenda.date}</h3>
+                <h3 className="text-4xl font-bold text-yellow">
+                  {agenda.date}
+                </h3>
               </div>
 
               <div className="space-y-4">
@@ -118,7 +123,7 @@ export default function SummitAgenda() {
         </div>
 
         {/* Day 3 Card */}
-        <div className="mt-8 rounded-[32px] bg-emerald-700 p-8 text-white">
+        <div className="mt-8 rounded-4xl bg-emerald-700 p-8 text-white">
           <div className="mb-8 flex items-start justify-between">
             <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-medium tracking-widest">
               DAY 3
