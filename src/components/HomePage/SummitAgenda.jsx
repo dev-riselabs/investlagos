@@ -13,7 +13,7 @@ const agendaData = [
     date: "8th June 2026",
     title: "Key Subjects",
     activities: [
-      "Keynote Address by Akinwunmi Ambode",
+      "Keynote Address by Asiwaju Bola Ahmed Tinubu, GCFR President of the Federal Republic of Nigeria",
       "Lagos: Africa's Global Gateway",
       "The Future of Technology & Innovation",
       "Governors' Investment Showcase",

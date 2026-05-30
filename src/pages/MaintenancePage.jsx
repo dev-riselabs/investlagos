@@ -42,7 +42,7 @@ export default function MaintenancePage() {
   // window when an exact ETA is known.
   const target = useMemo(() => {
     const d = new Date()
-    d.setHours(d.getHours() + 24)
+    d.setHours(d.getHours() + 1)
     return d.toISOString()
   }, [])
   const { days, hours, minutes, seconds } = useCountdown(target)
