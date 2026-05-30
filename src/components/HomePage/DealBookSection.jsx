@@ -2,12 +2,12 @@ import { FaPlay } from "react-icons/fa";
 
 function DealBookSection() {
   return (
-    <section className="dealbook-bg flex flex-col px-4 py-8 md:px-10  lg:px-20 md:flex-row gap-2 md:gap-4 md:items-center">
-      <div className="md:flex-1 ">
+    <section className="dealbook-bg flex flex-col px-4 py-8 md:px-10  lg:px-20 md:flex-row gap-2 md:gap-4 lg:gap-8 md:items-center">
+      <div className=" ">
         <img
           src="/Screenshot_20260530_135109_Drive.jpg"
           alt=""
-          className="max-h-120 max-w-120 w-full"
+          className="max-h-120"
         />
       </div>
       <div className="flex flex-col gap-6 max-w-xl md:items-center md:flex-1">
