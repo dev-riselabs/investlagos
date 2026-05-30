@@ -172,8 +172,7 @@ function MemberCard({ name, role, photo }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top"
-          style={{ aspectRatio: "3/4" }}
+          className="block w-full object-cover object-top max-h-120"
           loading="lazy"
         />
       </div>
@@ -216,8 +215,7 @@ function BioCard({
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top"
-          style={{ aspectRatio: "3/4" }}
+          className="block w-full object-cover object-top max-h-120"
           loading="lazy"
         />
       </div>
@@ -302,7 +300,7 @@ function SubSectionHeading({ title }) {
 const GovernanceAdditionalCommittees = () => {
   return (
     <section className="bg-white px-6 py-12 lg:py-16">
-      <div className="mx-auto max-w-[1240px] space-y-20">
+      <div className="mx-auto max-w-310 space-y-20">
         {/* Technical & Programmes Committee */}
         <div>
           <SubSectionHeading title="Technical & Programmes Committee" />

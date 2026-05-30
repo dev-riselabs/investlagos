@@ -20,7 +20,7 @@ function LeaderCard({ name, title, photo }) {
       <img
         src={photo}
         alt={name}
-        className="block max-h-110 h-full w-full object-cover object-top"
+        className="block max-h-120 h-full w-full object-cover object-top"
         loading="lazy"
       />
       <div className="px-6 py-5">
