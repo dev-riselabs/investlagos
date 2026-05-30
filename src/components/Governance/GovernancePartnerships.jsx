@@ -96,7 +96,7 @@ const secretariatBios = [
   {
     name: "Mrs Ire Odega",
     role: "Co-Chair, LOC Secretariat",
-    photo: "/governance-images/Mrs. Nana Hauwa Adeeyo.png",
+    photo: "/governance-images/Mrs Ire Odega.png",
     bio: [
       " Ire Odega is a dynamic project management and operations professional with experience spanning government advisory, investment facilitation, product management, and strategic programme execution. Currently serving as Special Adviser to the Honourable Commissioner for Commerce, Cooperative, Trade and Investment, Ire plays a key role in driving initiatives that strengthen investment attraction, trade promotion, stakeholder engagement, and economic development within Lagos State.",
       " Prior to this role, Ire built a strong foundation in Project Management, Product Management, and Operations, leading cross-functional initiatives across technology, fintech, and business transformation spaces. Her expertise includes programme coordination, stakeholder management, strategic partnerships, operational excellence, and execution of high impact projects.",
