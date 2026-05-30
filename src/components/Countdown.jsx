@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 const EVENT_MONTH = 5; // June (0-based)
-const START_DAY = 8;
-const END_DAY = 10;
+const START_DAY = 9;
+const END_DAY = 11;
 
 const getEventStatus = (date) => {
   const year = date.getFullYear();
