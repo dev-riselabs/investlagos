@@ -1,27 +1,29 @@
-import { IoMdSearch } from 'react-icons/io'
-import { FiArrowUpRight } from 'react-icons/fi'
-import InvestmentSection from '../components/HomePage/InvestmentSection'
-import FutureSection from '../components/HomePage/FutureSection'
-import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
+import { IoMdSearch } from "react-icons/io";
+import { FiArrowUpRight } from "react-icons/fi";
+import InvestmentSection from "../components/HomePage/InvestmentSection";
+import FutureSection from "../components/HomePage/FutureSection";
+import { Reveal, Spotlight, MouseTilt } from "../lib/animations";
 
 /* ─────────────────── HERO ─────────────────── */
 
 function AboutHero() {
   return (
     <section
-      className="relative overflow-hidden bg-[#0a2a4a] px-6 py-14 text-white lg:py-20"
+      className="relative overflow-hidden bg-[#032F74CC] px-4 md:px-10 lg:px-20 py-14 text-white lg:py-20"
       style={{
-        backgroundImage: 'url(/hero_investlagos_flier.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundImage: "url(/youth_skills.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a2a4a]/95 via-[#0a2a4a]/85 to-[#0a2a4a]/55" />
-      <div className="relative mx-auto max-w-[1240px]">
-        <div className="inline-flex items-center gap-3 border-l-4 border-white/80 py-1.5 pl-3.5">
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-white">Invest Lagos 3.0</p>
+      <div className="absolute inset-0 bg-linear-to-r from-[#032F74CC]/99 via-[#032F74CC]/95 to-[#032F74CC]/85" />
+      <div className="relative mx-auto max-w-310">
+        <div className="inline-flex items-center gap-3 border-l-4 border-white/80 p-5">
+          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-white">
+            Invest Lagos 3.0
+          </p>
         </div>
-        <h1 className="mt-6 max-w-3xl text-2xl font-bold leading-tight sm:text-3xl lg:text-[34px] lg:leading-[1.25]">
+        <h1 className="mt-6 max-w-3xl text-2xl font-bold leading-tight sm:text-3xl lg:text-[34px] lg:leading-tight">
           Theme: Lagos &mdash; The Business Gateway to Africa
         </h1>
         <p className="mt-4 max-w-2xl text-sm leading-7 text-white/80 sm:text-base">
@@ -29,7 +31,7 @@ function AboutHero() {
         </p>
       </div>
     </section>
-  )
+  );
 }
 
 /* ─────────────────── EXECUTIVE SUMMARY ─────────────────── */
@@ -37,58 +39,107 @@ function AboutHero() {
 function ExecutiveSummary() {
   return (
     <section className="bg-white px-6 py-14 lg:py-20">
-      <div className="mx-auto max-w-[1100px]">
-        <h2 className="text-2xl font-black text-green100 sm:text-3xl">Executive Summary</h2>
-        <div className="mt-3 h-[2px] w-14 bg-green100/60" />
+      <div className="mx-auto max-w-275">
+        <h2 className="text-2xl font-black text-green100 sm:text-3xl">
+          Executive Summary
+        </h2>
+        {/* <div className="mt-3 h-0.5 w-14 bg-green100/60" /> */}
 
         {/* First block: paragraphs flowing around top-right image */}
-        <div className="mt-8 lg:grid lg:grid-cols-[1fr_360px] lg:gap-10">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-5 text-[13px] leading-7 text-slate-600 sm:text-sm">
             <p>
-              Invest Lagos 3.0 is the flagship investor engagement platform of the Lagos State Government,
-              designed to position Lagos as Africa&apos;s premier destination for trade, capital and
-              long-term economic partnership. Convened by the Ministry of Commerce, Cooperatives, Trade
-              and Investment in collaboration with the Commonwealth Enterprise and Investment Council, the
-              Summit consolidates Lagos&apos; status as Africa&apos;s economic gateway and its primary
-              corridor for global capital flows.
+              Invest Lagos 3.0 is conceived as a Presidential scale investment
+              and innovation platform that consolidates Lagos State’s position
+              as Africa’s most credible sub sovereign gateway to capital, trade,
+              technology and talent. It reflects the economic maturity of
+              imperative for structured, high Lagos and responds to the global
+              confidence urban growth engines capable of absorbing long-term
+              investment.
             </p>
             <p>
-              Lagos generates more than 30% of Nigeria&apos;s GDP and operates as the financial,
-              commercial and innovation engine of West Africa. With a GDP of more than US$259 billion and
-              a population exceeding 25 million, the State already functions as one of Africa&apos;s
-              largest urban economies. Invest Lagos 3.0 is structured to translate this scale into
-              investable opportunity, structured deal flow and measurable partnerships.
+              Lagos already operates at national and continental scale.
+              Contributing over thirty percent of Nigeria’s GDP and handling
+              approximately seventy percent of national maritime cargo
+              throughput, the state anchors West Africa’s trade architecture. It
+              hosts more than 2,500 startups and commands Africa’s most vibrant
+              innovation ecosystem. Its financial services depth, expanding
+              industrial corridors, embedded power initiatives, inland waterways
+              activation under Omi Eko and aviation development through Lekki
+              International Airport collectively position it as a fully
+              integrated gateway economy
             </p>
           </div>
           <div className="mt-8 lg:mt-0">
             <MouseTilt intensity={6}>
               <img
-                src="/Vision for a 21st-Century Economy.png"
+                src="/es1.jpg"
                 alt="Lagos cityscape"
-                className="aspect-[4/3] w-full rounded-md object-cover shadow-md"
+                className="aspect-4/3 w-full rounded-md object-cover shadow-md"
               />
             </MouseTilt>
           </div>
         </div>
 
+        <div className="space-y-5 text-[13px] leading-7 text-slate-600 sm:text-sm mt-10">
+          <p>
+            Invest Lagos 3.0 translates these structural strengths into a
+            disciplined global platform. In addition to its Presidential and
+            subnational positioning, Invest Lagos 3.0 will formally integrate
+            Lagos State’s structured engagement with Commonwealth economies and
+            other strategic international trade partners. This integration
+            ensures that Lagos’ capital mobilisation strategy is supported by
+            organised diplomatic corridors, institutional trade relationships
+            and cross border investment frameworks. International convening
+            partners, including the Commonwealth Enterprise and Investment
+            Council, will participate within a structured Diplomatic Investment
+            Pavilion, supporting curated investor engagement rather than
+            operating as a parallel summit identity.
+          </p>
+          <p>
+            The summit will be opened by the President of the Federal Republic
+            of Nigeria, reinforcing federal alignment and national economic
+            coherence. Federal Honorable Ministers will participate across
+            sectoral dialogues. Select sub sovereign Governors, including Enugu,
+            Imo, Kano and Kaduna, will engage in structured competitiveness
+            discussions, demonstrating coordinated subnational ambition. Private
+            sector leadership will anchor the platform, with Abdulsamad Rabiu,
+            Chairman of BUA Group invited to serve s Summit Chair and Mr. Aig
+            Aigboje Imokhuedeas Co-Chairs, supported by leading financial
+            institution
+          </p>
+        </div>
+
         {/* Second block: image left, text right */}
-        <div className="mt-10 lg:grid lg:grid-cols-[360px_1fr] lg:gap-10">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <MouseTilt intensity={6}>
               <img
-                src="/bg_third_mainland_bridge.png"
+                src="/es2.jpg"
                 alt="Lagos infrastructure"
-                className="aspect-[4/3] w-full rounded-md object-cover shadow-md"
+                className="aspect-4/3 w-full rounded-md object-cover shadow-md"
               />
             </MouseTilt>
           </div>
           <div className="mt-8 space-y-5 text-[13px] leading-7 text-slate-600 sm:text-sm lg:mt-0">
             <p>
-              The summit will showcase a curated pipeline of investment-ready projects across priority
-              sectors including infrastructure, energy, healthcare, agribusiness, the creative economy,
-              technology and financial services. Through the Deal Room, structured pitch sessions,
-              sector-specific roundtables and bilateral engagements, participants will move from intent
-              to executable transactions within a single two-day window.
+              The summit architecture is designed around five integrated
+              pillars: Presidential Leadership Plenary, Panel Sessions, Pavilion
+              Ecosystem Activation, Deal Room 2.0 Transaction Platform and a
+              Masterclass and Talent Exchange Programme.
+            </p>
+            <p>
+              The Pavilion Ecosystem will replace traditional exhibition formats
+              with curated, sector -led economic zones. Innovation and AI,
+              Creative Economy, Diplomatic Investment, Aviation, Marine and
+              Waterways, Healthcare and Life Sciences, FinTech, Industrial
+              Zones, Education and Workforce Development, Insurance and Risk
+              Architecture, Energy Transition, Construction and Infrastructure,
+              and Smart City Security will each operate as structured platforms
+              led by credible private sector chairs and aligned with relevant
+              Commissioners. These Pavilions will integrate enterprise
+              demonstrations, investor engagement and sector -specific
+              masterclasses.
             </p>
           </div>
         </div>
@@ -96,34 +147,49 @@ function ExecutiveSummary() {
         {/* Full-width closing paragraphs */}
         <div className="mt-10 space-y-5 text-[13px] leading-7 text-slate-600 sm:text-sm">
           <p>
-            Invest Lagos 3.0 brings together global investors, development finance institutions, sovereign
-            funds, multilateral agencies, private sector leaders, government officials and policy
-            stakeholders from across the Commonwealth and beyond. The Summit will host curated convenings,
-            high-level plenaries, investor briefings and exhibition activations that highlight the
-            structural reforms, infrastructure pipeline and policy environment positioning Lagos as
-            Africa&apos;s most investable subnational economy.
+            The Deal Room will function as the commercial engine of the summit.
+            8 to 12 curated, investment-ready projects will be profiled within a
+            secure, invitation -only environment supported by development
+            finance institutions and transaction advisors. Structured due
+            diligence sessions, blended finance clinics and MOU drafting suites
+            will facilitate measurable outcomes, including signed term sheets
+            and defined pathways toward financial close.
           </p>
           <p>
-            The outcomes are anchored on three priorities: closing investment transactions, deepening
-            strategic partnerships and building the institutional architecture required to sustain
-            long-term capital deployment. Each session, deal room engagement and exhibition activation is
-            designed to translate dialogue into measurable commitments and to convert global interest into
-            specific transactions.
+            The Masterclass and Talent Exchange Programme will reinforce Lagos’
+            commitment to aligning capital with capability. Artificial
+            intelligence workshops, aviation engineering sessions, startup
+            scaling clinics, trade facilitation seminars and risk structuring
+            masterclasses will strengthen workforce readiness and deepen
+            sectoral expertise. Arise TV will serve as the principal broadcast
+            partner, ensuring live global coverage, structured interviews and
+            sustained post-summit visibility. International media engagement,
+            diplomatic outreach and digital amplification will position Invest
+            Lagos 3.0 asa globally referenced economic platform.
+          </p>
+          <p>
+            Success will be measured through multi-billion-dollar capital
+            commitments, structured MoUs, unicorn scale pathways, workforce
+            agreements, diplomatic trade frameworks and defined financial close
+            timelines. Invest Lagos 3.0 institutionalises Lagos as Africa’s
+            innovation capital, West Africa’s trade gateway and Nigeria’s most
+            consequential subnational economic platform. It establishes a
+            recurring global convening architecture anchored in Lagos State and
+            reinforces its trajectory toward becoming one of the world’s leading
+            city economies
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
-
 
 /* ─────────────────── SEARCH CTA ─────────────────── */
 
 function AboutSearchCTA() {
   return (
     <section className="bg-white px-6 py-12">
-      <div className="mx-auto max-w-[1240px]">
+      <div className="mx-auto max-w-310">
         <div className="flex flex-col items-stretch gap-3 rounded-lg bg-green200 p-3 sm:flex-row sm:items-center">
           <div className="flex flex-1 items-center gap-3 rounded-md bg-white/10 px-5 py-3">
             <IoMdSearch className="h-5 w-5 text-white/70" />
@@ -145,7 +211,7 @@ function AboutSearchCTA() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default function AboutPage() {
@@ -156,12 +222,20 @@ export default function AboutPage() {
           <AboutHero />
         </Reveal>
       </Spotlight>
-      <Reveal direction="up"><ExecutiveSummary /></Reveal>
-      <Reveal direction="up"><InvestmentSection /></Reveal>
+      <Reveal direction="up">
+        <ExecutiveSummary />
+      </Reveal>
+      <Reveal direction="up">
+        <InvestmentSection />
+      </Reveal>
       <Spotlight color="rgba(99, 202, 168, 0.20)" size={560}>
-        <Reveal direction="up"><FutureSection /></Reveal>
+        <Reveal direction="up">
+          <FutureSection />
+        </Reveal>
       </Spotlight>
-      <Reveal direction="up"><AboutSearchCTA /></Reveal>
+      {/* <Reveal direction="up">
+        <AboutSearchCTA />
+      </Reveal> */}
     </>
-  )
+  );
 }

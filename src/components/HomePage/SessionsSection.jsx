@@ -5,6 +5,21 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const sessions = [
   {
     id: 1,
+<<<<<<< HEAD
+    speaker: "/Folashade.png",
+  },
+  {
+    id: 2,
+    speaker: "/Sanwolu.png",
+  },
+  {
+    id: 3,
+    speaker: "/Marland.png",
+  },
+  {
+    id: 4,
+    speaker: "/Sanwolu.png",
+=======
     speaker: "/speakers/Mrs. Folashade KaosaratBada Ambrose-Medebem.png",
     name: "Mrs. Folashade Ambrose-Medebem",
     role: "Honourable Commissioner",
@@ -30,6 +45,7 @@ const sessions = [
     name: "Guest Speaker",
     role: "Industry Leader",
     title: "Keynote Session",
+>>>>>>> 52065e14e70528cf2ba87d153dd35ea265914082
   },
 ];
 
@@ -90,40 +106,7 @@ export default function SummitSessions() {
                 key={session.id}
                 className="min-w-0 flex-[0_0_100%] pl-6 md:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
               >
-                <div className="relative overflow-hidden rounded-3xl bg-white shadow-lg">
-                  {/* Poster */}
-                  <img
-                    src="/hero_investlagos_flier.png"
-                    alt={session.title}
-                    className="h-[430px] w-full object-cover"
-                  />
-
-                  {/* Speaker Image Overlay */}
-                  <div className="absolute bottom-4 left-2.5 z-10">
-                    <img
-                      src={session.speaker}
-                      alt={session.name}
-                      className="h-70 w-50 rounded-2xl object-cover shadow-xl"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="absolute bottom-4 left-2.5 right-auto bg-linear-to-t from-black/70 via-black/20 to-transparent backdrop-blur pl-3 pb-2 z-20 font-jost w-50 rounded-b-2xl">
-                    <div className="">
-                      <p className="text-sm text-yellow font-medium">
-                        {session.title}
-                      </p>
-
-                      <h3 className="mt-0.5 text-sm font-bold text-white uppercase">
-                        {session.name}
-                      </h3>
-
-                      <p className="text-xs text-white/90 uppercase">
-                        {session.role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <img src={session.speaker} />
               </div>
             ))}
           </div>

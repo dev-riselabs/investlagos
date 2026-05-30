@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
 
             <div className="flex-1 flex sm:justify-end">
-              <div className="flex  items-center justify-center md:flex-row px-2 md:px-8 py-4 md:py-6.5 bg-white rounded-xl md:rounded-full gap-2 md:gap-5">
+              <div className="flex  items-center justify-center md:flex-row px-2 md:px-8 py-4 md:py-6.5 bg-white rounded-3xl md:rounded-full w-full md:w-auto gap-2 md:gap-5">
                 <a
                   href="/DealBook for Invest Lagos 3.0.pdf"
                   download
@@ -62,17 +62,21 @@ const Footer = () => {
           </div>
 
           {/* ── Navigation links ── */}
-          <nav className="mt-8 flex flex-wrap gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium ">
+          <ul className="mt-8 flex flex-wrap gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
             {footerLinks.map((l) => (
-              <Link
+              <li
                 key={l}
-                to={l}
-                className=" transition text-black hover:text-green!"
+                className="marker:text-black hover:marker:text-green ml-3"
               >
-                {l}
-              </Link>
+                <Link
+                  to={l}
+                  className=" transition text-black hover:text-green!"
+                >
+                  {l}
+                </Link>
+              </li>
             ))}
-          </nav>
+          </ul>
 
           {/* ── Logo + social icons ── */}
           <div className="mt-8 flex flex-col gap-6 items-start sm:flex-row sm:items-center sm:justify-between">
