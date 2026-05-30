@@ -77,7 +77,7 @@ export default function SummitAgenda() {
                   <span className="text-xs text-white/70">
                     AGENDA LINE ITEM
                   </span>
-                  <p className="mt-2 text-sm text-white/80">{agenda.title}</p>
+                  {/* <p className="mt-2 text-sm text-white/80">{agenda.title}</p> */}
                 </div>
               </div>
 

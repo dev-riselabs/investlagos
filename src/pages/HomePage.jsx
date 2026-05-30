@@ -19,24 +19,37 @@ import GlobalLeaderSection from "../components/HomePage/GlobalLeaderSection";
 import SummitAgenda from "../components/HomePage/SummitAgenda";
 import SummitSessions from "../components/HomePage/SessionsSection";
 import Partners from "../components/HomePage/PartnersSection";
+import { FoldStack } from "../lib/animations";
 
 const HomePage = () => {
   return (
     <>
       <HeroSection />
-      <AdvantageSection />
-      <DealBookSection />
-      <PebecSection />
-      <GlobalLeaderSection />
+
+      {/* First stack cluster: sections slide over each other as you scroll.
+          Each section stays fully visible for a full section-height of scroll
+          before the next one appears — fixed via scroll-budget in FoldStack. */}
+      <FoldStack>
+        <AdvantageSection />
+        <DealBookSection />
+        <PebecSection />
+        <GlobalLeaderSection />
+      </FoldStack>
+
       <SpeakersSection />
       <img src="/home-img.png" className="w-full" />
       <SummitSessions />
       <SummitAgenda />
       <PressSection />
-      <InvestmentSection />
-      <MediaSection />
+
+      {/* Second stack cluster around mid-page content blocks */}
+      <FoldStack>
+        <InvestmentSection />
+        <MediaSection />
+        <ReasonSection />
+      </FoldStack>
+
       <Partners />
-      <ReasonSection />
       <InformationSection />
       <SubscribeSection />
       <StreamSection />

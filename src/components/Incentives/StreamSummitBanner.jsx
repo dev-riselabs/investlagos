@@ -10,7 +10,7 @@ const StreamSummitBanner = () => {
           partnerships shaping the future of investment in Lagos.
         </p>
         <a
-          href="#"
+          href="https://www.youtube.com/@invest-lagos" target='_blank'
           className="mt-6 inline-flex items-center gap-3 rounded bg-[#ED212B] px-10 py-3 text-sm font-bold text-white hover:bg-[#a52e1f] transition"
         >
           
