@@ -17,8 +17,8 @@ const buttons = [
 const HeroSection = () => {
   return (
     <section id="hero" className="relative overflow-hidden bg-green100">
-      <div className="bg-white! rounded-4xl hero-bg flex flex-col gap-10 md:gap-16 justify-center px-4 md:px-10 lg:px-20 py-10 md:py-20 text-center lg:py-15">
-        <p className="text-[10px] sm:text-xs font-bold font-jost  tracking-[6px] text-black text-center">
+      <div className="bg-white! rounded-4xl hero-bg flex flex-col gap-10 md:gap-20 justify-center px-4 md:px-10 lg:px-20 py-10 md:py-20 text-center lg:py-25">
+        <p className="mb-4 text-[10px] sm:text-xs font-bold font-jost  tracking-[6px] text-black text-center">
           8th to 10th,{" "}
           <span className="uppercase">
             June 2026 | eko hotel & Suites, Victoria Island, Lagos, Nigeria
@@ -93,11 +93,14 @@ const HeroSection = () => {
 
             <CountdownTimer />
           </div>
-          <div className="flex flex-col gap-4 items-center md:col-span-2 sm:flex-row sm:items-center md:flex-col">
+          <div className="flex flex-col gap-3 items-center md:col-span-2 sm:flex-row sm:items-center md:flex-col">
             <div className="md:flex-1 ">
-              <img src="/lagos.png" alt="" className="max-h-80" />
+              <img src="/lagos.png" alt="" className="max-h-75" />
             </div>
-            <div className="flex flex-row gap-6 max-w-md sm:items-center md:flex-1">
+            <div className="flex flex-col gap-6 max-w-sm sm:items-center md:flex-1">
+              <h3 className="text-green100 font-jost font-medium text-2xl md:text-center">
+                Download Our Investment Deal Book
+              </h3>
               <a
                 href="/DealBook for Invest Lagos 3.0.pdf"
                 download
@@ -110,10 +113,6 @@ const HeroSection = () => {
                   <FaPlay className={`w-4 h-4 text-white`} />
                 </div>
               </a>
-              <h3 className="text-green100 font-jost font-medium text-2xl md:text-left md:text-1xl">
-                Download Our Investment Deal Book
-              </h3>
-              
             </div>
           </div>
         </div>
