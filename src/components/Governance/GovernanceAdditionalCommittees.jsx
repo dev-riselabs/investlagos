@@ -27,7 +27,7 @@ const MailIcon = () => (
 const techBioTop = [
   {
     name: "Dr. Olamide Adekunle Okulaja",
-    role: "Member, Technical & Programmes Committee",
+    role: "Co-Chair, Technical & Programmes Committee",
     photo: "/governance-images/Dr. Olamide Adekunle Okulaja.png",
     principle:
       "GUIDING PRINCIPLES  Institutional coherence.   Financial sustainability.   Measurable scale.",
@@ -54,7 +54,7 @@ const techBioTop = [
   },
   {
     name: "Dr. Toyosi Akerele-Ogunsiji",
-    role: "Co- Chair, Technical and Programmes Committee",
+    role: "Co-Chair, Technical and Programmes Committee",
     photo: "/governance-images/Dr. Toyosi Akerele-Ogunsiji.png",
     bio: [
       "Dr. Toyosi Akerele-Ogunsiji is the Founder of Rise Networks and Rise  Interactive Studios, Africa, and a globally respected multidisciplinary  professional in Artificial Intelligence for Development, Media  Innovation, Youth Development, EdTech and Public Policy. Named  by Forbes as one of the 20 Most Powerful Young Women in Africa  and listed among the Top 30 Global Artificial Intelligence  Ambassadors by Swiss Cognitive, she also serves on the UNDP  #AI4Dev Reference Group. She holds a master’s in public  administration from the Harvard Kennedy School, has completed  Executive Education at the University of Cambridge, University of  New Hampshire and Pan-Atlantic University, an undergrad degree in  Civil Law.",
@@ -80,6 +80,12 @@ const techMembers = [
       "She is the Founder and CEO of Human Investment Group and previously served as Honourable Commissioner for Establishments, Training, and Pensions in Lagos State. Her professional experience includes roles at Arthur Andersen (now KPMG) and British American Tobacco. ",
       "Ajibola is an alumna of the University of Ibadan, the University of London, and Harvard Kennedy School of Public Leadership. She is committed to advancing human-centered public service transformation across Nigeria and Africa.",
     ],
+  },
+  {
+    name: "Babatunde Onigbanjo",
+    role: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment of Lagos State Government & Member, Technical & Programmes Committee",
+    photo: "/governance-images/Babatunde Onigbanjo.png",
+    bio: [],
   },
 ];
 
@@ -165,7 +171,7 @@ function MemberCard({ name, role, photo }) {
     <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 h-full">
       <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150">
         <img
-          src={photo ? photo : "/governance-images/Sean Leno (CWEIC).png"}
+          src={photo ? photo : "/governance-images/Sean Leno.jpeg"}
           alt={name}
           className="block w-full object-cover object-top max-h-100 h-full"
           loading="lazy"

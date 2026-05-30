@@ -98,7 +98,7 @@ const HeroSection = () => {
               <img src="/lagos.png" alt="" className="max-h-75" />
             </div>
             <div className="flex flex-col gap-6 max-w-sm sm:items-center md:flex-1">
-              <h3 className="text-green100 font-jost font-medium text-xl md:text-center md:text-2xl">
+              <h3 className=" font-jost font-medium text-1xl md:text-center">
                 Download Our Investment Deal Book
               </h3>
               <a
