@@ -1,4 +1,5 @@
 import React from 'react'
+import { Reveal, MouseTilt } from '../../lib/animations'
 
 const sectors = [
   { title: 'Agribusiness & Food System', image: '/Agribusiness & Food System.png' },
@@ -18,8 +19,8 @@ const TagIcon = () => (
 
 function SectorCard({ title, image }) {
   return (
-    <article className="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-slate-100 transition hover:shadow-md">
-      <div className="aspect-[16/9] overflow-hidden">
+    <article className="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-slate-100 il-card">
+      <div className="aspect-[16/9] overflow-hidden il-card-media">
         <img
           src={image}
           alt={title}
@@ -46,8 +47,12 @@ const DealRoomSectors = () => {
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {sectors.map((s) => (
-            <SectorCard key={s.title} {...s} />
+          {sectors.map((s, i) => (
+            <Reveal key={s.title} direction="up" delay={(i % 3) * 100} distance={26}>
+              <MouseTilt intensity={5}>
+                <SectorCard {...s} />
+              </MouseTilt>
+            </Reveal>
           ))}
         </div>
       </div>

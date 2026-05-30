@@ -1,4 +1,5 @@
 import React from 'react'
+import { Reveal, MouseTilt } from '../../lib/animations'
 
 const leaders = [
   {
@@ -15,7 +16,7 @@ const leaders = [
 
 function LeaderCard({ name, title, photo }) {
   return (
-    <article className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100">
+    <article className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100 il-card">
       <img
         src={photo}
         alt={name}
@@ -39,8 +40,12 @@ const GovernanceLeadership = () => {
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
-          {leaders.map((l) => (
-            <LeaderCard key={l.name} {...l} />
+          {leaders.map((l, i) => (
+            <Reveal key={l.name} direction="up" delay={i * 110} distance={26}>
+              <MouseTilt intensity={5}>
+                <LeaderCard {...l} />
+              </MouseTilt>
+            </Reveal>
           ))}
         </div>
       </div>

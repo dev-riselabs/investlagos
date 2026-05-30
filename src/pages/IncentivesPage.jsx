@@ -2,6 +2,7 @@ import IncentivesHero from "../components/Incentives/IncentivesHero"
 import IncentiveCard from "../components/Incentives/IncentiveCard"
 import ReadyCTA from "../components/Incentives/ReadyCTA"
 import StreamSummitBanner from "../components/Incentives/StreamSummitBanner"
+import { Reveal, Spotlight } from "../lib/animations"
 
 const incentives = [
   {
@@ -84,12 +85,25 @@ const incentives = [
 export default function IncentivesPage() {
   return (
     <>
-      <IncentivesHero />
-      {incentives.map((item) => (
-        <IncentiveCard key={item.title} item={item} />
+      <Spotlight color="rgba(99, 202, 168, 0.22)" size={600}>
+        <Reveal direction="fade" duration={900}>
+          <IncentivesHero />
+        </Reveal>
+      </Spotlight>
+      {incentives.map((item, i) => (
+        <Reveal
+          key={item.title}
+          direction={item.layout === 'imageRight' ? 'left' : 'right'}
+          distance={32}
+          duration={750}
+        >
+          <IncentiveCard item={item} />
+        </Reveal>
       ))}
-      <ReadyCTA />
-      <StreamSummitBanner />
+      <Reveal direction="up"><ReadyCTA /></Reveal>
+      <Spotlight color="rgba(253, 236, 63, 0.18)" size={560}>
+        <Reveal direction="up"><StreamSummitBanner /></Reveal>
+      </Spotlight>
     </>
   )
 }

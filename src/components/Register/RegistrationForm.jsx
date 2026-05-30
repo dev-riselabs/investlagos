@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
@@ -100,6 +101,14 @@ const RegistrationForm = () => {
     }
   };
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!success) return;
+    const timer = setTimeout(() => navigate("/"), 5000);
+    return () => clearTimeout(timer);
+  }, [success, navigate]);
+
   if (success) {
     return (
       <section className="bg-white">
@@ -111,6 +120,9 @@ const RegistrationForm = () => {
             Your registration for Invest Lagos 3.0 has been received. A
             confirmation will be sent to{" "}
             <span className="font-medium text-black">{data.email}</span>.
+          </p>
+          <p className="mt-4 text-xs font-jost text-black/50">
+            You will be redirected to the homepage in 5 seconds…
           </p>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Reveal, Spotlight, Stagger, MouseTilt } from '../lib/animations'
 
 /* ─────────────────── DATA ─────────────────── */
 
@@ -294,8 +295,13 @@ function AgendaTimeline() {
       <div className="px-6 py-14 lg:py-20">
         <div className="mx-auto max-w-[1240px] space-y-0">
           {current.sessions.map((session, idx) => (
-            <div
+            <Reveal
               key={session.title}
+              direction="up"
+              delay={Math.min(idx * 70, 280)}
+              distance={28}
+            >
+            <div
               className={`grid gap-6 py-12 lg:grid-cols-[160px_1fr] lg:gap-10 ${
                 idx < current.sessions.length - 1 ? 'border-b border-white/10' : ''
               }`}
@@ -349,6 +355,7 @@ function AgendaTimeline() {
                 )}
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -471,8 +478,10 @@ function ContactCards() {
 
         {/* Cards grid */}
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
-          {cards.map(({ Icon, label, lines, action, href, copyText }) => (
-            <div key={label} className="flex flex-col rounded-2xl bg-white/10 p-8 backdrop-blur-sm">
+          {cards.map(({ Icon, label, lines, action, href, copyText }, cardIdx) => (
+            <Reveal key={label} direction="up" delay={cardIdx * 90} distance={26}>
+            <MouseTilt intensity={6}>
+            <div className="flex flex-col rounded-2xl bg-white/10 p-8 backdrop-blur-sm">
               {/* Icon box */}
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20">
                 <Icon />
@@ -508,6 +517,8 @@ function ContactCards() {
                 </div>
               </div>
             </div>
+            </MouseTilt>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -537,11 +548,23 @@ function AgendaFooterCTA() {
 export default function AgendaPage() {
   return (
     <>
-      <AgendaHero />
-      <ProgrammeDownloadBar />
-      <AgendaTimeline />
-      <ContactCards />
-      <AgendaFooterCTA />
+      <Spotlight color="rgba(255, 255, 255, 0.16)" size={620}>
+        <Reveal direction="fade" duration={900}>
+          <AgendaHero />
+        </Reveal>
+      </Spotlight>
+      <Reveal direction="down" duration={600}>
+        <ProgrammeDownloadBar />
+      </Reveal>
+      <Reveal direction="up">
+        <AgendaTimeline />
+      </Reveal>
+      <Reveal direction="up">
+        <ContactCards />
+      </Reveal>
+      <Reveal direction="up">
+        <AgendaFooterCTA />
+      </Reveal>
     </>
   )
 }

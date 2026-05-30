@@ -1,4 +1,5 @@
 import React from 'react'
+import { Reveal, MouseTilt } from '../../lib/animations'
 
 const projects = [
   {
@@ -66,9 +67,9 @@ function FilterPill({ label }) {
 
 function ProjectCard({ title, subtitle, tags, required, raised, image }) {
   return (
-    <article className="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-slate-200">
+    <article className="overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-slate-200 il-card">
       {/* Image */}
-      <div className="aspect-[16/9] overflow-hidden">
+      <div className="aspect-[16/9] overflow-hidden il-card-media">
         <img src={image} alt={title} className="h-full w-full object-cover" loading="lazy" />
       </div>
 
@@ -148,8 +149,12 @@ const DealRoomProjects = () => {
       {/* Project cards */}
       <section className="bg-slate-50 px-6 py-12 lg:py-14">
         <div className="mx-auto grid max-w-[1240px] gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <ProjectCard key={p.title} {...p} />
+          {projects.map((p, i) => (
+            <Reveal key={p.title} direction="up" delay={i * 110} distance={28}>
+              <MouseTilt intensity={5}>
+                <ProjectCard {...p} />
+              </MouseTilt>
+            </Reveal>
           ))}
         </div>
       </section>

@@ -40,7 +40,7 @@ import { PiBank } from "react-icons/pi";
 
 function SpeakerCard({ speaker }) {
   return (
-    <article className="overflow-hidden rounded-xl bg-slate400/5 flex flex-col h-full">
+    <article className="overflow-hidden rounded-xl bg-slate400/5 flex flex-col h-full il-card">
       <img
         src={speaker.image}
         alt={speaker.name}
@@ -69,6 +69,7 @@ function SpeakerCard({ speaker }) {
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function ConfirmedSpeakers() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -122,9 +123,9 @@ function ConfirmedSpeakers() {
           </div>
 
           <div className="flex items-center gap-6">
-            <button className="text-sm font-bold font-inter uppercase text-white">
+            <Link to="/speakers" className="text-sm font-bold font-inter uppercase text-white no-underline">
               View All Speakers
-            </button>
+            </Link>
 
             <button className="flex h-9 w-9 items-center justify-center rounded-full border border-yellow text-yellow">
               <FaArrowRight />

@@ -41,9 +41,9 @@ const locMembers = [
 /* ─── Card ───────────────────────────────────────────────────────────────── */
 function LOCCard({ name, role, photo, bio }) {
   return (
-    <article className="flex flex-col">
+    <article className="flex flex-col il-card">
       {/* Photo */}
-      <div className="overflow-hidden rounded-xl bg-slate-100">
+      <div className="overflow-hidden rounded-xl bg-slate-100 il-card-media">
         <img
           src={photo}
           alt={name}
