@@ -15,7 +15,8 @@ function DealBookSection() {
           Download the Lagos State 2025 - 2030 Industrial Policy
         </h3>
         <a
-          href="/DealBook for Invest Lagos 3.0.pdf"
+          // href="/DealBook for Invest Lagos 3.0.pdf"
+          href="/Lagos State Industrial Policy 2025 - 2030.pdf"
           download
           className={`py-1.5 px-5 md:p-2.5 pl-4 md:px-8 flex items-center gap-2 md:gap-4 rounded-sm bg-red self-start md:self-center`}
         >
