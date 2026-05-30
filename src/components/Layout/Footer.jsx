@@ -95,7 +95,7 @@ const Footer = () => {
             />
             <div className="flex items-center gap-5">
               {socialIcons.map(({ label, icon: Icon, url }) => (
-                <a key={label} href="{url}" aria-label={label} className="">
+                <a key={label} href={url} aria-label={label} className="">
                   <Icon className="w-6 h-6 text-black" />
                 </a>
               ))}
