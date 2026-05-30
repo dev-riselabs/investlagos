@@ -140,7 +140,7 @@ function MemberCard({ name, role, photo }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-90"
+          className="block w-full object-cover object-top max-h-100"
           loading="lazy"
         />
       </div>
@@ -179,7 +179,7 @@ function BioCard({ name, role, photo, bio }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-90"
+          className="block w-full object-cover object-top max-h-100"
           loading="lazy"
         />
       </div>
@@ -268,7 +268,7 @@ const GovernanceSubCommittees = () => {
           </div>
 
           {/* Bio cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9 mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16 mb-20">
             {mediaBioCards.map((m, i) => (
               <Reveal key={m.name} direction="up" delay={i * 130} distance={28}>
                 <MouseTilt intensity={4} className="h-full">

@@ -135,7 +135,7 @@ function MemberCard({ name, role, photo }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-90"
+          className="block w-full object-cover object-top max-h-100"
           loading="lazy"
         />
       </div>
@@ -170,7 +170,7 @@ function BioCard({ name, role, photo, bio }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-90"
+          className="block w-full object-cover object-top max-h-100"
           loading="lazy"
         />
       </div>
@@ -229,21 +229,21 @@ const GovernancePartnerships = () => {
           <SectionHeading title="Partnerships & Sponsorships Committee" />
 
           {/* Top row: 3 member cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-9  mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16  mb-20">
             {partnershipsTop.map((m) => (
               <MemberCard key={m.name} {...m} />
             ))}
           </div>
 
           {/* Middle row: 2 bio cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9 mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16 mb-20">
             {partnershipsBios.map((m) => (
               <BioCard key={m.name} {...m} />
             ))}
           </div>
 
           {/* Bottom row: 1 wide lead bio card */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16">
             <BioCard {...partnershipsWideBio} />
           </div>
         </div>
@@ -253,14 +253,14 @@ const GovernancePartnerships = () => {
           <SectionHeading title="Secretariat" />
 
           {/* Top row: 2 bio cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9 mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16 mb-20">
             {secretariatBios.map((m) => (
               <BioCard key={m.name} {...m} />
             ))}
           </div>
 
           {/* Bottom row: 2 member cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16">
             {secretariatMembers.map((m) => (
               <MemberCard key={m.name} {...m} />
             ))}

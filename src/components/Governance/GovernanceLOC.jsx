@@ -67,7 +67,7 @@ function LOCCard({ name, role, photo, bio }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-90"
+          className="block w-full object-cover object-top max-h-100"
           loading="lazy"
         />
       </div>
@@ -125,7 +125,7 @@ const GovernanceLOC = () => {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16">
           {locMembers.map((m) => (
             <LOCCard key={m.name} {...m} />
           ))}

@@ -167,7 +167,7 @@ function MemberCard({ name, role, photo }) {
         <img
           src={photo ? photo : "/governance-images/Sean Leno (CWEIC).png"}
           alt={name}
-          className="block w-full object-cover object-top max-h-90 h-full"
+          className="block w-full object-cover object-top max-h-100 h-full"
           loading="lazy"
         />
       </div>
@@ -210,7 +210,7 @@ function BioCard({
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-90"
+          className="block w-full object-cover object-top max-h-100"
           loading="lazy"
         />
       </div>
@@ -300,7 +300,7 @@ const GovernanceAdditionalCommittees = () => {
         <div>
           <SubSectionHeading title="Technical & Programmes Committee" />
           {/* Top two bio cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9 mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16 mb-20">
             {techBioTop.map((m, i) => (
               <Reveal key={m.name} direction="up" delay={i * 130} distance={28}>
                 <MouseTilt intensity={4} className="h-full">
@@ -310,7 +310,7 @@ const GovernanceAdditionalCommittees = () => {
             ))}
           </div>
           {/* Middle two member cards */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9 mb-20">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16 mb-20">
             {techMembers.map((m, i) => (
               <Reveal key={m.name} direction="up" delay={i * 120} distance={26}>
                 <MouseTilt intensity={4} className="h-full">
@@ -339,7 +339,7 @@ const GovernanceAdditionalCommittees = () => {
         {/* Legal & Compliance Sub-Committee */}
         <div>
           <SubSectionHeading title="Legal & Compliance Sub-Committee" />
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16">
             {legalMembers.map((m, i) => (
               <Reveal key={m.name} direction="up" delay={i * 120} distance={26}>
                 <MouseTilt intensity={4} className="h-full">
@@ -353,7 +353,7 @@ const GovernanceAdditionalCommittees = () => {
         {/* Event & Guest Management Committee */}
         <div>
           <SubSectionHeading title="Event & Guest Management Committee" />
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-9">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:gap-16">
             {eventMembers.map((m, i) => (
               <Reveal key={m.name} direction="up" delay={i * 120} distance={26}>
                 <MouseTilt intensity={4} className="h-full">
