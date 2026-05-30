@@ -82,7 +82,7 @@ export default function CountdownTimer() {
   if (!timeLeft) return null;
 
   return (
-    <div className="flex items-center gap-6 text-center font-jost text-green100">
+    <div className="flex items-center gap-3 sm:gap-6 text-center font-jost text-green100">
       <div>
         <p className="text-4xl md:text-5xl font-bold">
           {format(timeLeft.days)}

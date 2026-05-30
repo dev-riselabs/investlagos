@@ -19,24 +19,23 @@ const socialIcons = [
   {
     label: "Facebook",
     icon: FaSquareFacebook,
-    url: "https://www.facebook.com/profile.php?id=61564549807377"
+    url: "https://www.facebook.com/profile.php?id=61564549807377",
   },
   {
     label: "Instagram",
     icon: FaInstagram,
-    url: "https://www.instagram.com/investlagos_?igsh=MXM3cXA4ZjFjcGQxaw%3D%3D"
-  },
-   {
-    label: "YouTube",
-    icon: FaYoutube,
-    url: "https://www.youtube.com/@invest-lagos"
+    url: "https://www.instagram.com/investlagos_?igsh=MXM3cXA4ZjFjcGQxaw%3D%3D",
   },
   {
-    label: "X", 
-    icon: FaXTwitter,
-    url: "https://x.com/investlagos_"
+    label: "YouTube",
+    icon: FaYoutube,
+    url: "https://www.youtube.com/@invest-lagos",
   },
-  
+  {
+    label: "X",
+    icon: FaXTwitter,
+    url: "https://x.com/investlagos_",
+  },
 ];
 
 const Footer = () => {
@@ -70,7 +69,7 @@ const Footer = () => {
           </div>
 
           {/* ── Navigation links ── */}
-          <ul className="mt-8 grid grid-cols-2 sm:flex-row sm:flex-wrap items-center justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
+          <ul className="mt-8 grid grid-cols-2 sm:grid-cols-none sm:flex sm:flex-row sm:flex-wrap items-center justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
             {footerLinks.map((l) => (
               <li
                 key={l}
@@ -146,7 +145,13 @@ const Footer = () => {
               <p>Copyright 2026. All Rights Reserved. Invest Lagos</p>
               <p>
                 Website Designed &amp; Developed by{" "}
+<<<<<<< HEAD
+                <a href="eventsintel.com" className="font-bold">
+                  Events Intel
+                </a>
+=======
                 <a href="https://eventsintel.com" target="_blank" className="font-bold">Events Intel</a>
+>>>>>>> 7448c7330a54abad8834fe1b0af628e9d820c749
               </p>
             </div>
           </div>

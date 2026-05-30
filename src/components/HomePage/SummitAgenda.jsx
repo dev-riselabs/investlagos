@@ -56,7 +56,8 @@ export default function SummitAgenda() {
             to="/agenda"
             className="mt-8 flex items-center justify-start  gap-4 text-sm md:text-lg font-jost font-bold uppercase tracking-wider text-yellow! transition hover:text-yellow/80!"
           >
-            View Full Detailed Programme
+            View Full Detailed Programme{" "}
+            <span className="w-4 md:w-10 h-px bg-yellow"></span>
           </Link>
         </div>
 
