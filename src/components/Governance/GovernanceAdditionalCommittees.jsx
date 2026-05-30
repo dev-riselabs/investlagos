@@ -20,7 +20,7 @@ const techBioTop = [
   {
     name: 'Dr. Toyosi Akerele-Ogunsiji',
     role: 'Member, Technical & Programmes Committee',
-    photo: '/governance/Dr. Toyosi Akerele-Ogunsiji.png',
+    photo: '/governance-images/Dr. Toyosi Akerele-Ogunsiji.png',
     bio: [
       'Dr. Toyosi Akerele-Ogunsiji is the Founder of RISE Networks, a leading social enterprise advancing youth development, data science and digital literacy across Africa. She has trained tens of thousands of young Nigerians through technology-driven programmes.',
       'A Forbes Africa "30 Under 30" honouree, she has consulted for the African Development Bank, the World Bank and the British Council on initiatives that bridge education and the future of work.',
@@ -29,7 +29,7 @@ const techBioTop = [
   {
     name: 'Dr. Olamide Adekunle Okulaja',
     role: 'Member, Technical & Programmes Committee',
-    photo: '/governance/Dr. Olamide Adekunle Okulaja.png',
+    photo: '/governance-images/Dr. Olamide Adekunle Okulaja.png',
     bio: [
       'Dr. Olamide Adekunle Okulaja is a public health and development specialist with extensive experience in healthcare policy, programme management and stakeholder engagement across Africa.',
       'He has led multi-country initiatives in partnership with the WHO, UNICEF and major development partners, with a focus on systems strengthening and sustainable health financing. He currently advises governments and private sector institutions on social-impact strategy.',
@@ -38,15 +38,15 @@ const techBioTop = [
 ]
 
 const techMembers = [
-  { name: 'Mrs. Adesuwa Ladoja', role: 'Member, Technical & Programmes Committee', photo: '/governance/Adesuwa Ladoja.png' },
-  { name: 'Mr. Charles Edosomwan', role: 'Member, Technical & Programmes Committee', photo: '/governance/Charles Edosomwan.png' },
+  { name: 'Mrs. Adesuwa Ladoja', role: 'Member, Technical & Programmes Committee', photo: '/governance-images/Adesuwa Ladoja.png' },
+  { name: 'Mr. Charles Edosomwan', role: 'Member, Technical & Programmes Committee', photo: '/governance-images/Charles Edosomwan.png' },
 ]
 
 const techBioBottom = [
   {
     name: 'Mr. Ayo Otuyalo',
     role: 'Member, Technical & Programmes Committee',
-    photo: '/governance/Ayo Otuyalo.png',
+    photo: '/governance-images/Ayo Otuyalo.png',
     bio: [
       'Ayo Otuyalo is a strategist and creative leader with over two decades of experience in branding, marketing and corporate communications. He has shaped campaigns for some of Africa\'s most recognised brands and serves on multiple advisory boards.',
       'His expertise spans integrated marketing, customer experience design and stakeholder communications — capabilities he brings to the strategic positioning of Invest Lagos 3.0.',
@@ -55,7 +55,7 @@ const techBioBottom = [
   {
     name: 'Mr. Babatunde Onigbanjo',
     role: 'Member, Technical & Programmes Committee',
-    photo: '/governance/Babatunde Onigbanjo.png',
+    photo: '/governance-images/Babatunde Onigbanjo.png',
     bio: [
       'Mr. Babatunde Onigbanjo is a distinguished legal practitioner with deep expertise in commercial law, public policy and government regulation. He currently provides advisory support to Lagos State on investment, trade and regulatory matters.',
       'He has played a key role in shaping the legal frameworks underpinning several of the state\'s economic and investment promotion initiatives.',
@@ -64,7 +64,7 @@ const techBioBottom = [
   {
     name: 'Mr. Ayiri Oladunmoye',
     role: 'Member, Technical & Programmes Committee',
-    photo: '/governance/Ayiri Oladunmoye.png',
+    photo: '/governance-images/Ayiri Oladunmoye.png',
     bio: [
       'Ayiri Oladunmoye is an experienced executive with a strong background in finance, business development and economic strategy. He has held senior leadership roles across financial services and consulting firms in Nigeria and abroad.',
       'He advises governments and corporates on investment promotion, market entry and economic policy design.',
@@ -74,19 +74,19 @@ const techBioBottom = [
 
 /* ─── DATA: Other sub-committees ─────────────────────────────────────────── */
 const legalMembers = [
-  { name: 'Ms. Lola Talabi-Oni', role: 'Member, Legal & Compliance Sub-Committee', photo: '/governance/Ms Lola Talabi-Oni.png' },
-  { name: 'Mr. Gboyega Akosile', role: 'Member, Legal & Compliance Sub-Committee', photo: '/governance/Mr Gboyega Akosile.png' },
+  { name: 'Ms. Lola Talabi-Oni', role: 'Member, Legal & Compliance Sub-Committee', photo: '/governance-images/Ms Lola Talabi-Oni.png' },
+  { name: 'Mr. Gboyega Akosile', role: 'Member, Legal & Compliance Sub-Committee', photo: '/governance-images/Mr Gboyega Akosile.png' },
 ]
 
 const eventMembers = [
-  { name: 'Mrs. Ajibola Yewande Ponnle', role: 'Member, Event & Guest Management Committee', photo: '/governance/Mrs. Ajibola Yewande Ponnle.png' },
-  { name: 'Mrs. Moji Hunponu-Wusu', role: 'Member, Event & Guest Management Committee', photo: '/governance/Mrs. Moji Hunponu-Wusu.png' },
+  { name: 'Mrs. Ajibola Yewande Ponnle', role: 'Member, Event & Guest Management Committee', photo: '/governance-images/Mrs. Ajibola Yewande Ponnle.png' },
+  { name: 'Mrs. Moji Hunponu-Wusu', role: 'Member, Event & Guest Management Committee', photo: '/governance-images/Mrs. Moji Hunponu-Wusu.png' },
 ]
 
 const logisticsMembers = [
-  { name: 'Mr. Kunle Fagbemi', role: 'Member, Logistics, Security, Protocol & Transportation Sub-Committee', photo: '/governance/Kunle Fagbemi.png' },
-  { name: 'Mr. Akintayo Sanwo-Olu', role: 'Member, Logistics, Security, Protocol & Transportation Sub-Committee', photo: '/governance/Akintayo Sanwo-Olu.png' },
-  { name: 'Mr. Taiye Nelson', role: 'Member, Logistics, Security, Protocol & Transportation Sub-Committee', photo: '/governance/Mr. Taiye Nelson.png' },
+  { name: 'Mr. Kunle Fagbemi', role: 'Member, Logistics, Security, Protocol & Transportation Sub-Committee', photo: '/governance-images/Kunle Fagbemi.png' },
+  { name: 'Mr. Akintayo Sanwo-Olu', role: 'Member, Logistics, Security, Protocol & Transportation Sub-Committee', photo: '/governance-images/Akintayo Sanwo-Olu.png' },
+  { name: 'Mr. Taiye Nelson', role: 'Member, Logistics, Security, Protocol & Transportation Sub-Committee', photo: '/governance-images/Mr. Taiye Nelson.png' },
 ]
 
 /* ─── MEMBER CARD (same size as LOC card, no bio) ────────────────────────── */

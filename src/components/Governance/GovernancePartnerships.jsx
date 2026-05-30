@@ -16,16 +16,16 @@ const MailIcon = () => (
 
 /* ─── DATA: Partnerships & Sponsorships Committee ────────────────────────── */
 const partnershipsTop = [
-  { name: 'Ms. Solape Hammond', role: 'Member, Partnerships & Sponsorships Committee', photo: '/governance/Solape Hammond.png' },
-  { name: 'Mr. Charles Edosomwan', role: 'Member, Partnerships & Sponsorships Committee', photo: '/governance/Charles Edosomwan.png' },
-  { name: 'Ms. Bukola Odoe', role: 'Member, Partnerships & Sponsorships Committee', photo: '/governance/Bukola Odoe.png' },
+  { name: 'Ms. Solape Hammond', role: 'Member, Partnerships & Sponsorships Committee', photo: '/governance-images/Solape Hammond.png' },
+  { name: 'Mr. Charles Edosomwan', role: 'Member, Partnerships & Sponsorships Committee', photo: '/governance-images/Charles Edosomwan.png' },
+  { name: 'Ms. Bukola Odoe', role: 'Member, Partnerships & Sponsorships Committee', photo: '/governance-images/Bukola Odoe.png' },
 ]
 
 const partnershipsBios = [
   {
     name: 'Ms. Peju Ibekwe',
     role: 'Member, Partnerships & Sponsorships Committee',
-    photo: '/governance/Peju Ibekwe.png',
+    photo: '/governance-images/Peju Ibekwe.png',
     bio: [
       'Peju Ibekwe is a seasoned business leader with extensive experience in partnerships, sponsorship strategy and corporate development across Africa.',
       'She has led successful collaborations between public institutions and global private-sector partners, with a strong focus on investment promotion and brand activation.',
@@ -34,7 +34,7 @@ const partnershipsBios = [
   {
     name: 'Mrs. Ire Odega',
     role: 'Member, Partnerships & Sponsorships Committee',
-    photo: '/governance/Mrs Ire Odega.png',
+    photo: '/governance-images/Mrs Ire Odega.png',
     bio: [
       'Mrs. Ire Odega is an accomplished communications and partnerships specialist with a track record of building high-impact alliances for major international summits and conferences.',
       'Her work bridges government, multilateral institutions and the private sector, ensuring that flagship events deliver measurable economic and reputational value for their host destinations.',
@@ -46,7 +46,7 @@ const partnershipsBios = [
 const partnershipsWideBio = {
   name: 'Mr. Ayo Otuyalo',
   role: 'Lead, Partnerships & Sponsorships Committee',
-  photo: '/governance/Ayo Otuyalo.png',
+  photo: '/governance-images/Ayo Otuyalo.png',
   bio: [
     'Mr. Ayo Otuyalo brings over two decades of leadership across branding, partnerships and corporate communications, having shaped some of the most recognised consumer and corporate campaigns on the African continent.',
     'In his capacity as Lead of the Partnerships & Sponsorships Committee, he is responsible for coordinating engagement with multinational sponsors, development partners and strategic institutional collaborators ahead of Invest Lagos 3.0.',
@@ -59,7 +59,7 @@ const secretariatBios = [
   {
     name: 'Mrs. Nana Hauwa Adeeyo',
     role: 'Member, Secretariat',
-    photo: '/governance/Mrs. Nana Hauwa Adeeyo.png',
+    photo: '/governance-images/Mrs. Nana Hauwa Adeeyo.png',
     bio: [
       'Mrs. Nana Hauwa Adeeyo is a public-sector administrator with deep experience in stakeholder coordination, programme management and institutional governance.',
       'She currently provides secretariat-level support to the Lagos State investment promotion portfolio, ensuring seamless coordination across committees, partners and external advisors for major state initiatives including Invest Lagos 3.0.',
@@ -68,7 +68,7 @@ const secretariatBios = [
   {
     name: 'Ms. Omofolahan Olowu',
     role: 'Member, Secretariat',
-    photo: '/governance/Ms Omofolahan Olowu.png',
+    photo: '/governance-images/Ms Omofolahan Olowu.png',
     bio: [
       'Ms. Omofolahan Olowu is a project-management professional with a background in policy advisory, public-sector reform and event coordination for high-level government engagements.',
       'She leads day-to-day secretariat operations for the Invest Lagos 3.0 organising structure, supporting committees with planning, documentation, communications and delivery oversight.',
@@ -77,8 +77,8 @@ const secretariatBios = [
 ]
 
 const secretariatMembers = [
-  { name: 'Ms. Megan Wright', role: 'Member, Secretariat', photo: '/governance/Ms.Megan Wright (CWEIC).png' },
-  { name: 'Ms. Biola Alabi', role: 'Member, Secretariat', photo: '/governance/Biola Alabi_2.png' },
+  { name: 'Ms. Megan Wright', role: 'Member, Secretariat', photo: '/governance-images/Ms.Megan Wright (CWEIC).png' },
+  { name: 'Ms. Biola Alabi', role: 'Member, Secretariat', photo: '/governance-images/Biola Alabi_2.png' },
 ]
 
 /* ─── MEMBER CARD ────────────────────────────────────────────────────────── */

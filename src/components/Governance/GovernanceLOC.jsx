@@ -19,7 +19,7 @@ const locMembers = [
   {
     name: 'HON Folashade Ambrose Medebem',
     role: 'Co-Chair, Local Organizing Committee',
-    photo: '/governance/HON Folashade Ambrose Medebem.png',
+    photo: '/governance-images/HON Folashade Ambrose Medebem.png',
     bio: [
       'Honourable Commissioner, Commerce, Cooperatives, Trade, and Investment, Lagos State Government (LASG). Folashade Bada Ambrose-Medebem is a seasoned leader with over 20 years of diverse experience in strategy, finance, sustainability, and corporate affairs. Appointed in September 2023, she has a proven track record of driving award winning business transformation strategies for FTSE100 companies across the UK, Europe, and Nigeria.',
       'Her leadership roles include serving on the Summit 24 Executive Committee of the Nigeria Economic Summit Group and as a board member of the UN Sustainable Development Goal Private Sector Advisory Group. Folashade also served on the board of the EuroChams (European Business Chamber) Nigeria, as the inaugural President, working with the Ambassador of European Union to Nigeria and to the Economic Community of West African States (ECOWAS) advocating the promotion of bilateral trade, investments and exchanges between European and Nigerian businesses.',
@@ -29,7 +29,7 @@ const locMembers = [
   {
     name: 'Mr. Sam Egube',
     role: 'Co-Chair, Local Organizing Committee',
-    photo: '/governance/Mr. Sam Egube.png',
+    photo: '/governance-images/Mr. Sam Egube.png',
     bio: [
       'Samuel Egube, FNSE, FICA, HOB, MNIM, MoD, COREN, is a seasoned public sector leader and corporate executive with over 34 years of experience spanning banking, governance, economic policy and institutional transformation.',
       'He currently serves as Deputy Chief of Staff to the Governor of Lagos State, following his tenure as Commissioner for Economic Planning and Budget, where he led strategic policy development, fiscal planning, resource allocation and state-wide performance management.',

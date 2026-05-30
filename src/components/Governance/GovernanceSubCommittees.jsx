@@ -17,24 +17,24 @@ const MailIcon = () => (
 
 /* ─── DATA ───────────────────────────────────────────────────────────────── */
 const financeMembers = [
-  { name: 'Mr. Yomi Oluyomi', role: 'Member', photo: '/governance/Yomi Oluyomi.png' },
-  { name: 'Mr. Ope George', role: 'Member', photo: '/governance/Ope George.png' },
-  { name: 'Ms. Biola Alabi', role: 'Member', photo: '/governance/Biola Alabi.png' },
+  { name: 'Mr. Yomi Oluyomi', role: 'Member', photo: '/governance-images/Yomi Oluyomi.png' },
+  { name: 'Mr. Ope George', role: 'Member', photo: '/governance-images/Ope George.png' },
+  { name: 'Ms. Biola Alabi', role: 'Member', photo: '/governance-images/Biola Alabi.png' },
 ]
 
 const mediaSmallCards = [
-  { name: 'Mr. Gbenga Omotosho', role: 'Chair', photo: '/governance/Gbenga Omotosho.png' },
-  { name: 'Ms. Charlotte Bailey', role: 'Member, Media and Communications Department', photo: '/governance/Charlotte Bailey (CWEIC).png' },
-  { name: 'Mr. AQ Hamza', role: 'Member, Media and Communications Department', photo: '/governance/AQ Hamza (CWEIC).png' },
-  { name: 'Mr. Pride Azefor', role: 'Member, Media and Communications Department', photo: '/governance/Pride Azefor (CWEIC).png' },
-  { name: 'Mr. Sean Leno', role: 'Member, Media and Communications Department', photo: '/governance/Sean Leno (CWEIC).png' },
+  { name: 'Mr. Gbenga Omotosho', role: 'Chair', photo: '/governance-images/Gbenga Omotosho.png' },
+  { name: 'Ms. Charlotte Bailey', role: 'Member, Media and Communications Department', photo: '/governance-images/Charlotte Bailey (CWEIC).png' },
+  { name: 'Mr. AQ Hamza', role: 'Member, Media and Communications Department', photo: '/governance-images/AQ Hamza (CWEIC).png' },
+  { name: 'Mr. Pride Azefor', role: 'Member, Media and Communications Department', photo: '/governance-images/Pride Azefor (CWEIC).png' },
+  { name: 'Mr. Sean Leno', role: 'Member, Media and Communications Department', photo: '/governance-images/Sean Leno (CWEIC).png' },
 ]
 
 const mediaBioCards = [
   {
     name: 'Mr. Abdeen Bolaji Abimbola',
     role: 'Member, Media, Communications & Publicity Sub-Committee',
-    photo: '/governance/Mr Abdeen Bolaji Abimbola.png',
+    photo: '/governance-images/Mr Abdeen Bolaji Abimbola.png',
     bio: [
       'Bolaji Abimbola brings extensive experience in media, communications and public affairs spanning over two decades. He has held senior leadership positions across major broadcasting organisations and communications agencies in Nigeria.',
       'As a seasoned communications professional, he has coordinated high-profile media campaigns for government agencies, multinational corporations and development institutions, with a particular focus on investment promotion and economic development narratives.',
@@ -44,7 +44,7 @@ const mediaBioCards = [
   {
     name: 'Mr. Obinna Anyanwu',
     role: 'Member, Media, Communications & Publicity Sub-Committee',
-    photo: '/governance/Obinna Anyanwu.png',
+    photo: '/governance-images/Obinna Anyanwu.png',
     bio: [
       'Obinna Anyanwu is a communications strategist and media executive with a distinguished career in journalism, public relations and digital media across Nigeria and internationally.',
       'He has led communications for several high-profile investment and economic summits, developing integrated media strategies that reach both domestic and international audiences. His work has been instrumental in positioning Nigeria and Lagos as top destinations for foreign direct investment.',
@@ -54,8 +54,8 @@ const mediaBioCards = [
 ]
 
 const mediaBottomCards = [
-  { name: 'Mr. Lami Adekola', role: 'Member, Media, Communications & Publicity Sub-Committee', photo: '/governance/Mr Lami Adekola.png' },
-  { name: 'Mrs. Mary Aderinola Ojulari', role: 'Member, Media, Communications & Publicity Sub-Committee', photo: '/governance/Mrs Mary Aderinola Ojulari.png' },
+  { name: 'Mr. Lami Adekola', role: 'Member, Media, Communications & Publicity Sub-Committee', photo: '/governance-images/Mr Lami Adekola.png' },
+  { name: 'Mrs. Mary Aderinola Ojulari', role: 'Member, Media, Communications & Publicity Sub-Committee', photo: '/governance-images/Mrs Mary Aderinola Ojulari.png' },
 ]
 
 /* ─── MEMBER CARD (same size as LOC card, no bio) ────────────────────────── */
