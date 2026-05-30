@@ -7,7 +7,7 @@ function DealBookSection() {
         <img
           src="/Screenshot_20260530_135109_Drive.jpg"
           alt=""
-          className="max-h-130"
+          className="max-h-120 max-w-120 w-full"
         />
       </div>
       <div className="flex flex-col gap-6 max-w-xl md:items-center md:flex-1">
