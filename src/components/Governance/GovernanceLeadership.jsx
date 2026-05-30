@@ -5,7 +5,7 @@ const leaders = [
   {
     name: "Mr. Babajide Olusola Sanwo-Olu",
     title: "Governor of Lagos State",
-    photo: "/speakers/MR_Babajide_Olusola_Sanwo_Olu.png",
+    photo: "/governance-images/Mr. Babajide Olusola Sanwo-Olu.png",
   },
   {
     name: "Dr. Kadri Obafemi Hamzat",
