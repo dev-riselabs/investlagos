@@ -51,7 +51,7 @@ export default function SummitAgenda() {
             Not just conversations, decisions that move markets.
           </p>
 
-          <button className="mt-8 flex items-center justify-start  gap-4 text-sm md:text-lg font-jost font-semibold uppercase tracking-wider text-white">
+          <button className="mt-8 flex items-center justify-start  gap-4 text-sm md:text-lg font-jost font-semibold uppercase tracking-wider text-yellow">
             View Full Detailed Programme
             <span className="h-px w-6 sm:w-12 bg-white" />
           </button>
@@ -78,7 +78,7 @@ export default function SummitAgenda() {
               </div>
 
               <div className="">
-                <h3 className="text-4xl font-bold">{agenda.date}</h3>
+                <h3 className="text-4xl font-bold text-yellow">{agenda.date}</h3>
               </div>
 
               <div className="space-y-4">
@@ -128,7 +128,7 @@ export default function SummitAgenda() {
           </div>
 
           <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <h3 className="text-4xl font-bold">10th June 2026</h3>
+            <h3 className="text-4xl font-bold text-yellow">10th June 2026</h3>
 
             <p className="text-sm text-white/80">
               Delegates' Industrial & Infrastructure Site Tour
