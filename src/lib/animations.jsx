@@ -389,9 +389,16 @@ export function PageTransition({ children, transitionKey, className = '' }) {
 // Stacks a sequence of full-width sections so that as the user scrolls down
 // each new section slides over the previous one, and the previous one is
 // scaled / faded slightly to feel "folded" underneath. Scrolling back up
-// unfolds the stack. Implemented with native CSS `position: sticky` so it
-// stays smooth without re-layout, and a rAF-driven transform on a wrapped
-// inner element so we never mutate the consumer's markup.
+// unfolds the stack.
+//
+// Each FoldStackItem wraps its section in two layers:
+//   1. An outer non-sticky div whose paddingBottom is dynamically set to the
+//      section's rendered height via ResizeObserver. This "scroll budget"
+//      keeps the section pinned and fully readable before the next card
+//      starts sliding in — fixing the issue where sections were covered
+//      before their content could be seen.
+//   2. An inner sticky div that pins to `top` while the user scrolls through
+//      that budget.
 
 export function FoldStack({ children, className = '', topOffset = 0, style }) {
   const items = Children.toArray(children).filter(isValidElement)
@@ -412,28 +419,43 @@ export function FoldStack({ children, className = '', topOffset = 0, style }) {
 }
 
 function FoldStackItem({ children, index, total, topOffset }) {
-  const wrapRef = useRef(null)
+  // outerRef  — non-sticky scroll-budget container
+  // stickyRef — sticky-positioned layer
+  // innerRef  — receives scale / opacity transforms
+  const outerRef = useRef(null)
+  const stickyRef = useRef(null)
   const innerRef = useRef(null)
 
   useEffect(() => {
     if (typeof window === 'undefined' || prefersReducedMotion()) return
-    const wrap = wrapRef.current
+    const outer = outerRef.current
+    const sticky = stickyRef.current
     const inner = innerRef.current
-    if (!wrap || !inner) return
+    if (!outer || !sticky || !inner) return
 
+    // ── Scroll budget ────────────────────────────────────────────────────────
+    // Set outer paddingBottom = section height so the section remains fully
+    // visible (pinned at `top`) while the user scrolls through a distance
+    // equal to the section's own height before the next card appears.
+    const applyScrollBudget = () => {
+      outer.style.paddingBottom = `${inner.offsetHeight}px`
+    }
+    applyScrollBudget()
+    const ro = new ResizeObserver(applyScrollBudget)
+    ro.observe(inner)
+
+    // ── Scale / opacity feedback ─────────────────────────────────────────────
+    // Gently shrink and fade the section as it gets "buried" under the next
+    // card. Overshoot measures how far the sticky element has been pushed
+    // above the sticky line, which only grows once the section is pinned.
     let raf = 0
     const update = () => {
-      const rect = wrap.getBoundingClientRect()
-      // Overshoot: how far the wrapper's top sits above the sticky line.
-      // Only items pinned to the top accumulate overshoot, so siblings
-      // further down stay unaffected until they pin in turn.
+      const rect = sticky.getBoundingClientRect()
       const overshoot = Math.max(0, topOffset - rect.top)
       const denom = Math.max(1, window.innerHeight * 0.9)
       const p = Math.min(1, overshoot / denom)
-      const scale = 1 - p * 0.06
-      const opacity = 1 - p * 0.28
-      inner.style.transform = `scale(${scale})`
-      inner.style.opacity = String(opacity)
+      inner.style.transform = `scale(${1 - p * 0.06})`
+      inner.style.opacity = String(1 - p * 0.28)
     }
     const onScroll = () => {
       cancelAnimationFrame(raf)
@@ -443,6 +465,7 @@ function FoldStackItem({ children, index, total, topOffset }) {
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
     return () => {
+      ro.disconnect()
       cancelAnimationFrame(raf)
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
@@ -450,23 +473,29 @@ function FoldStackItem({ children, index, total, topOffset }) {
   }, [topOffset, index, total])
 
   return (
-    <div
-      ref={wrapRef}
-      style={{
-        position: 'sticky',
-        top: topOffset,
-        zIndex: index + 1,
-      }}
-    >
+    // Outer: in normal flow, provides the scroll budget via paddingBottom.
+    <div ref={outerRef}>
+      {/* Sticky layer: pins while user scrolls through the budget above. */}
       <div
-        ref={innerRef}
+        ref={stickyRef}
         style={{
-          transformOrigin: 'center top',
-          transition: 'transform 180ms linear, opacity 180ms linear',
-          willChange: 'transform, opacity',
+          position: 'sticky',
+          top: topOffset,
+          zIndex: index + 1,
         }}
       >
-        {children}
+        {/* Transform target: scale + opacity applied here, not on the sticky
+            element itself, so layout is never affected by the animation. */}
+        <div
+          ref={innerRef}
+          style={{
+            transformOrigin: 'center top',
+            transition: 'transform 180ms linear, opacity 180ms linear',
+            willChange: 'transform, opacity',
+          }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   )

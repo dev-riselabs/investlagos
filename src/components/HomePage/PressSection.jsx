@@ -5,7 +5,7 @@ const PressSection = () => {
     <section className="bg-white flex flex-col gap-6 px-4 md:flex-row md:px-10 lg:px-20 py-20 lg:py-28">
       <div className="flex flex-col justify-center gap-4 md:flex-1">
         <h2 className="max-w-lg text-3xl font-bold font-jost leading-snug text-green400  sm:text-4xl">
-          Invest Lagos 3.0 Press Conference Forecasts Over N4 TrillionIn
+          Invest Lagos 3.0 Press Conference Forecasts Over N4 Trillion In
           Investment Opportunities
         </h2>
         <p className="leading-7 text-green400 font-jost text-lg">
