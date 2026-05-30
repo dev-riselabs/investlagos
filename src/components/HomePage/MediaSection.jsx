@@ -39,9 +39,10 @@ const news = [
     id: 4,
     category: "COMMERCE",
     image: "/meeting.jpg",
-    title: "Another Investment Story",
+    title: "Lagos tops Nigeria’s ease of doing business rankings",
     description: "Additional article for demonstrating carousel movement.",
     border: "border-green-500",
+    url:"https://punchng.com/lagos-tops-nigerias-ease-of-doing-business-rankings/"
   },
 ];
 
