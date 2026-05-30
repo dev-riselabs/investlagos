@@ -146,7 +146,7 @@ const Footer = () => {
               <p>Copyright 2026. All Rights Reserved. Invest Lagos</p>
               <p>
                 Website Designed &amp; Developed by{" "}
-                <span className="font-bold">Events Intel</span>
+                <a href="eventsintel.com" className="font-bold">Events Intel</a>
               </p>
             </div>
           </div>
