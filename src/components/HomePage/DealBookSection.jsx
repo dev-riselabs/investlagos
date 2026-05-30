@@ -2,7 +2,7 @@ import { FaPlay } from "react-icons/fa";
 
 function DealBookSection() {
   return (
-    <section className="dealbook-bg flex flex-col px-4 py-8 md:px-10 md:justify-evenly lg:px-20 md:flex-row gap-2 md:gap-4 lg:gap-8 md:items-center">
+    <section className="dealbook-bg flex flex-col px-4 py-8 md:px-10 md:justify-evenly lg:px-20 md:flex-row gap-5 md:gap-4 lg:gap-8 md:items-center">
       <div className=" ">
         <img
           src="/Screenshot_20260530_135109_Drive.jpg"
@@ -11,7 +11,7 @@ function DealBookSection() {
         />
       </div>
       <div className="flex flex-col gap-6 max-w-xl md:items-center md:flex-1">
-        <h3 className="text-green100 font-jost font-medium text-2xl md:text-center md:text-4xl">
+        <h3 className="text-black font-jost font-medium text-xl md:text-center md:text-4xl">
           Download the Lagos State 2025 - 2030 Industrial Policy
         </h3>
         <a
