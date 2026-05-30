@@ -89,7 +89,7 @@ const mediaBioCards = [
   },
   {
     name: "Mr Gboyega Akosile",
-    role: "Member, Media, Communications & Publicity Sub-Committee",
+    role: "Special Adviser on Media and Publicity to the Governor of Lagos State and Member, Media & Publicity, Communications Committee",
     photo: "/governance-images/Mr Gboyega Akosile.png",
     bio: [
       "Mr. Gboyega Akosile is a seasoned journalist, theatre practitioner,  public relations expert, and entrepreneur with over two decades of  experience in journalism, media, and strategic communication. He  currently serves as Special Adviser on Media and Publicity to the  Governor of Lagos State, Mr. Babajide Sanwo-Olu, a position he  assumed on 13th March 2024.",

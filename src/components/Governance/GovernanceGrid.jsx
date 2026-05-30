@@ -28,10 +28,10 @@ const committeeMembers = [
   { name: 'Mr. Charles Edosomwan', role: 'Member, Local Organising Committee', photo: '/governance-images/Charles Edosomwan.png' },
   { name: 'Dr. Olamide Adekunle Okulaja', role: 'Member, Local Organising Committee', photo: '/governance-images/Dr. Olamide Adekunle Okulaja.png' },
   { name: 'Dr. Toyosi Akerele-Ogunsiji', role: 'Member, Local Organising Committee', photo: '/governance-images/Dr. Toyosi Akerele-Ogunsiji.png' },
-  { name: 'Mr. Gbenga Omotosho', role: 'Member, Local Organising Committee', photo: '/governance-images/Gbenga Omotosho.png' },
+  { name: 'Mr. Gbenga Omotosho', role: 'Honourable Commissioner for Information & Strategy of Lagos State Government & Chair, Media, Publicity & Communications Committee', photo: '/governance-images/Gbenga Omotosho.png' },
   { name: 'Mr. Kunle Fagbemi', role: 'Member, Local Organising Committee', photo: '/governance-images/Kunle Fagbemi.png' },
   { name: 'Mr. Abdeen Bolaji Abimbola', role: 'Member, Local Organising Committee', photo: '/governance-images/Mr Abdeen Bolaji Abimbola.png' },
-  { name: 'Mr. Gboyega Akosile', role: 'Member, Local Organising Committee', photo: '/governance-images/Mr Gboyega Akosile.png' },
+  { name: 'Mr. Gboyega Akosile', role: 'Special Adviser on Media and Publicity to the Governor of Lagos State and Member, Media & Publicity, Communications Committee', photo: '/governance-images/Mr Gboyega Akosile.png' },
   { name: 'Mr. Lami Adekola', role: 'Member, Local Organising Committee', photo: '/governance-images/Mr Lami Adekola.png' },
   { name: 'Mr. Taiye Nelson', role: 'Member, Local Organising Committee', photo: '/governance-images/Mr. Taiye Nelson.png' },
   { name: 'Mrs. Ire Odega', role: 'Member, Local Organising Committee', photo: '/governance-images/Mrs Ire Odega.png' },
@@ -43,7 +43,7 @@ const committeeMembers = [
   { name: 'Ms. Omofolahan Olowu', role: 'Member, Local Organising Committee', photo: '/governance-images/Ms Omofolahan Olowu.png' },
   { name: 'Mr. Obinna Anyanwu', role: 'Member, Local Organising Committee', photo: '/governance-images/Obinna Anyanwu.png' },
   { name: 'Mrs. Peju Ibekwe', role: 'Member, Local Organising Committee', photo: '/governance-images/Peju Ibekwe.png' },
-  { name: 'Mr. Yomi Oluyomi', role: 'Member, Local Organising Committee', photo: '/governance-images/Yomi Oluyomi.png' },
+  { name: 'Mr. Yomi Oluyomi', role: 'Honourable Commissioner for Finance of Lagos State Government & Chair, Finance Committee', photo: '/governance-images/Yomi Oluyomi.png' },
 ]
 
 const cweicPartners = [

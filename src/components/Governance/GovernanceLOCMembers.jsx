@@ -86,7 +86,7 @@ const locMembers = [
   },
   {
     name: "Mr. Gbenga Omotosho",
-    role: "Member, Local Organising Committee",
+    role: "Honourable Commissioner for Information & Strategy of Lagos State Government & Chair, Media, Publicity & Communications Committee",
     photo: "/governance-images/Gbenga Omotosho.png",
   },
   {
@@ -101,7 +101,7 @@ const locMembers = [
   },
   {
     name: "Mr. Gboyega Akosile",
-    role: "Member, Local Organising Committee",
+    role: "Special Adviser on Media and Publicity to the Governor of Lagos State and Member, Media & Publicity, Communications Committee",
     photo: "/governance-images/Mr Gboyega Akosile.png",
   },
   {
@@ -161,7 +161,7 @@ const locMembers = [
   },
   {
     name: "Mr. Yomi Oluyomi",
-    role: "Member, Local Organising Committee",
+    role: "Honourable Commissioner for Finance of Lagos State Government & Chair, Finance Committee",
     photo: "/governance-images/Yomi Oluyomi.png",
   },
 ];

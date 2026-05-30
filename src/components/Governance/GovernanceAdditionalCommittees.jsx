@@ -27,7 +27,7 @@ const MailIcon = () => (
 const techBioTop = [
   {
     name: "Dr. Olamide Adekunle Okulaja",
-    role: "Member, Technical & Programmes Committee",
+    role: "Co-Chair, Technical & Programmes Committee",
     photo: "/governance-images/Dr. Olamide Adekunle Okulaja.png",
     principle:
       "GUIDING PRINCIPLES  Institutional coherence.   Financial sustainability.   Measurable scale.",
@@ -54,7 +54,7 @@ const techBioTop = [
   },
   {
     name: "Dr. Toyosi Akerele-Ogunsiji",
-    role: "Co- Chair, Technical and Programmes Committee",
+    role: "Co-Chair, Technical and Programmes Committee",
     photo: "/governance-images/Dr. Toyosi Akerele-Ogunsiji.png",
     bio: [
       "Dr. Toyosi Akerele-Ogunsiji is the Founder of Rise Networks and Rise  Interactive Studios, Africa, and a globally respected multidisciplinary  professional in Artificial Intelligence for Development, Media  Innovation, Youth Development, EdTech and Public Policy. Named  by Forbes as one of the 20 Most Powerful Young Women in Africa  and listed among the Top 30 Global Artificial Intelligence  Ambassadors by Swiss Cognitive, she also serves on the UNDP  #AI4Dev Reference Group. She holds a master’s in public  administration from the Harvard Kennedy School, has completed  Executive Education at the University of Cambridge, University of  New Hampshire and Pan-Atlantic University, an undergrad degree in  Civil Law.",
