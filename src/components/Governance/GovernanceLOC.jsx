@@ -94,12 +94,12 @@ function LOCCard({ name, role, photo, bio }) {
           >
             <LinkedInIcon />
           </button>
-          <button
+          {/* <button
             aria-label="Email"
             className="flex h-8 w-8 items-center justify-center rounded-full bg-green550 text-slate-500 transition-colors hover:border-green200 hover:text-green200"
           >
             <MailIcon />
-          </button>
+          </button> */}
         </div>
       </div>
     </article>

@@ -59,11 +59,11 @@ const cweicPartners = [
 function MemberCard({ name, role, photo }) {
   return (
     <article className="flex flex-col il-card">
-      <div className="overflow-hidden rounded-xl bg-slate-100 il-card-media">
+      <div className="overflow-hidden rounded-xl bg-slate-100 il-card-media max-h-52">
         <img
           src={photo}
           alt={name}
-          className="block aspect-[4/5] w-full object-cover object-top transition-transform duration-500 hover:scale-105"
+          className="block aspect-[3/4] w-full object-cover object-top transition-transform duration-500 hover:scale-105"
           loading="lazy"
         />
       </div>
