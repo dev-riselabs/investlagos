@@ -75,9 +75,9 @@ function MemberCard({ name, role, photo }) {
           <button className="flex h-6 w-6 items-center justify-center rounded bg-[#0077B5] text-white transition-opacity hover:opacity-80">
             <LinkedInIcon />
           </button>
-          <button className="flex h-6 w-6 items-center justify-center rounded border border-slate-200 text-slate-400 transition-colors hover:border-green200 hover:text-green200">
+          {/* <button className="flex h-6 w-6 items-center justify-center rounded border border-slate-200 text-slate-400 transition-colors hover:border-green200 hover:text-green200">
             <MailIcon />
-          </button>
+          </button> */}
         </div>
       </div>
     </article>
