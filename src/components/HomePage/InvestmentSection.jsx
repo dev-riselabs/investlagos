@@ -38,7 +38,7 @@ function InvestmentSection() {
                     <p className="text-white/80 font-manrope text-base font-medium">As the commercial heartbeat of Africa, Lagos offers unparalleled access to markets, talent, innovation and opportunity.</p>
                     <p className="text-white/80 font-manrope text-base font-medium">The Invest Lagos Deal Room provides a trusted platform where investors, governments, development finance institutions, and businesses can unlock partnerships that accelerate sustainable development.</p>
                 </div>
-                <button className="py-3 px-8 text-black300 font-inter font-bold text-sm bg-orange rounded-md self-start">Access Deal Room</button>
+                <a href="/dealroom" className="py-3 px-8 text-black300 font-inter font-bold text-sm bg-orange rounded-md self-start">Access Deal Room</a>
             </div>
             <div className="w-full md:flex-1">
                 <img src="/investment-img.png" alt=""className="w-full" />

@@ -1,9 +1,14 @@
 import { lazy, Suspense } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
 import LandingPageLayout from './layout/Landing_Page_Layout'
 import { AuthProvider } from './admin/AuthContext'
 import ProtectedRoute from './admin/ProtectedRoute'
+
+// Site-wide maintenance toggle. When VITE_MAINTENANCE_MODE=true, every
+// public route redirects to /maintenance. Admin routes and /maintenance
+// itself remain reachable.
+const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === 'true'
 
 // Route-level code splitting — each page becomes its own async chunk and
 // is only fetched the first time the route is visited. This keeps the
@@ -22,6 +27,7 @@ const AboutPage             = lazy(() => import('./pages/AboutPage'))
 const AdministrationPage    = lazy(() => import('./pages/AdministrationPage'))
 const PolicyPage            = lazy(() => import('./pages/PolicyPage'))
 const MediaKitPage          = lazy(() => import('./pages/MediaKitPage'))
+const MaintenancePage       = lazy(() => import('./pages/MaintenancePage'))
 
 // Admin console — kept in its own group of chunks; never loaded on
 // the public marketing site.
@@ -48,26 +54,31 @@ function App() {
       <AuthProvider>
         <Suspense fallback={<RouteFallback />}>
           <Routes>
-            <Route path="/" element={<LandingPageLayout />}>
-              <Route index element={<HomePage />} />
-              <Route path="about" element={<AboutPage />} />
-              <Route path="sectors" element={<SectorsPage />} />
-              <Route path="incentives" element={<IncentivesPage />} />
-              <Route path="agenda" element={<AgendaPage />} />
-              <Route path="speakers" element={<SpeakersPage />} />
-              <Route path="deal-room" element={<DealRoomPage />} />
-              <Route path="register" element={<RegisterPage />} />
-              <Route path="governance" element={<GovernancePage />} />
-              <Route path="publications" element={<PublicationsPage />} />
-              <Route path="publications/:slug" element={<PublicationDetailPage />} />
-              <Route path="administration" element={<AdministrationPage />} />
-              <Route path="the-summit/administration" element={<AdministrationPage />} />
-              <Route path="policy" element={<PolicyPage />} />
-              <Route path="pressroom/reports" element={<PolicyPage />} />
-              <Route path="media-kit" element={<MediaKitPage />} />
-              <Route path="media/kits" element={<MediaKitPage />} />
-              <Route path="pressroom/publications" element={<PublicationsPage />} />
-            </Route>
+            {/* Standalone maintenance page (no site chrome) — always reachable */}
+            <Route path="/maintenance" element={<MaintenancePage />} />
+
+            {!MAINTENANCE_MODE && (
+              <Route path="/" element={<LandingPageLayout />}>
+                <Route index element={<HomePage />} />
+                <Route path="about" element={<AboutPage />} />
+                <Route path="sectors" element={<SectorsPage />} />
+                <Route path="incentives" element={<IncentivesPage />} />
+                <Route path="agenda" element={<AgendaPage />} />
+                <Route path="speakers" element={<SpeakersPage />} />
+                <Route path="deal-room" element={<DealRoomPage />} />
+                <Route path="register" element={<RegisterPage />} />
+                <Route path="governance" element={<GovernancePage />} />
+                <Route path="publications" element={<PublicationsPage />} />
+                <Route path="publications/:slug" element={<PublicationDetailPage />} />
+                <Route path="administration" element={<AdministrationPage />} />
+                <Route path="the-summit/administration" element={<AdministrationPage />} />
+                <Route path="policy" element={<PolicyPage />} />
+                <Route path="pressroom/reports" element={<PolicyPage />} />
+                <Route path="media-kit" element={<MediaKitPage />} />
+                <Route path="media/kits" element={<MediaKitPage />} />
+                <Route path="pressroom/publications" element={<PublicationsPage />} />
+              </Route>
+            )}
 
             {/* Admin auth (public) */}
             <Route path="/admin/login" element={<AdminLogin />} />
@@ -87,6 +98,13 @@ function App() {
               <Route path="registrations" element={<AdminRegistrations />} />
               <Route path="subscribers" element={<AdminSubscribers />} />
             </Route>
+
+            {/* Catch-all: in maintenance mode any unmatched URL is redirected
+                to /maintenance. Outside maintenance mode this falls through to
+                the public layout, so existing 404 behaviour is unchanged. */}
+            {MAINTENANCE_MODE && (
+              <Route path="*" element={<Navigate to="/maintenance" replace />} />
+            )}
           </Routes>
         </Suspense>
       </AuthProvider>

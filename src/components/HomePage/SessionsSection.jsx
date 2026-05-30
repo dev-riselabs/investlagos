@@ -5,28 +5,44 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const sessions = [
   {
     id: 1,
+<<<<<<< HEAD
     speaker: "/speakers/Mrs. Folashade KaosaratBada Ambrose-Medebem.png",
+=======
+    speaker:"",
+>>>>>>> 55704bac2ebb013627015976db4c24e11c1e9eba
     name: "Mrs. Folashade Ambrose-Medebem",
     role: "Honourable Commissioner",
     title: "Welcome Address",
   },
   {
     id: 2,
+<<<<<<< HEAD
     speaker: "/speakers/MR_Babajide_Olusola_Sanwo_Olu.png",
+=======
+    speaker:"",
+>>>>>>> 55704bac2ebb013627015976db4c24e11c1e9eba
     name: "Mr. Babajide Sanwo-Olu",
     role: "Governor of Lagos State",
     title: "Opening Address",
   },
   {
     id: 3,
+<<<<<<< HEAD
     speaker: "/speakers/LORD MARLAND.png",
+=======
+    speaker:"",
+>>>>>>> 55704bac2ebb013627015976db4c24e11c1e9eba
     name: "Rt. Hon. Lord Marland",
     role: "Chair, CWIC",
     title: "Opening Remarks",
   },
   {
     id: 4,
+<<<<<<< HEAD
     speaker: "/speakers/Mr. Osahon Akpata.png",
+=======
+    speaker:"",
+>>>>>>> 55704bac2ebb013627015976db4c24e11c1e9eba
     name: "Guest Speaker",
     role: "Industry Leader",
     title: "Keynote Session",
