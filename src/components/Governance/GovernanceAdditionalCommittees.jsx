@@ -128,7 +128,7 @@ const legalMembers = [
   {
     name: "Michael Ojomo",
     role: "Member, Legal & Compliance Sub-Committee",
-    photo: "/governance-images/Michael Ojomo.png",
+    photo: "/governance-images/Sean Leno (CWEIC).png",
   },
 ];
 
@@ -160,13 +160,14 @@ const logisticsMembers = [
 
 /* ─── MEMBER CARD (same size as LOC card, no bio) ────────────────────────── */
 function MemberCard({ name, role, photo }) {
+  console.log(photo);
   return (
     <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 h-full">
-      <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150 max-h-120 h-full">
+      <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150">
         <img
-          src={photo}
+          src={photo ? photo : "/governance-images/Sean Leno (CWEIC).png"}
           alt={name}
-          className="block w-full object-cover object-top max-h-120 h-full"
+          className="block w-full object-cover object-top max-h-90 h-full"
           loading="lazy"
         />
       </div>
@@ -209,7 +210,7 @@ function BioCard({
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-120"
+          className="block w-full object-cover object-top max-h-90"
           loading="lazy"
         />
       </div>

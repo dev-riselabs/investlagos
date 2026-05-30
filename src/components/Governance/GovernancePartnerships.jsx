@@ -107,7 +107,7 @@ const secretariatBios = [
   {
     name: "Ms Lola Talabi-Oni",
     role: "Co-Chair, LOC Secretariat",
-    photo: "/governance-images/Ms Lola Talabi-Oni.png",
+    photo: "/governance-images/Lola Talabi Oni.jpg.jpeg",
     bio: [
       "Lola Talabi-Oni is a governance and public policy professional  with over 20 years of experience across the public and private  sectors in Africa, Europe, and North America. She currently  serves as Senior Special Assistant to the Governor of Lagos State  in the Office of the Deputy Chief of Staff. Previously, she held  advisory and consulting roles with the Lagos State Ministry of  Economic Planning & Budget, Global Citizen, Rockefeller  Philanthropy Advisors, and the National Bureau of Statistics,  where she led stakeholder engagement, policy coordination, and  data governance initiatives. She has also served in key secretariat  and coordination roles, including as Secretariat Lead for E1  Lagos and as a member of the Secretariat Team for the 2014  World Economic Forum Africa meeting. Lola holds an Executive  master’s in public administration from the London School of  Economics, with a focus on Public Economics.",
     ],
@@ -135,7 +135,7 @@ function MemberCard({ name, role, photo }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-120"
+          className="block w-full object-cover object-top max-h-90"
           loading="lazy"
         />
       </div>
@@ -170,7 +170,7 @@ function BioCard({ name, role, photo, bio }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-120"
+          className="block w-full object-cover object-top max-h-90"
           loading="lazy"
         />
       </div>

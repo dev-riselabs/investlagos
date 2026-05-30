@@ -67,7 +67,7 @@ function LOCCard({ name, role, photo, bio }) {
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-120"
+          className="block w-full object-cover object-top max-h-90"
           loading="lazy"
         />
       </div>
