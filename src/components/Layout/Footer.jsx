@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           {/* ── Navigation links ── */}
-          <ul className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-center justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
+          <ul className="mt-8 grid grid-cols-2 sm:flex-row sm:flex-wrap items-center justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
             {footerLinks.map((l) => (
               <li
                 key={l}
@@ -79,7 +79,7 @@ const Footer = () => {
           </ul>
 
           {/* ── Logo + social icons ── */}
-          <div className="mt-8 flex flex-col gap-6 items-center sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-8 flex flex-col gap-6 items-center sm:flex-row sm:items-center sm:justify-between border-t border-black/20 pt-6 sm:border-t-0 sm:pt-0">
             <img
               src="/logo.png"
               alt="Invest Lagos"
@@ -94,10 +94,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-6 border-t border-black" />
+          <div className="mt-6 border-t border-black/20" />
 
           {/* ── Legal links ── */}
-          <ul className="mt-5 space-y-1.5 text-xs text-black text-center sm:text-left font-manrope font-light">
+          <ul className="mt-5 space-y-1.5 text-xs text-black text-center sm:text-left font-manrope font-light border-b border-black/20 pb-5 sm:border-b-0 sm:pb-0">
             <li>
               •{" "}
               <a href="#" className="hover:underline">
@@ -134,7 +134,7 @@ const Footer = () => {
               <p>Lagos State Government,</p>
               <p>Alausa, Nigeria.</p>
             </div>
-            <div className="flex flex-col gap-px">
+            <div className="flex flex-col gap-px items-center text-center sm:text-left sm:items-start border-t border-black/20 pt-5 sm:border-t-0 sm:pt-0">
               <p>Copyright 2026. All Rights Reserved. Invest Lagos</p>
               <p>
                 Website Designed &amp; Developed by{" "}
