@@ -25,15 +25,9 @@ const MailIcon = () => (
 /* ─── Data ───────────────────────────────────────────────────────────────── */
 const locMembers = [
   {
-<<<<<<< HEAD
-    name: "HON Folashade Ambrose Medebem",
-    role: "Co-Chair, Local Organizing Committee",
-    photo: "/governance-images/HON Folashade Ambrose Medebem.png",
-=======
     name: 'HON Folashade Ambrose Medebem',
     role: 'Co-Chair, Local Organising Committee',
     photo: '/governance-images/HON Folashade Ambrose Medebem.png',
->>>>>>> 7448c7330a54abad8834fe1b0af628e9d820c749
     bio: [
       "Honourable Commissioner, Commerce, Cooperatives, Trade, and Investment,  Lagos State Government (LASG)   Folashade Bada Ambrose-Medebem is a seasoned leader with over 20 years of  diverse experience in strategy, finance, sustainability, and corporate affairs.  Appointed in September 2023, she has a proven track record of driving award winning business transformation strategies for FTSE100 companies across the UK,  Europe, and Nigeria.",
 
@@ -45,15 +39,9 @@ const locMembers = [
     ],
   },
   {
-<<<<<<< HEAD
-    name: "Mr. Sam Egube",
-    role: "Co-Chair, Local Organizing Committee",
-    photo: "/governance-images/Mr. Sam Egube.png",
-=======
     name: 'Mr. Sam Egube',
     role: 'Co-Chair, Local Organising Committee',
     photo: '/governance-images/Mr. Sam Egube.png',
->>>>>>> 7448c7330a54abad8834fe1b0af628e9d820c749
     bio: [
       "Samuel Egube, FNSE, FICA, HCIB, MNIM, MIoD, COREN, is a  seasoned public sector leader and corporate executive with over 34  years of experience spanning banking, governance, economic  policy and institutional transformation.",
 
