@@ -13,17 +13,11 @@ const SpeakersPage = () => {
           <SpeakersBanner />
         </Reveal>
       </Spotlight>
-      <Reveal direction="scale" duration={800}>
-        <MouseTilt intensity={5}>
-          <SpeakersHero />
-        </MouseTilt>
-      </Reveal>
-      <Reveal direction="up">
-        <SpeakersGrid />
-      </Reveal>
-      <Reveal direction="up">
-        <SpeakersCTA />
-      </Reveal>
+      <MouseTilt intensity={5}>
+        <SpeakersHero />
+      </MouseTilt>
+      <SpeakersGrid />
+      <SpeakersCTA />
     </>
   )
 }

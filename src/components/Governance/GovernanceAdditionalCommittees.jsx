@@ -103,9 +103,9 @@ function MemberCard({ name, role, photo }) {
           <button aria-label="LinkedIn" className="flex h-8 w-8 items-center justify-center rounded-md bg-blue-700 text-white hover:opacity-80">
             <LinkedInIcon />
           </button>
-          <button aria-label="Email" className="flex h-8 w-8 items-center justify-center rounded-md border border-slate-300 text-slate-500 hover:border-green200 hover:text-green200">
+          {/* <button aria-label="Email" className="flex h-8 w-8 items-center justify-center rounded-md border border-slate-300 text-slate-500 hover:border-green200 hover:text-green200">
             <MailIcon />
-          </button>
+          </button> */}
         </div>
       </div>
     </article>
@@ -129,7 +129,7 @@ function BioCard({ name, role, photo, bio }) {
         </div>
         <div className="mt-6 flex items-center gap-3">
           <button aria-label="LinkedIn" className="flex h-8 w-8 items-center justify-center rounded-md bg-blue-700 text-white hover:opacity-80"><LinkedInIcon /></button>
-          <button aria-label="Email" className="flex h-8 w-8 items-center justify-center rounded-md border border-slate-300 text-slate-500 hover:border-green200 hover:text-green200"><MailIcon /></button>
+          {/* <button aria-label="Email" className="flex h-8 w-8 items-center justify-center rounded-md border border-slate-300 text-slate-500 hover:border-green200 hover:text-green200"><MailIcon /></button> */}
         </div>
       </div>
     </article>

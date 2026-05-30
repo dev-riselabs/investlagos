@@ -4,6 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoMdSearch } from "react-icons/io";
 
 const navLinks = [
+  { label: "Welcome", path: "/" },
   { label: "About", path: "/about" },
 
   {

@@ -271,7 +271,7 @@ function SubscribeSection() {
     <section className="bg-white skyline-bg px-4 md:px-10 lg:px-20 py-10 pt-60 md:py-20 md:pt-80 flex justify-center">
       <div className="flex flex-col gap-6 items-center w-full max-w-2xl">
         <h3 className="text-xl md:text-2xl font-bold font-jost text-black text-center">
-          Subscribe for exclusive updates, investor insights partnership &
+          Subscribe for exclusive updates, investor insights, partnership &
           opportunities
         </h3>
 

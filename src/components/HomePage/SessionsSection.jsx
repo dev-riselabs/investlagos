@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const sessions = [
   {
     id: 1,
+<<<<<<< HEAD
     speaker: "/Folashade.png",
   },
   {
@@ -18,6 +19,33 @@ const sessions = [
   {
     id: 4,
     speaker: "/Sanwolu.png",
+=======
+    speaker: "/speakers/Mrs. Folashade KaosaratBada Ambrose-Medebem.png",
+    name: "Mrs. Folashade Ambrose-Medebem",
+    role: "Honourable Commissioner",
+    title: "Welcome Address",
+  },
+  {
+    id: 2,
+    speaker: "/speakers/MR_Babajide_Olusola_Sanwo_Olu.png",
+    name: "Mr. Babajide Sanwo-Olu",
+    role: "Governor of Lagos State",
+    title: "Opening Address",
+  },
+  {
+    id: 3,
+    speaker: "/speakers/LORD MARLAND.png",
+    name: "Rt. Hon. Lord Marland",
+    role: "Chair, CWIC",
+    title: "Opening Remarks",
+  },
+  {
+    id: 4,
+    speaker: "/speakers/Mr. Osahon Akpata.png",
+    name: "Guest Speaker",
+    role: "Industry Leader",
+    title: "Keynote Session",
+>>>>>>> 52065e14e70528cf2ba87d153dd35ea265914082
   },
 ];
 

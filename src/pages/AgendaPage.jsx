@@ -236,10 +236,10 @@ function ProgrammeDownloadBar() {
     <div className="bg-[#090e0c] px-6 py-5 border-b border-white/10">
       <div className="mx-auto max-w-[1240px] flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#ED212B]">Official Document</p>
-          <h2 className="text-xl font-black text-white sm:text-2xl">Download Full Programme PDF</h2>
+          {/* <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#ED212B]">Official Document</p> */}
+          <h2 className="text-xl font-black text-white sm:text-2xl">View Agenda</h2>
         </div>
-        <a
+        {/* <a
           href="/DealBook for Invest Lagos 3.0.pdf"
           download
           className="inline-flex shrink-0 items-center gap-2.5 rounded-full border-2 border-[#099567] bg-white px-6 py-2.5 text-[11px] font-black uppercase tracking-widest text-[#090e0c] transition hover:bg-[#099567] hover:text-white"
@@ -249,7 +249,7 @@ function ProgrammeDownloadBar() {
             <path d="M3 5.5h7M3 8.5h7M3 11.5h4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
           </svg>
           Download PDF
-        </a>
+        </a> */}
       </div>
     </div>
   )
@@ -448,10 +448,10 @@ function ContactCards() {
     {
       Icon: PhoneIcon,
       label: 'HELP LINES',
-      lines: ['+234.803.590.0000', '+234.803.000.0000'],
+      lines: ['+234.803.590.0000', '+234.707.662.3338'],
       action: 'CALL US',
-      href: 'tel:+2348035900000',
-      copyText: '+234.803.590.0000',
+      href: 'tel:+234.707.662.3338',
+      copyText: '+234.707.662.3338',
     },
     {
       Icon: CameraIcon,
