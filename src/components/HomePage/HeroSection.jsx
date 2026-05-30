@@ -93,20 +93,11 @@ const HeroSection = () => {
 
             <CountdownTimer />
           </div>
-          <div className="flex flex-col gap-3 items-center md:col-span-2 sm:flex-row sm:items-center md:flex-col">
+          <div className="flex flex-col gap-4 items-center md:col-span-2 sm:flex-row sm:items-center md:flex-col">
             <div className="md:flex-1 ">
-<<<<<<< HEAD
-              <img src="/lagos.png" alt="" className="max-h-75" />
-            </div>
-            <div className="flex flex-col gap-6 max-w-sm sm:items-center md:flex-1">
-              <h3 className="text-green100 font-jost font-medium text-2xl md:text-center ">
-                Download Our Investment Deal Book
-              </h3>
-=======
-              <img src="/lagos.png" alt="" className="max-h-70" />
+              <img src="/lagos.png" alt="" className="max-h-80" />
             </div>
             <div className="flex flex-row gap-6 max-w-md sm:items-center md:flex-1">
->>>>>>> 725d5afc91d21b2421645b6e9b9ff5a9157ed706
               <a
                 href="/DealBook for Invest Lagos 3.0.pdf"
                 download
