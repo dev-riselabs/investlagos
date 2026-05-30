@@ -24,6 +24,7 @@ const MailIcon = () => (
 
 /* ─── DATA: Partnerships & Sponsorships Committee ────────────────────────── */
 const partnershipsTop = [
+<<<<<<< HEAD
   {
     name: "Solape Hammond",
     role: "Chair, Partnerships and Sponsorships Committee",
@@ -52,6 +53,27 @@ const partnershipsBios = [
     name: "Mrs Mary Aderinola Ojulari",
     role: "Member, Partnerships & Sponsorships Committee",
     photo: "/governance/Mrs Mary Aderinola Ojulari.png",
+=======
+  { name: 'Ms. Solape Hammond', role: 'Member, Partnerships & Sponsorships Committee', photo: '/governance-images/Solape Hammond.png' },
+  { name: 'Mr. Charles Edosomwan', role: 'Member, Partnerships & Sponsorships Committee', photo: '/governance-images/Charles Edosomwan.png' },
+  { name: 'Ms. Bukola Odoe', role: 'Member, Partnerships & Sponsorships Committee', photo: '/governance-images/Bukola Odoe.png' },
+]
+
+const partnershipsBios = [
+  {
+    name: 'Ms. Peju Ibekwe',
+    role: 'Member, Partnerships & Sponsorships Committee',
+    photo: '/governance-images/Peju Ibekwe.png',
+    bio: [
+      'Peju Ibekwe is a seasoned business leader with extensive experience in partnerships, sponsorship strategy and corporate development across Africa.',
+      'She has led successful collaborations between public institutions and global private-sector partners, with a strong focus on investment promotion and brand activation.',
+    ],
+  },
+  {
+    name: 'Mrs. Ire Odega',
+    role: 'Member, Partnerships & Sponsorships Committee',
+    photo: '/governance-images/Mrs Ire Odega.png',
+>>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
     bio: [
       "Aderinola Mary Ojulari is an accomplished business and finance executive  with over 25 years of experience in transforming organisations, driving  strategic growth, and fostering meaningful stakeholder relationships. She  holds an MBA and is currently a board member of an oil servicing company.  She has also served at board levels in renowned brands and businesses  across multiple sectors, including media, automotive, and services, both in the  diaspora and Nigeria. ",
 
@@ -65,9 +87,15 @@ const partnershipsBios = [
 ];
 
 const partnershipsWideBio = {
+<<<<<<< HEAD
   name: "Charles Edosomwan",
   role: "Member, Partnerships and Sponsorships Committee",
   photo: "/governance/Charles Edosomwan.png",
+=======
+  name: 'Mr. Ayo Otuyalo',
+  role: 'Lead, Partnerships & Sponsorships Committee',
+  photo: '/governance-images/Ayo Otuyalo.png',
+>>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
   bio: [
     "Charles Edosowan is a certified computer engineer and digital marketer.  He has a budding desire to improve PR practice and its reputation in  Nigeria. To fulfill this desire, he founded TEKSIGHT Edge in 2014.Teksight  is an Integrated PR and Digital Communications agency based in Lagos,  Nigeria. Teksight has a special interest in tech and public relations.  ",
 
@@ -94,9 +122,15 @@ const partnershipsWideBio = {
 /* ─── DATA: Secretariat ──────────────────────────────────────────────────── */
 const secretariatBios = [
   {
+<<<<<<< HEAD
     name: "Mrs Ire Odega",
     role: "Co-Chair, LOC Secretariat",
     photo: "/governance/Mrs. Nana Hauwa Adeeyo.png",
+=======
+    name: 'Mrs. Nana Hauwa Adeeyo',
+    role: 'Member, Secretariat',
+    photo: '/governance-images/Mrs. Nana Hauwa Adeeyo.png',
+>>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
     bio: [
       " Ire Odega is a dynamic project management and operations professional with experience spanning government advisory, investment facilitation, product management, and strategic programme execution. Currently serving as Special Adviser to the Honourable Commissioner for Commerce, Cooperative, Trade and Investment, Ire plays a key role in driving initiatives that strengthen investment attraction, trade promotion, stakeholder engagement, and economic development within Lagos State.",
       " Prior to this role, Ire built a strong foundation in Project Management, Product Management, and Operations, leading cross-functional initiatives across technology, fintech, and business transformation spaces. Her expertise includes programme coordination, stakeholder management, strategic partnerships, operational excellence, and execution of high impact projects.",
@@ -105,9 +139,15 @@ const secretariatBios = [
     ],
   },
   {
+<<<<<<< HEAD
     name: "Ms Lola Talabi-Oni",
     role: "Co-Chair, LOC Secretariat",
     photo: "/governance/Ms Lola Talabi-Oni.png",
+=======
+    name: 'Ms. Omofolahan Olowu',
+    role: 'Member, Secretariat',
+    photo: '/governance-images/Ms Omofolahan Olowu.png',
+>>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
     bio: [
       "Lola Talabi-Oni is a governance and public policy professional  with over 20 years of experience across the public and private  sectors in Africa, Europe, and North America. She currently  serves as Senior Special Assistant to the Governor of Lagos State  in the Office of the Deputy Chief of Staff. Previously, she held  advisory and consulting roles with the Lagos State Ministry of  Economic Planning & Budget, Global Citizen, Rockefeller  Philanthropy Advisors, and the National Bureau of Statistics,  where she led stakeholder engagement, policy coordination, and  data governance initiatives. She has also served in key secretariat  and coordination roles, including as Secretariat Lead for E1  Lagos and as a member of the Secretariat Team for the 2014  World Economic Forum Africa meeting. Lola holds an Executive  master’s in public administration from the London School of  Economics, with a focus on Public Economics.",
     ],
@@ -115,6 +155,7 @@ const secretariatBios = [
 ];
 
 const secretariatMembers = [
+<<<<<<< HEAD
   {
     name: "Ms.Megan Wright (CWEIC)",
     role: "LOC Secretariat",
@@ -126,6 +167,11 @@ const secretariatMembers = [
     photo: "/governance/Ms Omofolahan Olowu.png",
   },
 ];
+=======
+  { name: 'Ms. Megan Wright', role: 'Member, Secretariat', photo: '/governance-images/Ms.Megan Wright (CWEIC).png' },
+  { name: 'Ms. Biola Alabi', role: 'Member, Secretariat', photo: '/governance-images/Biola Alabi_2.png' },
+]
+>>>>>>> 6494a7c9fc2a6b2d1a87689850c1755912293df9
 
 /* ─── MEMBER CARD ────────────────────────────────────────────────────────── */
 function MemberCard({ name, role, photo }) {

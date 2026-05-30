@@ -16,42 +16,42 @@ const MailIcon = () => (
 
 /* ─── DATA ─────────────────────────────────────────────────────────────── */
 const committeeMembers = [
-  { name: 'Mr. Babatunde Onigbanjo', role: 'Member, Local Organising Committee', photo: '/governance/Babatunde Onigbanjo.png' },
-  { name: 'Mr. Ope George', role: 'Member, Local Organising Committee', photo: '/governance/Ope George.png' },
-  { name: 'Mrs. Solape Hammond', role: 'Member, Local Organising Committee', photo: '/governance/Solape Hammond.png' },
-  { name: 'Mrs. Adesuwa Ladoja', role: 'Member, Local Organising Committee', photo: '/governance/Adesuwa Ladoja.png' },
-  { name: 'Mr. Akintayo Sanwo-Olu', role: 'Member, Local Organising Committee', photo: '/governance/Akintayo Sanwo-Olu.png' },
-  { name: 'Mr. Ayiri Oladunmoye', role: 'Member, Local Organising Committee', photo: '/governance/Ayiri Oladunmoye.png' },
-  { name: 'Mr. Ayo Otuyalo', role: 'Member, Local Organising Committee', photo: '/governance/Ayo Otuyalo.png' },
-  { name: 'Ms. Biola Alabi', role: 'Member, Local Organising Committee', photo: '/governance/Biola Alabi.png' },
-  { name: 'Mrs. Bukola Odoe', role: 'Member, Local Organising Committee', photo: '/governance/Bukola Odoe.png' },
-  { name: 'Mr. Charles Edosomwan', role: 'Member, Local Organising Committee', photo: '/governance/Charles Edosomwan.png' },
-  { name: 'Dr. Olamide Adekunle Okulaja', role: 'Member, Local Organising Committee', photo: '/governance/Dr. Olamide Adekunle Okulaja.png' },
-  { name: 'Dr. Toyosi Akerele-Ogunsiji', role: 'Member, Local Organising Committee', photo: '/governance/Dr. Toyosi Akerele-Ogunsiji.png' },
-  { name: 'Mr. Gbenga Omotosho', role: 'Member, Local Organising Committee', photo: '/governance/Gbenga Omotosho.png' },
-  { name: 'Mr. Kunle Fagbemi', role: 'Member, Local Organising Committee', photo: '/governance/Kunle Fagbemi.png' },
-  { name: 'Mr. Abdeen Bolaji Abimbola', role: 'Member, Local Organising Committee', photo: '/governance/Mr Abdeen Bolaji Abimbola.png' },
-  { name: 'Mr. Gboyega Akosile', role: 'Member, Local Organising Committee', photo: '/governance/Mr Gboyega Akosile.png' },
-  { name: 'Mr. Lami Adekola', role: 'Member, Local Organising Committee', photo: '/governance/Mr Lami Adekola.png' },
-  { name: 'Mr. Taiye Nelson', role: 'Member, Local Organising Committee', photo: '/governance/Mr. Taiye Nelson.png' },
-  { name: 'Mrs. Ire Odega', role: 'Member, Local Organising Committee', photo: '/governance/Mrs Ire Odega.png' },
-  { name: 'Mrs. Mary Aderinola Ojulari', role: 'Member, Local Organising Committee', photo: '/governance/Mrs Mary Aderinola Ojulari.png' },
-  { name: 'Mrs. Ajibola Yewande Ponnle', role: 'Member, Local Organising Committee', photo: '/governance/Mrs. Ajibola Yewande Ponnle.png' },
-  { name: 'Mrs. Moji Hunponu-Wusu', role: 'Member, Local Organising Committee', photo: '/governance/Mrs. Moji Hunponu-Wusu.png' },
-  { name: 'Mrs. Nana Hauwa Adeeyo', role: 'Member, Local Organising Committee', photo: '/governance/Mrs. Nana Hauwa Adeeyo.png' },
-  { name: 'Ms. Lola Talabi-Oni', role: 'Member, Local Organising Committee', photo: '/governance/Ms Lola Talabi-Oni.png' },
-  { name: 'Ms. Omofolahan Olowu', role: 'Member, Local Organising Committee', photo: '/governance/Ms Omofolahan Olowu.png' },
-  { name: 'Mr. Obinna Anyanwu', role: 'Member, Local Organising Committee', photo: '/governance/Obinna Anyanwu.png' },
-  { name: 'Mrs. Peju Ibekwe', role: 'Member, Local Organising Committee', photo: '/governance/Peju Ibekwe.png' },
-  { name: 'Mr. Yomi Oluyomi', role: 'Member, Local Organising Committee', photo: '/governance/Yomi Oluyomi.png' },
+  { name: 'Mr. Babatunde Onigbanjo', role: 'Member, Local Organising Committee', photo: '/governance-images/Babatunde Onigbanjo.png' },
+  { name: 'Mr. Ope George', role: 'Member, Local Organising Committee', photo: '/governance-images/Ope George.png' },
+  { name: 'Mrs. Solape Hammond', role: 'Member, Local Organising Committee', photo: '/governance-images/Solape Hammond.png' },
+  { name: 'Mrs. Adesuwa Ladoja', role: 'Member, Local Organising Committee', photo: '/governance-images/Adesuwa Ladoja.png' },
+  { name: 'Mr. Akintayo Sanwo-Olu', role: 'Member, Local Organising Committee', photo: '/governance-images/Akintayo Sanwo-Olu.png' },
+  { name: 'Mr. Ayiri Oladunmoye', role: 'Member, Local Organising Committee', photo: '/governance-images/Ayiri Oladunmoye.png' },
+  { name: 'Mr. Ayo Otuyalo', role: 'Member, Local Organising Committee', photo: '/governance-images/Ayo Otuyalo.png' },
+  { name: 'Ms. Biola Alabi', role: 'Member, Local Organising Committee', photo: '/governance-images/Biola Alabi.png' },
+  { name: 'Mrs. Bukola Odoe', role: 'Member, Local Organising Committee', photo: '/governance-images/Bukola Odoe.png' },
+  { name: 'Mr. Charles Edosomwan', role: 'Member, Local Organising Committee', photo: '/governance-images/Charles Edosomwan.png' },
+  { name: 'Dr. Olamide Adekunle Okulaja', role: 'Member, Local Organising Committee', photo: '/governance-images/Dr. Olamide Adekunle Okulaja.png' },
+  { name: 'Dr. Toyosi Akerele-Ogunsiji', role: 'Member, Local Organising Committee', photo: '/governance-images/Dr. Toyosi Akerele-Ogunsiji.png' },
+  { name: 'Mr. Gbenga Omotosho', role: 'Member, Local Organising Committee', photo: '/governance-images/Gbenga Omotosho.png' },
+  { name: 'Mr. Kunle Fagbemi', role: 'Member, Local Organising Committee', photo: '/governance-images/Kunle Fagbemi.png' },
+  { name: 'Mr. Abdeen Bolaji Abimbola', role: 'Member, Local Organising Committee', photo: '/governance-images/Mr Abdeen Bolaji Abimbola.png' },
+  { name: 'Mr. Gboyega Akosile', role: 'Member, Local Organising Committee', photo: '/governance-images/Mr Gboyega Akosile.png' },
+  { name: 'Mr. Lami Adekola', role: 'Member, Local Organising Committee', photo: '/governance-images/Mr Lami Adekola.png' },
+  { name: 'Mr. Taiye Nelson', role: 'Member, Local Organising Committee', photo: '/governance-images/Mr. Taiye Nelson.png' },
+  { name: 'Mrs. Ire Odega', role: 'Member, Local Organising Committee', photo: '/governance-images/Mrs Ire Odega.png' },
+  { name: 'Mrs. Mary Aderinola Ojulari', role: 'Member, Local Organising Committee', photo: '/governance-images/Mrs Mary Aderinola Ojulari.png' },
+  { name: 'Mrs. Ajibola Yewande Ponnle', role: 'Member, Local Organising Committee', photo: '/governance-images/Mrs. Ajibola Yewande Ponnle.png' },
+  { name: 'Mrs. Moji Hunponu-Wusu', role: 'Member, Local Organising Committee', photo: '/governance-images/Mrs. Moji Hunponu-Wusu.png' },
+  { name: 'Mrs. Nana Hauwa Adeeyo', role: 'Member, Local Organising Committee', photo: '/governance-images/Mrs. Nana Hauwa Adeeyo.png' },
+  { name: 'Ms. Lola Talabi-Oni', role: 'Member, Local Organising Committee', photo: '/governance-images/Ms Lola Talabi-Oni.png' },
+  { name: 'Ms. Omofolahan Olowu', role: 'Member, Local Organising Committee', photo: '/governance-images/Ms Omofolahan Olowu.png' },
+  { name: 'Mr. Obinna Anyanwu', role: 'Member, Local Organising Committee', photo: '/governance-images/Obinna Anyanwu.png' },
+  { name: 'Mrs. Peju Ibekwe', role: 'Member, Local Organising Committee', photo: '/governance-images/Peju Ibekwe.png' },
+  { name: 'Mr. Yomi Oluyomi', role: 'Member, Local Organising Committee', photo: '/governance-images/Yomi Oluyomi.png' },
 ]
 
 const cweicPartners = [
-  { name: 'Mr. AQ Hamza', role: 'CWEIC Partner', photo: '/governance/AQ Hamza (CWEIC).png' },
-  { name: 'Ms. Charlotte Bailey', role: 'CWEIC Partner', photo: '/governance/Charlotte Bailey (CWEIC).png' },
-  { name: 'Ms. Megan Wright', role: 'CWEIC Partner', photo: '/governance/Ms.Megan Wright (CWEIC).png' },
-  { name: 'Mr. Pride Azefor', role: 'CWEIC Partner', photo: '/governance/Pride Azefor (CWEIC).png' },
-  { name: 'Mr. Sean Leno', role: 'CWEIC Partner', photo: '/governance/Sean Leno (CWEIC).png' },
+  { name: 'Mr. AQ Hamza', role: 'CWEIC Partner', photo: '/governance-images/AQ Hamza (CWEIC).png' },
+  { name: 'Ms. Charlotte Bailey', role: 'CWEIC Partner', photo: '/governance-images/Charlotte Bailey (CWEIC).png' },
+  { name: 'Ms. Megan Wright', role: 'CWEIC Partner', photo: '/governance-images/Ms.Megan Wright (CWEIC).png' },
+  { name: 'Mr. Pride Azefor', role: 'CWEIC Partner', photo: '/governance-images/Pride Azefor (CWEIC).png' },
+  { name: 'Mr. Sean Leno', role: 'CWEIC Partner', photo: '/governance-images/Sean Leno (CWEIC).png' },
 ]
 
 /* ─── COMPONENTS ────────────────────────────────────────────────────────── */
@@ -75,9 +75,9 @@ function MemberCard({ name, role, photo }) {
           <button className="flex h-6 w-6 items-center justify-center rounded bg-[#0077B5] text-white transition-opacity hover:opacity-80">
             <LinkedInIcon />
           </button>
-          <button className="flex h-6 w-6 items-center justify-center rounded border border-slate-200 text-slate-400 transition-colors hover:border-green200 hover:text-green200">
+          {/* <button className="flex h-6 w-6 items-center justify-center rounded border border-slate-200 text-slate-400 transition-colors hover:border-green200 hover:text-green200">
             <MailIcon />
-          </button>
+          </button> */}
         </div>
       </div>
     </article>

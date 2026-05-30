@@ -10,9 +10,13 @@
     # RewriteCond %{HTTPS} !=on
     # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # If the request matches a real file or directory, serve it directly.
-    RewriteCond %{REQUEST_FILENAME} -f [OR]
-    RewriteCond %{REQUEST_FILENAME} -d
+    # If the request matches a real FILE on disk, serve it directly.
+    # Note: we deliberately do NOT short-circuit on real directories,
+    # because some asset folders (e.g. /governance, /speakers) share a
+    # name with a React Router route. Letting those URLs fall through to
+    # index.html lets React Router resolve them, while individual asset
+    # requests like /governance/foo.png still match -f and are served.
+    RewriteCond %{REQUEST_FILENAME} -f
     RewriteRule ^ - [L]
 
     # Otherwise, hand the request to index.html (SPA fallback).

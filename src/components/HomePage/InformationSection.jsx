@@ -6,9 +6,9 @@ import { LuExternalLink } from "react-icons/lu";
 import { LuCopy } from "react-icons/lu";
 
 const informations = [
-{icon : LuMapPin , heading: 'Headquarters', title: 'Ministry of Commerce, Cooperatives, Trade and Investment,', sub: 'Alausa, Lagos, Nigeria.', link: 'visit us'},
+{icon : LuMapPin , heading: 'Headquarters', title: 'Ministry of Commerce, Cooperatives, Trade and Investment', sub: 'Alausa, Lagos, Nigeria.', link: 'visit us'},
 {icon : GoGlobe , heading: 'Digital Connect', title: 'investinlagos@lagosmccti.com', sub: '', link: 'Email us'},
-{icon : IoIosCall , heading: 'HELP Lines', title: '+234.707.662.3338', sub: '', link: 'CALL us'},
+{icon : IoIosCall , heading: 'HELP Line', title: '+234.707.662.3338', sub: '', link: 'CALL us'},
 {icon : FiCamera , heading: 'WE’RE SOCIAL', title: '@investlagos_', sub: '', link: 'follow us'},
 ]
 
@@ -16,7 +16,7 @@ function InformationSection() {
   return (
     <section className="px-4 md:px-10 lg:px-20 py-20 md:py-30 border-t border-t-yellow bg-green100 flex flex-col gap-20">
         <div className="flex flex-col gap-10">
-            <h3 className="text-white font-jost font-medium text-2xl md:text-4xl relative after:absolute after:content-[''] after:left-0 after:h-1 after:md:h-2 after:w-25 after:bg-white after:-bottom-4">Reach out to our Information Center</h3>
+            <h3 className="text-yellow font-jost font-medium text-2xl md:text-4xl relative after:absolute after:content-[''] after:left-0 after:h-1 after:md:h-2 after:w-25 after:bg-white after:-bottom-4">Reach out to our Information Center</h3>
             <p className="text-white font-jost text-base md:text-xl font-medium max-w-[50ch]">Need help with travel arrangements, hotel bookings, or media accreditation? Our team is ready to assist you every step of the way.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-5">
