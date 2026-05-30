@@ -8,7 +8,7 @@ import { LuCopy } from "react-icons/lu";
 const informations = [
 {icon : LuMapPin , heading: 'Headquarters', title: 'Ministry of Commerce, Cooperatives, Trade and Investment,', sub: 'Alausa, Lagos, Nigeria.', link: 'visit us'},
 {icon : GoGlobe , heading: 'Digital Connect', title: 'investinlagos@lagosmccti.com', sub: '', link: 'Email us'},
-{icon : IoIosCall , heading: 'HELP Lines', title: '+234.707.662.3338', sub: '', link: 'CALL us'},
+{icon : IoIosCall , heading: 'HELP Line', title: '+234.707.662.3338', sub: '', link: 'CALL us'},
 {icon : FiCamera , heading: 'WE’RE SOCIAL', title: '@investlagos_', sub: '', link: 'follow us'},
 ]
 

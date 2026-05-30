@@ -781,7 +781,7 @@ function ContactCards() {
     },
     {
       Icon: PhoneIcon,
-      label: "HELP LINES",
+      label: "HELP LINE",
       lines: ["+234.803.590.0000", "+234.707.662.3338"],
       action: "CALL US",
       href: "tel:+234.707.662.3338",

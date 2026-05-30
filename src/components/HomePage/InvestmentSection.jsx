@@ -16,7 +16,7 @@ function InvestmentSection() {
         <div className="flex flex-col gap-4 items-center">
             <div className="px-4 py-1.5 border border-orange rounded-full bg-orange/30 text-orange font-semibold font-jost text-sm">INVESTMENT IMPACT</div>
             <h3 className="text-white font-medium font-jost text-3xl md:text-5xl">Investment Hub</h3>
-            <p className="text-base font-manrope text-white/70 font-medium text-center max-w-[80ch]">Connecting global capital with transformative opportunities in Africa's largest subnational economy. Discover projects that drive growth, innovation, sustainability and inclusive prosperity.</p>
+            <p className="text-base font-manrope text-white font-small text-center max-w-[80ch]">Connecting global capital with transformative opportunities in Africa's largest subnational economy. Discover projects that drive growth, innovation, sustainability and inclusive prosperity.</p>
         </div>
         <div className="flex flex-col gap-8 md:flex-row md:items-center ">
             <div className="flex flex-col gap-8 md:flex-1">
@@ -35,8 +35,8 @@ function InvestmentSection() {
 
                 </div>
                 <div className="flex flex-col gap-3">
-                    <p className="text-white/80 font-manrope text-base font-medium">As the commercial heartbeat of Africa, Lagos offers unparalleled access to markets, talent, innovation and opportunity.</p>
-                    <p className="text-white/80 font-manrope text-base font-medium">The Invest Lagos Deal Room provides a trusted platform where investors, governments, development finance institutions, and businesses can unlock partnerships that accelerate sustainable development.</p>
+                    <p className="text-white/80 font-manrope text-base font-small">As the commercial heartbeat of Africa, Lagos offers unparalleled access to markets, talent, innovation and opportunity.</p>
+                    <p className="text-white/80 font-manrope text-base font-small">The Invest Lagos Deal Room provides a trusted platform where investors, governments, development finance institutions, and businesses can unlock partnerships that accelerate sustainable development.</p>
                 </div>
                 <a href="/dealroom" className="py-3 px-8 text-black300 font-inter font-bold text-sm bg-orange rounded-md self-start">Access Deal Room</a>
             </div>

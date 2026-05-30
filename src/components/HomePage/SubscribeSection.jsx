@@ -271,8 +271,7 @@ function SubscribeSection() {
     <section className="bg-white skyline-bg px-4 md:px-10 lg:px-20 py-10 pt-60 md:py-20 md:pt-80 flex justify-center">
       <div className="flex flex-col gap-6 items-center w-full max-w-2xl">
         <h3 className="text-xl md:text-2xl font-bold font-jost text-black text-center">
-          Subscribe for exclusive updates, investor insights, partnership &
-          opportunities
+          Subscribe for exclusive updates, investor insights & opportunities
         </h3>
 
         {success ? (
@@ -399,7 +398,7 @@ function SubscribeSection() {
               className="flex items-center gap-5 px-20 py-1.5 md:py-2.5 rounded-md bg-green100  border border-black/30 self-center disabled:opacity-60 disabled:cursor-not-allowed"
             >
               <span className="text-sm font-bold font-jost text-white">
-                {submitting ? "Subscribing…" : "Subscribe"}
+                {submitting ? "loading…" : "Join our newsletter"}
               </span>
               <div className="w-9 h-9 rounded-md bg-white/20 backdrop-blur-xl backdrop-brightness-100 flex items-center justify-center">
                 <FiArrowUpRight className="w-5 h-5 text-white" />

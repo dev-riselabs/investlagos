@@ -19,16 +19,24 @@ const socialIcons = [
   {
     label: "Facebook",
     icon: FaSquareFacebook,
+    url: "https://www.facebook.com/profile.php?id=61564549807377"
   },
-  { label: "X", icon: FaXTwitter },
   {
-    label: "LinkedIn",
+    label: "Instagram",
     icon: FaInstagram,
+    url: "https://www.instagram.com/investlagos_?igsh=MXM3cXA4ZjFjcGQxaw%3D%3D"
   },
-  {
+   {
     label: "YouTube",
     icon: FaYoutube,
+    url: "https://www.youtube.com/@invest-lagos"
   },
+  {
+    label: "X", 
+    icon: FaXTwitter,
+    url: "https://x.com/investlagos_"
+  },
+  
 ];
 
 const Footer = () => {
@@ -86,8 +94,8 @@ const Footer = () => {
               className="h-16 w-auto object-contain"
             />
             <div className="flex items-center gap-5">
-              {socialIcons.map(({ label, icon: Icon }) => (
-                <a key={label} href="#" aria-label={label} className="">
+              {socialIcons.map(({ label, icon: Icon, url }) => (
+                <a key={label} href="{url}" aria-label={label} className="">
                   <Icon className="w-6 h-6 text-black" />
                 </a>
               ))}
