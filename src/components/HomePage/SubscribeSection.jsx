@@ -256,7 +256,7 @@ function SubscribeSection() {
         setFieldErrors(err.errors || {});
       } else {
         setErrorMessage(
-          "Could not reach the server. Please check your connection and try again."
+          "Poor network. Please check your internet connection and try again."
         );
       }
     } finally {
