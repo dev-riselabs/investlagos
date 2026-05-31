@@ -216,17 +216,17 @@ const speakers = [
   // },
     {
     name: "Mr. Osahon Akpata",
-    title: "President, Nigerian Bar Association",
+    title: "CEO CANEX Creations, Afreximbank",
     photo: "/speakers/Mr. Osahon Akpata.png",
   },
   {
     name: "Mrs. Zain Asher",
-    title: "CNN International Anchor & Journalist",
+    title: "Cable News Network (CNN)",
     photo: "/speakers/Mrs. Zain Asher.png",
   },
   {
     name: "Mr. Babatunde Onigbanjo",
-    title: "Attorney-General & Commissioner for Justice, Lagos State",
+    title: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment",
     photo: "/speakers/Mr. Babatunde Onigbanjo.png",
   },
   {
@@ -236,7 +236,7 @@ const speakers = [
   },
   {
     name: "Mr. Adeola Ukoha",
-    title: "Executive Secretary, PPPRA",
+    title: "British International Investment",
     photo: "/speakers/Mr. Adeola Ukoha.png",
   },
   // {
