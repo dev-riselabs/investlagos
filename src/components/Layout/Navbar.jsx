@@ -25,7 +25,7 @@ const navLinks = [
     dropdown: true,
     children: [
       { label: "Deal Room", path: "/deal-room" },
-      { label: "Future Leaders Corps", path: "/sectors/technology" },
+      { label: "Future Leaders Movement", path: "/sectors/technology" },
       {
         label: "Business Exhibition & Cultural Showcase",
         path: "/sectors/technology",

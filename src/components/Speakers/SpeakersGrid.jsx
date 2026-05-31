@@ -3,11 +3,7 @@ import { InstitutionIcon } from "./SpeakersHero";
 import { Reveal, MouseTilt } from "../../lib/animations";
 
 const speakers = [
-  {
-    name: "Mr. Babajide Olusola Sanwo-Olu",
-    title: "Governor of Lagos State",
-    photo: "/speakers/MR_Babajide_Olusola_Sanwo_Olu.png",
-  },
+
   {
     name: "H.E. Wamkele Mene",
     title: "Secretary-General, AfCFTA",
@@ -24,174 +20,204 @@ const speakers = [
     photo: "/speakers/LORD MARLAND.png",
   },
   {
+    name: "Mr. Babajide Olusola Sanwo-Olu",
+    title: "Governor of Lagos State",
+    photo: "/speakers/MR_Babajide_Olusola_Sanwo_Olu.png",
+  },
+  {
     name: "Dr Kadri Obafemi Hamzat",
     title: "Deputy Governor, Lagos State",
     photo: "/speakers/Dr Kadri_Obafemi Hamzat.png",
   },
   {
+    name: "The Hon. Shirley Botchwey",
+    title: "Secretary-General, The Commonwealth Addresses from visiting Heads of Government",
+    photo: "/speakers/The Hon. Shirley Botchwey.png",
+  },
+  {
     name: "Dr. Jumoke Oduwole",
-    title: "Special Adviser on Trade & Investment, Lagos State",
+    title: "Hon. Minister of Trade & Investment",
     photo: "/speakers/Dr. Jumoke Oduwole.png",
   },
   {
-    name: "Dr. Segun Ogunsanya",
-    title: "Group CEO, Airtel Africa PLC",
-    photo: "/speakers/Dr. Segun Ogunsanya, Chairman.png",
+    name: "Mrs. Folashade Ambrose-Medebem",
+    title: "Hon. Commissioner, Ministry of Commerce, Cooperatives, Trade & Investment, Lagos State Government",
+    photo: "/speakers/Mrs. Folashade KaosaratBada Ambrose-Medebem.png",
   },
   {
     name: "Engr. Jani Ibrahim",
-    title: "Director-General, PENCOM",
+    title: "President, NACCIMA",
     photo: "/speakers/Engr. Jani Ibrahim.png",
   },
   {
-    name: "H.E. Jonny Baxter",
-    title: "British High Commissioner to Nigeria",
-    photo: "/speakers/HE Jonny Baxter.png",
-  },
-  {
-    name: "H.E. Hannatu Musa Musawa",
-    title: "Minister of Art, Culture & Creative Economy",
-    photo: "/speakers/Her Excellency Hannatu Musa  Musawa.png",
-  },
-  {
-    name: "H.E. Caleb Mutfwang",
-    title: "Executive Governor, Plateau State",
+    name: "His Excellency, Barrister Caleb Manasseh Mutfwang",
+    title: "Governor of Plateau State",
     photo: "/speakers/His Excellency, Barrister Caleb Manasseh Mutfwang.png",
   },
   {
-    name: "H.E. Dr. Agbu Kefas",
-    title: "Executive Governor, Taraba State",
+    name: "His Excellency, Dr. Agbu Kefas",
+    title: "Governor, Taraba State",
     photo: "/speakers/His Excellency, Dr. Agbu Kefas.png",
   },
   {
+    name: "His Excellency, SEN. HOPE UDODIMMA",
+    title: "Governor of Imo State",
+    photo: "/speakers/His Excellency SEN HOPE UDODIMMA.png",
+  },
+  {
+    name: "His Excellency, Abdulrahman abdulrazaq",
+    title: "Governor of Kwara State",
+    photo: "/speakers/His Excellency Abdulrahman abdulrazaq.png",
+  },
+  {
+    name: "Her Excellency Hannatu Musa  Musawa",
+    title: "Minister of Art, Culture,Tourism & CreativeEconomy",
+    photo: "/speakers/Her Excellency Hannatu Musa  Musawa.png",
+  },
+  {
+    name: "Mr. Aig Aigboje Imoukhuede",
+    title: "Co-Chair, Lagos Finance &Investment Council (LFIC)",
+    photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
+  },
+  {
+    name: "Mr. David Oyelowo",
+    title: "British/Nigerian Actor",
+    photo: "/speakers/Mr. David Oyelowo.png",
+  },
+  {
+    name: "Mr. Abubakar Suleiman",
+    title: "Managing Director/CEO, Sterling Bank",
+    photo: "/speakers/Mr. Abubakar Suleiman.png",
+  },
+  {
+    name: "Mrs. Toke Benson-Awoyinka",
+    title: "Honourable Commissioner for Tourism, Arts and Culture",
+    photo: "/speakers/Mrs. Toke Benson-Awoyinka.png",
+  },
+  {
+    name: "Mr. Olugbenga Agboola",
+    title: "Managing Director/CEO, Flutterwave",
+    photo: "/speakers/Mr. Olugbenga Agboola.png",
+  },
+  {
+    name: "Mr. Tubosun Alake",
+    title: "Honourable Commissioner, Ministry of Innovation, Science & Technology, Lagos State Government",
+    photo: "/speakers/Mr. Tubosun Alake.png",
+  },
+  {
     name: "Lord Christopher Geidt",
-    title: "Senior Adviser, UK Government & Business",
+    title: "Baron Geidt",
     photo: "/speakers/Lord Christopher Geidt.png",
   },
   {
     name: "Madam Elsie Attafuah",
-    title: "UNDP Resident Representative, Nigeria",
+    title: "Resident Representative, Lagos State Government",
     photo: "/speakers/Madam Elsie Attafuah.png",
   },
   {
-    name: "Mr. Abubakar Suleiman",
-    title: "CEO, Sterling Financial Holdings",
-    photo: "/speakers/Mr. Abubakar Suleiman.png",
+    name: "Kola Adesina",
+    title: "Group MD/CEO, Sahara Energy Group",
+    photo: "/speakers/Kola Adesina.png",
   },
   {
-    name: "Mr. Adeola Ukoha",
-    title: "Executive Secretary, PPPRA",
-    photo: "/speakers/Mr. Adeola Ukoha.png",
+    name: "Mrs. Olatomiwa Williams",
+    title: "Chief Growth & AI Officer (MiddleEast & Africa), Microsoft",
+    photo: "/speakers/Mrs Olatomiwa Williams.png",
   },
   {
-    name: "Mr. Aig-Imoukhuede",
-    title: "Co-Founder, Access Bank PLC",
-    photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
+    name: "Mr. Zaki Cooper",
+    title: "Co-Founder and Director, Integra",
+    photo: "/speakers/Mr. Zaki Cooper.png",
   },
   {
-    name: "Mr. Babatunde Onigbanjo",
-    title: "Attorney-General & Commissioner for Justice, Lagos State",
-    photo: "/speakers/Mr. Babatunde Onigbanjo.png",
+    name: "Temi Marcella",
+    title: "MD, Alcent Capital",
+    photo: "/speakers/Temi Marcella.png",
   },
   {
-    name: "Mr. David Oyelowo",
-    title: "Award-Winning Actor & Filmmaker",
-    photo: "/speakers/Mr. David Oyelowo.png",
-  },
-  {
-    name: "Mr. Kayode Adeleke",
-    title: "Special Adviser, Economic Planning & Budget, Lagos State",
-    photo: "/speakers/Mr. Kayode Adeleke.png",
-  },
-  {
-    name: "Mr. Mitchell Elegbe",
-    title: "Founder & Group MD/CEO, Interswitch",
-    photo: "/speakers/Mr. Mitchell Elegbe.png",
-  },
-  {
-    name: "Mr. Olugbenga Agboola",
-    title: "Co-founder & CEO, Flutterwave",
-    photo: "/speakers/Mr. Olugbenga Agboola.png",
-  },
-  {
-    name: "Mr. Olusegun Alebiosu",
-    title: "MD/CEO, Access Bank PLC",
-    photo: "/speakers/Mr. Olusegun Alebiosu.png",
-  },
-  {
-    name: "Mr. Osahon Akpata",
-    title: "President, Nigerian Bar Association",
-    photo: "/speakers/Mr. Osahon Akpata.png",
+    name: "Massimo de luca",
+    title: "European Union Head of Cooperation",
+    photo: "/speakers/Massimo de luca.png",
   },
   {
     name: "Mr. Sameh Shenouda",
-    title: "Country Director, International Finance Corporation",
+    title: "Executive Director& Chief Investment Officer, Africa Finance Corporation",
     photo: "/speakers/Mr. Sameh Shenouda.png",
   },
   {
+    name: "Mr. Olusegun Alebiosu",
+    title: "Managing Director/CEO, First Bank of Nigeria Plc",
+    photo: "/speakers/Mr. Olusegun Alebiosu.png",
+  },
+  {
+    name: "Mr. Mitchell Elegbe",
+    title: "Founder and Group CEO, Interswitch",
+    photo: "/speakers/Mr. Mitchell Elegbe.png",
+  },
+  {
+    name: "Dr. Segun Ogunsanya, Chairman",
+    title: "Nigeria Sovereign Investment Authority (NSIA)",
+    photo: "/speakers/Dr. Segun Ogunsanya, Chairman.png",
+  },
+  {
+    name: "Prof. Akin Abayomi",
+    title: "Honourable Commissioner for Health, Lagos State",
+    photo: "/speakers/Prof. Akin Abayomi.png",
+  },
+  {
+    name: "Mrs. Choma Ude",
+    title: "Founder & Convener, Africa Film Festival AFRIFF ",
+    photo: "/speakers/Mrs. Choma Ude.png",
+  },
+  {
     name: "Mr. Shahzad Athar",
-    title: "Director, UK Department for Business & Trade",
+    title: "Vice President, Adani Group",
     photo: "/speakers/Mr. Shahzad Athar.png",
   },
   {
     name: "Mr. Tom Cartledge",
-    title: "CEO, Stirling & Hamilton Group",
+    title: "CEO, Benoy",
     photo: "/speakers/Mr. Tom Cartledge.png",
   },
   {
-    name: "Mr. Tosin Eniolorunda",
-    title: "Founder & CEO, Moniepoint",
-    photo: "/speakers/Mr. Tosin Eniolorunda.png",
-  },
-  {
-    name: "Mr. Tubosun Alake",
-    title: "Commissioner for Innovation, Science & Technology, Lagos State",
-    photo: "/speakers/Mr. Tubosun Alake.png",
-  },
-  {
-    name: "Mr. Zaki Cooper",
-    title: "Senior Adviser, British-Asian Trust",
-    photo: "/speakers/Mr. Zaki Cooper.png",
-  },
-  {
-    name: "Mrs. Olatomiwa Williams",
-    title: "MD/CEO, Central Securities Clearing System",
-    photo: "/speakers/Mrs Olatomiwa Williams.png",
+    name: "Samantha Cohen",
+    title: "CVO, OBE, CEO, CWEIC",
+    photo: "/speakers/Samantha Cohen.png",
   },
   {
     name: "Mrs. Adesuwa Ladoja",
-    title: "Executive Director, Lagos State Investment & PPP Office",
+    title: "CEO, Lagos Free Zone",
     photo: "/speakers/Mrs. Adesuwa Ladoja.png",
   },
   {
+    name: "Mr. Tosin Eniolorunda",
+    title: "CEO Moniepoint MFB",
+    photo: "/speakers/Mr. Tosin Eniolorunda.png",
+  },
+  {
     name: "Mrs. Bolanle Austen-Peters",
-    title: "Filmmaker & Artistic Director, Terra Kulture",
+    title: "Chief Executive Officer, Terra Kulture",
     photo: "/speakers/Mrs. Bolanle Austen-Peters.png",
   },
   {
-    name: "Mrs. Choma Ude",
-    title: "Executive Director, Strategy & Innovation",
-    photo: "/speakers/Mrs. Choma Ude.png",
-  },
-  {
-    name: "Mrs. Folashade Ambrose-Medebem",
-    title: "Commissioner for Commerce & Industry, Lagos State",
-    photo: "/speakers/Mrs. Folashade KaosaratBada Ambrose-Medebem.png",
-  },
-  {
-    name: "Mrs. Keke Hammond",
-    title: "CEO, Ghana Investment Promotion Centre",
-    photo: "/speakers/Mrs. Keke Hammond .png",
+    name: "Mr. Kayode Adeleke",
+    title: "Chief Executive Officer, Russel Smith 3D Printing & Manufacturing Company",
+    photo: "/speakers/Mr. Kayode Adeleke.png",
   },
   {
     name: "Mrs. Rolake Akinkugbe-Filani",
     title: "Chief Investment Officer, Chapel Hill Denham",
     photo: "/speakers/Mrs. Rolake AkinkugbeFilani.png",
   },
-  {
-    name: "Mrs. Toke Benson-Awoyinka",
-    title: "Commissioner for Agriculture, Lagos State",
-    photo: "/speakers/Mrs. Toke Benson-Awoyinka.png",
+  // {
+  //   name: "Mrs. Keke Hammond",
+  //   title: "Co-Founder/COO, Flytime Promotions Africa",
+  //   photo: "/speakers/Mrs. Keke Hammond .png",
+  // },
+    {
+    name: "Mr. Osahon Akpata",
+    title: "President, Nigerian Bar Association",
+    photo: "/speakers/Mr. Osahon Akpata.png",
   },
   {
     name: "Mrs. Zain Asher",
@@ -199,25 +225,34 @@ const speakers = [
     photo: "/speakers/Mrs. Zain Asher.png",
   },
   {
-    name: "Prof. Akin Abayomi",
-    title: "Commissioner for Health, Lagos State",
-    photo: "/speakers/Prof. Akin Abayomi.png",
+    name: "Mr. Babatunde Onigbanjo",
+    title: "Attorney-General & Commissioner for Justice, Lagos State",
+    photo: "/speakers/Mr. Babatunde Onigbanjo.png",
   },
   {
-    name: "Samantha Cohen",
-    title: "Senior Adviser, UK Foreign & Commonwealth Office",
-    photo: "/speakers/Samantha Cohen.png",
+    name: "Mrs. Omoyemi Akerele",
+    title: "Founder/CEO, Lagos Fashion Week",
+    photo: "/speakers/Mrs. Omoyemi Akerele.png",
   },
   {
-    name: "Temi Marcella",
-    title: "Executive Director, Lagos State PPP Office",
-    photo: "/speakers/Temi Marcella.png",
+    name: "Mr. Adeola Ukoha",
+    title: "Executive Secretary, PPPRA",
+    photo: "/speakers/Mr. Adeola Ukoha.png",
   },
-  {
-    name: "The Hon. Shirley Botchwey",
-    title: "Minister of Foreign Affairs, Ghana",
-    photo: "/speakers/The Hon. Shirley Botchwey.png",
-  },
+  // {
+  //   name: "H.E. Jonny Baxter",
+  //   title: "British High Commissioner to Nigeria",
+  //   photo: "/speakers/HE Jonny Baxter.png",
+  // },
+ 
+
+
+
+
+
+ 
+
+
 ];
 
 const accents = ["bg-yellow", "bg-red"];

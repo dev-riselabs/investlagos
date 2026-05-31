@@ -22,10 +22,10 @@ export const speakers = [
   },
   {
     id: 4,
-    name: "Asiwaju Bola Ahmed Tinubu",
-    title: "President, of Nigeria",
+    name: "Asiwaju Bola Ahmed Tinubu, GCFR",
+    title: "President of the Federal Republic of Nigeria",
     image: "/speakers/Asiwaju Bola Ahmed Tinubu, GCFR.png",
-    accent: "bg-blue-500",
+    accent: "bg-red-500",
   },
   {
     id: 5,
