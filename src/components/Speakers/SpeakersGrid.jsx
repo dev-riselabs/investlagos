@@ -16,7 +16,7 @@ const speakers = [
   },
   {
     name: "Lord Marland",
-    title: "Chairman, CWEIC",
+    title: "Chairman, Commonwealth Enterprise and Investment Council [CWEIC]",
     photo: "/speakers/LORD MARLAND.png",
   },
   {
@@ -48,6 +48,11 @@ const speakers = [
     name: "Mr. Aig Aigboje Imoukhuede",
     title: "Co-Chair, Lagos Finance &Investment Council (LFIC)",
     photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
+  },
+  {
+    name: "Abdul Samad Rabiu",
+    title: " CFR, CON, Chairman of BUA Foods Plc",
+    photo: "/speakers/Abdul Samad Rabiu BUA.jpeg",
   },
   {
     name: "His Excellency, Barrister Caleb Manasseh Mutfwang",
