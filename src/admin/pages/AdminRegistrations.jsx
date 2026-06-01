@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useState } from 'react'
-import { FiEdit2, FiEye, FiTrash2 } from 'react-icons/fi'
+import { FiCheckCircle, FiEdit2, FiEye, FiTrash2 } from 'react-icons/fi'
 import {
+  adminConfirmRegistration,
   adminDeleteRegistration,
   adminListRegistrations,
   adminUpdateRegistration,
 } from '../../lib/api'
 import { Alert, Badge, Button, Card, Input, Modal, Select } from '../ui'
 import RegistrationForm from './RegistrationForm'
+import { Check } from 'lucide-react'
 
 function flattenErrors(err) {
   if (err?.status === 422 && err.errors) {
@@ -40,6 +42,7 @@ export default function AdminRegistrations() {
   const [formErrors, setFormErrors] = useState({})
   const [submitting, setSubmitting] = useState(false)
   const [deleting, setDeleting] = useState(null)
+  const [confirming, setConfirming] = useState(null)
 
   const load = useCallback(() => {
     setLoading(true)
@@ -84,6 +87,26 @@ export default function AdminRegistrations() {
     }
   }
 
+  const handleConfirm = async (row) => {
+    const label = `${row.first_name || ''} ${row.last_name || ''}`.trim() || row.email
+    if (!window.confirm(
+      `Confirm registration for "${label}"? A confirmation email will be sent to ${row.email}.`,
+    )) return
+    setConfirming(row.id)
+    setError(null)
+    try {
+      const res = await adminConfirmRegistration(row.id)
+      if (res && res.mail_sent === false) {
+        setError('Registration was marked confirmed, but the confirmation email could not be sent.')
+      }
+      if (viewing?.id === row.id) setViewing(null)
+      load()
+    } catch (err) {
+      setError(err.message || 'Failed to confirm registration.')
+    } finally {
+      setConfirming(null)
+    }
+  }
   const handleDelete = async (row) => {
     const label = `${row.first_name || ''} ${row.last_name || ''}`.trim() || row.email
     if (!window.confirm(`Delete registration for "${label}"? This cannot be undone.`)) return
@@ -133,15 +156,16 @@ export default function AdminRegistrations() {
                 <th className="py-2 pr-3 font-medium">Organization</th>
                 <th className="py-2 pr-3 font-medium">Sector</th>
                 <th className="py-2 pr-3 font-medium">Mode</th>
+                <th className="py-2 pr-3 font-medium">Status</th>
                 <th className="py-2 pr-3 font-medium text-right">Actions</th>
               </tr>
             </thead>
             <tbody>
               {loading && (
-                <tr><td colSpan={6} className="py-6 text-center text-slate-500">Loading…</td></tr>
+                <tr><td colSpan={7} className="py-6 text-center text-slate-500">Loading…</td></tr>
               )}
               {!loading && data.data.length === 0 && (
-                <tr><td colSpan={6} className="py-6 text-center text-slate-500">No registrations found.</td></tr>
+                <tr><td colSpan={7} className="py-6 text-center text-slate-500">No registrations found.</td></tr>
               )}
               {!loading && data.data.map((row) => (
                 <tr key={row.id} className="border-b border-slate-50 last:border-0">
@@ -161,10 +185,26 @@ export default function AdminRegistrations() {
                         ? <Badge tone="green">In-Person</Badge>
                         : <Badge tone="slate">—</Badge>}
                   </td>
+                  <td className="py-3 pr-3">
+                    {row.confirmed_at
+                      ? <Badge tone="green">Confirmed</Badge>
+                      : <Badge tone="yellow">Pending</Badge>}
+                  </td>
                   <td className="py-3 pr-3 text-right">
                     <div className="inline-flex gap-2">
                       <Button variant="secondary" onClick={() => openView(row)} className="px-3 py-1.5 text-xs">
                         <FiEye className="h-3.5 w-3.5" /> View
+                      </Button>
+                      <Button
+                        variant="primary"
+                        loading={confirming === row.id}
+                        disabled={!!row.confirmed_at}
+                        onClick={() => handleConfirm(row)}
+                        className="px-3 py-1.5 text-xs"
+                        title={row.confirmed_at ? 'Already confirmed' : 'Confirm and send email'}
+                      >
+                        <FiCheckCircle className="h-3.5 w-3.5" />
+                        {row.confirmed_at ? 'Confirmed' : 'Confirm'}
                       </Button>
                       <Button variant="secondary" onClick={() => openEdit(row)} className="px-3 py-1.5 text-xs">
                         <FiEdit2 className="h-3.5 w-3.5" /> Edit
@@ -216,10 +256,24 @@ export default function AdminRegistrations() {
               <DetailRow label="Other requests" value={viewing.other_requests} />
               <DetailRow label="Heard about" value={viewing.heard_about} />
               <DetailRow label="Objective" value={viewing.objective} />
+              <DetailRow
+                label="Status"
+                value={viewing.confirmed_at
+                  ? `Confirmed on ${new Date(viewing.confirmed_at).toLocaleString()}`
+                  : 'Pending confirmation'}
+              />
             </dl>
             <div className="mt-5 flex justify-end gap-2">
               <Button variant="secondary" onClick={closeView}>Close</Button>
-              <Button onClick={() => openEdit(viewing)}>Edit</Button>
+              {!viewing.confirmed_at && (
+                <Button
+                  loading={confirming === viewing.id}
+                  onClick={() => handleConfirm(viewing)}
+                >
+                  <FiCheckCircle className="h-4 w-4" /> Confirm &amp; send email
+                </Button>
+              )}
+              <Button variant="secondary" onClick={() => openEdit(viewing)}>Edit</Button>
             </div>
           </div>
         )}

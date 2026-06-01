@@ -227,6 +227,13 @@ export function adminDeleteRegistration(id) {
   return request(`/admin/registrations/${id}`, { method: "DELETE", auth: true });
 }
 
+export function adminConfirmRegistration(id) {
+  return request(`/admin/registrations/${id}/confirm`, {
+    method: "POST",
+    auth: true,
+  });
+}
+
 export function adminRegistrationStats() {
   return request("/admin/registrations/stats", { auth: true });
 }
@@ -268,6 +275,7 @@ export const api = {
   adminGetRegistration,
   adminUpdateRegistration,
   adminDeleteRegistration,
+  adminConfirmRegistration,
   adminRegistrationStats,
   adminListSubscribers,
   adminGetSubscriber,
