@@ -166,14 +166,13 @@ const logisticsMembers = [
 
 /* ─── MEMBER CARD (same size as LOC card, no bio) ────────────────────────── */
 function MemberCard({ name, role, photo }) {
-  console.log(photo);
   return (
     <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 h-full">
-      <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150">
+      <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150 max-h-100 h-full">
         <img
           src={photo ? photo : "/governance-images/Sean Leno.jpeg"}
           alt={name}
-          className="block w-full object-cover object-top max-h-100 h-full"
+          className="block w-full object-cover object-top h-full"
           loading="lazy"
         />
       </div>
@@ -184,7 +183,7 @@ function MemberCard({ name, role, photo }) {
         <p className="mt-1 text-sm font-semibold  text-slate900 font-jost">
           {role}
         </p>
-        <div className="mt-6 flex items-center gap-3">
+        <div className="mt-auto flex items-center gap-3">
           <button
             aria-label="LinkedIn"
             className="flex h-8 w-8 items-center justify-center rounded-full bg-green550 text-white transition-opacity hover:opacity-80"
@@ -300,8 +299,8 @@ function SubSectionHeading({ title }) {
 /* ─── MAIN EXPORT ────────────────────────────────────────────────────────── */
 const GovernanceAdditionalCommittees = () => {
   return (
-    <section className="bg-white px-4 md:px-10 lg:px-20 py-12 lg:py-16">
-      <div className="mx-auto max-w-310 space-y-20">
+    <section className="bg-white px-4 md:px-10 lg:px-40 py-12 lg:py-16">
+      <div className="mx-auto max-w-280 space-y-20">
         {/* Technical & Programmes Committee */}
         <div>
           <SubSectionHeading title="Technical & Programmes Committee" />

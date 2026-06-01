@@ -2,7 +2,7 @@ import React from "react";
 
 const GovernanceBanner = () => {
   return (
-    <section className="bg-white px-4 md:px-10 lg:px-20 py-16 lg:py-24">
+    <section className="bg-white px-4 md:px-10 lg:px-40 py-16 lg:py-24">
       <div className="mx-auto grid max-w-310 items-center gap-12 lg:grid-cols-2 lg:gap-16">
         {/* ── Left: text ───────────────────────────────────── */}
         <div>

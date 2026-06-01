@@ -16,7 +16,7 @@ const leaders = [
 
 function LeaderCard({ name, title, photo }) {
   return (
-    <article className="overflow-hidden bg-white shadow-card ring-1 ring-slate-100 il-card">
+    <article className="overflow-hidden bg-white shadow-card ring-1 ring-slate-100 il-card h-full flex flex-col">
       <img
         src={photo}
         alt={name}
@@ -35,16 +35,16 @@ function LeaderCard({ name, title, photo }) {
 
 const GovernanceLeadership = () => {
   return (
-    <section className="bg-white px-4 md:px-10 lg:px-20 pb-16 lg:pb-24">
-      <div className="mx-auto max-w-310">
+    <section className="bg-white px-4 md:px-10 lg:px-40 pb-16 lg:pb-24 h-full">
+      <div className="mx-auto max-w-280 h-full">
         <h2 className="text-center text-xl font-bold text-green400 font-jost sm:text-2xl lg:text-[28px]">
           Lagos State Government Leadership
         </h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8 h-full">
           {leaders.map((l, i) => (
-            <Reveal key={l.name} direction="up" delay={i * 110} distance={26}>
-              <MouseTilt intensity={5}>
+            <Reveal key={l.name} direction="up" delay={i * 110} distance={26} className="h-full">
+              <MouseTilt intensity={5} className="h-full">
                 <LeaderCard {...l} />
               </MouseTilt>
             </Reveal>

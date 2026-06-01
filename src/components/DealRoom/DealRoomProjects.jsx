@@ -120,7 +120,7 @@ function ProjectCard({ title, subtitle, tags, required, raised, image }) {
           </div>
           <div className="flex items-center justify-between text-sm font-jost">
             <span className="text-violet">Raised:</span>
-            <span className="font-bold text-black300">{raised}</span>
+            <span className="font-bold text-green850">{raised}</span>
           </div>
         </div>
 
