@@ -130,10 +130,12 @@ const speakers = [
     photo: "/speakers/Mr. Zaki Cooper.png",
   },
   {
-    name: "Temi Marcella",
-    title: "MD, Alcent Capital",
-    photo: "/speakers/Temi Marcella.png",
+    name: "Mr. Babatunde Onigbanjo",
+    title: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment",
+    photo: "/speakers/Mr. Babatunde Onigbanjo.png",
   },
+
+
   {
     name: "Massimo de luca",
     title: "European Union Head of Cooperation",
@@ -220,14 +222,14 @@ const speakers = [
     photo: "/speakers/Mr. Osahon Akpata.png",
   },
   {
-    name: "Mrs. Zain Asher",
+    name: "Ms. Zain Asher",
     title: "Cable News Network (CNN)",
     photo: "/speakers/Mrs. Zain Asher.png",
   },
   {
-    name: "Mr. Babatunde Onigbanjo",
-    title: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment",
-    photo: "/speakers/Mr. Babatunde Onigbanjo.png",
+    name: "Temi Marcella",
+    title: "MD, Alcent Capital",
+    photo: "/speakers/Temi Marcella.png",
   },
   {
     name: "Mrs. Omoyemi Akerele",
