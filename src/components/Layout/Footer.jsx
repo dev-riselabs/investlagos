@@ -136,10 +136,10 @@ const Footer = () => {
             </p>
             <div className="flex flex-col gap-px items-center text-center sm:text-left sm:items-start">
               <p>
-                Ministry of Commerce, Cooperatives, Trade and Investment [MCCTI]
+                Lagos State Ministry of Commerce, Cooperatives, Trade & Investment [MCCTI]
               </p>
-              <p>Lagos State Government,</p>
-              <p>Alausa, Nigeria.</p>
+              <p>Block 8, Room 104, The Secretariat,</p>
+              <p>Alausa, Ikeja, Lagos State Nigeria.</p>
             </div>
             <div className="flex flex-col gap-px items-center text-center sm:text-left sm:items-start border-t border-black/20 pt-5 sm:border-t-0 sm:pt-0">
               <p>Copyright 2026. All Rights Reserved. Invest Lagos</p>
