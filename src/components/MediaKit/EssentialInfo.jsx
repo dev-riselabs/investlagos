@@ -5,13 +5,13 @@ const EssentialInfo = () => {
   const essentialInfo = [
     { label: 'Event', value: 'Invest Lagos 3.0' },
     { label: 'Date', value: 'June 8 – 10, 2026 (Monday – Wednesday)' },
-    { label: 'Location', value: 'Lagos, Nigeria' },
+    { label: 'Location', value: 'Eko hotel & Suites, Victoria Island, Lagos, Nigeria' },
     {
       label: 'Host',
-      value: 'Ministry of Commerce, Cooperatives, Trade and Investment (MCCTI), Lagos State Government',
+      value: 'Lagos State Ministry of Commerce, Cooperatives, Trade & Investment (MCCTI), Lagos State Government',
     },
     { label: 'Social Handle', value: '@investlagos_' },
-    { label: 'Official Website', value: 'www.investlagos.com' },
+    { label: 'Official Website', value: 'www.investlagos.org' },
   ];
 
   return (

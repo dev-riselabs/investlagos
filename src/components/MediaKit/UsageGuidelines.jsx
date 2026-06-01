@@ -15,7 +15,7 @@ const UsageGuidelines = () => {
       ),
       body: (
         <>
-          Please tag <strong className="font-bold text-slate-800">@investinlagos3.0</strong> in all social media posts for re-sharing and amplification.
+          Please tag <strong className="font-bold text-slate-800">@investinlagos</strong> in all social media posts for re-sharing and amplification.
         </>
       ),
     },

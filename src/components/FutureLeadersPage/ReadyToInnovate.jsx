@@ -6,12 +6,12 @@ const ReadyToInnovate = () => {
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
         {/* Heading */}
         <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl md:text-[40px]">
-          Ready to Innovate?
+          Ready to Join In?
         </h2>
         
         {/* Subtitle */}
         <p className="mb-8 max-w-[600px] text-[15px] leading-relaxed text-white/90 sm:text-base">
-          Join thousands of young entrepreneurs shaping Lagos's future through innovation and technology.
+          Join hundreds of students, professionals & young entrepreneurs shaping the Lagos's future through service and innovative thinking.
         </p>
 
         {/* Buttons Container */}

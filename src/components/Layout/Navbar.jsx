@@ -13,8 +13,9 @@ const navLinks = [
     dropdown: true,
     children: [
       { label: "Governance Structure", path: "/governance" },
-      { label: "IL 1.0 & 2.0 Highlights", path: "/the-summit/agenda" },
+      { label: "IL 1.0 & 2.0 Highlights", path: "#" },
       { label: "IL 3.0 Programme Flow", path: "/agenda" },
+      { label: "Speakers", path: "/speakers" },
       { label: "Administration", path: "/administration" },
     ],
   },
@@ -25,6 +26,7 @@ const navLinks = [
     dropdown: true,
     children: [
       { label: "Deal Room", path: "/deal-room" },
+      { label: "Submit a Project Proposal", path: "/deal-room/proposal" },
       { label: "Future Leaders Movement", path: "/sectors/technology" },
       {
         label: "Business Exhibition & Cultural Showcase",
