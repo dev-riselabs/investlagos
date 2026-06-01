@@ -9,7 +9,7 @@ import ProtectedRoute from "./admin/ProtectedRoute";
 // Site-wide maintenance toggle. When VITE_MAINTENANCE_MODE=true, every
 // public route redirects to /maintenance. Admin routes and /maintenance
 // itself remain reachable.
-const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "false";
+const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "true";
 
 // Route-level code splitting — each page becomes its own async chunk and
 // is only fetched the first time the route is visited. This keeps the
