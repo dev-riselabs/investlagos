@@ -106,22 +106,16 @@ const Footer = () => {
           {/* ── Legal links ── */}
           <ul className="mt-5 space-y-1.5 text-xs text-black text-center sm:text-left font-manrope font-light border-b border-black/20 pb-5 sm:border-b-0 sm:pb-0">
             <li>
-              •{" "}
-              <a href="#" className="hover:underline">
-                Accessibility
-              </a>
+              • <Link className="hover:underline!">Accessibility</Link>
+            </li>
+            <li>
+              • <Link className="hover:underline!">Terms &amp; Conditions</Link>
             </li>
             <li>
               •{" "}
-              <a href="#" className="hover:underline">
-                Terms &amp; Conditions
-              </a>
-            </li>
-            <li>
-              •{" "}
-              <a href="#" className="hover:underline">
+              <Link to="/privacy-policy" className="hover:underline!">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -145,7 +139,13 @@ const Footer = () => {
               <p>Copyright 2026. All Rights Reserved. Invest Lagos</p>
               <p>
                 Website Designed &amp; Developed by{" "}
-                <a href="https://eventsintel.com" target="_blank" className="font-bold">Events Intel Technologies</a>
+                <a
+                  href="https://eventsintel.com"
+                  target="_blank"
+                  className="font-bold"
+                >
+                  Events Intel Technologies
+                </a>
               </p>
             </div>
           </div>

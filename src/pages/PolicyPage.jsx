@@ -1,6 +1,11 @@
-import { IoMdSearch } from 'react-icons/io'
-import { IoIosArrowDown } from 'react-icons/io'
-import { FiArrowUpRight, FiArrowRight } from 'react-icons/fi'
+import { IoMdSearch } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
+import {
+  FiArrowUpRight,
+  FiArrowRight,
+  FiFilter,
+  FiBookOpen,
+} from "react-icons/fi";
 import {
   LuFileText,
   LuChartBar,
@@ -10,107 +15,117 @@ import {
   LuBriefcase,
   LuGraduationCap,
   LuHeartPulse,
-} from 'react-icons/lu'
-import InformationSection from '../components/HomePage/InformationSection'
-import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
+} from "react-icons/lu";
+import InformationSection from "../components/HomePage/InformationSection";
+import { Reveal, Spotlight, MouseTilt } from "../lib/animations";
+import { TrendingUp } from "lucide-react";
 
 /* ─────────────────── HERO ─────────────────── */
 
 function PolicyHero() {
   return (
     <section
-      className="relative overflow-hidden bg-[#04191D] px-6 py-16 text-white lg:py-20"
+      className="relative overflow-hidden px-4 md:px-10 lg:px-20 py-16 text-white lg:py-20"
       style={{
-        backgroundImage: 'url(/bg_third_mainland_bridge.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundImage: "url(/policy-bg.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#04191D]/95 via-[#04191D]/80 to-[#04191D]/40" />
-      <div className="relative mx-auto max-w-[1240px]">
-        <h1 className="text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">Policy Centre</h1>
-        <p className="mt-5 max-w-2xl text-sm leading-7 text-gray-200 sm:text-base">
-          A hub of evidence-based research, policy briefs and strategic insights shaping the future
-          of investment, economic transformation and sustainable growth across Lagos State.
+      <div className="relative mx-auto max-w-310 space-x-6">
+        <h1 className="text-3xl font-bold font-inter text-white leading-tight sm:text-4xl lg:text-5xl">
+          Policy Centre
+        </h1>
+        <p className="max-w-2xl text-sm leading-7 text-white font-inter sm:text-lg">
+          A hub of evidence-based research, policy briefs and strategic insights
+          shaping the future of investment, economic transformation and
+          sustainable growth across Lagos State.
         </p>
       </div>
     </section>
-  )
+  );
 }
 
 /* ─────────────────── STATS ─────────────────── */
 
 const policyStats = [
-  { value: '300+', label: 'Research Reports' },
-  { value: '50', label: 'Policy Briefs' },
-  { value: '16', label: 'LGAs Studies' },
-  { value: '200K+', label: 'Total Downloads' },
-]
+  { value: "12", label: "Research Reports" },
+  { value: "5", label: "Policy Briefs" },
+  { value: "20", label: "LGAs " },
+  { value: "100K", label: "Total Downloads" },
+];
 
 function PolicyStats() {
   return (
-    <section className="border-y border-gray-100 bg-gray-50 py-14">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-2 gap-8 px-6 md:grid-cols-4">
+    <section className="border-y border-gray-100 bg-slate450 py-14">
+      <div className="mx-auto grid max-w-310 grid-cols-2 gap-8 px-6 md:grid-cols-4">
         {policyStats.map((s) => (
-          <div key={s.label} className="text-center">
-            <p className="text-4xl font-black text-green100 sm:text-5xl">{s.value}</p>
-            <p className="mt-2 text-sm font-semibold text-gray-500">{s.label}</p>
+          <div key={s.label} className="text-center space-y-2">
+            <p className="text-3xl font-bold font-inter text-green100 sm:text-5xl">
+              {s.value}
+            </p>
+            <p className="text-sm text-violet font-medium">{s.label}</p>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }
 
 /* ─────────────────── RESEARCH FOCUS AREAS ─────────────────── */
 
 const focusAreas = [
   {
-    icon: LuChartBar,
-    title: 'Economic Policy',
-    desc: 'Macroeconomic frameworks, fiscal policy and revenue strategies that drive sustainable growth.',
-    accent: 'bg-green100/15 text-green100',
+    title: "Economic Policy",
+    desc: "Access data-driven insights, market trends, and economic indicators shaping investment decisions in Lagos and across Africa.",
+    accent: "bg-green100/15 text-green100",
   },
   {
-    icon: LuBuilding2,
-    title: 'Investment Climate',
-    desc: 'Reforms, incentives and regulatory analysis that improve ease of doing business in Lagos.',
-    accent: 'bg-yellow/20 text-[#B8860B]',
+    title: "Sector Deep Dives",
+    desc: "Explore detailed analyses of priority sectors including infrastructure, technology, healthcare, manufacturing, energy, and the creative economy.",
+    accent: "bg-green100/15 text-green100",
   },
   {
-    icon: LuLeaf,
-    title: 'Sustainability & Climate',
-    desc: 'Green growth, climate resilience and ESG frameworks shaping responsible investment.',
-    accent: 'bg-orange/15 text-orange',
+    title: "Investment Outlook",
+    desc: "Discover emerging opportunities, growth projections, and strategic developments positioning Lagos for long-term economic expansion.",
+    accent: "bg-green100/15 text-green100",
   },
-  {
-    icon: LuScale,
-    title: 'Governance & Reform',
-    desc: 'Institutional reform, public-sector innovation and accountability frameworks.',
-    accent: 'bg-[#3B7FCD]/15 text-[#3B7FCD]',
-  },
-]
+];
 
 function ResearchFocusAreas() {
   return (
-    <section className="bg-white px-6 py-16 lg:py-20">
-      <div className="mx-auto max-w-[1240px]">
-        <h2 className="text-2xl font-black text-green200 sm:text-3xl">Research Focus Areas</h2>
-        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
-          Our research portfolio spans the economic, regulatory and institutional themes that
-          shape Lagos&apos; long-term competitiveness as Africa&apos;s leading investment destination.
-        </p>
+    <section className="bg-white px-4 md:px-10 lg:px-20 py-16 lg:py-20">
+      <div className="mx-auto max-w-310">
+        <div className="flex flex-col gap-6">
+          <h2 className="text-2xl font-semibold font-jost text-green400 sm:text-3xl">
+            Research Focus Areas
+          </h2>
+          <p className=" max-w-[50ch] text-sm leading-relaxed text-green400 font-jost">
+            Our research informs policy decisions across Lagos most critical
+            economic development challenges
+          </p>
+        </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 sm:grid-cols-3 lg:grid-cols-3 h-full">
           {focusAreas.map(({ icon: Icon, title, desc, accent }, i) => (
-            <Reveal key={title} direction="up" delay={i * 90} distance={26}>
-              <MouseTilt intensity={6}>
-                <article className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-100 il-card">
-                  <span className={`inline-flex h-10 w-10 items-center justify-center rounded-md ${accent}`}>
-                    <Icon className="h-5 w-5" />
+            <Reveal
+              key={title}
+              direction="up"
+              delay={i * 90}
+              distance={26}
+              className="h-full"
+            >
+              <MouseTilt intensity={6} className="h-full">
+                <article className="rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate250 il-card flex flex-col gap-3 h-full">
+                  <span
+                    className={`inline-flex h-10 w-10 items-center justify-center rounded-md ${accent}`}
+                  >
+                    <TrendingUp className="h-5 w-5" />
                   </span>
-                  <h3 className="mt-4 text-sm font-bold text-slate-900">{title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-500">{desc}</p>
+                  <h3 className="text-base font-jost font-bold text-black300">
+                    {title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-violet">{desc}</p>
                 </article>
               </MouseTilt>
             </Reveal>
@@ -118,132 +133,136 @@ function ResearchFocusAreas() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 /* ─────────────────── FILTER BAR ─────────────────── */
 
 function PolicyFilterBar() {
   return (
-    <div className="bg-green100 px-6 py-6">
-      <div className="mx-auto max-w-[1100px]">
-        <div className="flex flex-col items-stretch gap-3 rounded-full bg-green200 p-2 sm:flex-row sm:items-center">
-          <div className="flex flex-1 items-center gap-3 rounded-full bg-white/95 px-5 py-2.5">
-            <IoMdSearch className="h-5 w-5 text-slate-500" />
-            <input
-              type="text"
-              placeholder="Search policy briefs and reports..."
-              className="flex-1 bg-transparent text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none"
-            />
-          </div>
-          <div className="relative flex items-center rounded-full bg-white/95 px-5 py-2.5 text-sm text-slate-600 sm:w-44">
-            <select className="w-full appearance-none bg-transparent pr-6 focus:outline-none">
-              <option>All Topics</option>
-            </select>
-            <IoIosArrowDown className="pointer-events-none absolute right-4 h-4 w-4 text-slate-500" />
-          </div>
-          <div className="relative flex items-center rounded-full bg-white/95 px-5 py-2.5 text-sm text-slate-600 sm:w-36">
-            <select className="w-full appearance-none bg-transparent pr-6 focus:outline-none">
-              <option>All Years</option>
-            </select>
-            <IoIosArrowDown className="pointer-events-none absolute right-4 h-4 w-4 text-slate-500" />
-          </div>
+    <div className="bg-green200 px-4 md:px-10 lg:px-20 py-10">
+      <div className="ml-auto max-w-310 flex items-center md:justify-end flex-wrap gap-3">
+        <div className="flex items-center gap-3 rounded-md border border-white px-5 py-2.5">
+          <IoMdSearch className="h-5 w-5 text-white" />
+          <input
+            type="text"
+            placeholder="Search policy briefs and reports..."
+            className="flex-1 bg-transparent text-sm text-white placeholder:text-white/80 focus:outline-none"
+          />
+        </div>
+        <div className="relative flex items-center gap-2 rounded-md bg-white px-5 py-2.5 text-sm text-slate-600 sm:w-44">
+          <FiFilter className="w-5 h-5 text-black200" />
+          <select className="w-full  pr-6 focus:outline-none">
+            <option>All Topics</option>
+          </select>
+        </div>
+        <div className="relative flex items-center gap-2 rounded-md bg-white px-5 py-2.5 text-sm text-slate-600 sm:w-36">
+          <FiFilter className="w-5 h-5 text-black200" />
+          <select className="w-full pr-6 focus:outline-none">
+            <option>All Years</option>
+          </select>
+        </div>
+        <div className="relative flex items-center gap-2 rounded-md bg-white px-5 py-2.5 text-sm text-slate-600 sm:w-36">
+          <FiFilter className="w-5 h-5 text-black200" />
+          <select className="w-full pr-6 focus:outline-none">
+            <option>All</option>
+          </select>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 /* ─────────────────── POLICY BRIEFS GRID ─────────────────── */
 
 const policyBriefs = [
   {
-    icon: LuFileText,
-    tag: 'Economic Policy',
-    year: '2025',
-    title: 'Lagos State Investment Promotion Framework',
-    desc: 'A comprehensive review of the policy levers driving investment promotion across priority sectors and the institutional architecture supporting deal flow.',
-    accent: 'bg-green100/15 text-green100',
+    tag: "Report",
+    year: "2025",
+    lang: "English",
+    event: "Invest Lagos 3.0",
+    category: "trade",
+    title: "Ease of Doing Business Reforms",
+    desc: "Learn about the policies, reforms, and initiatives improving the business environment and enhancing investor confidence in Lagos.",
   },
   {
-    icon: LuBriefcase,
-    tag: 'Investment Climate',
-    year: '2025',
-    title: 'Ease of Doing Business Reforms in Lagos',
-    desc: 'An assessment of regulatory simplification, licensing reform and digital service delivery improvements that strengthen investor confidence.',
-    accent: 'bg-yellow/20 text-[#B8860B]',
+    tag: "Report",
+    year: "2025",
+    lang: "English",
+    event: "Invest Lagos 3.0",
+    category: "trade",
+    title: "Public-Private Partnerships",
+    desc: "Explore frameworks and opportunities enabling collaboration between government and the private sector to deliver transformative projects.",
   },
   {
-    icon: LuLeaf,
-    tag: 'Sustainability',
-    year: '2024',
-    title: 'Climate-Smart Infrastructure & Green Finance',
-    desc: 'Pathways for mobilising green capital and integrating climate resilience into Lagos&apos; long-term infrastructure planning.',
-    accent: 'bg-orange/15 text-orange',
+    tag: "Report",
+    year: "2025",
+    lang: "English",
+    event: "Invest Lagos 3.0",
+    category: "trade",
+    title: "Regulatory Insights",
+    desc: "Stay informed on key regulatory developments, investment guidelines, and policy updates relevant to businesses and investors.",
   },
   {
-    icon: LuGraduationCap,
-    tag: 'Human Capital',
-    year: '2024',
-    title: 'Skills, Innovation and the Lagos Workforce',
-    desc: 'Strategic recommendations for aligning workforce development with the demands of a globally competitive Lagos economy.',
-    accent: 'bg-[#3B7FCD]/15 text-[#3B7FCD]',
+    tag: "Report",
+    year: "2025",
+    lang: "English",
+    event: "Invest Lagos 3.0",
+    category: "trade",
+    title: "Development Agenda",
+    desc: "Understand the long-term vision, priorities and policy direction driving Lagos’ economic growth and competitiveness.",
   },
-  {
-    icon: LuHeartPulse,
-    tag: 'Social Policy',
-    year: '2024',
-    title: 'Healthcare Investment & Public-Private Partnerships',
-    desc: 'A framework for attracting private capital into the Lagos health sector through structured PPPs and concessional financing.',
-    accent: 'bg-red/15 text-red',
-  },
-  {
-    icon: LuChartBar,
-    tag: 'Economic Policy',
-    year: '2024',
-    title: 'Fiscal Strategy and Revenue Mobilisation',
-    desc: 'Insights on broadening Lagos&apos; revenue base, deepening tax compliance and unlocking sustainable financing for development.',
-    accent: 'bg-green100/15 text-green100',
-  },
-]
+];
 
 function PolicyBriefCard({ brief }) {
-  const { icon: Icon, tag, year, title, desc, accent } = brief
+  const { tag, year, title, desc, event, lang, category } = brief;
   return (
-    <article className="flex flex-col gap-4 rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate-100 il-card">
-      <div className="flex items-center justify-between">
-        <span className={`inline-flex h-11 w-11 items-center justify-center rounded-md ${accent}`}>
-          <Icon className="h-5 w-5" />
-        </span>
-        <div className="flex items-center gap-2 text-[11px] font-medium text-slate-500">
-          <span className="rounded-sm bg-slate-100 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-600">
-            {tag}
-          </span>
-          <span className="text-slate-400">•</span>
-          <span>{year}</span>
+    <article className="flex items-start gap-4 rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate250 il-card">
+      <span
+        className={`inline-flex h-11 md:h-16 w-11 md:w-16 shrink-0 items-center justify-center rounded-md bg-linear-to-br from-green750/30 to-orange/20`}
+      >
+        <FiBookOpen className="h-6 w-6 md:h-7 md:w-7 text-blue100" />
+      </span>
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4 ">
+          <div className="flex flex-col gap-3">
+            <h3 className="text-base font-bold text-black100">{title}</h3>
+
+            <div className="flex items-start gap-2 font-jost text-violet text-sm">
+              <span className=" bg-green750/10 rounded-full px-3 py-1.5 text-xs font-jost tracking-wide text-green750">
+                {tag}
+              </span>
+
+              <span>{year}</span>
+              <span className="text-violet">•</span>
+              <span>{event}</span>
+              <span className="text-violet">•</span>
+              <span>{lang}</span>
+            </div>
+          </div>
+
+          <p className="text-base leading-6 text-violet">{desc}</p>
+        </div>
+        <div className="flex flex-col gap-3">
+          <div className="bg-slate350 rounded-md px-2 py-1.5 text-black300 text-sm self-start">
+            {category}
+          </div>
+          <button className="border border-blue100 rounded-md px-5 py-2 text-blue100 font-jost text-xs font-black self-start">
+            View Summary
+          </button>
         </div>
       </div>
-      <h3 className="text-base font-bold text-black100">{title}</h3>
-      <p className="text-[13px] leading-6 text-slate-500">{desc}</p>
-      <a
-        href="#"
-        className="mt-auto inline-flex w-fit items-center gap-1 pt-2 text-xs font-semibold text-green100 transition hover:opacity-80"
-      >
-        Read More <FiArrowRight className="h-3.5 w-3.5" />
-      </a>
     </article>
-  )
+  );
 }
 
 function PolicyBriefsGrid() {
   return (
-    <section className="bg-[#F7F8FA] px-6 py-14 lg:py-20">
-      <div className="mx-auto max-w-[1240px]">
-        <h2 className="text-2xl font-black text-green200 sm:text-3xl">Latest Policy Briefs &amp; Reports</h2>
-        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
-          Explore recent research outputs covering economic policy, investment climate, sustainability
-          and the institutional reforms shaping Lagos&apos; competitive edge.
-        </p>
+    <section className="bg-white px-4 md:px-10 lg:px-20 py-14 lg:py-20">
+      <div className="mx-auto max-w-310">
+        <h2 className="text-2xl font-bold text-green400 text-center font-jost sm:text-3xl">
+          Policy
+        </h2>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {policyBriefs.map((brief, i) => (
@@ -260,7 +279,7 @@ function PolicyBriefsGrid() {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        {/* <div className="mt-10 flex justify-center">
           <a
             href="/publications"
             className="inline-flex items-center gap-2 rounded-md bg-green100 px-6 py-3 text-sm font-bold text-white transition hover:opacity-90"
@@ -268,41 +287,41 @@ function PolicyBriefsGrid() {
             View All Publications
             <FiArrowRight className="h-4 w-4" />
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
-  )
+  );
 }
 
 /* ─────────────────── SEARCH CTA ─────────────────── */
 
-function PolicySearchCTA() {
-  return (
-    <section className="bg-white px-6 py-12">
-      <div className="mx-auto max-w-[1240px]">
-        <div className="flex flex-col items-stretch gap-3 rounded-lg bg-green200 p-3 sm:flex-row sm:items-center">
-          <div className="flex flex-1 items-center gap-3 rounded-md bg-white/10 px-5 py-3">
-            <IoMdSearch className="h-5 w-5 text-white/70" />
-            <input
-              type="text"
-              placeholder="Pan Africa Growth, Lagos Africa..."
-              className="flex-1 bg-transparent text-sm text-white placeholder:text-white/60 focus:outline-none"
-            />
-          </div>
-          <a
-            href="#"
-            className="flex items-center justify-center gap-3 rounded-md bg-green100 px-6 py-3 font-jost text-sm font-semibold text-white transition hover:opacity-90"
-          >
-            <span>Investment Information Hub</span>
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20">
-              <FiArrowUpRight className="h-4 w-4 text-white" />
-            </span>
-          </a>
-        </div>
-      </div>
-    </section>
-  )
-}
+// function PolicySearchCTA() {
+//   return (
+//     <section className="bg-white px-6 py-12">
+//       <div className="mx-auto max-w-310">
+//         <div className="flex flex-col items-stretch gap-3 rounded-lg bg-green200 p-3 sm:flex-row sm:items-center">
+//           <div className="flex flex-1 items-center gap-3 rounded-md bg-white/10 px-5 py-3">
+//             <IoMdSearch className="h-5 w-5 text-white/70" />
+//             <input
+//               type="text"
+//               placeholder="Pan Africa Growth, Lagos Africa..."
+//               className="flex-1 bg-transparent text-sm text-white placeholder:text-white/60 focus:outline-none"
+//             />
+//           </div>
+//           <a
+//             href="#"
+//             className="flex items-center justify-center gap-3 rounded-md bg-green100 px-6 py-3 font-jost text-sm font-semibold text-white transition hover:opacity-90"
+//           >
+//             <span>Investment Information Hub</span>
+//             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20">
+//               <FiArrowUpRight className="h-4 w-4 text-white" />
+//             </span>
+//           </a>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 export default function PolicyPage() {
   return (
@@ -312,12 +331,24 @@ export default function PolicyPage() {
           <PolicyHero />
         </Reveal>
       </Spotlight>
-      <Reveal direction="up"><PolicyStats /></Reveal>
-      <Reveal direction="up"><ResearchFocusAreas /></Reveal>
-      <Reveal direction="down" duration={600}><PolicyFilterBar /></Reveal>
-      <Reveal direction="up"><PolicyBriefsGrid /></Reveal>
-      <Reveal direction="up"><InformationSection /></Reveal>
-      <Reveal direction="up"><PolicySearchCTA /></Reveal>
+      <Reveal direction="up">
+        <PolicyStats />
+      </Reveal>
+      <Reveal direction="up">
+        <ResearchFocusAreas />
+      </Reveal>
+      <Reveal direction="down" duration={600}>
+        <PolicyFilterBar />
+      </Reveal>
+      <Reveal direction="up">
+        <PolicyBriefsGrid />
+      </Reveal>
+      <Reveal direction="up">
+        <InformationSection />
+      </Reveal>
+      {/* <Reveal direction="up">
+        <PolicySearchCTA />
+      </Reveal> */}
     </>
-  )
+  );
 }

@@ -59,7 +59,7 @@
   --color-green500: #50d8c1;
   --color-green550: #e6f7ef;
   --color-green600: #1c5c47;
-  --color-greeen650: #008751;
+  --color-green650: #008751;
   --color-green700: #f1faf2;
   --color-green750: #30aba3;
   --color-green800: #2c2c2c;
@@ -68,6 +68,7 @@
   --color-black100: #04191d;
   --color-black200: #05163f;
   --color-black300: #2a1e33;
+  --color-black400: #1F2937;
   --color-mint: #004f61;
   --color-slate100: #333333;
   --color-slate150: #e5e7eb;
@@ -76,8 +77,11 @@
   --color-slate300: #f9faf9;
   --color-slate350: #F7F7F7;
   --color-slate400: #f8f9fb;
+  --color-slate450: #F5F5F5;
   --color-slate500: #f3f6fa;
+  --color-slate550: #F9FAFB;
   --color-slate600: #fffefe;
+  --color-slate650: #F3F4F6;
   --color-slate700: #cacacb;
   --color-slate800: #2a1e33cc;
   --color-slate900: #4b5563;
@@ -96,6 +100,12 @@
 
 .hero-bg {
   background: url("/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.privacy-bg {
+  background: url("/privacy-policy-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
