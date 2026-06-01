@@ -92,7 +92,7 @@ const speakers = [
   {
     name: "Mrs. Toke Benson-Awoyinka",
     title: "Honourable Commissioner for Tourism, Arts and Culture",
-    photo: "/speakers/Mrs. Toke Benson-Awoyinka.png",
+    photo: "/speakers/Commissioner for Tourism.png",
   },
   {
     name: "Mr. Olugbenga Agboola",
@@ -102,7 +102,7 @@ const speakers = [
   {
     name: "Mr. Tubosun Alake",
     title: "Honourable Commissioner, Ministry of Innovation, Science & Technology, Lagos State Government",
-    photo: "/speakers/Mr. Tubosun Alake.png",
+    photo: "/speakers/Commissioner for Innovation.jpg.jpeg",
   },
   {
     name: "Lord Christopher Geidt",
