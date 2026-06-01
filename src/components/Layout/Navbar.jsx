@@ -28,7 +28,7 @@ const navLinks = [
       { label: "Future Leaders Movement", path: "/sectors/technology" },
       {
         label: "Business Exhibition & Cultural Showcase",
-        path: "/sectors/technology",
+        path: "/business-exhibition",
       },
       { label: "Sectors", path: "/sectors" },
       { label: "Incentives", path: "/incentives" },
