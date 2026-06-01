@@ -92,7 +92,7 @@ const speakers = [
   {
     name: "Mrs. Toke Benson-Awoyinka",
     title: "Honourable Commissioner for Tourism, Arts and Culture",
-    photo: "/speakers/Mrs. Toke Benson-Awoyinka.png",
+    photo: "/speakers/Commissioner for Tourism.png",
   },
   {
     name: "Mr. Olugbenga Agboola",
@@ -102,7 +102,7 @@ const speakers = [
   {
     name: "Mr. Tubosun Alake",
     title: "Honourable Commissioner, Ministry of Innovation, Science & Technology, Lagos State Government",
-    photo: "/speakers/Mr. Tubosun Alake.png",
+    photo: "/speakers/Commissioner for Innovation.jpg.jpeg",
   },
   {
     name: "Lord Christopher Geidt",
@@ -259,14 +259,14 @@ const accents = ["bg-yellow", "bg-red"];
 
 function SpeakerCard({ name, title, photo, accent }) {
   return (
-    <article className="overflow-hidden rounded-b-lg il-card h-full ">
+    <article className="overflow-hidden rounded-b-lg il-card h-full flex flex-col bg-green350">
       <img
         src={photo}
         alt={name}
-        className="block aspect-4/5 w-full object-cover"
+        className="block h-80 w-full object-cover"
         loading="lazy"
       />
-      <div className="flex items-start gap-3 bg-green350 px-4 py-6 md:px-7.5 md:py-10">
+      <div className="flex items-start gap-3  px-4 py-6 md:px-7.5 md:py-10">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded bg-white/15 text-white">
           <InstitutionIcon className="h-4 w-4" />
         </div>
@@ -279,20 +279,20 @@ function SpeakerCard({ name, title, photo, accent }) {
           </p>
         </div>
       </div>
-      <div className={`h-1 rounded-b-lg ${accent}`} />
+      <div className={`h-1 rounded-b-lg ${accent} mt-auto`} />
     </article>
   );
 }
 
 const SpeakersGrid = () => {
   return (
-    <section className="bg-green100 px-6 pb-20 pt-2 lg:pb-24">
+    <section className="bg-green100 px-4 md:px-10 lg:px-40 pb-20 pt-2 lg:pb-24">
       <div className="mx-auto max-w-310">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 h-full">
           {speakers.map((s, i) => (
             <div key={s.name} className="h-full">
-              <Reveal direction="up" delay={(i % 6) * 90} distance={28}>
-                <MouseTilt intensity={5}>
+              <Reveal direction="up" delay={(i % 6) * 90} distance={28} className="h-full">
+                <MouseTilt intensity={5} className="h-full">
                   <SpeakerCard {...s} accent={accents[i % accents.length]} />
                 </MouseTilt>
               </Reveal>

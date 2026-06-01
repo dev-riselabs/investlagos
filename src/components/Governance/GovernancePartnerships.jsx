@@ -131,11 +131,11 @@ const secretariatMembers = [
 function MemberCard({ name, role, photo }) {
   return (
     <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 h-full">
-      <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150">
+      <div className="overflow-hidden rounded-t-xl il-card-media bg-slate150 max-h-100 h-full">
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-100"
+          className="block w-full object-cover object-top h-full"
           loading="lazy"
         />
       </div>
@@ -165,12 +165,12 @@ function MemberCard({ name, role, photo }) {
 /* ─── BIO CARD ───────────────────────────────────────────────────────────── */
 function BioCard({ name, role, photo, bio }) {
   return (
-    <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 h-ful">
-      <div className="overflow-hidden rounded-t-xl bg-slate150 il-card-media">
+    <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 h-full">
+      <div className="overflow-hidden rounded-t-xl bg-slate150 il-card-media max-h-100 h-120">
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-100"
+          className="block w-full object-cover object-top h-full"
           loading="lazy"
         />
       </div>
@@ -222,8 +222,8 @@ function SectionHeading({ title }) {
 /* ─── MAIN EXPORT ────────────────────────────────────────────────────────── */
 const GovernancePartnerships = () => {
   return (
-    <section className="bg-white px-4 md:px-10 lg:px-20 py-12 lg:py-16">
-      <div className="mx-auto max-w-310 space-y-20">
+    <section className="bg-white px-4 md:px-10 lg:px-40 py-12 lg:py-16">
+      <div className="mx-auto max-w-280 space-y-20">
         {/* Partnerships & Sponsorships Committee */}
         <div>
           <SectionHeading title="Partnerships & Sponsorships Committee" />

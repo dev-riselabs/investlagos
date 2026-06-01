@@ -63,6 +63,7 @@
   --color-green700: #f1faf2;
   --color-green750: #30aba3;
   --color-green800: #2c2c2c;
+  --color-green850: #004E61;
   --color-green900: #038f5d;
   --color-black100: #04191d;
   --color-black200: #05163f;
@@ -113,6 +114,7 @@
 
 .deal-impact-bg {
   background: url("/impact-img.png");
+
   background-repeat: no-repeat;
   background-size: cover;
 }

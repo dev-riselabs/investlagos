@@ -9,7 +9,7 @@ const buttons = [
 
 function FutureSection() {
   return (
-    <section className="future-bg flex flex-col gap-6 px-4 md:px-10 lg:px-20 py-10 md:py-21">
+    <section className="bg-white flex flex-col gap-6 px-4 md:px-10 lg:px-20 py-10 md:py-21">
         <div className="border-l-4 border-l-green100 p-5">
             <h3 className="text-green100 text-sm md:text-base font-bold font-jost uppercase tracking-[5px]">WELCOME TO THE FUTURE</h3>
         </div>
