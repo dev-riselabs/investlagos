@@ -5,7 +5,6 @@ import LandingPageLayout from "./layout/Landing_Page_Layout";
 import { AuthProvider } from "./admin/AuthContext";
 import ProtectedRoute from "./admin/ProtectedRoute";
 
-
 // Site-wide maintenance toggle. When VITE_MAINTENANCE_MODE=true, every
 // public route redirects to /maintenance. Admin routes and /maintenance
 // itself remain reachable.
@@ -36,8 +35,8 @@ const MediaKitPage = lazy(() => import("./pages/MediaKitPage"));
 const GalleryPage = lazy(() => import("./pages/GalleryPage"));
 const MaintenancePage = lazy(() => import("./pages/MaintenancePage"));
 
-
 const FutureLeadersPage = lazy(() => import("./pages/FutureLeadersPage"));
+const BusinessExhibition = lazy(() => import("./pages/BusinessExhibition"));
 
 // Admin console — kept in its own group of chunks; never loaded on
 // the public marketing site.
@@ -91,6 +90,10 @@ function App() {
                 />
                 <Route path="register" element={<RegisterPage />} />
                 <Route path="governance" element={<GovernancePage />} />
+                <Route
+                  path="business-exhibition"
+                  element={<BusinessExhibition />}
+                />
                 <Route path="publications" element={<PublicationsPage />} />
                 <Route
                   path="publications/:slug"

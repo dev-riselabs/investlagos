@@ -125,6 +125,12 @@
   background-size: cover;
 }
 
+.business-exhibition-bg {
+  background: url("/business/business-exhibition-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .invest-bg {
   background: url("/invest-bg.png");
   background-repeat: no-repeat;
