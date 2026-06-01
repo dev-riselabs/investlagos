@@ -106,8 +106,8 @@ function App() {
                   path="the-summit/administration"
                   element={<AdministrationPage />}
                 />
-                <Route path="policy" element={<PolicyPage />} />
-                <Route path="pressroom/reports" element={<PolicyPage />} />
+                <Route path="policy_centre" element={<PolicyPage />} />
+                {/* <Route path="pressroom/policy_centre" element={<PolicyPage />} /> */}
                 {/* <Route path="media-kit" element={<MediaKitPage />} /> */}
                 <Route path="media/kits" element={<MediaKitPage />} />
                 <Route path="media/gallery" element={<GalleryPage />} />

@@ -44,7 +44,7 @@ const navLinks = [
     children: [
       { label: "Gallery", path: "/media/gallery" },
       { label: "Media Kits", path: "/media/kits" },
-      { label: "Press Releases", path: "/media/news" },
+      { label: "Press Releases", path: "#" },
     ],
   },
 
@@ -53,8 +53,8 @@ const navLinks = [
     path: "/pressroom",
     dropdown: true,
     children: [
-      { label: "Policy Centre", path: "/pressroom/reports" },
-      { label: "Data & Insights", path: "/pressroom/publications" },
+      { label: "Policy Centre", path: "/policy_centre" },
+      { label: "Data & Insights", path: "#" },
       { label: "Publications", path: "/pressroom/publications" },
     ],
   },
