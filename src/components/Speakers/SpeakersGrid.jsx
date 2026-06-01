@@ -45,9 +45,9 @@ const speakers = [
     photo: "/speakers/Mrs. Folashade KaosaratBada Ambrose-Medebem.png",
   },
   {
-    name: "Engr. Jani Ibrahim",
-    title: "President, NACCIMA",
-    photo: "/speakers/Engr. Jani Ibrahim.png",
+    name: "Mr. Aig Aigboje Imoukhuede",
+    title: "Co-Chair, Lagos Finance &Investment Council (LFIC)",
+    photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
   },
   {
     name: "His Excellency, Barrister Caleb Manasseh Mutfwang",
@@ -74,10 +74,10 @@ const speakers = [
     title: "Minister of Art, Culture,Tourism & CreativeEconomy",
     photo: "/speakers/Her Excellency Hannatu Musa  Musawa.png",
   },
-  {
-    name: "Mr. Aig Aigboje Imoukhuede",
-    title: "Co-Chair, Lagos Finance &Investment Council (LFIC)",
-    photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
+   {
+    name: "Engr. Jani Ibrahim",
+    title: "President, NACCIMA",
+    photo: "/speakers/Engr. Jani Ibrahim.png",
   },
   {
     name: "Mr. David Oyelowo",
