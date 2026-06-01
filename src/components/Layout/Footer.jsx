@@ -40,7 +40,7 @@ const socialIcons = [
 
 const Footer = () => {
   return (
-    <footer className=" bg-green100 p-5 sm:p-8 lg:p-14">
+    <footer className=" bg-[#099567] p-5 sm:p-8 lg:p-14">
       <div className="bg-white rounded-2xl">
         <div className="mx-auto max-w-310 px-6 pt-10 pb-8">
           {/* ── Dark green CTA card ── */}

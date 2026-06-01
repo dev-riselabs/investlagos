@@ -5,6 +5,7 @@ import LandingPageLayout from "./layout/Landing_Page_Layout";
 import { AuthProvider } from "./admin/AuthContext";
 import ProtectedRoute from "./admin/ProtectedRoute";
 
+
 // Site-wide maintenance toggle. When VITE_MAINTENANCE_MODE=true, every
 // public route redirects to /maintenance. Admin routes and /maintenance
 // itself remain reachable.
@@ -29,7 +30,11 @@ const AboutPage = lazy(() => import("./pages/AboutPage"));
 const AdministrationPage = lazy(() => import("./pages/AdministrationPage"));
 const PolicyPage = lazy(() => import("./pages/PolicyPage"));
 const MediaKitPage = lazy(() => import("./pages/MediaKitPage"));
+const GalleryPage = lazy(() => import("./pages/GalleryPage"));
 const MaintenancePage = lazy(() => import("./pages/MaintenancePage"));
+
+
+const FutureLeadersPage = lazy(() => import("./pages/FutureLeadersPage"));
 
 // Admin console — kept in its own group of chunks; never loaded on
 // the public marketing site.
@@ -84,8 +89,18 @@ function App() {
                 />
                 <Route path="policy" element={<PolicyPage />} />
                 <Route path="pressroom/reports" element={<PolicyPage />} />
-                <Route path="media-kit" element={<MediaKitPage />} />
+                {/* <Route path="media-kit" element={<MediaKitPage />} /> */}
                 <Route path="media/kits" element={<MediaKitPage />} />
+                <Route path="media/gallery" element={<GalleryPage />} />
+                <Route
+                  path="pressroom/publications"
+                  element={<PublicationsPage />}
+                />
+
+                <Route
+                  path="/sectors/technology"
+                  element={<FutureLeadersPage />}
+                />
                 <Route
                   path="pressroom/publications"
                   element={<PublicationsPage />}

@@ -40,9 +40,9 @@ const navLinks = [
     path: "/media",
     dropdown: true,
     children: [
-      { label: "Gallery", path: "/media/news" },
-      { label: "Media Kits", path: "/media-kit" },
-      { label: "Press Releases", path: "/media/gallery" },
+      { label: "Gallery", path: "/media/gallery" },
+      { label: "Media Kits", path: "/media/kits" },
+      { label: "Press Releases", path: "/media/news" },
     ],
   },
 
