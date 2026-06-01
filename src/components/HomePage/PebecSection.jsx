@@ -85,10 +85,10 @@ function PebecSection() {
           <div className="flex flex-col gap-3">
             {[
               {
-                title: "COMMERCE",
-                value: "₦450,000,000+",
+                title: "COOPERATIVES",
+                value: "5,000",
                 description:
-                  "Returned to Lagos consumers through LASCOPA enforcement",
+                  "Cooperators reskilled on the City & Guilds curriculum, LASCOCO 2.0",
               },
               {
                 title: "TRADE",
@@ -101,7 +101,11 @@ function PebecSection() {
                 key={title}
                 className="flex flex-col gap-3 md:gap-1 rounded-4xl bg-white p-4 md:p-6 border border-black200"
               >
-                <h4 className="text-xs text-black ">{title}</h4>
+                <div className="flex items-center justify-between">
+                  <h4 className="text-xs text-black font-consolas tracking-widest">{title}</h4>
+                  <div className="w-1 h-1 rounded-full bg-green500"></div>
+                </div>
+                
                 <h5 className="text-black font-inter text-2xl font-bold">
                   {value}
                 </h5>

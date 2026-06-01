@@ -68,7 +68,7 @@ export default function MediaCenter() {
 
   return (
     <section className="bg-slate500 py-20">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 md:px-10 lg:px-20">
         {/* Header */}
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div className="font-jost">

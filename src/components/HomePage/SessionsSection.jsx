@@ -37,7 +37,7 @@ export default function SummitSessions() {
 
   return (
     <section className="bg-slate-100 py-20">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 md:px-10 lg:px-20">
         {/* Header */}
         <div className="mb-12 flex items-center justify-between">
           <div>
