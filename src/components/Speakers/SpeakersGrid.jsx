@@ -162,7 +162,7 @@ const speakers = [
   {
     name: "Prof. Akin Abayomi",
     title: "Honourable Commissioner for Health, Lagos State",
-    photo: "/speakers/Prof. Akin Abayomi.png",
+    photo: "/speakers/Commissioner for health.jpg.jpeg",
   },
   {
     name: "Mrs. Choma Ude",
