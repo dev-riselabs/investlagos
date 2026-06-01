@@ -27,7 +27,7 @@ const news = [
   {
     id: 3,
     category: "COMMERCE",
-    image: "/Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy.png",
+    image: "/meeting.jpg",
     title:
       "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
     description:
@@ -38,7 +38,7 @@ const news = [
   {
     id: 4,
     category: "COMMERCE",
-    image: "/meeting.jpg",
+    image: "/Lagos tops.PNG",
     title: "Lagos tops Nigeria’s ease of doing business rankings",
     description: "Additional article for demonstrating carousel movement.",
     border: "border-green-500",
@@ -120,9 +120,9 @@ export default function MediaCenter() {
                       {item.description}
                     </p>
 
-                    <button className="text-sm font-medium text-green100 hover:text-green font-jost mt-auto">
+                    <a href={item.url} target="_blank" className="text-sm font-medium text-green200 hover:text-green font-jost mt-auto">
                       Read Story →
-                    </button>
+                    </a>
                   </div>
                 </article>
               </div>
