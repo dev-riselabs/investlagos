@@ -3,6 +3,7 @@ import IncentiveCard from "../components/Incentives/IncentiveCard"
 import ReadyCTA from "../components/Incentives/ReadyCTA"
 import StreamSummitBanner from "../components/Incentives/StreamSummitBanner"
 import { Reveal, Spotlight } from "../lib/animations"
+import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 
 const incentives = [
   {
@@ -104,6 +105,7 @@ export default function IncentivesPage() {
       <Spotlight color="rgba(253, 236, 63, 0.18)" size={560}>
         <Reveal direction="up"><StreamSummitBanner /></Reveal>
       </Spotlight>
+      <Reveal direction="up"><SpeakersCTA /></Reveal>
     </>
   )
 }
