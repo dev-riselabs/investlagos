@@ -20,6 +20,9 @@ const IncentivesPage = lazy(() => import("./pages/IncentivesPage"));
 const AgendaPage = lazy(() => import("./pages/AgendaPage"));
 const SpeakersPage = lazy(() => import("./pages/SpeakersPage"));
 const DealRoomPage = lazy(() => import("./pages/DealRoomPage"));
+const InvestmentProposalPage = lazy(
+  () => import("./pages/InvestmentProposalPage"),
+);
 const RegisterPage = lazy(() => import("./pages/RegisterPage"));
 const GovernancePage = lazy(() => import("./pages/GovernancePage"));
 const PublicationsPage = lazy(() => import("./pages/PublicationsPage"));
@@ -47,6 +50,9 @@ const AdminRegistrations = lazy(
   () => import("./admin/pages/AdminRegistrations"),
 );
 const AdminSubscribers = lazy(() => import("./admin/pages/AdminSubscribers"));
+const AdminInvestmentProposals = lazy(
+  () => import("./admin/pages/AdminInvestmentProposals"),
+);
 
 // Lightweight fallback shown while a route chunk is being fetched.
 function RouteFallback() {
@@ -75,6 +81,14 @@ function App() {
                 <Route path="agenda" element={<AgendaPage />} />
                 <Route path="speakers" element={<SpeakersPage />} />
                 <Route path="deal-room" element={<DealRoomPage />} />
+                <Route
+                  path="deal-room/proposal"
+                  element={<InvestmentProposalPage />}
+                />
+                <Route
+                  path="investment-proposal"
+                  element={<InvestmentProposalPage />}
+                />
                 <Route path="register" element={<RegisterPage />} />
                 <Route path="governance" element={<GovernancePage />} />
                 <Route path="publications" element={<PublicationsPage />} />
@@ -125,6 +139,10 @@ function App() {
               <Route path="publications" element={<AdminPublications />} />
               <Route path="registrations" element={<AdminRegistrations />} />
               <Route path="subscribers" element={<AdminSubscribers />} />
+              <Route
+                path="investment-proposals"
+                element={<AdminInvestmentProposals />}
+              />
             </Route>
 
             {/* Catch-all: in maintenance mode any unmatched URL is redirected

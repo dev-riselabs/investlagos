@@ -9,6 +9,7 @@ import {
 } from 'react-icons/lu'
 import InformationSection from '../components/HomePage/InformationSection'
 import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
+import { ArrowBigRight, ArrowRight } from 'lucide-react'
 
 /* ─────────────────── HERO ─────────────────── */
 
@@ -20,9 +21,11 @@ function AdministrationHero() {
           Administrative Secretariat
         </h1>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-white/80 sm:text-base">
-          The Administrative Secretariat functions to support the effective planning, coordination
-          and delivery of Invest Lagos 3.0. It serves as the central operational nerve centre,
-          ensuring all summit governance, logistics and programme execution.
+          This serves as the permanent administrative and technical body responsible 
+          for implementing the Summit's outcomes and coordinating future editions. 
+          Established to ensure continuity beyond the annual convenings, 
+          the Administration transforms high-level political 
+          commitments into measurable, operational reality.
         </p>
       </div>
     </section>
@@ -53,7 +56,7 @@ function AdministrationIntro() {
         <div className="w-full">
           <MouseTilt intensity={6}>
             <img
-              src="/governance_structure_hero_image.png"
+              src="/administrative_subhero.png"
               alt="Administrative Secretariat at work"
               className="w-full rounded-2xl object-cover shadow-sm"
             />
@@ -70,37 +73,37 @@ const responsibilities = [
   {
     icon: LuDollarSign,
     title: 'Delegate Services',
-    desc: 'Registration, check-in support, hospitality coordination and full delegate experience management throughout the Summit.',
+    desc: 'Supporting participant registration, accreditation, enquiries and overall delegate experience before, during and after the summit.',
     accent: 'bg-green100/15 text-green100',
   },
   {
     icon: FiUsers,
     title: 'Stakeholder Engagement',
-    desc: 'Bilateral coordination, partner liaison, government relations and curated stakeholder convenings.',
+    desc: 'Coordinating communication and engagement with government agencies, investors, sponsors, partners, speakers and institutional stakeholders.',
     accent: 'bg-yellow/20 text-[#B8860B]',
   },
   {
     icon: LuCalendar,
     title: 'Programme Coordination',
-    desc: 'Programme oversight, session scheduling, speaker management and end-to-end agenda delivery.',
+    desc: 'Managing summit schedules, session planning, speaker logistics and programme implementation across all event activities.',
     accent: 'bg-orange/15 text-orange',
   },
   {
     icon: LuHandshake,
     title: 'Partnerships & Sponsorships',
-    desc: 'Building strategic partnerships with development institutions, private sector leaders and sponsors.',
+    desc: 'Facilitating collaboration with strategic partners, sponsors, development institutions, and private sector organizations supporting the summit.',
     accent: 'bg-green100/15 text-green100',
   },
   {
     icon: LuMegaphone,
     title: 'Media & Communications',
-    desc: 'Press relations, media accreditation, content strategy, public communications and brand stewardship.',
+    desc: 'Overseeing media relations, public communications, digital engagement, content management and information dissemination.',
     accent: 'bg-yellow/20 text-[#B8860B]',
   },
   {
     icon: LuTruck,
     title: 'Operations & Logistics',
-    desc: 'Venue operations, transport coordination, security logistics and on-the-ground execution support.',
+    desc: 'Ensuring seamless venue management, protocol services, transportation coordination, hospitality and event operations.',
     accent: 'bg-orange/15 text-orange',
   },
 ]
@@ -111,9 +114,9 @@ function CoreResponsibilities() {
       <div className="mx-auto max-w-[1240px]">
         <h2 className="text-2xl font-black text-green200 sm:text-3xl">Our Core Responsibilities</h2>
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
-          The Administrative Secretariat is the central coordinating office for Invest Lagos 3.0,
-          providing administrative support and oversight across every workstream that defines the
-          delivery of the Summit.
+          The Administrative  Secretariat serves as the central coordinating office for Invest Lagos 3.0, 
+          providing administrative, operational and stakeholder support to ensure 
+          the successful planning and delivery of the summit.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -146,15 +149,15 @@ function ConnectCTA() {
           Connect with the Administrative Secretariat
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-7 text-white/80 sm:text-base">
-          For all matters relating to Invest Lagos 3.0 administration, partner engagement,
-          delegate support, programme coordination or general inquiries. Our team is ready to
-          assist and support every aspect of your Invest Lagos 3.0 participation.
+          Reach out to the Invest Lagos 3.0 Secretariat for enquiries, 
+          stakeholder engagement, delegate support, partnerships and summit information. 
+          Our team is available to provide guidance and assistance throughout your Invest Lagos journey.
         </p>
         <a
-          href="#contact"
+          href="/contact"
           className="mt-8 inline-flex items-center justify-center rounded-md bg-red px-8 py-3 text-sm font-bold text-white transition hover:opacity-90"
         >
-          Contact Us
+          Contact Us &nbsp;&nbsp; <ArrowRight />
         </a>
       </div>
     </section>
@@ -203,7 +206,7 @@ export default function AdministrationPage() {
       <Reveal direction="up"><CoreResponsibilities /></Reveal>
       <Reveal direction="up"><ConnectCTA /></Reveal>
       <Reveal direction="up"><InformationSection /></Reveal>
-      <Reveal direction="up"><AdministrationSearchCTA /></Reveal>
+
     </>
   )
 }

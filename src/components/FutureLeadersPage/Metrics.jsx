@@ -11,12 +11,12 @@ const Metrics = () => {
       label: 'LGAs',
     },
     {
-      value: '$750K+',
-      label: 'Total Prize Funding',
+      value: '8K+',
+      label: 'Teams',
     },
     {
       value: '47%',
-      label: 'Female-led Teams',
+      label: 'Female',
     },
   ];
 

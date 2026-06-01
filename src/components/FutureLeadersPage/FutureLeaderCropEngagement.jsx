@@ -6,10 +6,10 @@ const FutureLeaderCropEngagement = () => {
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 text-center">
           <h2 className="mb-3 text-3xl font-bold text-[#2B1C3B] sm:text-4xl">
-            Future Leader Corps Engagement
+            Future Leaders Engagement
           </h2>
           <p className="text-[15px] text-[#756A82] sm:text-base">
-            Participation in Future Leader Corps innovation initiatives continues to grow, with strong representation of women founders.
+            Participation in the Invest Lagos Future Leaders Movement initiative continues to grow, with strong representation of young women.
           </p>
         </div>
 
