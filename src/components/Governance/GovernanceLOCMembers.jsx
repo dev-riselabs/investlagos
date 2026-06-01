@@ -180,7 +180,7 @@ const cweicPartners = [
   {
     name: "Ms. Megan Wright",
     role: "CWEIC Partner",
-    photo: "/governance-images/Ms.Megan Wright (CWEIC).png",
+    photo: "/governance-images/Ms.Megan Wright (CWEIC).jpeg",
   },
   {
     name: "Mr. Pride Azefor",

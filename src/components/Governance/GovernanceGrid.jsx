@@ -49,7 +49,7 @@ const committeeMembers = [
 const cweicPartners = [
   { name: 'Mr. AQ Hamza', role: 'CWEIC Partner', photo: '/governance-images/AQ Hamza (CWEIC).png' },
   { name: 'Ms. Charlotte Bailey', role: 'CWEIC Partner', photo: '/governance-images/Charlotte Bailey (CWEIC).png' },
-  { name: 'Ms. Megan Wright', role: 'CWEIC Partner', photo: '/governance-images/Ms.Megan Wright (CWEIC).png' },
+  { name: 'Ms. Megan Wright', role: 'CWEIC Partner', photo: '/governance-images/Ms.Megan Wright (CWEIC).jpeg' },
   { name: 'Mr. Pride Azefor', role: 'CWEIC Partner', photo: '/governance-images/Pride Azefor (CWEIC).png' },
   { name: 'Mr. Sean Leno', role: 'CWEIC Partner', photo: '/governance-images/Sean Leno.jpeg' },
 ]
