@@ -83,6 +83,7 @@
   --color-slate600: #fffefe;
   --color-slate650: #F3F4F6;
   --color-slate700: #cacacb;
+  --color-slate750: #9CA3AF;
   --color-slate800: #2a1e33cc;
   --color-slate900: #4b5563;
   --color-orange: #f9a04d;
@@ -106,6 +107,18 @@
 
 .privacy-bg {
   background: url("/privacy-policy-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.term-service-bg {
+  background: url("/term-of-service-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.accessibility-bg {
+  background: url("/accessibility-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
