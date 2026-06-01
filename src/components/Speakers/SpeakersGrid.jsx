@@ -12,7 +12,7 @@ const speakers = [
   {
     name: "Mrs. Kanayo Awani",
     title: "Executive Vice President, Afreximbank",
-    photo: "/speakers/Mrs. Kanayo Awani.png",
+    photo: "/speakers/Mrs. Kanayo Awani.jpeg",
   },
   {
     name: "Lord Marland",
@@ -60,7 +60,7 @@ const speakers = [
     photo: "/speakers/His Excellency, Dr. Agbu Kefas.png",
   },
   {
-    name: "His Excellency, SEN. HOPE UDODIMMA",
+    name: "His Excellency, SEN. HOPE UZODINMA",
     title: "Governor of Imo State",
     photo: "/speakers/His Excellency SEN HOPE UDODIMMA.png",
   },
@@ -165,8 +165,8 @@ const speakers = [
     photo: "/speakers/Commissioner for health.jpg.jpeg",
   },
   {
-    name: "Mrs. Choma Ude",
-    title: "Founder & Convener, Africa Film Festival AFRIFF ",
+    name: "Mrs. Chioma Ude",
+    title: "Founder & Convener, Africal International Film Festival AFRIFF ",
     photo: "/speakers/Mrs. Choma Ude.png",
   },
   {

@@ -10,7 +10,7 @@ export const speakers = [
     id: 2,
     name: "MRS. KANAYO AWANI",
     title: "Executive Vice President, Afreximbank",
-    image: "/speakers/Mrs. Kanayo Awani.png",
+    image: "/speakers/Mrs. Kanayo Awani.jpeg",
     accent: "bg-yellow-500",
   },
   {
