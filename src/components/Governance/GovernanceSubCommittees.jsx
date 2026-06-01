@@ -26,8 +26,8 @@ const MailIcon = () => (
 /* ─── DATA ───────────────────────────────────────────────────────────────── */
 const financeMembers = [
   {
-    name: "Yomi Oluyomi",
-    role: "Chair",
+    name: "Abayomi Oluyomi",
+    role: "Honourable Commissioner for Finance of Lagos State Government & Chair, Finance Committee",
     photo: "/governance-images/Yomi Oluyomi.png",
   },
   {
@@ -45,7 +45,7 @@ const financeMembers = [
 const mediaSmallCards = [
   {
     name: "Gbenga Omotosho",
-    role: "Chair",
+    role: "Honourable Commissioner for Information & Strategy of Lagos State Government & Chair, Media, Publicity & Communications Committee",
     photo: "/governance-images/Gbenga Omotosho.png",
   },
   {
