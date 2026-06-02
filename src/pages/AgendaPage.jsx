@@ -258,7 +258,7 @@ const days = [
             items: [
               {
                 name: "Mr. Aig Aigboje Imoukhuede",
-                role: "Co-Chair, Lagos Finance & Investment Council (LFIC)",
+                role: "Co-Chair, Lagos International Financial Centre [LIFC]",
               },
             ],
           },
@@ -310,7 +310,7 @@ const days = [
               },
               {
                 name: "Mr. Aig Aigboje Imoukhuede",
-                role: "Chairman, Lagos International Financial Centre & Co-Chair Invest Lagos 3.0",
+                role: "Co-Chair, Lagos International Financial Centre [LIFC]",
               },
             ],
           },
