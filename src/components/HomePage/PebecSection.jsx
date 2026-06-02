@@ -1,10 +1,107 @@
+import { useEffect, useRef, useState } from "react";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { IoSparklesOutline } from "react-icons/io5";
 import { FiUsers } from "react-icons/fi";
 
-function PebecSection() {
+// Detects when the host element first enters the viewport so the counters
+// only run when the user actually scrolls the section into view.
+function useInViewOnce({ threshold = 0.3, rootMargin = "0px 0px -10% 0px" } = {}) {
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      setInView(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setInView(true);
+            io.disconnect();
+            break;
+          }
+        }
+      },
+      { threshold, rootMargin }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [threshold, rootMargin]);
+
+  return [ref, inView];
+}
+
+// Animates a number from 0 up to `end` once `start` flips to true.
+// `format` controls how the running value is rendered each frame.
+function CountUp({
+  end,
+  start,
+  duration = 1800,
+  prefix = "",
+  suffix = "",
+  decimals = 0,
+  format = "comma",
+}) {
+  const [value, setValue] = useState(0);
+  const rafRef = useRef(0);
+
+  useEffect(() => {
+    if (!start) return;
+
+    const reduceMotion =
+      typeof window !== "undefined" &&
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion) {
+      setValue(end);
+      return;
+    }
+
+    const startTime = performance.now();
+    const ease = (t) => 1 - Math.pow(1 - t, 3); // easeOutCubic
+
+    const tick = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      setValue(end * ease(progress));
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(tick);
+      } else {
+        setValue(end);
+      }
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [start, end, duration]);
+
+  const rendered =
+    format === "comma"
+      ? Math.round(value).toLocaleString("en-US")
+      : value.toFixed(decimals);
+
   return (
-    <section className="flex flex-col gap-10 px-4 md:px-10 lg:px-20 py-8 bg-green100">
+    <>
+      {prefix}
+      {rendered}
+      {suffix}
+    </>
+  );
+}
+
+function PebecSection() {
+  const [sectionRef, inView] = useInViewOnce();
+
+  return (
+    <section
+      ref={sectionRef}
+      className="flex flex-col gap-10 px-4 md:px-10 lg:px-20 py-8 bg-green100"
+    >
       <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
         <div className="flex flex-col gap-4 md:col-span-3">
           {/* Investment Achievements IN 2025 */}
@@ -31,12 +128,24 @@ function PebecSection() {
               <IoSparklesOutline className="w-5.5 h-5.5 rotate-45 text-green500" />
             </div>
             <h4 className="font-inter font-bold text-white text-3xl sm:text-5xl lg:text-7xl">
-              $400,000,000+
+              <CountUp
+                start={inView}
+                end={400000000}
+                prefix="$"
+                suffix="+"
+                duration={2200}
+              />
             </h4>
             <div className="pt-4 flex items-center gap-8">
               <div className="flex flex-col gap-1">
                 <h6 className="text-green50 font-inter font-bold text-2xl">
-                  ₦10B
+                  <CountUp
+                    start={inView}
+                    end={10}
+                    prefix="₦"
+                    suffix="B"
+                    duration={1500}
+                  />
                 </h6>
                 <p className="text-white font-inter text-[10px] uppercase">
                   LASMECO seed
@@ -44,7 +153,7 @@ function PebecSection() {
               </div>
               <div className="flex flex-col gap-1">
                 <h6 className="text-white font-inter font-bold text-2xl">
-                  84%
+                  <CountUp start={inView} end={84} suffix="%" duration={1500} />
                 </h6>
                 <p className="text-white font-inter text-[10px] uppercase">
                   Resolution rate
@@ -59,7 +168,13 @@ function PebecSection() {
               <div className="w-2 h-2 bg-green50 rounded-full"></div>
             </div>
             <h6 className="font-bold text-yellow font-inter text-2xl">
-              ₦450,000,000+
+              <CountUp
+                start={inView}
+                end={450000000}
+                prefix="₦"
+                suffix="+"
+                duration={2200}
+              />
             </h6>
             <p className=" text-yellow font-inter text-xs">
               Returned to Lagos consumers through LASCOPA enforcement
@@ -73,7 +188,7 @@ function PebecSection() {
                 <FiUsers className="text-white w-6 h-6" />
               </div>
               <h4 className="font-inter font-bold text-white text-4xl pt-4">
-                44
+                <CountUp start={inView} end={44} duration={1400} />
               </h4>
               <p className="font-inter font-medium uppercase text-white text-[11px]">
                 Imota Light Industrial units. 96% complete, commissioning June
@@ -86,13 +201,13 @@ function PebecSection() {
             {[
               {
                 title: "COOPERATIVES",
-                value: "5,000",
+                value: 5000,
                 description:
                   "Cooperators reskilled on the City & Guilds curriculum, LASCOCO 2.0",
               },
               {
                 title: "TRADE",
-                value: "450",
+                value: 450,
                 description:
                   "sq m. Largest-ever Lagos Pavilion at the 39th LITF, hosting 180 exhibitors",
               },
@@ -105,9 +220,9 @@ function PebecSection() {
                   <h4 className="text-xs text-black font-consolas tracking-widest">{title}</h4>
                   <div className="w-1 h-1 rounded-full bg-green500"></div>
                 </div>
-                
+
                 <h5 className="text-black font-inter text-2xl font-bold">
-                  {value}
+                  <CountUp start={inView} end={value} duration={1600} />
                 </h5>
                 <p className="text-xs text-black font-inter">{description}</p>
               </div>
