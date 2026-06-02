@@ -83,7 +83,7 @@ const speakers = [
    {
     name: "Engr. Jani Ibrahim",
     title: "President, NACCIMA",
-    photo: "/speakers/Engr. Jani Ibrahim.png",
+    photo: "/speakers/Engr. Jani Ibrahim.jpg",
   },
   {
     name: "Mr. David Oyelowo",
@@ -118,7 +118,7 @@ const speakers = [
   {
     name: "Madam Elsie Attafuah",
     title: "Resident Representative, United Nations Development Programme [UNDP]",
-    photo: "/speakers/Madam Elsie Attafuah.png",
+    photo: "/speakers/Elsie Attafuah.jpeg",
   },
   {
     name: "Mr. Kola Adesina",
@@ -200,7 +200,7 @@ const speakers = [
   {
     name: "Mr. Tosin Eniolorunda",
     title: "CEO Moniepoint MFB",
-    photo: "/speakers/Mr. Tosin Eniolorunda.png",
+    photo: "/speakers/Mr. Tosin Eniolorunda.jpg",
   },
   {
     name: "Mrs. Bolanle Austen-Peters",
