@@ -77,7 +77,8 @@ const speakers = [
   {
     name: "Her Excellency Hannatu Musa  Musawa",
     title: "Minister of Art, Culture,Tourism & CreativeEconomy",
-    photo: "/speakers/Hannatu Musa Musawa 5.jpeg",
+    // photo: "/speakers/Hannatu Musa Musawa 5.jpeg",
+    photo: "/speakers/Her Excellency Hannatu Musa Musawa.jpeg",
   },
    {
     name: "Engr. Jani Ibrahim",
@@ -129,11 +130,11 @@ const speakers = [
     title: "Chief Growth & AI Officer (MiddleEast & Africa), Microsoft",
     photo: "/speakers/Mrs Olatomiwa Williams.png",
   },
-  {
-    name: "Mr. Zaki Cooper",
-    title: "Co-Founder and Director, Integra",
-    photo: "/speakers/Mr. Zaki Cooper.png",
-  },
+  // {
+  //   name: "Mr. Zaki Cooper",
+  //   title: "Co-Founder and Director, Integra",
+  //   photo: "/speakers/Mr. Zaki Cooper.png",
+  // },
   {
     name: "Mr. Babatunde Onigbanjo",
     title: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment",
@@ -172,7 +173,7 @@ const speakers = [
     photo: "/speakers/Commissioner for health.jpg.jpeg",
   },
   {
-    name: "Mrs. Chioma Ude ",
+    name: "Ms. Chioma Ude ",
     title: "Founder & Convener, Africal International Film Festival [AFRIFF] ",
     photo: "/speakers/Mrs. Choma Ude.png",
   },
@@ -187,14 +188,14 @@ const speakers = [
     photo: "/speakers/Mr. Tom Cartledge.png",
   },
   {
-    name: "Mrs. Samantha Cohen",
+    name: "Ms. Samantha Cohen",
     title: "CVO, OBE, CEO, CWEIC",
     photo: "/speakers/Samantha Cohen.png",
   },
   {
     name: "Mrs. Adesuwa Ladoja",
     title: "CEO, Lagos Free Zone",
-    photo: "/speakers/Mrs. Adesuwa Ladoja.png",
+    photo: "/speakers/Mrs. Adesuwa Ladoja.jpg",
   },
   {
     name: "Mr. Tosin Eniolorunda",
@@ -204,7 +205,7 @@ const speakers = [
   {
     name: "Mrs. Bolanle Austen-Peters",
     title: "Chief Executive Officer, Terra Kulture",
-    photo: "/speakers/Mrs. Bolanle Austen-Peters.png",
+    photo: "/speakers/Mrs. Bolanle Austen-Peters.jpg",
   },
   {
     name: "Mr. Kayode Adeleke",
@@ -212,10 +213,15 @@ const speakers = [
     photo: "/speakers/Kayode Adeleke 2.jpeg",
   },
   {
-    name: "Mrs. Rolake Akinkugbe-Filani",
-    title: "Chief Investment Officer, Chapel Hill Denham",
-    photo: "/speakers/Mrs. Rolake AkinkugbeFilani.png",
+    name: "Ms. Mojibade Sosanya, LadyMc",
+    title: "Host/Anchor",
+    photo: "/speakers/Mojibade Sosanya.jpeg",
   },
+  // {
+  //   name: "Mrs. Rolake Akinkugbe-Filani",
+  //   title: "Chief Investment Officer, Chapel Hill Denham",
+  //   photo: "/speakers/Mrs. Rolake AkinkugbeFilani.png",
+  // },
   // {
   //   name: "Mrs. Keke Hammond",
   //   title: "Co-Founder/COO, Flytime Promotions Africa",

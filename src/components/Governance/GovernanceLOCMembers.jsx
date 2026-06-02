@@ -42,7 +42,7 @@ const locMembers = [
   {
     name: "Mrs. Adesuwa Ladoja",
     role: "Member, Local Organising Committee",
-    photo: "/governance-images/Adesuwa Ladoja.png",
+    photo: "/governance-images/Adesuwa Ladoja.jpeg",
   },
   {
     name: "Mr. Akintayo Sanwo-Olu",

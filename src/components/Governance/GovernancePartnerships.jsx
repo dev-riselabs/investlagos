@@ -37,7 +37,7 @@ const partnershipsTop = [
   {
     name: "Adesuwa Ladoja",
     role: "Member, Partnerships & Sponsorships Committee",
-    photo: "/governance-images/Adesuwa Ladoja.png",
+    photo: "/governance-images/Adesuwa Ladoja.jpg",
   },
 ];
 
