@@ -26,8 +26,8 @@ const MailIcon = () => (
 /* ─── DATA ───────────────────────────────────────────────────────────────── */
 const financeMembers = [
   {
-    name: "Yomi Oluyomi",
-    role: "Chair",
+    name: "Abayomi Oluyomi",
+    role: "Honourable Commissioner for Finance of Lagos State Government & Chair, Finance Committee",
     photo: "/governance-images/Yomi Oluyomi.png",
   },
   {
@@ -45,7 +45,7 @@ const financeMembers = [
 const mediaSmallCards = [
   {
     name: "Gbenga Omotosho",
-    role: "Chair",
+    role: "Honourable Commissioner for Information & Strategy of Lagos State Government & Chair, Media, Publicity & Communications Committee",
     photo: "/governance-images/Gbenga Omotosho.png",
   },
   {
@@ -54,17 +54,17 @@ const mediaSmallCards = [
     photo: "/governance-images/Charlotte Bailey (CWEIC).png",
   },
   {
-    name: "AQ Hamza (CWEIC)",
+    name: "AQ Hamza, Commonwealth Enterprise and Investment Council [CWEIC]",
     role: "Member, Media and Communications Committee",
     photo: "/governance-images/AQ Hamza (CWEIC).png",
   },
   {
-    name: "Pride Azefor (CWEIC)",
+    name: "Pride Azefor, Commonwealth Enterprise and Investment Council [CWEIC]",
     role: "Member, Media and Communications Committee",
     photo: "/governance-images/Pride Azefor (CWEIC).png",
   },
   {
-    name: "Sean Leno (CWEIC)",
+    name: "Sean Leno, Commonwealth Enterprise and Investment Council [CWEIC]",
     role: "Member, Media and Communications Committee",
     photo: "/governance-images/Sean Leno.jpeg",
   },

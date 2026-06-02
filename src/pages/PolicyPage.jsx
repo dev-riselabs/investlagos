@@ -17,6 +17,7 @@ import {
   LuHeartPulse,
 } from "react-icons/lu";
 import InformationSection from "../components/HomePage/InformationSection";
+import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 import { Reveal, Spotlight, MouseTilt } from "../lib/animations";
 import { TrendingUp } from "lucide-react";
 
@@ -345,6 +346,9 @@ export default function PolicyPage() {
       </Reveal>
       <Reveal direction="up">
         <InformationSection />
+      </Reveal>
+      <Reveal direction="up">
+         <SpeakersCTA />
       </Reveal>
       {/* <Reveal direction="up">
         <PolicySearchCTA />

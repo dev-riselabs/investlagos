@@ -12,11 +12,11 @@ const speakers = [
   {
     name: "Mrs. Kanayo Awani",
     title: "Executive Vice President, Afreximbank",
-    photo: "/speakers/Mrs. Kanayo Awani.png",
+    photo: "/speakers/Mrs. Kanayo Awani.jpeg",
   },
   {
     name: "Lord Marland",
-    title: "Chairman, CWEIC",
+    title: "Chairman, Commonwealth Enterprise and Investment Council [CWEIC]",
     photo: "/speakers/LORD MARLAND.png",
   },
   {
@@ -45,9 +45,14 @@ const speakers = [
     photo: "/speakers/Mrs. Folashade KaosaratBada Ambrose-Medebem.png",
   },
   {
-    name: "Engr. Jani Ibrahim",
-    title: "President, NACCIMA",
-    photo: "/speakers/Engr. Jani Ibrahim.png",
+    name: "Mr. Aig Aigboje Imoukhuede",
+    title: "Co-Chair, Lagos Finance &Investment Council (LFIC)",
+    photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
+  },
+  {
+    name: "Abdul Samad Rabiu",
+    title: " CFR, CON, Chairman of BUA Foods Plc",
+    photo: "/speakers/Abdul Samad Rabiu BUA.jpeg",
   },
   {
     name: "His Excellency, Barrister Caleb Manasseh Mutfwang",
@@ -60,7 +65,7 @@ const speakers = [
     photo: "/speakers/His Excellency, Dr. Agbu Kefas.png",
   },
   {
-    name: "His Excellency, SEN. HOPE UDODIMMA",
+    name: "His Excellency, SEN. HOPE UZODINMA",
     title: "Governor of Imo State",
     photo: "/speakers/His Excellency SEN HOPE UDODIMMA.png",
   },
@@ -74,10 +79,10 @@ const speakers = [
     title: "Minister of Art, Culture,Tourism & CreativeEconomy",
     photo: "/speakers/Hannatu Musa Musawa 5.jpeg",
   },
-  {
-    name: "Mr. Aig Aigboje Imoukhuede",
-    title: "Co-Chair, Lagos Finance &Investment Council (LFIC)",
-    photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
+   {
+    name: "Engr. Jani Ibrahim",
+    title: "President, NACCIMA",
+    photo: "/speakers/Engr. Jani Ibrahim.png",
   },
   {
     name: "Mr. David Oyelowo",
@@ -130,10 +135,12 @@ const speakers = [
     photo: "/speakers/Mr. Zaki Cooper.png",
   },
   {
-    name: "Temi Marcella",
-    title: "MD, Alcent Capital",
-    photo: "/speakers/Temi Marcella.png",
+    name: "Mr. Babatunde Onigbanjo",
+    title: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment",
+    photo: "/speakers/Mr. Babatunde Onigbanjo.png",
   },
+
+
   {
     name: "Massimo de luca",
     title: "European Union Head of Cooperation",
@@ -165,8 +172,8 @@ const speakers = [
     photo: "/speakers/Commissioner for health.jpg.jpeg",
   },
   {
-    name: "Mrs. Choma Ude",
-    title: "Founder & Convener, Africa Film Festival AFRIFF ",
+    name: "Mrs. Chioma Ude",
+    title: "Founder & Convener, Africal International Film Festival AFRIFF ",
     photo: "/speakers/Mrs. Choma Ude.png",
   },
   {
@@ -220,14 +227,14 @@ const speakers = [
     photo: "/speakers/Mr. Osahon Akpata.png",
   },
   {
-    name: "Mrs. Zain Asher",
+    name: "Ms. Zain Asher",
     title: "Cable News Network (CNN)",
     photo: "/speakers/Mrs. Zain Asher.png",
   },
   {
-    name: "Mr. Babatunde Onigbanjo",
-    title: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment",
-    photo: "/speakers/Mr. Babatunde Onigbanjo.png",
+    name: "Temi Marcella",
+    title: "MD, Alcent Capital",
+    photo: "/speakers/Temi Marcella.png",
   },
   {
     name: "Mrs. Omoyemi Akerele",

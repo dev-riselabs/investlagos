@@ -4,6 +4,7 @@ import InvestmentSection from "../components/HomePage/InvestmentSection";
 import FutureSection from "../components/HomePage/FutureSection";
 import { Reveal, Spotlight, MouseTilt } from "../lib/animations";
 
+
 /* ─────────────────── HERO ─────────────────── */
 
 function AboutHero() {
@@ -233,6 +234,7 @@ export default function AboutPage() {
           <FutureSection />
         </Reveal>
       </Spotlight>
+      
       {/* <Reveal direction="up">
         <AboutSearchCTA />
       </Reveal> */}

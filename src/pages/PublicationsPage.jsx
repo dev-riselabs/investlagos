@@ -6,6 +6,7 @@ import { FaPlay } from 'react-icons/fa'
 import { fetchPublications, fetchPublicationFilters } from '../lib/api'
 import { slugify, FALLBACK_PUBLICATION_CONTENT } from '../lib/publications'
 import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
+import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 
 /* ─────────────────── STATIC FALLBACK ─────────────────── */
 // Used only when the API is unreachable or empty so the marketing
@@ -369,7 +370,7 @@ export default function PublicationsPage() {
         <PublicationsDealBook />
       </Reveal>
       <Reveal direction="up">
-        <PublicationsSearchCTA />
+          <SpeakersCTA />
       </Reveal>
     </>
   )

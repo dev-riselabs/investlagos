@@ -5,6 +5,7 @@ import InvestmentSection from "../components/HomePage/InvestmentSection";
 import FutureSection from "../components/HomePage/FutureSection";
 import { Reveal, Spotlight } from "../lib/animations";
 
+
 const InvestmentProposalPage = () => {
   return (
     <>

@@ -6,7 +6,7 @@ import YouthGala from '../components/FutureLeadersPage/YouthGala'
 import LagosFutureLeaderMovement from '../components/FutureLeadersPage/LagosFutureLeaderMovement'
 import ReadyToInnovate from '../components/FutureLeadersPage/ReadyToInnovate'
 import FutureLeaderCropEngagement from '../components/FutureLeadersPage/FutureLeaderCropEngagement'
-
+import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 const FutureLeadersPage = () => {
   return (
     <>
@@ -17,6 +17,7 @@ const FutureLeadersPage = () => {
     <LagosFutureLeaderMovement />
     <FutureLeaderCropEngagement />
     <ReadyToInnovate />
+<SpeakersCTA />
     </>
   )
 }

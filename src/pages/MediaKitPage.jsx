@@ -6,7 +6,7 @@ import EssentialInfo from '../components/MediaKit/EssentialInfo'
 import DownloadableMediaAssets from '../components/MediaKit/DownloadableMediaAssets'
 import UsageGuidelines from '../components/MediaKit/UsageGuidelines'
 import InvestmentSection from '../components/HomePage/InvestmentSection'
-
+import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 
 
 
@@ -19,6 +19,7 @@ export default function MediaKitPage() {
       <DownloadableMediaAssets />
       <UsageGuidelines />
       <InvestmentSection />
+    <SpeakersCTA />
     </>
   )
 }

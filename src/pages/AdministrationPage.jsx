@@ -10,6 +10,7 @@ import {
 import InformationSection from '../components/HomePage/InformationSection'
 import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
 import { ArrowBigRight, ArrowRight } from 'lucide-react'
+import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 
 /* ─────────────────── HERO ─────────────────── */
 
@@ -206,7 +207,7 @@ export default function AdministrationPage() {
       <Reveal direction="up"><CoreResponsibilities /></Reveal>
       <Reveal direction="up"><ConnectCTA /></Reveal>
       <Reveal direction="up"><InformationSection /></Reveal>
-
+      <Reveal direction="up"><SpeakersCTA /></Reveal>
     </>
   )
 }

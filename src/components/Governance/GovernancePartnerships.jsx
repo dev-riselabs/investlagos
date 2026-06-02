@@ -118,7 +118,7 @@ const secretariatMembers = [
   {
     name: "Ms.Megan Wright (CWEIC)",
     role: "LOC Secretariat",
-    photo: "/governance-images/Ms.Megan Wright (CWEIC).png",
+    photo: "/governance-images/Ms.Megan Wright (CWEIC).jpeg",
   },
   {
     name: "Ms Omofolahan Olowu",

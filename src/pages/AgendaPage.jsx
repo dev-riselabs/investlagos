@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Reveal, Spotlight, Stagger, MouseTilt } from "../lib/animations";
 import InformationSection from "../components/HomePage/InformationSection";
+import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 
 /* ─────────────────── DATA ─────────────────── */
 
@@ -907,6 +908,9 @@ export default function AgendaPage() {
       <AgendaTimeline />
       <Reveal direction="up">
         <InformationSection />
+      </Reveal>
+      <Reveal direction="up">
+            <SpeakersCTA />
       </Reveal>
       {/* <Reveal direction="up">
         <AgendaFooterCTA />
