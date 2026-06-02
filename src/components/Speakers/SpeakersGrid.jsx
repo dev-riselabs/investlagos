@@ -50,7 +50,7 @@ const speakers = [
     photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
   },
   {
-    name: "Abdul Samad Rabiu, CFR, CON",
+    name: "Alh. Abdul Samad Rabiu, CFR, CON",
     title: "Chairman of BUA Foods Plc",
     photo: "/speakers/Abdul Samad Rabiu BUA.jpeg",
   },
@@ -70,19 +70,20 @@ const speakers = [
     photo: "/speakers/His Excellency SEN HOPE UDODIMMA.png",
   },
   {
-    name: "His Excellency, Abdulrahman abdulrazaq",
+    name: "His Excellency, Alh. Abdulrahman abdulrazaq",
     title: "Governor of Kwara State",
     photo: "/speakers/AbdulRahman AbdulRasaq 4.jpeg",
   },
   {
     name: "Her Excellency Hannatu Musa  Musawa",
     title: "Minister of Art, Culture,Tourism & CreativeEconomy",
-    photo: "/speakers/Hannatu Musa Musawa 5.jpeg",
+    // photo: "/speakers/Hannatu Musa Musawa 5.jpeg",
+    photo: "/speakers/Her Excellency Hannatu Musa Musawa.jpeg",
   },
    {
     name: "Engr. Jani Ibrahim",
     title: "President, NACCIMA",
-    photo: "/speakers/Engr. Jani Ibrahim.png",
+    photo: "/speakers/Engr. Jani Ibrahim.jpg",
   },
   {
     name: "Mr. David Oyelowo",
@@ -110,17 +111,17 @@ const speakers = [
     photo: "/speakers/Commissioner for Innovation.jpg.jpeg",
   },
   {
-    name: "Lord Christopher Geidt, Director, Burstock",
-    title: "Baron Geidt",
+    name: "Lord Christopher Geidt",
+    title: "Director, Burstock",
     photo: "/speakers/Lord Christopher Geidt.png",
   },
   {
     name: "Madam Elsie Attafuah",
     title: "Resident Representative, United Nations Development Programme [UNDP]",
-    photo: "/speakers/Madam Elsie Attafuah.png",
+    photo: "/speakers/Elsie Attafuah.jpeg",
   },
   {
-    name: "Kola Adesina",
+    name: "Mr. Kola Adesina",
     title: "Group MD/CEO, Sahara Energy Group",
     photo: "/speakers/Kola Adesina.png",
   },
@@ -129,11 +130,11 @@ const speakers = [
     title: "Chief Growth & AI Officer (MiddleEast & Africa), Microsoft",
     photo: "/speakers/Mrs Olatomiwa Williams.png",
   },
-  {
-    name: "Mr. Zaki Cooper",
-    title: "Co-Founder and Director, Integra",
-    photo: "/speakers/Mr. Zaki Cooper.png",
-  },
+  // {
+  //   name: "Mr. Zaki Cooper",
+  //   title: "Co-Founder and Director, Integra",
+  //   photo: "/speakers/Mr. Zaki Cooper.png",
+  // },
   {
     name: "Mr. Babatunde Onigbanjo",
     title: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment",
@@ -142,7 +143,7 @@ const speakers = [
 
 
   {
-    name: "Massimo de luca",
+    name: "Mr. Massimo de luca",
     title: "European Union Head of Cooperation",
     photo: "/speakers/Massimo de luca.png",
   },
@@ -172,8 +173,8 @@ const speakers = [
     photo: "/speakers/Commissioner for health.jpg.jpeg",
   },
   {
-    name: "Mrs. Chioma Ude",
-    title: "Founder & Convener, Africal International Film Festival AFRIFF ",
+    name: "Ms. Chioma Ude ",
+    title: "Founder & Convener, Africal International Film Festival [AFRIFF] ",
     photo: "/speakers/Mrs. Choma Ude.png",
   },
   {
@@ -187,24 +188,24 @@ const speakers = [
     photo: "/speakers/Mr. Tom Cartledge.png",
   },
   {
-    name: "Samantha Cohen",
+    name: "Ms. Samantha Cohen",
     title: "CVO, OBE, CEO, CWEIC",
     photo: "/speakers/Samantha Cohen.png",
   },
   {
     name: "Mrs. Adesuwa Ladoja",
     title: "CEO, Lagos Free Zone",
-    photo: "/speakers/Mrs. Adesuwa Ladoja.png",
+    photo: "/speakers/Mrs. Adesuwa Ladoja.jpg",
   },
   {
     name: "Mr. Tosin Eniolorunda",
     title: "CEO Moniepoint MFB",
-    photo: "/speakers/Mr. Tosin Eniolorunda.png",
+    photo: "/speakers/Mr. Tosin Eniolorunda.jpg",
   },
   {
     name: "Mrs. Bolanle Austen-Peters",
     title: "Chief Executive Officer, Terra Kulture",
-    photo: "/speakers/Mrs. Bolanle Austen-Peters.png",
+    photo: "/speakers/Mrs. Bolanle Austen-Peters.jpg",
   },
   {
     name: "Mr. Kayode Adeleke",
@@ -212,10 +213,15 @@ const speakers = [
     photo: "/speakers/Kayode Adeleke 2.jpeg",
   },
   {
-    name: "Mrs. Rolake Akinkugbe-Filani",
-    title: "Chief Investment Officer, Chapel Hill Denham",
-    photo: "/speakers/Mrs. Rolake AkinkugbeFilani.png",
+    name: "Ms. Mojibade Sosanya, LadyMc",
+    title: "Host/Anchor",
+    photo: "/speakers/Mojibade Sosanya.jpeg",
   },
+  // {
+  //   name: "Mrs. Rolake Akinkugbe-Filani",
+  //   title: "Chief Investment Officer, Chapel Hill Denham",
+  //   photo: "/speakers/Mrs. Rolake AkinkugbeFilani.png",
+  // },
   // {
   //   name: "Mrs. Keke Hammond",
   //   title: "Co-Founder/COO, Flytime Promotions Africa",
@@ -232,7 +238,7 @@ const speakers = [
     photo: "/speakers/Mrs. Zain Asher.png",
   },
   {
-    name: "Temi Marcella",
+    name: "Mrs. Temi Marcella",
     title: "MD, Alcent Capital",
     photo: "/speakers/Temi Marcella.png",
   },
@@ -242,7 +248,7 @@ const speakers = [
     photo: "/speakers/Mrs. Omoyemi Akerele.png",
   },
   {
-    name: "Mr. Adeola Ukoha",
+    name: "Mrs. Adeola Ukoha",
     title: "British International Investment",
     photo: "/speakers/Mr. Adeola Ukoha.png",
   },

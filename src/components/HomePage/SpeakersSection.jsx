@@ -22,7 +22,7 @@ export const speakers = [
   },
   {
     id: 4,
-    name: "Abdul Samad Rabiu, CFR, CON",
+    name: "Alh. Abdul Samad Rabiu, CFR, CON",
     title: "Chairman of BUA Foods Plc",
     image: "/speakers/Abdul Samad Rabiu BUA.jpeg",
     accent: "bg-red-500",
@@ -35,8 +35,15 @@ export const speakers = [
     accent: "bg-red-500",
   },
   {
+    id: 5,
+    name: "Asiwaju Bola Ahmed Tinubu, GCFR",
+    title: "President of the Federal Republic of Nigeria",
+    image: "/speakers/Asiwaju Bola Ahmed Tinubu, GCFR.png",
+    accent: "bg-red-500",
+  },
+  {
     id: 6,
-    name: "Olajumoke Omoniyi Oduwole",
+    name: "Dr. Olajumoke Omoniyi Oduwole",
     title: "Minister of Industry, Trade and Investment",
     image: "/speakers/Dr. Jumoke Oduwole.png",
     accent: "bg-purple-500",

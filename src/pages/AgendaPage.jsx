@@ -134,7 +134,7 @@ const days = [
                 role: "Executive Governor, Taraba State",
               },
               {
-                name: "HE Abdulrahman Abdulrazaq",
+                name: "HE Alh. Abdulrahman Abdulrazaq",
                 role: "Executive Governor, Kwara State",
               },
               {
@@ -229,7 +229,7 @@ const days = [
                 name: "Mr. Tubosun Alake",
                 role: "Honourable Commissioner, Ministry of Innovation, Science & Technology, Lagos State Government",
               },
-              { name: "Lord Geidt", role: "Director, Burstock" },
+              { name: "Lord Christopher Geidt", role: "Director, Burstock" },
               {
                 name: "Mr. Kayode Adeleke",
                 role: "Managing Director/CEO, Russel Smith 3D Printing & Manufacturing Company",
@@ -266,7 +266,7 @@ const days = [
             label: "MODERATOR",
             items: [
               {
-                name: "Temi Marcella",
+                name: "Mrs. Temi Marcella",
                 role: "Managing Director, Alvarez Capital",
               },
             ],
@@ -275,7 +275,7 @@ const days = [
             label: "PANEL DISCUSSION",
             items: [
               {
-                name: "Ms Adeola Ukhola",
+                name: "Mrs. Adeola Ukhola",
                 role: "Country Manager, British International Investment",
               },
               {
