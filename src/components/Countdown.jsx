@@ -73,9 +73,40 @@ export default function CountdownTimer() {
 
   if (status === "ENDED") {
     return (
-      <p className="text-2xl font-bold text-red-600">
-        Event already took place
-      </p>
+      <div className="flex items-center gap-3 sm:gap-6 text-center font-jost text-green100">
+      <div>
+        <p className="text-4xl md:text-5xl font-bold">
+          00
+        </p>
+        <span className="text-[10px] font-medium">Days</span>
+      </div>
+
+      <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
+
+      <div>
+        <p className="text-4xl md:text-5xl font-bold">
+          00
+        </p>
+        <span className="text-[10px] font-medium">Hours</span>
+      </div>
+      <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
+
+      <div>
+        <p className="text-4xl md:text-5xl font-bold">
+          00
+        </p>
+        <span className="text-[10px] font-medium">Mins</span>
+      </div>
+
+      <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
+
+      <div>
+        <p className="text-4xl md:text-5xl font-bold">
+          00
+        </p>
+        <span className="text-[10px] font-medium">Secs</span>
+      </div>
+    </div>
     );
   }
 
