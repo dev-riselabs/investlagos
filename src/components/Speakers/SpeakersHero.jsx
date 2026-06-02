@@ -22,7 +22,7 @@ const SpeakersHero = () => {
             alt="Asiwaju Bola Ahmed Tinubu, GCFR"
             className="block h-100 w-full object-cover"
           />
-          <div className="flex items-start gap-4 bg-green350 px-5 md:px-7.5 py-5 md:py-8">
+          <div className="flex items-start gap-4 bg-green350 px-5 md:px-5 py-5 md:py-8">
             <div className="flex h-10 md:h-12 w-10 md:w-12 shrink-0 items-center justify-center rounded bg-white/15 text-white">
               <InstitutionIcon />
             </div>
