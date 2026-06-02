@@ -120,7 +120,7 @@ const speakers = [
     photo: "/speakers/Madam Elsie Attafuah.png",
   },
   {
-    name: "Kola Adesina",
+    name: "Mr. Kola Adesina",
     title: "Group MD/CEO, Sahara Energy Group",
     photo: "/speakers/Kola Adesina.png",
   },

@@ -36,7 +36,7 @@ export const speakers = [
   },
   {
     id: 6,
-    name: "Olajumoke Omoniyi Oduwole",
+    name: "Dr. Olajumoke Omoniyi Oduwole",
     title: "Minister of Industry, Trade and Investment",
     image: "/speakers/Dr. Jumoke Oduwole.png",
     accent: "bg-purple-500",
