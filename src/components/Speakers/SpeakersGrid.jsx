@@ -67,12 +67,12 @@ const speakers = [
   {
     name: "His Excellency, Abdulrahman abdulrazaq",
     title: "Governor of Kwara State",
-    photo: "/speakers/His Excellency Abdulrahman abdulrazaq.png",
+    photo: "/speakers/AbdulRahman AbdulRasaq 4.jpeg",
   },
   {
     name: "Her Excellency Hannatu Musa  Musawa",
     title: "Minister of Art, Culture,Tourism & CreativeEconomy",
-    photo: "/speakers/Her Excellency Hannatu Musa  Musawa.png",
+    photo: "/speakers/Hannatu Musa Musawa 5.jpeg",
   },
   {
     name: "Mr. Aig Aigboje Imoukhuede",
@@ -112,7 +112,7 @@ const speakers = [
   {
     name: "Madam Elsie Attafuah",
     title: "Resident Representative, Lagos State Government",
-    photo: "/speakers/Madam Elsie Attafuah.png",
+    photo: "/speakers/Elsie Attafuah.jpeg",
   },
   {
     name: "Kola Adesina",
@@ -202,7 +202,7 @@ const speakers = [
   {
     name: "Mr. Kayode Adeleke",
     title: "Chief Executive Officer, Russel Smith 3D Printing & Manufacturing Company",
-    photo: "/speakers/Mr. Kayode Adeleke.png",
+    photo: "/speakers/Kayode Adeleke 2.jpeg",
   },
   {
     name: "Mrs. Rolake Akinkugbe-Filani",
