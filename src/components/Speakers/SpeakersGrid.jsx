@@ -31,7 +31,7 @@ const speakers = [
   },
   {
     name: "The Hon. Shirley Botchwey",
-    title: "Secretary-General, The Commonwealth Addresses from visiting Heads of Government",
+    title: "Secretary General, The Commonwealth",
     photo: "/speakers/The Hon. Shirley Botchwey.png",
   },
   {
@@ -46,12 +46,12 @@ const speakers = [
   },
   {
     name: "Mr. Aig Aigboje Imoukhuede",
-    title: "Co-Chair, Lagos Finance &Investment Council (LFIC)",
+    title: "Co-Chair, Lagos International Financial Centre [LIFC]",
     photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
   },
   {
-    name: "Abdul Samad Rabiu",
-    title: " CFR, CON, Chairman of BUA Foods Plc",
+    name: "Abdul Samad Rabiu, CFR, CON",
+    title: "Chairman of BUA Foods Plc",
     photo: "/speakers/Abdul Samad Rabiu BUA.jpeg",
   },
   {
@@ -110,14 +110,14 @@ const speakers = [
     photo: "/speakers/Commissioner for Innovation.jpg.jpeg",
   },
   {
-    name: "Lord Christopher Geidt",
+    name: "Lord Christopher Geidt, Director, Burstock",
     title: "Baron Geidt",
     photo: "/speakers/Lord Christopher Geidt.png",
   },
   {
     name: "Madam Elsie Attafuah",
-    title: "Resident Representative, Lagos State Government",
-    photo: "/speakers/Elsie Attafuah.jpeg",
+    title: "Resident Representative, United Nations Development Programme [UNDP]",
+    photo: "/speakers/Madam Elsie Attafuah.png",
   },
   {
     name: "Kola Adesina",
