@@ -112,7 +112,7 @@ const policies = [
   },
 ];
 
-function PolicySection() {
+function TermSection() {
   return (
     <section className="px-4 md:px-10 lg:px-20 py-10 md:py-20">
       <div className="max-w-5xl shadow-card border border-slate650 rounded-2xl p-4 sm:p-6 flex flex-col gap-10">
@@ -149,4 +149,4 @@ function PolicySection() {
   );
 }
 
-export default PolicySection;
+export default TermSection;

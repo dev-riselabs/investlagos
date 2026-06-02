@@ -425,9 +425,9 @@ function AgendaHero() {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#032F74CC] via-[#032F74CC]/85 to-[#032F74CC]/70" />
-      <div className="relative mx-auto max-w-[1240px]">
-        <h1 className="max-w-3xl text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
+      <div className="absolute inset-0 bg-linear-to-r from-[#032F74CC] via-[#032F74CC]/85 to-[#032F74CC]/70" />
+      <div className="relative mx-auto max-w-310">
+        <h1 className="max-w-3xl text-3xl font-bold leading-tight sm:text-4xl">
           Programme flow: Explore sessions and build your unique schedule
         </h1>
         <p className="mt-5 max-w-2xl text-sm leading-7 text-gray-200 sm:text-base">
@@ -452,17 +452,17 @@ function AgendaHero() {
 function ProgrammeDownloadBar() {
   return (
     <div className="bg-[#090e0c] px-4 md:px-10 lg:px-20 py-5 border-b border-white/10">
-      <div className="mx-auto max-w-[1240px] flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto max-w-310 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           {/* <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#ED212B]">Official Document</p> */}
-          <h2 className="text-xl font-black text-white sm:text-2xl">
+          <h2 className="text-xl font-bold text-white sm:text-2xl">
             View Agenda
           </h2>
         </div>
         {/* <a
           href="/DealBook for Invest Lagos 3.0.pdf"
           download
-          className="inline-flex shrink-0 items-center gap-2.5 rounded-full border-2 border-[#099567] bg-white px-6 py-2.5 text-[11px] font-black uppercase tracking-widest text-[#090e0c] transition hover:bg-[#099567] hover:text-white"
+          className="inline-flex shrink-0 items-center gap-2.5 rounded-full border-2 border-green100 bg-white px-6 py-2.5 text-[11px] font-bold uppercase tracking-widest text-[#090e0c] transition hover:bg-green100 hover:text-white"
         >
           <svg width="13" height="16" viewBox="0 0 13 16" fill="none" aria-hidden="true">
             <rect x="0.75" y="0.75" width="11.5" height="14.5" rx="1.25" stroke="currentColor" strokeWidth="1.5"/>
@@ -483,7 +483,7 @@ function PersonIcon() {
       height="14"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="#11A892"
       strokeWidth="1.8"
       aria-hidden="true"
     >
@@ -499,22 +499,22 @@ function AgendaTimeline() {
   const current = days[activeDay];
 
   return (
-    <section className="bg-[#071510] text-white">
+    <section className="bg-[#04191D] text-white font-jost">
       {/* ── Day tabs ── */}
-      <div className="bg-[#0e1a16] border-b border-white/10">
-        <div className="mx-auto max-w-[1240px] grid grid-cols-3 divide-x divide-white/15">
+      <div className="bg-[#1A1A1A] border-b border-white/10">
+        <div className="mx-auto max-w-310 grid grid-cols-3 divide-x divide-white/15">
           {days.map((day, i) => (
             <button
               key={day.label}
               onClick={() => setActiveDay(i)}
               className={`flex flex-col items-start px-5 py-5 transition sm:px-10 sm:py-7 ${
-                activeDay === i ? "bg-[#099567]" : "hover:bg-white/5"
+                activeDay === i ? "bg-green100" : "hover:bg-white/5"
               }`}
             >
-              <span className="text-xl font-black text-white sm:text-3xl">
+              <span className="text-xl font-bold text-white sm:text-3xl">
                 {day.label}
               </span>
-              <span className="mt-0.5 text-[10px] font-bold uppercase tracking-widest text-white/70 sm:text-xs">
+              <span className="mt-0.5 text-[10px] font-medium uppercase tracking-widest text-white/90 sm:text-xs">
                 {day.date}
               </span>
             </button>
@@ -524,7 +524,7 @@ function AgendaTimeline() {
 
       {/* ── Sessions ── */}
       <div className="px-4 md:px-10 lg:px-20 py-14 lg:py-20">
-        <div className="mx-auto max-w-[1240px] space-y-0">
+        <div className="mx-auto max-w-310 space-y-0">
           {current.sessions.map((session, idx) => (
             <Reveal
               key={session.title}
@@ -533,18 +533,18 @@ function AgendaTimeline() {
               distance={28}
             >
               <div
-                className={`grid gap-6 py-12 lg:grid-cols-[160px_1fr] lg:gap-10 ${
+                className={`grid gap-6 py-12 lg:grid-cols-[200px_1fr] lg:gap-10 ${
                   idx < current.sessions.length - 1
                     ? "border-b border-white/10"
                     : ""
                 }`}
               >
                 {/* Time column */}
-                <div className="lg:border-r lg:border-white/10 lg:pr-8">
-                  <p className="text-3xl font-black leading-tight text-white sm:text-4xl">
+                <div className="lg:border-r lg:border-white/10 lg:pr-8 flex flex-col gap-2 items-start">
+                  <p className="text-3xl font-extralight leading-tight text-white sm:text-5xl">
                     {session.timeStart}
                   </p>
-                  <p className="mt-2 text-[10px] font-bold uppercase tracking-widest text-gray-500">
+                  <p className="text-xs uppercase tracking-widest text-white/30">
                     To {session.timeEnd}
                   </p>
                 </div>
@@ -556,7 +556,7 @@ function AgendaTimeline() {
                       {session.tag}
                     </span>
                   )}
-                  <h3 className="pr-20 text-xl font-black text-[#099567] sm:text-2xl">
+                  <h3 className="pr-20 text-xl font-bold text-green100 sm:text-2xl">
                     {session.title}
                   </h3>
                   {session.desc && (
@@ -624,12 +624,12 @@ function AgendaTimeline() {
 function DontMissCTA() {
   return (
     <section className="bg-white px-6 py-16">
-      <div className="mx-auto grid max-w-[1240px] items-center gap-8 lg:grid-cols-[1.3fr_1fr]">
+      <div className="mx-auto grid max-w-310 items-center gap-8 lg:grid-cols-[1.3fr_1fr]">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#007B5E]">
             Save Your Seat
           </p>
-          <h3 className="mt-3 text-2xl font-black text-gray-900 sm:text-3xl">
+          <h3 className="mt-3 text-2xl font-bold text-gray-900 sm:text-3xl">
             Don&apos;t miss out on these key events
           </h3>
           <p className="mt-3 max-w-md text-sm leading-7 text-gray-600">
@@ -800,12 +800,12 @@ function ContactCards() {
 
   return (
     <section className="bg-green100 px-4 md:px-10 lg:px-20 py-16 lg:py-20">
-      <div className="mx-auto max-w-[1240px]">
+      <div className="mx-auto max-w-310">
         {/* Heading */}
-        <h2 className="text-2xl font-black text-white sm:text-3xl lg:text-4xl">
+        <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
           Reach out to our Information Center
         </h2>
-        <div className="mt-3 h-[3px] w-20 rounded-full bg-white" />
+        <div className="mt-3 h-0.75 w-20 rounded-full bg-white" />
         <p className="mt-6 max-w-lg text-sm leading-7 text-white/80">
           Need help with travel arrangements, hotel bookings, or media
           accreditation? Our team is ready to assist you every step of the way.
@@ -874,9 +874,9 @@ function ContactCards() {
 function AgendaFooterCTA() {
   return (
     <section className="bg-[#007B5E] px-6 py-12">
-      <div className="mx-auto flex max-w-[1240px] flex-col items-center gap-4 rounded-lg bg-[#0a1e15] p-6 sm:flex-row sm:justify-between sm:p-8">
+      <div className="mx-auto flex max-w-310 flex-col items-center gap-4 rounded-lg bg-[#0a1e15] p-6 sm:flex-row sm:justify-between sm:p-8">
         <div>
-          <h4 className="text-lg font-black text-white sm:text-xl">
+          <h4 className="text-lg font-bold text-white sm:text-xl">
             Get the full programme — PDF
           </h4>
           <p className="mt-1 text-xs text-white/70">
@@ -909,9 +909,9 @@ export default function AgendaPage() {
       <Reveal direction="up">
         <InformationSection />
       </Reveal>
-      <Reveal direction="up">
+      {/* <Reveal direction="up">
             <SpeakersCTA />
-      </Reveal>
+      </Reveal> */}
       {/* <Reveal direction="up">
         <AgendaFooterCTA />
       </Reveal> */}
