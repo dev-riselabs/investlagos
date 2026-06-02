@@ -229,7 +229,7 @@ const days = [
                 name: "Mr. Tubosun Alake",
                 role: "Honourable Commissioner, Ministry of Innovation, Science & Technology, Lagos State Government",
               },
-              { name: "Lord Geidt", role: "Director, Burstock" },
+              { name: "Lord Christopher Geidt", role: "Director, Burstock" },
               {
                 name: "Mr. Kayode Adeleke",
                 role: "Managing Director/CEO, Russel Smith 3D Printing & Manufacturing Company",

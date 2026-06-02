@@ -110,8 +110,8 @@ const speakers = [
     photo: "/speakers/Commissioner for Innovation.jpg.jpeg",
   },
   {
-    name: "Lord Christopher Geidt, Director, Burstock",
-    title: "Baron Geidt",
+    name: "Lord Christopher Geidt",
+    title: "Director, Burstock",
     photo: "/speakers/Lord Christopher Geidt.png",
   },
   {
