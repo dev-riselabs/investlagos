@@ -111,6 +111,18 @@
   background-size: cover;
 }
 
+.contact-bg {
+  background: url("/contact-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-touch-bg {
+  background: url("/touch-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .term-service-bg {
   background: url("/term-of-service-bg.png");
   background-repeat: no-repeat;
