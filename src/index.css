@@ -71,6 +71,8 @@
   --color-black400: #1F2937;
   --color-mint: #004f61;
   --color-slate100: #333333;
+  --color-slate110: #D1D5DB;
+  --color-slate120: #EFEFEF;
   --color-slate150: #e5e7eb;
   --color-slate200: #a4a4a4;
   --color-slate250: #e2e8f0;
@@ -85,9 +87,12 @@
   --color-slate700: #cacacb;
   --color-slate750: #9CA3AF;
   --color-slate800: #2a1e33cc;
+  --color-slate850: #6B7280;
   --color-slate900: #4b5563;
+  --color-slate950: #374151;
   --color-orange: #f9a04d;
   --color-orange100: #de613b;
+  --color-orange200: #D4AF37;
   --color-blue100: #004f61;
   --color-violet : #785794;
 
