@@ -92,8 +92,11 @@ const RegistrationForm = () => {
         setErrorMessage(err.message || "Registration failed.");
         setFieldErrors(err.errors || {});
       } else {
+        console.error("[RegistrationForm] fetch error:", err);
         setErrorMessage(
-          "Poor network. Please check your internet connection and try again."
+          navigator.onLine
+            ? "Unable to reach the server. Please try again in a moment."
+            : "You appear to be offline. Please check your internet connection and try again."
         );
       }
     } finally {
