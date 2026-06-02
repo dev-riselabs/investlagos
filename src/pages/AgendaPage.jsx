@@ -909,9 +909,9 @@ export default function AgendaPage() {
       <Reveal direction="up">
         <InformationSection />
       </Reveal>
-      <Reveal direction="up">
+      {/* <Reveal direction="up">
             <SpeakersCTA />
-      </Reveal>
+      </Reveal> */}
       {/* <Reveal direction="up">
         <AgendaFooterCTA />
       </Reveal> */}
