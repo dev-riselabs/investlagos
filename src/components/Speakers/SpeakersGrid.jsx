@@ -50,7 +50,7 @@ const speakers = [
     photo: "/speakers/Mr. Aig Aigboje Imoukhuede.png",
   },
   {
-    name: "Abdul Samad Rabiu, CFR, CON",
+    name: "Alh. Abdul Samad Rabiu, CFR, CON",
     title: "Chairman of BUA Foods Plc",
     photo: "/speakers/Abdul Samad Rabiu BUA.jpeg",
   },
@@ -70,7 +70,7 @@ const speakers = [
     photo: "/speakers/His Excellency SEN HOPE UDODIMMA.png",
   },
   {
-    name: "His Excellency, Abdulrahman abdulrazaq",
+    name: "His Excellency, Alh. Abdulrahman abdulrazaq",
     title: "Governor of Kwara State",
     photo: "/speakers/AbdulRahman AbdulRasaq 4.jpeg",
   },
@@ -142,7 +142,7 @@ const speakers = [
 
 
   {
-    name: "Massimo de luca",
+    name: "Mr. Massimo de luca",
     title: "European Union Head of Cooperation",
     photo: "/speakers/Massimo de luca.png",
   },
@@ -172,8 +172,8 @@ const speakers = [
     photo: "/speakers/Commissioner for health.jpg.jpeg",
   },
   {
-    name: "Mrs. Chioma Ude",
-    title: "Founder & Convener, Africal International Film Festival AFRIFF ",
+    name: "Mrs. Chioma Ude ",
+    title: "Founder & Convener, Africal International Film Festival [AFRIFF] ",
     photo: "/speakers/Mrs. Choma Ude.png",
   },
   {
@@ -187,7 +187,7 @@ const speakers = [
     photo: "/speakers/Mr. Tom Cartledge.png",
   },
   {
-    name: "Samantha Cohen",
+    name: "Mrs. Samantha Cohen",
     title: "CVO, OBE, CEO, CWEIC",
     photo: "/speakers/Samantha Cohen.png",
   },
@@ -232,7 +232,7 @@ const speakers = [
     photo: "/speakers/Mrs. Zain Asher.png",
   },
   {
-    name: "Temi Marcella",
+    name: "Mrs. Temi Marcella",
     title: "MD, Alcent Capital",
     photo: "/speakers/Temi Marcella.png",
   },
@@ -242,7 +242,7 @@ const speakers = [
     photo: "/speakers/Mrs. Omoyemi Akerele.png",
   },
   {
-    name: "Mr. Adeola Ukoha",
+    name: "Mrs. Adeola Ukoha",
     title: "British International Investment",
     photo: "/speakers/Mr. Adeola Ukoha.png",
   },

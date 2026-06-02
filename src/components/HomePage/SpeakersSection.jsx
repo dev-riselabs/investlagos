@@ -22,7 +22,7 @@ export const speakers = [
   },
   {
     id: 4,
-    name: "Abdul Samad Rabiu, CFR, CON",
+    name: "Alh. Abdul Samad Rabiu, CFR, CON",
     title: "Chairman of BUA Foods Plc",
     image: "/speakers/Abdul Samad Rabiu BUA.jpeg",
     accent: "bg-red-500",
