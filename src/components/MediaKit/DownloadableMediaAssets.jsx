@@ -50,12 +50,12 @@ const DownloadableMediaAssets = () => {
   return (
     <section
       // Background Image handled via inline style
-      className="px-6 py-14 bg-cover bg-center bg-no-repeat lg:py-20"
+      className="px-4 md:px-10 lg:px-20 py-14 bg-cover bg-center bg-no-repeat lg:py-20"
       style={{ backgroundImage: "url('/deal-book-bg.png')" }}
     >
-      <div className="mx-auto max-w-[1240px]">
+      <div className="mx-auto max-w-310">
         {/* Header Section */}
-        <h2 className="flex items-center gap-3 text-2xl font-bold text-slate-800">
+        <h2 className="flex items-center gap-3 text-2xl font-bold text-black900">
           {/* Download Icon SVG - Title */}
           <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M28 20V25.3333C28 26.0406 27.719 26.7189 27.219 27.219C26.7189 27.719 26.0406 28 25.3333 28H6.66667C5.95942 28 5.28115 27.719 4.78105 27.219C4.28095 26.7189 4 26.0406 4 25.3333V20" stroke="#30ABA3" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
@@ -64,16 +64,16 @@ const DownloadableMediaAssets = () => {
           </svg>
           Downloadable Media Assets
         </h2>
-        <p className="mt-3 max-w-3xl text-[14px] text-slate-500">
+        <p className="mt-3 max-w-3xl text-[14px] text-violet">
           Provide a clear button or link for these resources. Do not clutter the page with the files themselves; use a secure link.
         </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {/* -------------------- CARD 1: Media Kit -------------------- */}
           <article className="flex flex-col items-center justify-center rounded-xl bg-white px-8 py-12 text-center shadow-sm">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#30ABA3]/10">
+            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-green100/10">
               {/* Fallback Document SVG */}
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#30ABA3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#099567" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -81,14 +81,14 @@ const DownloadableMediaAssets = () => {
                 <polyline points="10 9 9 9 8 9"></polyline>
               </svg>
             </span>
-            <h3 className="mt-5 text-lg font-bold text-slate-800">Download The Media Kit (PDF)</h3>
-            <p className="mt-2 max-w-sm text-[14px] leading-relaxed text-slate-500">
+            <h3 className="mt-5 text-lg font-bold text-black300">Download The Media Kit (PDF)</h3>
+            <p className="mt-2 max-w-sm text-[14px] leading-relaxed text-violet">
               Access the official guide for journalists, digital press and broadcast media.
             </p>
             <a
               href="/DealBook for Invest Lagos 3.0.pdf"
               download
-              className="mt-8 flex items-center gap-2 rounded bg-[#099567] px-6 py-3 text-[14px] font-semibold text-white transition hover:opacity-90"
+              className="mt-8 flex items-center gap-2 rounded bg-green100 px-6 py-3 text-[14px] font-semibold text-white! transition hover:opacity-90"
             >
               {/* Dynamic currentColor Download Icon */}
               <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,12 +102,12 @@ const DownloadableMediaAssets = () => {
 
           {/* -------------------- CARD 2: Brand Assets -------------------- */}
           <article className="flex flex-col items-center justify-center rounded-xl bg-white px-8 py-10 shadow-sm">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#30ABA3]/10">
+            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-green100/10">
               {/* Picture SVG */}
               <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M25.3333 4H6.66667C5.19391 4 4 5.19391 4 6.66667V25.3333C4 26.8061 5.19391 28 6.66667 28H25.3333C26.8061 28 28 26.8061 28 25.3333V6.66667C28 5.19391 26.8061 4 25.3333 4Z" stroke="#30ABA3" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M11.9997 14.6666C13.4724 14.6666 14.6663 13.4727 14.6663 11.9999C14.6663 10.5272 13.4724 9.33325 11.9997 9.33325C10.5269 9.33325 9.33301 10.5272 9.33301 11.9999C9.33301 13.4727 10.5269 14.6666 11.9997 14.6666Z" stroke="#30ABA3" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M28 19.9999L23.8853 15.8853C23.3853 15.3853 22.7071 15.1045 22 15.1045C21.2929 15.1045 20.6147 15.3853 20.1147 15.8853L8 27.9999" stroke="#30ABA3" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M28 19.9999L23.8853 15.8853C23.3853 15.3853 22.7071 15.1045 22 15.1045C21.2929 15.1045 20.6147 15.3853 20.1147 15.8853L8 27.9999" stroke="#099567" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
             <h3 className="mt-4 text-lg font-bold text-slate-800">Access Brand Assets</h3>
@@ -128,7 +128,7 @@ const DownloadableMediaAssets = () => {
 
             <a
               href="#"
-              className="mt-8 flex items-center gap-2 rounded border border-[#099567] px-6 py-3 text-[14px] font-semibold text-[#099567] transition-colors hover:bg-slate-50 active:bg-slate-100"
+              className="mt-8 flex items-center gap-2 rounded border border-green100 px-6 py-3 text-[14px] font-semibold text-green100! transition-colors hover:bg-slate-50 active:bg-slate-100"
             >
               {/* Dynamic currentColor Download Icon */}
               <svg width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

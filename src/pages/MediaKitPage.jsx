@@ -1,14 +1,12 @@
-import React from 'react'
+import React from "react";
 
-import MediaKitHero from '../components/MediaKit/MediaKitHero'
-import AboutBoilerplate from '../components/MediaKit/AboutBoilerplate'
-import EssentialInfo from '../components/MediaKit/EssentialInfo'
-import DownloadableMediaAssets from '../components/MediaKit/DownloadableMediaAssets'
-import UsageGuidelines from '../components/MediaKit/UsageGuidelines'
-import InvestmentSection from '../components/HomePage/InvestmentSection'
-import SpeakersCTA from '../components/Speakers/SpeakersCTA'
-
-
+import MediaKitHero from "../components/MediaKit/MediaKitHero";
+import AboutBoilerplate from "../components/MediaKit/AboutBoilerplate";
+import EssentialInfo from "../components/MediaKit/EssentialInfo";
+import DownloadableMediaAssets from "../components/MediaKit/DownloadableMediaAssets";
+import UsageGuidelines from "../components/MediaKit/UsageGuidelines";
+import InvestmentSection from "../components/HomePage/InvestmentSection";
+import FutureSection from "../components/HomePage/FutureSection";
 
 export default function MediaKitPage() {
   return (
@@ -19,7 +17,7 @@ export default function MediaKitPage() {
       <DownloadableMediaAssets />
       <UsageGuidelines />
       <InvestmentSection />
-    <SpeakersCTA />
+      {/* <FutureSection /> */}
     </>
-  )
+  );
 }

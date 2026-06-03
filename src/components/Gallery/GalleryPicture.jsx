@@ -21,7 +21,7 @@ const GalleryPicture = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-[250px] gap-4 p-4 max-w-[1200px] mx-auto my-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-[250px] gap-4 p-4 md:py-10 md:px-10 lg:px-20 max-w-310 mx-auto my-10">
       {galleryItems.map((item) => (
         <div
           key={item.id}
