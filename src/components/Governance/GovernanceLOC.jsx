@@ -37,7 +37,7 @@ const locMembers = [
     ],
   },
   {
-    name: "HON Folashade Ambrose Medebem",
+    name: "Mrs. Folashade Ambrose Medebem",
     role: "Co-Chair, Local Organizing Committee",
     photo: "/governance-images/HON Folashade Ambrose Medebem.png",
     bio: [
@@ -51,7 +51,7 @@ const locMembers = [
     ],
   },
   {
-    name: "Babatunde Onigbanjo",
+    name: "Mr. Babatunde Onigbanjo",
     role: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment of Lagos State Government & Member, Technical & Programmes Committee",
     photo: "/governance-images/Babatunde Onigbanjo.png",
     bio: [],

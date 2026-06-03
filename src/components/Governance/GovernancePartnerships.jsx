@@ -25,31 +25,31 @@ const MailIcon = () => (
 /* ─── DATA: Partnerships & Sponsorships Committee ────────────────────────── */
 const partnershipsTop = [
   {
-    name: "Solape Hammond",
+    name: "Mrs. Solape Hammond",
     role: "Chair, Partnerships and Sponsorships Committee",
     photo: "/governance-images/Solape Hammond.png",
   },
   {
-    name: "Akintayo Sanwo-Olu",
+    name: "Mr. Akintayo Sanwo-Olu",
     role: "Member, Partnerships & Sponsorships Committee",
     photo: "/governance-images/Akintayo Sanwo-Olu.png",
   },
   {
-    name: "Adesuwa Ladoja",
+    name: "Mrs. Adesuwa Ladoja",
     role: "Member, Partnerships & Sponsorships Committee",
-    photo: "/governance-images/Adesuwa Ladoja.jpg",
+    photo: "/governance-images/Adesuwa Ladoja.png",
   },
 ];
 
 const partnershipsBios = [
   {
     name: "Mrs. Moji Hunponu-Wusu",
-    role: "Chair, Partnerships and Sponsorships Committee",
+    role: "Member, Partnerships and Sponsorships Committee",
     photo: "/governance-images/Mrs. Moji Hunponu-Wusu.png",
     bio: [],
   },
   {
-    name: "Mrs Mary Aderinola Ojulari",
+    name: "Mrs. Mary Aderinola Ojulari",
     role: "Member, Partnerships & Sponsorships Committee",
     photo: "/governance-images/Mrs Mary Aderinola Ojulari.png",
     bio: [
@@ -65,7 +65,7 @@ const partnershipsBios = [
 ];
 
 const partnershipsWideBio = {
-  name: "Charles Edosomwan",
+  name: "Mr. Charles Edosomwan",
   role: "Member, Partnerships and Sponsorships Committee",
   photo: "/governance-images/Charles Edosomwan.png",
   bio: [
@@ -94,7 +94,7 @@ const partnershipsWideBio = {
 /* ─── DATA: Secretariat ──────────────────────────────────────────────────── */
 const secretariatBios = [
   {
-    name: "Mrs Ire Odega",
+    name: "Mrs. Ire Odega",
     role: "Co-Chair, LOC Secretariat",
     photo: "/governance-images/Mrs Ire Odega.png",
     bio: [
@@ -105,7 +105,7 @@ const secretariatBios = [
     ],
   },
   {
-    name: "Ms Lola Talabi-Oni",
+    name: "Ms. Lola Talabi-Oni",
     role: "Co-Chair, LOC Secretariat",
     photo: "/governance-images/Lola Talabi Oni.jpg.jpeg",
     bio: [
@@ -116,12 +116,12 @@ const secretariatBios = [
 
 const secretariatMembers = [
   {
-    name: "Ms.Megan Wright (CWEIC)",
+    name: "Ms. Megan Wright (CWEIC)",
     role: "LOC Secretariat",
     photo: "/governance-images/Ms.Megan Wright (CWEIC).jpeg",
   },
   {
-    name: "Ms Omofolahan Olowu",
+    name: "Ms. Omofolahan Olowu",
     role: "LOC Secretariat",
     photo: "/governance-images/Ms Omofolahan Olowu.png",
   },

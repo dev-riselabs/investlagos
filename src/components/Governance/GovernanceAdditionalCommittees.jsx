@@ -72,7 +72,7 @@ const techBioTop = [
 
 const techMembers = [
   {
-    name: "Mrs. Ajibola Yewande Ponnle",
+    name: "Ms. Ajibola Yewande Ponnle",
     role: "Member, Technical and Programmes Committee",
     photo: "/governance-images/Mrs. Ajibola Yewande Ponnle.png",
     bio: [
@@ -82,7 +82,7 @@ const techMembers = [
     ],
   },
   {
-    name: "Babatunde Onigbanjo",
+    name: "Mr. Babatunde Onigbanjo",
     role: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment of Lagos State Government & Member, Technical & Programmes Committee",
     photo: "/governance-images/Babatunde Onigbanjo.png",
     bio: [],
@@ -91,7 +91,7 @@ const techMembers = [
 
 const techBioBottom = [
   {
-    name: "Peju Ibekwe",
+    name: "Mrs. Peju Ibekwe",
     role: "Member, Technical & Programmes Committee",
     photo: "/governance-images/Peju Ibekwe.png",
     bio: [
@@ -107,7 +107,7 @@ const techBioBottom = [
     ],
   },
   {
-    name: "Obinna Anyanwu",
+    name: "Mr. Obinna Anyanwu",
     role: "Member, Technical & Programmes Committee",
     photo: "/governance-images/Obinna Anyanwu.png",
     bio: [
@@ -117,7 +117,7 @@ const techBioBottom = [
     ],
   },
   {
-    name: "Ayo Otuyalo",
+    name: "Mr. Ayo Otuyalo",
     role: "Member, Technical & Programmes Committee",
     photo: "/governance-images/Ayo Otuyalo.png",
     bio: [],
@@ -127,12 +127,12 @@ const techBioBottom = [
 /* ─── DATA: Other sub-committees ─────────────────────────────────────────── */
 const legalMembers = [
   {
-    name: "Bukola Odoe",
-    role: "Chair, Legal & Compliance Sub-Committee",
+    name: "Barr. Bukola Odoe",
+    role: "Special Adviser on Legal Matters and Public/Private Partnerships to the Governor of Lagos State & Chair, Legal & Compliance Sub-Committee.",
     photo: "/governance-images/Bukola Odoe.png",
   },
   {
-    name: "Michael Ojomo",
+    name: "Mr. Michael Ojomo",
     role: "Member, Legal & Compliance Sub-Committee",
     photo: "/governance-images/Sean Leno (CWEIC).png",
   },
@@ -140,12 +140,12 @@ const legalMembers = [
 
 const eventMembers = [
   {
-    name: "Ayiri Oladunmoye",
+    name: "Mrs. Ayiri Oladunmoye",
     role: "Co-Chair, Events and Guest Management Committee",
     photo: "/governance-images/Ayiri Oladunmoye.png",
   },
   {
-    name: "Biola Alabi",
+    name: "Ms. Biola Alabi",
     role: "Co-Chair, Events and Guest Management Committee",
     photo: "/governance-images/Biola Alabi.png",
   },
@@ -154,12 +154,12 @@ const eventMembers = [
 const logisticsMembers = [
   {
     name: "Mr. Taiye Nelson",
-    role: "Chair",
+    role: "Director of Protocol of Lagos State Government & Chair, Logistics, Security,  Protocol & Transportation Committee",
     photo: "/governance-images/Mr. Taiye Nelson.png",
   },
   {
-    name: "Kunle Fagbemi",
-    role: "Member",
+    name: "Mr. Kunle Fagbemi",
+    role: "Chief Security Officer to the Governor of Lagos & Member, Logistics, Security,  Protocol & Transportation Committee",
     photo: "/governance-images/Kunle Fagbemi.png",
   },
 ];

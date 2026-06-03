@@ -26,30 +26,30 @@ const MailIcon = () => (
 /* ─── DATA ───────────────────────────────────────────────────────────────── */
 const financeMembers = [
   {
-    name: "Abayomi Oluyomi",
+    name: "Mr. Abayomi Oluyomi",
     role: "Honourable Commissioner for Finance of Lagos State Government & Chair, Finance Committee",
     photo: "/governance-images/Yomi Oluyomi.png",
   },
   {
-    name: "Ope George",
-    role: "Member",
+    name: "Mr. Ope George",
+    role: "Honourable Commissioner for Budget and Planning of Lagos State Government & Member, Finance Committee.",
     photo: "/governance-images/Ope George.png",
   },
-  {
-    name: "Biola Alabi",
-    role: "Member",
-    photo: "/governance-images/Biola Alabi.png",
-  },
+  // {
+  //   name: "Ms. Biola Alabi",
+  //   role: "Member",
+  //   photo: "/governance-images/Biola Alabi.png",
+  // },
 ];
 
 const mediaSmallCards = [
   {
-    name: "Gbenga Omotosho",
+    name: "Mr. Gbenga Omotosho",
     role: "Honourable Commissioner for Information & Strategy of Lagos State Government & Chair, Media, Publicity & Communications Committee",
     photo: "/governance-images/Gbenga Omotosho.png",
   },
   {
-    name: "Charlotte Bailey",
+    name: "Ms. Charlotte Bailey",
     role: "Member, Media and Communications Committee",
     photo: "/governance-images/Charlotte Bailey (CWEIC).png",
   },
@@ -59,12 +59,12 @@ const mediaSmallCards = [
     photo: "/governance-images/AQ Hamza (CWEIC).png",
   },
   {
-    name: "Pride Azefor, Commonwealth Enterprise and Investment Council [CWEIC]",
+    name: "Mr. Pride Azefor, Commonwealth Enterprise and Investment Council [CWEIC]",
     role: "Member, Media and Communications Committee",
     photo: "/governance-images/Pride Azefor (CWEIC).png",
   },
   {
-    name: "Sean Leno, Commonwealth Enterprise and Investment Council [CWEIC]",
+    name: "Mr. Sean Leno, Commonwealth Enterprise and Investment Council [CWEIC]",
     role: "Member, Media and Communications Committee",
     photo: "/governance-images/Sean Leno.jpeg",
   },
@@ -88,7 +88,7 @@ const mediaBioCards = [
     ],
   },
   {
-    name: "Mr Gboyega Akosile",
+    name: "Mr. Gboyega Akosile",
     role: "Special Adviser on Media and Publicity to the Governor of Lagos State and Member, Media & Publicity, Communications Committee",
     photo: "/governance-images/Mr Gboyega Akosile.png",
     bio: [
@@ -98,7 +98,7 @@ const mediaBioCards = [
     ],
   },
   {
-    name: "Mr Lami Adekola",
+    name: "Mr. Lami Adekola",
     role: "Member, Media, Communications & Publicity Sub-Committee",
     photo: "/governance-images/Mr Lami Adekola.png",
     bio: [
