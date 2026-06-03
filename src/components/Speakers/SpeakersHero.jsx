@@ -15,7 +15,7 @@ export const InstitutionIcon = ({ className = "h-5 w-5" }) => (
 const SpeakersHero = () => {
   return (
     <section className="bg-green100 px-6 pt-16 pb-12 lg:pt-20 lg:pb-16">
-      <div className="flex flex-col md:flex-row gap-4 mx-auto w-full max-w-5xl">
+      <div className="flex flex-col md:flex-row md:justify-center gap-4 mx-auto w-full max-w-5xl">
         <article className="overflow-hidden rounded-b-xl">
           <img
             src="/speakers/Asiwaju Bola Ahmed Tinubu, GCFR.png"

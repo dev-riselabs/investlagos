@@ -40,7 +40,7 @@ function AboutHero() {
 function ExecutiveSummary() {
   return (
     <section className="bg-white px-6 py-14 lg:py-20">
-      <div className="mx-auto max-w-275">
+      <div className="mx-auto max-w-310">
         <h2 className="text-2xl font-black text-green100 sm:text-3xl">
           Executive Summary
         </h2>

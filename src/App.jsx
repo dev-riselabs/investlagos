@@ -37,10 +37,11 @@ const MaintenancePage = lazy(() => import("./pages/MaintenancePage"));
 
 const FutureLeadersPage = lazy(() => import("./pages/FutureLeadersPage"));
 const BusinessExhibition = lazy(() => import("./pages/BusinessExhibition"));
-const PrivacyPolicy= lazy(() => import("./pages/PrivacyPolicy"));
-const TermService= lazy(() => import("./pages/TermService"));
-const AccessibilityPage= lazy(() => import("./pages/AccessibilityPage"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermService = lazy(() => import("./pages/TermService"));
+const AccessibilityPage = lazy(() => import("./pages/AccessibilityPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
+const DataInsightPage = lazy(() => import("./pages/DataInsightPage"));
 
 // Admin console — kept in its own group of chunks; never loaded on
 // the public marketing site.
@@ -98,6 +99,7 @@ function App() {
                 <Route path="term-of-service" element={<TermService />} />
                 <Route path="accessibility" element={<AccessibilityPage />} />
                 <Route path="contact" element={<ContactPage />} />
+                <Route path="data-insight" element={<DataInsightPage />} />
                 <Route
                   path="business-exhibition"
                   element={<BusinessExhibition />}

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Reveal, MouseTilt } from "../../lib/animations";
 import { PiPlant } from "react-icons/pi";
 import { RxLightningBolt } from "react-icons/rx";
@@ -9,36 +9,36 @@ import { MdOutlineTour } from "react-icons/md";
 
 const sectors = [
   {
-    title: "Agribusiness & Food System",
+    title: "Technology & Innovation",
     image: "/Agribusiness & Food System.png",
-    icon: PiPlant,
+    desc : 'The Future of Technology & Innovation'
   },
   {
-    title: "Energy & Utilities",
+    title: "Infrastructure",
     image: "/Clean Energy & Power.png",
-    icon: RxLightningBolt,
+    desc : 'Building the Cities of the Future'
   },
   {
-    title: "Health and Life Sciences",
+    title: "Energy & Sustainability",
     image: "/Health and Life Sciences.png",
-    icon: LuSmartphone,
+    desc : 'Energy and Sustainability'
   },
   {
-    title: "Housing and Urban Development",
+    title: "Creative Economy",
     image: "/Housing and Urban Development.png",
-    icon: FaRegHeart,
+    desc : 'Talent, Creativity and Culture'
   },
-  { title: "Free Trade Zones", image: "/Free Trade Zones.png", icon: BsTruck },
-  {
-    title: "Tourism and Creative Economy",
-    image: "/Tourism and Creative Economy.png",
-    icon: MdOutlineTour,
-  },
+  { title: "Manufacturing", image: "/Free Trade Zones.png", desc : 'Industrial site tours (Dangote Refinery, Fertilizer Plant, 3D Printing Factory, Lekki Free Zone' },
+//   {
+//     title: "Tourism and Creative Economy",
+//     image: "/Tourism and Creative Economy.png",
+//     icon: MdOutlineTour,
+//   },
 ];
 
-function SectorCard({ title, image, icon: Icon, i }) {
+function SectorCard({ title, image, desc, i }) {
   return (
-    <article className="overflow-hidden rounded-lg bg-whit il-card shadow-sector">
+    <article className="overflow-hidden rounded-lg bg-whit il-card shadow-sector h-full flex flex-col">
       <div className="max-h-51 overflow-hidden il-card-media">
         <img
           src={image}
@@ -47,8 +47,8 @@ function SectorCard({ title, image, icon: Icon, i }) {
           loading="lazy"
         />
       </div>
-      <div className="flex items-center gap-2 px-6 py-7">
-        <span
+      <div className="flex flex-col gap-2 px-6 py-7">
+        {/* <span
           className={` rounded-md w-9 h-9 flex items-center justify-center ${
             i === 0
               ? "bg-orange/10"
@@ -73,22 +73,29 @@ function SectorCard({ title, image, icon: Icon, i }) {
                       : "text-orange"
             }`}
           />
-        </span>
+        </span> */}
+        
         <h3 className="text-xs font-bold text-black300 font-jost sm:text-sm">
           {title}
         </h3>
+        <p className="text-[10px] sm:text-xs font-jost text-black300/70 ">{desc}</p>
       </div>
     </article>
   );
 }
 
-const DealRoomSectors = () => {
+const FocusSection = () => {
   return (
     <section className="bg-white px-4 md:px-10 lg:px-20 py-12 lg:py-16">
       <div className="mx-auto max-w-310">
-        <h2 className="text-center text-2xl font-bold font-jost text-black300 sm:text-3xl">
-          Focus Sectors
+        <div className="flex flex-col gap-4 items-center">
+            <h2 className="text-center text-2xl font-bold font-jost text-green100 sm:text-3xl">
+          Investment Focus Areas
         </h2>
+        <p className="font-jost text-sm md:text-base text-black">Based on the Invest Lagos 3.0 summit agenda, current opportunities span:</p>
+
+        </div>
+        
 
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {sectors.map((s, i) => (
@@ -98,7 +105,7 @@ const DealRoomSectors = () => {
               delay={(i % 3) * 100}
               distance={26}
             >
-              <MouseTilt intensity={5}>
+              <MouseTilt intensity={5} className="h-full">
                 <SectorCard {...s} i={i} />
               </MouseTilt>
             </Reveal>
@@ -109,4 +116,4 @@ const DealRoomSectors = () => {
   );
 };
 
-export default DealRoomSectors;
+export default FocusSection;

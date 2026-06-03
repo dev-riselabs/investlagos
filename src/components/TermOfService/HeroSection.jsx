@@ -1,6 +1,6 @@
 function HeroSection() {
   return (
-    <section className="flex flex-col gap-6 px-4 md:px-10 lg:px-30 py-15 md:py-20 term-service-bg">
+    <section className="flex flex-col gap-6 px-4 md:px-10 lg:px-20 py-15 md:py-20 term-service-bg">
       <div className="border-l-2 border-white p-4 font-inter font-bold text-base uppercase tracking-widest text-white">
         EFFECTIVE DATE: 1ST OF JULY, 2026
       </div>
