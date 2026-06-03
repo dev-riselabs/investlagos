@@ -8,7 +8,8 @@ const navLinks = [
   { label: "About", path: "/about" },
 
   {
-    label: "The Summit",
+    label: "THE SUMMIT",
+    path: "#",
     dropdown: true,
     children: [
       { label: "Governance Structure", path: "/governance" },
@@ -21,6 +22,7 @@ const navLinks = [
 
   {
     label: "INVESTMENT HUB",
+    path: "#",
     dropdown: true,
     children: [
       { label: "Deal Room", path: "/deal-room" },
@@ -37,6 +39,7 @@ const navLinks = [
 
   {
     label: "MEDIA CENTRE",
+    path: "#",
     dropdown: true,
     children: [
       { label: "Gallery", path: "/media/gallery" },
@@ -47,6 +50,7 @@ const navLinks = [
 
   {
     label: "RESEARCH",
+    path: "#",
     dropdown: true,
     children: [
       { label: "Policy Centre", path: "/policy_centre" },
@@ -162,24 +166,25 @@ const Navbar = () => {
                 key={l.label}
                 className="relative flex flex-1 items-center group"
               >
-                <NavLink
-                  to={l.path}
-                  className={({ isActive }) =>
-                    `flex w-full items-center justify-center gap-2 py-4 transition text-white! ${
-                      isActive
-                        ? "bg-green text-[#F4C430]"
-                        : "hover:bg-green hover:text-[#F4C430]"
-                    }`
-                  }
-                >
-                  {l.label}
-
-                  {l.dropdown && (
-                    <button className=" opacity-80">
-                      <IoIosArrowDown className="w-4 h-4 text-white" />
-                    </button>
-                  )}
-                </NavLink>
+                {l.dropdown ? (
+                  <button className="flex w-full items-center justify-center gap-2 py-4 text-white hover:bg-green! hover:text-yellow!">
+                    {l.label}
+                    <IoIosArrowDown className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <NavLink
+                    to={l.path}
+                    className={({ isActive }) =>
+                      `flex w-full items-center justify-center py-4 transition ${
+                        isActive
+                          ? "bg-green! text-yellow!"
+                          : "text-white! hover:bg-green! hover:text-yellow!"
+                      }`
+                    }
+                  >
+                    {l.label}
+                  </NavLink>
+                )}
 
                 {/* Dropdown */}
                 {l.dropdown && l.children && (
