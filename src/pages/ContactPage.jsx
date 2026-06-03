@@ -104,43 +104,39 @@ function ContactSection() {
         : "border-slate110"
     }`;
 
-  if (success) {
-    return (
-      <section className="max-w-310 mx-auto px-4 md:px-10 lg:px-20 py-16 md:py-20">
-        <div className="bg-white rounded-3xl border border-gray-200 shadow-md p-10 flex flex-col items-center gap-6 text-center max-w-xl mx-auto">
-          <div className="h-16 w-16 rounded-full bg-green-50 flex items-center justify-center text-green-600">
-            <FiCheckCircle size={36} />
-          </div>
-          <h2 className="text-2xl font-bold text-green450 font-jost">
-            Message Received!
-          </h2>
-          <p className="text-slate850 font-jost text-sm max-w-sm">
-            Thank you for reaching out. Our team will review your message and
-            respond to{" "}
-            <span className="font-semibold text-slate950">{form.email}</span>{" "}
-            as soon as possible.
-          </p>
-          <button
-            onClick={() => {
-              setSuccess(false);
-              setForm({ fullName: "", email: "", subject: "", message: "" });
-              setSecurityAnswer("");
-              setChallenge(generateChallenge());
-            }}
-            className="mt-2 px-8 py-3 rounded-xl bg-green650 text-white font-bold font-jost tracking-widest uppercase hover:bg-green900 transition text-sm"
-          >
-            Send Another Message
-          </button>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section className="max-w-310 mx-auto px-4 md:px-10 lg:px-20 py-16 md:py-20">
       <div className="grid lg:grid-cols-2 gap-8">
         {/* Contact Form */}
         <div className="bg-white rounded-3xl border border-gray-200 shadow-md p-8">
+          {success ? (
+            <div className="flex flex-col items-center gap-6 text-center py-10">
+              <div className="h-16 w-16 rounded-full bg-green-50 flex items-center justify-center text-green-600">
+                <FiCheckCircle size={36} />
+              </div>
+              <h2 className="text-2xl font-bold text-green450 font-jost">
+                Message Received!
+              </h2>
+              <p className="text-slate850 font-jost text-sm max-w-sm">
+                Thank you for reaching out. Our team will review your message
+                and respond to{" "}
+                <span className="font-semibold text-slate950">{form.email}</span>{" "}
+                as soon as possible.
+              </p>
+              <button
+                onClick={() => {
+                  setSuccess(false);
+                  setForm({ fullName: "", email: "", subject: "", message: "" });
+                  setSecurityAnswer("");
+                  setChallenge(generateChallenge());
+                }}
+                className="mt-2 px-8 py-3 rounded-xl bg-green650 text-white font-bold font-jost tracking-widest uppercase hover:bg-green900 transition text-sm"
+              >
+                Send Another Message
+              </button>
+            </div>
+          ) : (
+            <>
           <h2 className="text-2xl font-bold text-green450 font-jost mb-2">
             Contact Us / Feedback
           </h2>
@@ -278,6 +274,8 @@ function ContactSection() {
               {submitting ? "Sending…" : "Submit Feedback"}
             </button>
           </form>
+            </>
+          )}
         </div>
 
         {/* Right Side */}
