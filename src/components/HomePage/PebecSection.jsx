@@ -5,7 +5,10 @@ import { FiUsers } from "react-icons/fi";
 
 // Detects when the host element first enters the viewport so the counters
 // only run when the user actually scrolls the section into view.
-function useInViewOnce({ threshold = 0.3, rootMargin = "0px 0px -10% 0px" } = {}) {
+function useInViewOnce({
+  threshold = 0.3,
+  rootMargin = "0px 0px -10% 0px",
+} = {}) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
 
@@ -26,7 +29,7 @@ function useInViewOnce({ threshold = 0.3, rootMargin = "0px 0px -10% 0px" } = {}
           }
         }
       },
-      { threshold, rootMargin }
+      { threshold, rootMargin },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -100,142 +103,151 @@ function PebecSection() {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col gap-10 px-4 md:px-10 lg:px-20 py-8 bg-green100"
+      className="px-4 md:px-10 lg:px-20 py-8 bg-green100"
     >
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
-        <div className="flex flex-col gap-4 md:col-span-3">
-          {/* Investment Achievements IN 2025 */}
-          <div className="flex flex-col gap-6 p-5 md:p-10 rounded-4xl bg-green400 relative overflow-hidden">
-            <img
-              src="/Overlay+Blur+top.png"
-              alt=""
-              className="absolute top-0 left-0"
-            />
-            <img
-              src="/Overlay+Blur.png"
-              alt=""
-              className="absolute -right-10 -bottom-10"
-            />
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <div className="bg-white/20 backdrop-blur-md backdrop-brightness-95 rounded-md w-10 h-10 flex items-center justify-center shrink-0">
-                  <FaArrowTrendUp className="text-white w-6 h-6" />
+      <div className="flex flex-col gap-10 max-w-310 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
+          <div className="flex flex-col gap-4 md:col-span-3">
+            {/* Investment Achievements IN 2025 */}
+            <div className="flex flex-col gap-6 p-5 md:p-10 rounded-4xl bg-green400 relative overflow-hidden">
+              <img
+                src="/Overlay+Blur+top.png"
+                alt=""
+                className="absolute top-0 left-0"
+              />
+              <img
+                src="/Overlay+Blur.png"
+                alt=""
+                className="absolute -right-10 -bottom-10"
+              />
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="bg-white/20 backdrop-blur-md backdrop-brightness-95 rounded-md w-10 h-10 flex items-center justify-center shrink-0">
+                    <FaArrowTrendUp className="text-white w-6 h-6" />
+                  </div>
+                  <h5 className="font-jost text-white text-sm uppercase">
+                    Investment Achievements IN 2025
+                  </h5>
                 </div>
-                <h5 className="font-jost text-white text-sm uppercase">
-                  Investment Achievements IN 2025
-                </h5>
+                <IoSparklesOutline className="w-5.5 h-5.5 rotate-45 text-green500" />
               </div>
-              <IoSparklesOutline className="w-5.5 h-5.5 rotate-45 text-green500" />
-            </div>
-            <h4 className="font-inter font-bold text-white text-3xl sm:text-5xl lg:text-7xl">
-              <CountUp
-                start={inView}
-                end={400000000}
-                prefix="$"
-                suffix="+"
-                duration={2200}
-              />
-            </h4>
-            <div className="pt-4 flex items-center gap-8">
-              <div className="flex flex-col gap-1">
-                <h6 className="text-green50 font-inter font-bold text-2xl">
-                  <CountUp
-                    start={inView}
-                    end={10}
-                    prefix="₦"
-                    suffix="B"
-                    duration={1500}
-                  />
-                </h6>
-                <p className="text-white font-inter text-[10px] uppercase">
-                  LASMECO seed
-                </p>
-              </div>
-              <div className="flex flex-col gap-1">
-                <h6 className="text-white font-inter font-bold text-2xl">
-                  <CountUp start={inView} end={84} suffix="%" duration={1500} />
-                </h6>
-                <p className="text-white font-inter text-[10px] uppercase">
-                  Resolution rate
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* COMMERCE */}
-          <div className="flex flex-col gap-4 p-5 md:p-8 rounded-4xl border border-white bg-white/11 backdrop-blur-xl">
-            <div className="flex items-center justify-between gap-3">
-              <h5 className="text-yellow text-xs uppercase">COMMERCE</h5>
-              <div className="w-2 h-2 bg-green50 rounded-full"></div>
-            </div>
-            <h6 className="font-bold text-yellow font-inter text-2xl">
-              <CountUp
-                start={inView}
-                end={450000000}
-                prefix="₦"
-                suffix="+"
-                duration={2200}
-              />
-            </h6>
-            <p className=" text-yellow font-inter text-xs">
-              Returned to Lagos consumers through LASCOPA enforcement
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col gap-3 md:col-span-2">
-          <div className="bg-green150 rounded-4xl p-5 pt-3.25 md:p-8 md:pt-3.25 flex flex-col gap-1.5">
-            <div className="flex flex-col gap-1">
-              <div className="w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-xl backdrop-brightness-95 rounded-xl">
-                <FiUsers className="text-white w-6 h-6" />
-              </div>
-              <h4 className="font-inter font-bold text-white text-4xl pt-4">
-                <CountUp start={inView} end={44} duration={1400} />
+              <h4 className="font-inter font-bold text-white text-3xl sm:text-5xl lg:text-7xl">
+                <CountUp
+                  start={inView}
+                  end={400000000}
+                  prefix="$"
+                  suffix="+"
+                  duration={2200}
+                />
               </h4>
-              <p className="font-inter font-medium uppercase text-white text-[11px]">
-                Imota Light Industrial units. 96% complete, commissioning June
-                2026
+              <div className="pt-4 flex items-center gap-8">
+                <div className="flex flex-col gap-1">
+                  <h6 className="text-green50 font-inter font-bold text-2xl">
+                    <CountUp
+                      start={inView}
+                      end={10}
+                      prefix="₦"
+                      suffix="B"
+                      duration={1500}
+                    />
+                  </h6>
+                  <p className="text-white font-inter text-[10px] uppercase">
+                    LASMECO seed
+                  </p>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h6 className="text-white font-inter font-bold text-2xl">
+                    <CountUp
+                      start={inView}
+                      end={84}
+                      suffix="%"
+                      duration={1500}
+                    />
+                  </h6>
+                  <p className="text-white font-inter text-[10px] uppercase">
+                    Resolution rate
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* COMMERCE */}
+            <div className="flex flex-col gap-4 p-5 md:p-8 rounded-4xl border border-white bg-white/11 backdrop-blur-xl">
+              <div className="flex items-center justify-between gap-3">
+                <h5 className="text-yellow text-xs uppercase">COMMERCE</h5>
+                <div className="w-2 h-2 bg-green50 rounded-full"></div>
+              </div>
+              <h6 className="font-bold text-yellow font-inter text-2xl">
+                <CountUp
+                  start={inView}
+                  end={450000000}
+                  prefix="₦"
+                  suffix="+"
+                  duration={2200}
+                />
+              </h6>
+              <p className=" text-yellow font-inter text-xs">
+                Returned to Lagos consumers through LASCOPA enforcement
               </p>
             </div>
-            <img src="/landscape-img.png" alt="" />
           </div>
-          <div className="flex flex-col gap-3">
-            {[
-              {
-                title: "COOPERATIVES",
-                value: 5000,
-                description:
-                  "Cooperators reskilled on the City & Guilds curriculum, LASCOCO 2.0",
-              },
-              {
-                title: "TRADE",
-                value: 450,
-                description:
-                  "sq m. Largest-ever Lagos Pavilion at the 39th LITF, hosting 180 exhibitors",
-              },
-            ].map(({ title, value, description }) => (
-              <div
-                key={title}
-                className="flex flex-col gap-3 md:gap-1 rounded-4xl bg-white p-4 md:p-6 border border-black200"
-              >
-                <div className="flex items-center justify-between">
-                  <h4 className="text-xs text-black font-consolas tracking-widest">{title}</h4>
-                  <div className="w-1 h-1 rounded-full bg-green500"></div>
+          <div className="flex flex-col gap-3 md:col-span-2">
+            <div className="bg-green150 rounded-4xl p-5 pt-3.25 md:p-8 md:pt-3.25 flex flex-col gap-1.5">
+              <div className="flex flex-col gap-1">
+                <div className="w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-xl backdrop-brightness-95 rounded-xl">
+                  <FiUsers className="text-white w-6 h-6" />
                 </div>
-
-                <h5 className="text-black font-inter text-2xl font-bold">
-                  <CountUp start={inView} end={value} duration={1600} />
-                </h5>
-                <p className="text-xs text-black font-inter">{description}</p>
+                <h4 className="font-inter font-bold text-white text-4xl pt-4">
+                  <CountUp start={inView} end={44} duration={1400} />
+                </h4>
+                <p className="font-inter font-medium uppercase text-white text-[11px]">
+                  Imota Light Industrial units. 96% complete, commissioning June
+                  2026
+                </p>
               </div>
-            ))}
+              <img src="/landscape-img.png" alt="" />
+            </div>
+            <div className="flex flex-col gap-3">
+              {[
+                {
+                  title: "COOPERATIVES",
+                  value: 5000,
+                  description:
+                    "Cooperators reskilled on the City & Guilds curriculum, LASCOCO 2.0",
+                },
+                {
+                  title: "TRADE",
+                  value: 450,
+                  description:
+                    "sq m. Largest-ever Lagos Pavilion at the 39th LITF, hosting 180 exhibitors",
+                },
+              ].map(({ title, value, description }) => (
+                <div
+                  key={title}
+                  className="flex flex-col gap-3 md:gap-1 rounded-4xl bg-white p-4 md:p-6 border border-black200"
+                >
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-xs text-black font-consolas tracking-widest">
+                      {title}
+                    </h4>
+                    <div className="w-1 h-1 rounded-full bg-green500"></div>
+                  </div>
+
+                  <h5 className="text-black font-inter text-2xl font-bold">
+                    <CountUp start={inView} end={value} duration={1600} />
+                  </h5>
+                  <p className="text-xs text-black font-inter">{description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="flex flex-col gap-4 md:flex-row md:items-center">
-        <img src="./PEBEC.jpg 1.png" alt="" className="h-10 max-w-30"/>
-        <p className="text-white font-medium text-lg md:text-sm font-jost">
-          2025 Winner Ease of Doing Business Best Subnational Investment
-          Environment
-        </p> 
+        <div className="flex flex-col gap-4 md:flex-row md:items-center">
+          <img src="./PEBEC.jpg 1.png" alt="" className="h-10 max-w-30" />
+          <p className="text-white font-medium text-lg md:text-sm font-jost">
+            2025 Winner Ease of Doing Business Best Subnational Investment
+            Environment
+          </p>
+        </div>
       </div>
     </section>
   );

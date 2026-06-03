@@ -12,7 +12,8 @@ const invest = [
 
 function InvestmentSection() {
   return (
-    <section className="bg-green100! invest-bg px-4 md:px-10 lg:px-20 py-10 md:py-20 flex flex-col gap-15 ">
+    <section className="bg-green100!  invest-bg px-4 md:px-10 lg:px-20 py-10 md:py-20  ">
+        <div className="flex flex-col gap-15 max-w-310 mx-auto">
         <div className="flex flex-col gap-4 items-center">
             <div className="px-4 py-1.5 border border-orange rounded-full bg-orange/30 text-orange font-semibold font-jost text-sm">INVESTMENT IMPACT</div>
             <h3 className="text-white font-medium font-jost text-3xl md:text-5xl">Investment Hub</h3>
@@ -45,7 +46,7 @@ function InvestmentSection() {
             </div>
             
         </div>
-
+</div>
     </section>
   )
 }

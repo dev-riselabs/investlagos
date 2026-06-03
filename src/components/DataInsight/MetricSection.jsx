@@ -61,46 +61,63 @@ const metrics = [
 ];
 function MetricSection() {
   return (
-    <section className="flex flex-col gap-10 px-4 md:px-10 lg:px-20 py-15 md:py-20 metric-bg">
-      <div className="flex flex-col gap-6">
-        <h2 className="text-green400 font-jost text-2xl md:text-3xl font-semibold">
-          Lagos Advantage - Performance Metrics
-        </h2>
-        <p className="text-green400 font-jost text-base md:text-lg">
-          All data below is drawn from official Lagos State Government records.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {metrics.map((metric, i) => {
-          const Icon =
-            i % 3 === 0 ? LuDollarSign : i % 3 === 1 ? LuBuilding2 : FiUsers;
-          return (
-            <div
-              key={metric.title}
-              className="border border-slate250 bg-white shadow-card p-6 rounded-xl flex flex-col gap-5"
-            >
-              <span
-                className={`flex h-10 w-10 items-center justify-center rounded-md ${
-                  i % 3 === 0
-                    ? "bg-green750/10"
-                    : i % 3 === 1
-                      ? "bg-orange/10"
-                      :  "bg-orange100/10"
-                }`}
+    <section className=" px-4 md:px-10 lg:px-20 py-15 md:py-20 metric-bg">
+      <div className="flex flex-col gap-10 max-w-310 mx-auto">
+        <div className="flex flex-col gap-6">
+          <h2 className="text-green400 font-jost text-2xl md:text-3xl font-semibold">
+            Lagos Advantage - Performance Metrics
+          </h2>
+          <p className="text-green400 font-jost text-base md:text-lg">
+            All data below is drawn from official Lagos State Government
+            records.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+          {metrics.map((metric, i) => {
+            const Icon =
+              i % 3 === 0 ? LuDollarSign : i % 3 === 1 ? LuBuilding2 : FiUsers;
+            return (
+              <div
+                key={metric.title}
+                className="border border-slate250 bg-white shadow-card p-6 rounded-xl flex flex-col gap-5"
               >
-                <Icon
-                  className={`w-5 h-5 ${
+                <span
+                  className={`flex h-10 w-10 items-center justify-center rounded-md ${
                     i % 3 === 0
-                      ? "text-green750"
+                      ? "bg-green750/10"
                       : i % 3 === 1
-                        ? "text-orange"
-                        :  "text-orange100"
+                        ? "bg-orange/10"
+                        : "bg-orange100/10"
                   }`}
-                />
-              </span>
-            </div>
-          );
-        })}
+                >
+                  <Icon
+                    className={`w-5 h-5 ${
+                      i % 3 === 0
+                        ? "text-green750"
+                        : i % 3 === 1
+                          ? "text-orange"
+                          : "text-orange100"
+                    }`}
+                  />
+                </span>
+                <h4 className="text-base font-bold font-jost text-black300 md:text-lg">
+                  {metric.title}
+                </h4>
+                <div className="flex flex-col gap-3">
+                  {metric.data.map((item) => (
+                    <div
+                      key={item.title}
+                      className="font-jost text-sm text-black300"
+                    >
+                      <span className="font-bold">{item.title}</span>{" "}
+                      {item.desc}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

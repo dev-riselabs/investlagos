@@ -116,6 +116,12 @@
   background-size: cover;
 }
 
+.future-leader-bg {
+  background: url("/future-leader-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .data-insight-bg {
   background: url("/data-insight-bg.png");
   background-repeat: no-repeat;
@@ -138,6 +144,13 @@
   background: url("/touch-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.key-priority-bg {
+  background: url("/key-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
 }
 
 .term-service-bg {

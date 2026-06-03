@@ -9,7 +9,6 @@ const navLinks = [
 
   {
     label: "The Summit",
-    path: "/the-summit",
     dropdown: true,
     children: [
       { label: "Governance Structure", path: "/governance" },
@@ -22,7 +21,6 @@ const navLinks = [
 
   {
     label: "INVESTMENT HUB",
-    path: "/sectors",
     dropdown: true,
     children: [
       { label: "Deal Room", path: "/deal-room" },
@@ -39,7 +37,6 @@ const navLinks = [
 
   {
     label: "MEDIA CENTRE",
-    path: "/media",
     dropdown: true,
     children: [
       { label: "Gallery", path: "/media/gallery" },
@@ -50,7 +47,6 @@ const navLinks = [
 
   {
     label: "RESEARCH",
-    path: "/pressroom",
     dropdown: true,
     children: [
       { label: "Policy Centre", path: "/policy_centre" },
