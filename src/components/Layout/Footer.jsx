@@ -5,7 +5,7 @@ import { FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { LuCircleArrowRight } from "react-icons/lu";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const footerLinks = [
   "About",
@@ -95,10 +95,26 @@ const socialIcons = [
 
 const Footer = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const navRef = useRef();
 
   const toggleDropdown = (label) => {
     setOpenDropdown((prev) => (prev === label ? null : label));
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <footer className=" bg-green100 p-4 sm:p-10 lg:p-20">
       <div className="bg-white rounded-2xl">
@@ -129,7 +145,10 @@ const Footer = () => {
           </div>
 
           {/* ── Navigation links ── */}
-          <ul className="mt-8 grid grid-cols-2 sm:grid-cols-none sm:flex sm:flex-row sm:flex-wrap items-center justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
+          <ul
+            ref={navRef}
+            className="mt-8 grid grid-cols-2 sm:grid-cols-none sm:flex sm:flex-row sm:flex-wrap items-center justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc"
+          >
             {navLinks.map((item) => (
               <li
                 key={item.label}

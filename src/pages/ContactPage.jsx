@@ -377,7 +377,8 @@ function ContactSection() {
 function ContactPage() {
   return (
     <section>
-      <div className="contact-bg px-4 md:px-10 lg:px-20 py-15 md:py-20 flex flex-col gap-5">
+      <div className="contact-bg px-4 md:px-10 lg:px-20 py-15 md:py-20 ">
+        <div className="flex flex-col gap-5 max-w-310 mx-auto">
         <div className="border-l-4 border-l-white p-5 text-white font-inter font-bold tracking-widest text-base">
           GET IN TOUCH
         </div>
@@ -391,8 +392,10 @@ function ContactPage() {
             accreditation and general participation for Invest Lagos 3.0
           </p>
         </div>
+        </div>
       </div>
       <div className="px-4 md:px-10 lg:px-20 py-15 md:py-20 bg-green100">
+        <div className="max-w-310 mx-auto">
         <div className="contact-touch-bg p-6 md:px-10 md:py-11 flex flex-col gap-7 md:flex-row md:items-center">
           <div className="flex flex-col gap-5 md:flex-1 w-full">
             <h2 className="text-green100 font-medium font-jost text-2xl md:text-3xl">
@@ -416,6 +419,7 @@ function ContactPage() {
             </div>
           </div>
           <img src="/contact-img.png" alt="" className="md:flex-1 w-full" />
+        </div>
         </div>
       </div>
       <ContactSection/>

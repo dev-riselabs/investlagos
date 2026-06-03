@@ -15,7 +15,8 @@ const gallery = [
 
 function GallerySection() {
   return (
-    <section className="bg-white px-4 md:px-10 lg:px-20 py-8 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-3">
+    <section className="bg-white px-4 md:px-10 lg:px-20 py-8 md:py-10">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-3 max-w-310 mx-auto">
       {gallery.map((img, i) => (
         <img
           key={i}
@@ -23,6 +24,7 @@ function GallerySection() {
           className={`${i === 8 || i === 11 ? "md:col-span-2" : "md:col-span-1"}`}
         />
       ))}
+      </div>
     </section>
   );
 }
