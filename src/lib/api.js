@@ -100,6 +100,15 @@ export function subscribe(formData) {
 }
 
 /**
+ * Submit a contact / feedback message from the Contact page.
+ * Accepts { fullName, email, subject, message }.
+ * Laravel's StoreContactMessageRequest normalizes the keys on its side.
+ */
+export function submitContact(formData) {
+  return request("/contact-messages", { method: "POST", body: formData });
+}
+
+/**
  * Submit an Investment Project Proposal for the Deal Room. Accepts a plain
  * camelCase object (or a FormData, for backwards compatibility) — Laravel's
  * StoreInvestmentProposalRequest normalizes the keys on its side.
@@ -302,6 +311,7 @@ export function adminInvestmentProposalStats() {
 export const api = {
   submitRegistration,
   subscribe,
+  submitContact,
   submitInvestmentProposal,
   fetchPublications,
   fetchPublicationFilters,

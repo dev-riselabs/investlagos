@@ -363,10 +363,10 @@ const days = [
                 name: "Engr. Jani Ibrahim",
                 role: "Minister of Power, Federal Republic of Nigeria",
               },
-              {
-                name: "Mr. Tom Cartledge",
-                role: "Chief Executive Officer, Actis",
-              },
+              // {
+              //   name: "Mr. Tom Cartledge",
+              //   role: "Chief Executive Officer, Actis",
+              // },
             ],
           },
         ],

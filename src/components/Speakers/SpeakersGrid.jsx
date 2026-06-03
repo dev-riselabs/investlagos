@@ -182,11 +182,11 @@ const speakers = [
     title: "Vice President, Adani Group",
     photo: "/speakers/Mr. Shahzad Athar.png",
   },
-  {
-    name: "Mr. Tom Cartledge",
-    title: "CEO, Benoy",
-    photo: "/speakers/Mr. Tom Cartledge.png",
-  },
+  // {
+  //   name: "Mr. Tom Cartledge",
+  //   title: "CEO, Benoy",
+  //   photo: "/speakers/Mr. Tom Cartledge.png",
+  // },
   {
     name: "Ms. Samantha Cohen",
     title: "CVO, OBE, CEO, CWEIC",

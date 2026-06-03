@@ -140,11 +140,11 @@ const Footer = () => {
               <p>
                 Website Designed &amp; Developed by{" "}
                 <a
-                  href="https://eventsintel.com"
+                  href="https://www.riseinteractivestudios.com/"
                   target="_blank"
                   className="font-bold"
                 >
-                  Events Intel Technologies
+                  Rise Interactive Studios
                 </a>
               </p>
             </div>
