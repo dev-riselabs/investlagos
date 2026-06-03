@@ -54,7 +54,7 @@ const navLinks = [
     dropdown: true,
     children: [
       { label: "Policy Centre", path: "/policy_centre" },
-      { label: "Data & Insights", path: "#" },
+      { label: "Data & Insights", path: "/data-insight" },
       { label: "Publications", path: "/pressroom/publications" },
     ],
   },

@@ -116,6 +116,18 @@
   background-size: cover;
 }
 
+.data-insight-bg {
+  background: url("/data-insight-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.metric-bg {
+  background: url("/metric-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .contact-bg {
   background: url("/contact-bg.png");
   background-repeat: no-repeat;

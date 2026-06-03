@@ -5,33 +5,33 @@ import { FiBriefcase } from "react-icons/fi";
 
 const stats = [
   {
-    value: "$400M+",
-    label: "In investment commitments mobilised across summits",
+    value: "$5.2 Billion",
+    label: "Verified investment opportunities across infrastructure, technology, manufacturing, energy, real estate and other strategic sectors.",
     icon: LuDollarSign,
   },
   {
-    value: "253",
-    label: "Investment proposals reviewed & qualified",
+    value: "52",
+    label: "Investment-ready projects at various stages of readiness seeking private sector participation, strategic partnerships, and capital deployment.",
     icon: LuBuilding2,
   },
   {
-    value: "1st",
-    label: "Investment Summit anchored in Lagos State",
+    value: "102",
+    label: "Institutional investors engaged – a growing network of DFIs, sovereign funds, private capital providers and development partners.",
     icon: FiUsers,
   },
   {
-    value: "₦10B",
-    label: "Direct contribution to the Lagos economy",
+    value: "58",
+    label: "Public-private partnerships facilitated supporting infrastructure delivery, economic development, and investment promotion.",
     icon: FiBriefcase,
   },
 ];
 
-const DealRoomStats = () => {
+const DataInsightStats = () => {
   return (
     <section className="bg-slate-50 px-4 md:px-10 lg:px-20 py-16 lg:py-20 deal-impact-bg">
       <div className="mx-auto max-w-310">
         <h2 className="text-center text-2xl font-bold text-black300 font-jost sm:text-3xl">
-          The Impact. The Firsts. The Wins.
+          The Investment Opportunity
         </h2>
 
         <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
@@ -77,4 +77,4 @@ const DealRoomStats = () => {
   );
 };
 
-export default DealRoomStats;
+export default DataInsightStats;
