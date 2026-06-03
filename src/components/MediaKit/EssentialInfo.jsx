@@ -4,21 +4,21 @@ const EssentialInfo = () => {
   // Using your exact array data
   const essentialInfo = [
     { label: 'Event', value: 'Invest Lagos 3.0' },
-    { label: 'Date', value: 'June 8 – 10, 2026 (Monday – Wednesday)' },
-    { label: 'Location', value: 'Eko hotel & Suites, Victoria Island, Lagos, Nigeria' },
+    { label: 'Venue', value: 'Eko Hotel & Suites, Victoria Island, Lagos, Nigeria.' },
+    { label: 'Core Theme', value: 'Lagos: The Business Gateway to Africa' },
     {
       label: 'Host',
-      value: 'Lagos State Ministry of Commerce, Cooperatives, Trade & Investment (MCCTI), Lagos State Government',
+      value: 'Ministry of Commerce, Cooperatives, Trade and Investment [MCCTI] Lagos State Government, Alausa, Nigeria.',
     },
     { label: 'Social Handle', value: '@investlagos_' },
     { label: 'Official Website', value: 'www.investlagos.org' },
   ];
 
   return (
-    <section className="bg-white px-6 py-14 lg:py-16">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-white px-4 md:px-10 lg:px-20 py-14 lg:py-16">
+      <div className="mx-auto max-w-310 font-jost">
         {/* Header */}
-        <h2 className="flex items-center gap-3 text-2xl font-bold text-slate-800">
+        <h2 className="flex items-center gap-3 text-2xl font-bold text-black300">
           {/* Target/Essential Info SVG */}
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.0003 29.3333C23.3641 29.3333 29.3337 23.3638 29.3337 16C29.3337 8.63616 23.3641 2.66663 16.0003 2.66663C8.63653 2.66663 2.66699 8.63616 2.66699 16C2.66699 23.3638 8.63653 29.3333 16.0003 29.3333Z" stroke="#099567" strokeWidth="2.66667" strokeLinecap="round" strokeLinejoin="round"/>
@@ -37,7 +37,7 @@ const EssentialInfo = () => {
               className="flex items-start gap-4 rounded-md border border-gray-200 bg-white px-6 py-5 "
             >
               {/* Icon Container - Pale Green */}
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#099567]/10">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green100/10">
                 {/* Globe SVG */}
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.0003 18.3333C14.6027 18.3333 18.3337 14.6023 18.3337 9.99996C18.3337 5.39759 14.6027 1.66663 10.0003 1.66663C5.39795 1.66663 1.66699 5.39759 1.66699 9.99996C1.66699 14.6023 5.39795 18.3333 10.0003 18.3333Z" stroke="#099567" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
@@ -48,8 +48,8 @@ const EssentialInfo = () => {
 
               {/* Text Container */}
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-bold text-slate-800">{item.label}</p>
-                <p className="mt-1 text-[14px] leading-relaxed text-slate-500">{item.value}</p>
+                <p className="text-sm font-bold text-black300">{item.label}</p>
+                <p className="mt-1 text-[14px] leading-relaxed text-violet">{item.value}</p>
               </div>
             </div>
           ))}

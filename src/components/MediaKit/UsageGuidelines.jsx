@@ -45,8 +45,8 @@ const UsageGuidelines = () => {
   ];
 
   return (
-    <section className="bg-white px-6 pt-14 lg:pt-16">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-white px-4 md:px-10 lg:px-20 pt-14 lg:pt-16">
+      <div className="mx-auto max-w-310">
         {/* Header Section */}
         <h2 className="flex items-center gap-3 text-2xl font-bold text-slate-800">
           <span className="text-[#30ABA3] text-3xl font-light">#</span>

@@ -4,7 +4,7 @@ const AboutBoilerplate = () => {
   const [copied, setCopied] = useState(false);
 
   // Using the boilerplate text you provided
-  const BOILERPLATE = `Invest Lagos is Lagos State's flagship investment engagement platform, designed to connect global investors with structured opportunities across priority sectors of the Lagos economy. The 3.0 edition deepens dialogue, partnerships and transactions that translate ambition into measurable investment outcomes for Lagos and Africa.`;
+  const BOILERPLATE = `Invest in Lagos is a flagship investment engagement platform designed to connect investors with opportunities across key sectors of the Lagos economy. The 3.0 edition is structured to drive partnerships that translate into measurable economic outcomes.`;
 
   const copy = async () => {
     try {
@@ -17,8 +17,8 @@ const AboutBoilerplate = () => {
   };
 
   return (
-    <section className="bg-[#1C5C47] px-6 py-12 lg:py-16">
-      <div className="mx-auto max-w-[1240px]">
+    <section className="bg-green400 px-4 md:px-10 lg:px-20 py-12 lg:py-16">
+      <div className="mx-auto max-w-310 font-jost">
         {/* Header Section */}
         <div className="mb-6">
           <h2 className="flex items-center gap-3 text-2xl font-bold text-white sm:text-3xl">
@@ -46,7 +46,7 @@ const AboutBoilerplate = () => {
           <button
             type="button"
             onClick={copy}
-            className="inline-flex items-center gap-2 rounded-md border border-[#004F61] px-4 py-2 text-sm font-bold text-[#004F61] transition-colors hover:bg-slate-50 active:bg-slate-100"
+            className="inline-flex items-center gap-2 rounded-md border border-mint px-4 py-2 text-sm font-bold! text-[#004F61] transition-colors hover:bg-slate-50 active:bg-slate-100"
           >
             {copied ? (
               // Simple check icon for copied state
