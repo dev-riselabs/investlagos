@@ -25,6 +25,23 @@ const MailIcon = () => (
 
 /* ─── DATA: Technical & Programmes Committee ─────────────────────────────── */
 const techBioTop = [
+  
+  {
+    name: "Dr. Toyosi Akerele-Ogunsiji",
+    role: "Co-Chair, Technical and Programmes Committee",
+    photo: "/governance-images/Dr. Toyosi Akerele-Ogunsiji.png",
+    bio: [
+      "Dr. Toyosi Akerele-Ogunsiji is the Founder of Rise Networks and Rise  Interactive Studios, Africa, and a globally respected multidisciplinary  professional in Artificial Intelligence for Development, Media  Innovation, Youth Development, EdTech and Public Policy. Named  by Forbes as one of the 20 Most Powerful Young Women in Africa  and listed among the Top 30 Global Artificial Intelligence  Ambassadors by Swiss Cognitive, she also serves on the UNDP  #AI4Dev Reference Group. She holds a master’s in public  administration from the Harvard Kennedy School, has completed  Executive Education at the University of Cambridge, University of  New Hampshire and Pan-Atlantic University, an undergrad degree in  Civil Law.",
+
+      "She earned a PhD in Defence and Strategic Studies from the Nigerian  Defence Academy, where her Dissertation examined the impact of AI  on Nigeria’s national and economic security in the Fourth Industrial  Revolution, highlighting the nexus between emerging technologies,  governance and human behaviour.",
+
+      "At Rise Networks, a foremost Data and AI for Development  organization, she leads efforts to empower Nigerians with world-class  digital skills, foster inclusive opportunities and build a future-ready  workforce. Rise Networks is Nigeria’s representative in the Microsoft  Global TVET AI Community of Practice and built West Africa’s first  career job chatbot, recognized by the UN’s AI for Good initiative.",
+
+      "She’s led pioneering AI and technology initiatives across Africa and  with her leadership, the organization also executed the landmark UK  Government FCDO-commissioned AI for Border Governance study. ",
+
+      "Through Rise Interactive Studios, a creative innovation company  working at the intersection of Fil, Music, Culture & Tech, Dr. Toyosi  created and produced MAKEMATION, Africa’s first feature film on  Artificial Intelligence.",
+    ],
+  },
   {
     name: "Dr. Olamide Adekunle Okulaja",
     role: "Co-Chair, Technical & Programmes Committee",
@@ -52,25 +69,15 @@ const techBioTop = [
       "Dr. Olamide Okulaja serves as Technical Adviser to the Honourable  Commissioner at the Lagos State Ministry of Commerce, Cooperatives, Trade  and Investment, and at the Lagos State Ministry of Health. Across both portfolios,  his work supports the development of durable institutional architecture and the  design of mechanisms that allow markets to function more equitably, public  systems to operate more efficiently, and financing to reach productive actors at  scale. He combines training in medicine and health economics with applied  experience in governance reform, financing design, and digital transformation.",
     ],
   },
-  {
-    name: "Dr. Toyosi Akerele-Ogunsiji",
-    role: "Co-Chair, Technical and Programmes Committee",
-    photo: "/governance-images/Dr. Toyosi Akerele-Ogunsiji.png",
-    bio: [
-      "Dr. Toyosi Akerele-Ogunsiji is the Founder of Rise Networks and Rise  Interactive Studios, Africa, and a globally respected multidisciplinary  professional in Artificial Intelligence for Development, Media  Innovation, Youth Development, EdTech and Public Policy. Named  by Forbes as one of the 20 Most Powerful Young Women in Africa  and listed among the Top 30 Global Artificial Intelligence  Ambassadors by Swiss Cognitive, she also serves on the UNDP  #AI4Dev Reference Group. She holds a master’s in public  administration from the Harvard Kennedy School, has completed  Executive Education at the University of Cambridge, University of  New Hampshire and Pan-Atlantic University, an undergrad degree in  Civil Law.",
-
-      "She earned a PhD in Defence and Strategic Studies from the Nigerian  Defence Academy, where her Dissertation examined the impact of AI  on Nigeria’s national and economic security in the Fourth Industrial  Revolution, highlighting the nexus between emerging technologies,  governance and human behaviour.",
-
-      "At Rise Networks, a foremost Data and AI for Development  organization, she leads efforts to empower Nigerians with world-class  digital skills, foster inclusive opportunities and build a future-ready  workforce. Rise Networks is Nigeria’s representative in the Microsoft  Global TVET AI Community of Practice and built West Africa’s first  career job chatbot, recognized by the UN’s AI for Good initiative.",
-
-      "She’s led pioneering AI and technology initiatives across Africa and  with her leadership, the organization also executed the landmark UK  Government FCDO-commissioned AI for Border Governance study. ",
-
-      "Through Rise Interactive Studios, a creative innovation company  working at the intersection of Fil, Music, Culture & Tech, Dr. Toyosi  created and produced MAKEMATION, Africa’s first feature film on  Artificial Intelligence.",
-    ],
-  },
 ];
 
 const techMembers = [
+  {
+    name: "Mr. Tubosun Alake",
+    role: "Member of the Technical and Programmes Committee",
+    photo: "/speakers/Commissioner for Innovation.jpg.jpeg",
+    bio : ['']
+  },
   {
     name: "Ms. Ajibola Yewande Ponnle",
     role: "Member, Technical and Programmes Committee",
@@ -95,7 +102,7 @@ const techBioBottom = [
     role: "Member, Technical & Programmes Committee",
     photo: "/governance-images/Peju Ibekwe.png",
     bio: [
-      "Commonwealth Enterprise and Investment Olapeju Ibekwe is a distinguished social impact leader and sustainability advocate, widely recognised for her visionary leadership in advancing the Sustainable Development Goals (SDGs) across Africa. As the CEO of Sterling One Foundation, Olapeju has led transformative initiatives that address critical challenges in healthcare, education, gender equality, climate action, and food security. Under her guidance, the Foundation has emerged as a catalyst for systemic change, leveraging strategic partnerships and innovative solutions to create measurable and sustainable impact.",
+      "Olapeju Ibekwe is a distinguished social impact leader and sustainability advocate, widely recognised for her visionary leadership in advancing the Sustainable Development Goals (SDGs) across Africa. As the CEO of Sterling One Foundation, Olapeju has led transformative initiatives that address critical challenges in healthcare, education, gender equality, climate action, and food security. Under her guidance, the Foundation has emerged as a catalyst for systemic change, leveraging strategic partnerships and innovative solutions to create measurable and sustainable impact.",
 
       "Olapeju’s strategic foresight as a filmmaker and advocate for social change led to the production and successful execution of Chatroom, a groundbreaking film and gender-based violence advocacy campaign tool. The project has engaged over 1500 participants across more than nine states, addressing gender-based violence through powerful storytelling and community engagement. This initiative not only amplified voices but also inspired policy and community-driven action to combat systemic inequalities.",
 
@@ -118,7 +125,7 @@ const techBioBottom = [
   },
   {
     name: "Mr. Ayo Otuyalo",
-    role: "Member, Technical & Programmes Committee",
+    role: "Board Member, Commonwealth Investment & Enterprise Council [CWEIC] and Member, Technical & Programmes Committee",
     photo: "/governance-images/Ayo Otuyalo.png",
     bio: [],
   },

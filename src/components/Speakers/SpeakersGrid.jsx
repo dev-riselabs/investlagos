@@ -65,15 +65,21 @@ const speakers = [
     photo: "/speakers/His Excellency, Dr. Agbu Kefas.png",
   },
   {
+    name: "His Excellency, Alh. Abdulrahman abdulrazaq",
+    title: "Governor of Kwara State",
+    photo: "/speakers/AbdulRahman AbdulRasaq 4.jpeg",
+  },
+  {
     name: "His Excellency, SEN. HOPE UZODINMA",
     title: "Governor of Imo State",
     photo: "/speakers/His Excellency SEN HOPE UDODIMMA.png",
   },
   {
-    name: "His Excellency, Alh. Abdulrahman abdulrazaq",
-    title: "Governor of Kwara State",
-    photo: "/speakers/AbdulRahman AbdulRasaq 4.jpeg",
+    name: "His Excellency, Engineer Abdullahi A. Sule",
+    title: "Governor of Nasarawa State",
+    photo: "/speakers/Abdullahi-Sule.jpeg",
   },
+  
   {
     name: "Her Excellency Hannatu Musa  Musawa",
     title: "Minister of Art, Culture,Tourism & CreativeEconomy",
@@ -130,15 +136,21 @@ const speakers = [
     title: "Chief Growth & AI Officer (MiddleEast & Africa), Microsoft",
     photo: "/speakers/Mrs Olatomiwa Williams.png",
   },
-  // {
-  //   name: "Mr. Zaki Cooper",
-  //   title: "Co-Founder and Director, Integra",
-  //   photo: "/speakers/Mr. Zaki Cooper.png",
-  // },
+  {
+    name: "Mr. Zaki Cooper",
+    title: "Co-Founder and Director, Integra",
+    photo: "/speakers/Mr. Zaki Cooper.png",
+  },
   {
     name: "Mr. Babatunde Onigbanjo",
     title: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment",
     photo: "/speakers/Mr. Babatunde Onigbanjo.png",
+  },
+
+  {
+    name: "Barrister Festus Keyamo, SAN",
+    title: "Honourable Minister for Aviation and Aerospace Development",
+    photo: "/speakers/kanyo-fetus.jpeg",
   },
 
 
@@ -163,8 +175,8 @@ const speakers = [
     photo: "/speakers/Mr. Mitchell Elegbe.png",
   },
   {
-    name: "Dr. Segun Ogunsanya, Chairman",
-    title: "Nigeria Sovereign Investment Authority (NSIA)",
+    name: "Dr. Segun Ogunsanya",
+    title: "Chairman, Nigeria Sovereign Investment Authority (NSIA)",
     photo: "/speakers/Dr. Segun Ogunsanya, Chairman.png",
   },
   {
@@ -217,11 +229,11 @@ const speakers = [
     title: "Host/Anchor",
     photo: "/speakers/Mojibade Sosanya.jpeg",
   },
-  // {
-  //   name: "Mrs. Rolake Akinkugbe-Filani",
-  //   title: "Chief Investment Officer, Chapel Hill Denham",
-  //   photo: "/speakers/Mrs. Rolake AkinkugbeFilani.png",
-  // },
+  {
+    name: "Mrs. Rolake Akinkugbe-Filani",
+    title: "Chief Investment Officer, Chapel Hill Denham",
+    photo: "/speakers/Mrs. Rolake AkinkugbeFilani.png",
+  },
   // {
   //   name: "Mrs. Keke Hammond",
   //   title: "Co-Founder/COO, Flytime Promotions Africa",

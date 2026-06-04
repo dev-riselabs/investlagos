@@ -44,6 +44,15 @@ const news = [
     border: "border-green-500",
     url:"https://punchng.com/lagos-tops-nigerias-ease-of-doing-business-rankings/"
   },
+  {
+    id: 5,
+    category: "COMMERCE",
+    image: "/Federal-Capital-Territory-FCT (1).webp",
+    title: "Lagos Emerges As Best-Performing State In 2025 Performance Index",
+    description: "LAGOS – Lagos State has emerged Nigeria’s best-performing sub-national in the 2025 State Performance Index (pSPI), leading other states by wide margins across all sectors.",
+    border: "border-green-500",
+    url:"https://share.google/0245XBY4K0ZkuHrf7"
+  },
 ];
 
 export default function MediaCenter() {
