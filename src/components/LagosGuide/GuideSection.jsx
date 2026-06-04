@@ -16,8 +16,8 @@ function GuideSection() {
         <div className="max-w-310 mx-auto flex divide-x divide-white/40 h-full font-jost w-full">
           <button
             onClick={() => handleActiveTab("Hotels")}
-            className={`text-white uppercase  font-bold! flex-1 text-base p-2 sm:text-xl ${
-              activeTab === "Hotels" ? "bg-green100" : "bg-transparent"
+            className={`text-white uppercase  font-bold! flex-1 text-base p-2 sm:text-xl transition ${
+              activeTab === "Hotels" ? "bg-green100" : "bg-transparent hover:bg-black300"
             }`}
           >
             Hotels
@@ -25,7 +25,7 @@ function GuideSection() {
           <button
             onClick={() => handleActiveTab("Restaurants")}
             className={`text-white uppercase font-bold! flex-1 text-base p-2 sm:text-xl ${
-              activeTab === "Restaurants" ? "bg-green100" : "bg-transparent"
+              activeTab === "Restaurants" ? "bg-green100" : "bg-transparent hover:bg-black300"
             }`}
           >
             Restaurants
@@ -33,7 +33,7 @@ function GuideSection() {
           <button
             onClick={() => handleActiveTab("Cultural Places")}
             className={`text-white uppercase font-bold! flex-1 text-base p-2 sm:text-xl ${
-              activeTab === "Cultural Places" ? "bg-green100" : "bg-transparent"
+              activeTab === "Cultural Places" ? "bg-green100" : "bg-transparent hover:bg-black300"
             }`}
           >
             Cultural Places
@@ -41,7 +41,7 @@ function GuideSection() {
           <button
             onClick={() => handleActiveTab("Visa")}
             className={`text-white uppercase font-bold! flex-1 text-base p-2 sm:text-xl ${
-              activeTab === "Visa" ? "bg-green100" : "bg-transparent"
+              activeTab === "Visa" ? "bg-green100" : "bg-transparent hover:bg-black300"
             }`}
           >
             Visa
