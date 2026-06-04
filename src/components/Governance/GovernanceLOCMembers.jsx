@@ -31,7 +31,7 @@ const locMembers = [
   },
   {
     name: "Mr. Ope George",
-    role: "Member, Local Organising Committee",
+    role: "Honourable Commissioner for Budget and Planning of Lagos State Government & Member, Finance Committee.",
     photo: "/governance-images/Ope George.png",
   },
   {
@@ -50,7 +50,7 @@ const locMembers = [
     photo: "/governance-images/Akintayo Sanwo-Olu.png",
   },
   {
-    name: "Mr. Ayiri Oladunmoye",
+    name: "Mrs. Ayiri Oladunmoye",
     role: "Member, Local Organising Committee",
     photo: "/governance-images/Ayiri Oladunmoye.png",
   },
@@ -65,8 +65,8 @@ const locMembers = [
     photo: "/governance-images/Biola Alabi.png",
   },
   {
-    name: "Mrs. Bukola Odoe",
-    role: "Member, Local Organising Committee",
+    name: "Barr. Bukola Odoe",
+    role: "Special Adviser on Legal Matters and Public/Private Partnerships to the Governor of Lagos State & Chair, Legal & Compliance Sub-Committee.",
     photo: "/governance-images/Bukola Odoe.png",
   },
   {
@@ -91,7 +91,7 @@ const locMembers = [
   },
   {
     name: "Mr. Kunle Fagbemi",
-    role: "Member, Local Organising Committee",
+    role: "Chief Security Officer to the Governor of Lagos & Member, Logistics, Security,  Protocol & Transportation Committee",
     photo: "/governance-images/Kunle Fagbemi.png",
   },
   {
@@ -111,7 +111,7 @@ const locMembers = [
   },
   {
     name: "Mr. Taiye Nelson",
-    role: "Member, Local Organising Committee",
+    role: "Director of Protocol of Lagos State Government & Chair, Logistics, Security,  Protocol & Transportation Committee",
     photo: "/governance-images/Mr. Taiye Nelson.png",
   },
   {
@@ -125,7 +125,7 @@ const locMembers = [
     photo: "/governance-images/Mrs Mary Aderinola Ojulari.png",
   },
   {
-    name: "Mrs. Ajibola Yewande Ponnle",
+    name: "Ms. Ajibola Yewande Ponnle",
     role: "Member, Local Organising Committee",
     photo: "/governance-images/Mrs. Ajibola Yewande Ponnle.png",
   },

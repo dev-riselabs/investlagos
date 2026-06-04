@@ -52,7 +52,7 @@ const days = [
             label: "GOODWILL MESSAGES",
             items: [
               {
-                name: "Mrs Kanayo Awani",
+                name: "Mrs. Kanayo Awani",
                 role: "Executive Vice President, Afreximbank",
               },
               {
@@ -120,7 +120,7 @@ const days = [
           },
           {
             label: "MODERATORS",
-            items: [{ name: "Ms Zain Asher", role: "CNN" }],
+            items: [{ name: "Ms. Zain Asher", role: "CNN" }],
           },
           {
             label: "GOVERNORS' INVESTMENT PITCHES",
@@ -239,7 +239,7 @@ const days = [
                 role: "Founder and Group CEO, Interswitch",
               },
               {
-                name: "Mrs Olatomiwa Williams",
+                name: "Mrs. Olatomiwa Williams",
                 role: "Chief Growth & AI Officer (Middle East & Africa), Microsoft",
               },
             ],
@@ -363,10 +363,10 @@ const days = [
                 name: "Engr. Jani Ibrahim",
                 role: "Minister of Power, Federal Republic of Nigeria",
               },
-              {
-                name: "Mr. Tom Cartledge",
-                role: "Chief Executive Officer, Actis",
-              },
+              // {
+              //   name: "Mr. Tom Cartledge",
+              //   role: "Chief Executive Officer, Actis",
+              // },
             ],
           },
         ],

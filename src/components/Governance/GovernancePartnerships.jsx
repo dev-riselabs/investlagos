@@ -25,31 +25,31 @@ const MailIcon = () => (
 /* ─── DATA: Partnerships & Sponsorships Committee ────────────────────────── */
 const partnershipsTop = [
   {
-    name: "Solape Hammond",
+    name: "Mrs. Solape Hammond",
     role: "Chair, Partnerships and Sponsorships Committee",
     photo: "/governance-images/Solape Hammond.png",
   },
   {
-    name: "Akintayo Sanwo-Olu",
+    name: "Mr. Akintayo Sanwo-Olu",
     role: "Member, Partnerships & Sponsorships Committee",
     photo: "/governance-images/Akintayo Sanwo-Olu.png",
   },
   {
-    name: "Adesuwa Ladoja",
+    name: "Mrs. Adesuwa Ladoja",
     role: "Member, Partnerships & Sponsorships Committee",
-    photo: "/governance-images/Adesuwa Ladoja.jpg",
+    photo: "/governance-images/Adesuwa Ladoja.png",
   },
 ];
 
 const partnershipsBios = [
   {
     name: "Mrs. Moji Hunponu-Wusu",
-    role: "Chair, Partnerships and Sponsorships Committee",
+    role: "Member, Partnerships and Sponsorships Committee",
     photo: "/governance-images/Mrs. Moji Hunponu-Wusu.png",
     bio: [],
   },
   {
-    name: "Mrs Mary Aderinola Ojulari",
+    name: "Mrs. Mary Aderinola Ojulari",
     role: "Member, Partnerships & Sponsorships Committee",
     photo: "/governance-images/Mrs Mary Aderinola Ojulari.png",
     bio: [
@@ -65,7 +65,7 @@ const partnershipsBios = [
 ];
 
 const partnershipsWideBio = {
-  name: "Charles Edosomwan",
+  name: "Mr. Charles Edosomwan",
   role: "Member, Partnerships and Sponsorships Committee",
   photo: "/governance-images/Charles Edosomwan.png",
   bio: [
@@ -94,7 +94,15 @@ const partnershipsWideBio = {
 /* ─── DATA: Secretariat ──────────────────────────────────────────────────── */
 const secretariatBios = [
   {
-    name: "Mrs Ire Odega",
+    name: "Ms. Lola Talabi-Oni",
+    role: "Co-Chair, LOC Secretariat",
+    photo: "/governance-images/Lola Talabi Oni.jpg.jpeg",
+    bio: [
+      "Lola Talabi-Oni is a governance and public policy professional  with over 20 years of experience across the public and private  sectors in Africa, Europe, and North America. She currently  serves as Senior Special Assistant to the Governor of Lagos State  in the Office of the Deputy Chief of Staff. Previously, she held  advisory and consulting roles with the Lagos State Ministry of  Economic Planning & Budget, Global Citizen, Rockefeller  Philanthropy Advisors, and the National Bureau of Statistics,  where she led stakeholder engagement, policy coordination, and  data governance initiatives. She has also served in key secretariat  and coordination roles, including as Secretariat Lead for E1  Lagos and as a member of the Secretariat Team for the 2014  World Economic Forum Africa meeting. Lola holds an Executive  master’s in public administration from the London School of  Economics, with a focus on Public Economics.",
+    ],
+  },
+  {
+    name: "Mrs. Ire Odega",
     role: "Co-Chair, LOC Secretariat",
     photo: "/governance-images/Mrs Ire Odega.png",
     bio: [
@@ -104,24 +112,17 @@ const secretariatBios = [
       "With a background that bridges public sector leadership and private sector execution, Ire brings a unique perspective to solving complex challenges, managing transformational projects, and enabling economic opportunities. She is committed to continuous learning, empowering others, and building solutions that create long-term value.",
     ],
   },
-  {
-    name: "Ms Lola Talabi-Oni",
-    role: "Co-Chair, LOC Secretariat",
-    photo: "/governance-images/Lola Talabi Oni.jpg.jpeg",
-    bio: [
-      "Lola Talabi-Oni is a governance and public policy professional  with over 20 years of experience across the public and private  sectors in Africa, Europe, and North America. She currently  serves as Senior Special Assistant to the Governor of Lagos State  in the Office of the Deputy Chief of Staff. Previously, she held  advisory and consulting roles with the Lagos State Ministry of  Economic Planning & Budget, Global Citizen, Rockefeller  Philanthropy Advisors, and the National Bureau of Statistics,  where she led stakeholder engagement, policy coordination, and  data governance initiatives. She has also served in key secretariat  and coordination roles, including as Secretariat Lead for E1  Lagos and as a member of the Secretariat Team for the 2014  World Economic Forum Africa meeting. Lola holds an Executive  master’s in public administration from the London School of  Economics, with a focus on Public Economics.",
-    ],
-  },
+  
 ];
 
 const secretariatMembers = [
   {
-    name: "Ms.Megan Wright (CWEIC)",
+    name: "Ms. Megan Wright (CWEIC)",
     role: "LOC Secretariat",
     photo: "/governance-images/Ms.Megan Wright (CWEIC).jpeg",
   },
   {
-    name: "Ms Omofolahan Olowu",
+    name: "Ms. Omofolahan Olowu",
     role: "LOC Secretariat",
     photo: "/governance-images/Ms Omofolahan Olowu.png",
   },

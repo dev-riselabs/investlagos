@@ -9,6 +9,9 @@ const partners = [
   "/p5.png",
   "/p6.png",
   "/p7.png",
+  "/p8.png",
+  "/p9.png",
+  "/p10.png",
 ];
 
 function Partners() {
