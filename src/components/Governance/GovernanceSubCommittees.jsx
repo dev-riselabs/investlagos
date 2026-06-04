@@ -54,17 +54,17 @@ const mediaSmallCards = [
     photo: "/governance-images/Charlotte Bailey (CWEIC).png",
   },
   {
-    name: "AQ Hamza, Commonwealth Enterprise and Investment Council [CWEIC]",
+    name: "AQ Hamza",
     role: "Member, Media and Communications Committee",
     photo: "/governance-images/AQ Hamza (CWEIC).png",
   },
   {
-    name: "Mr. Pride Azefor, Commonwealth Enterprise and Investment Council [CWEIC]",
+    name: "Mr. Pride Azefor",
     role: "Member, Media and Communications Committee",
     photo: "/governance-images/Pride Azefor (CWEIC).png",
   },
   {
-    name: "Mr. Sean Leno, Commonwealth Enterprise and Investment Council [CWEIC]",
+    name: "Mr. Sean Leno",
     role: "Member, Media and Communications Committee",
     photo: "/governance-images/Sean Leno.jpeg",
   },
