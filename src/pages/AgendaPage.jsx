@@ -6,6 +6,414 @@ import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 
 /* ─────────────────── DATA ─────────────────── */
 
+// const days = [
+//   {
+//     label: "DAY 1",
+//     date: "8TH JUNE",
+//     sessions: [
+//       {
+//         timeStart: "09:30AM",
+//         timeEnd: "11:30AM",
+//         tag: "ARRIVAL",
+//         title: "Arrival, Registration & Tea Break",
+//         desc: "This session establishes political clarity, strategic alignment and macroeconomic confidence for the summit. The keynote address situates Lagos within Nigeria's broader economic trajectory and affirms its continental role as Africa's primary gateway for trade, capital and innovation. The session opens with a cultural performance celebrating Lagos as a living symbol of African enterprise.",
+//         subsections: [
+//           {
+//             label: "MASTERS OF CEREMONY",
+//             plain: true,
+//             items: [
+//               { name: "Mrs. Rolake Akinkugbe Filani" },
+//               { name: "Mr. Zaki Cooper" },
+//             ],
+//           },
+//           {
+//             label: "OPENING PERFORMANCE / SPOKEN WORD",
+//             items: [{ name: "Terra Kulture" }],
+//           },
+//           {
+//             label: "WELCOME ADDRESS",
+//             items: [
+//               {
+//                 name: "Mrs. Folashade Kaosarat Bada Ambrose-Medebem",
+//                 role: "Honourable Commissioner, Ministry of Commerce, Cooperatives, Trade & Investment, Lagos State Government",
+//               },
+//             ],
+//           },
+//           {
+//             label: "OPENING REMARKS",
+//             items: [
+//               {
+//                 name: "Lord Marland",
+//                 role: "Chair, Commonwealth Enterprise & Investment Council (CWEIC)",
+//               },
+//             ],
+//           },
+//           {
+//             label: "GOODWILL MESSAGES",
+//             items: [
+//               {
+//                 name: "Mrs. Kanayo Awani",
+//                 role: "Executive Vice President, Afreximbank",
+//               },
+//               {
+//                 name: "Senator Daisy Danjuma",
+//                 role: "Executive Chairman, JAPETRO",
+//               },
+//               {
+//                 name: "His Excellency, Wamkele Mene",
+//                 role: "Secretary-General, African Continental Free Trade Area, AfCTA",
+//               },
+//             ],
+//           },
+//           {
+//             label: "SPECIAL ADDRESS",
+//             items: [
+//               {
+//                 name: "Hon. Shirley Botchwey",
+//                 role: "Secretary-General, The Commonwealth",
+//               },
+//             ],
+//           },
+//           {
+//             label: "OPENING ADDRESS",
+//             items: [
+//               {
+//                 name: "Mr. Babajide Olusola Sanwo-Olu",
+//                 role: "Executive Governor, Lagos State",
+//               },
+//             ],
+//           },
+//           {
+//             label: "KEYNOTE ADDRESS",
+//             items: [
+//               {
+//                 name: "Asiwaju Bola Ahmed Tinubu, GCFR",
+//                 role: "President of the Federal Republic of Nigeria",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         timeStart: "11:30AM",
+//         timeEnd: "12:30PM",
+//         tag: "TOUR",
+//         title: "Governors' Walk-through Pavilion",
+//         desc: "Guided Tour of the Pavilion and Exhibition. The President and Governor of Lagos State, accompanied by selected VIP Guests, will tour the exhibition. Delegates are invited to observe.",
+//         subsections: [],
+//       },
+//       {
+//         timeStart: "12:30PM",
+//         timeEnd: "13:30PM",
+//         tag: "PANEL",
+//         title: "Panel 1 — Governors' Investment Showcase",
+//         desc: "A high-visibility structured platform in which participating State Governors present targeted investment opportunities within their states, framed for an audience of investors, development finance institutions and private sector decision-makers. This format is designed to maximize deal-ready engagement, deliver focused pitches and drive bilateral conversations during the Deal Room sessions that follow.",
+//         subsections: [
+//           {
+//             label: "OPENING REMARKS",
+//             items: [
+//               {
+//                 name: "Dr. Jumoke Oduwole",
+//                 role: "Hon. Minister of Trade & Investment",
+//               },
+//             ],
+//           },
+//           {
+//             label: "MODERATORS",
+//             items: [{ name: "Ms. Zain Asher", role: "CNN" }],
+//           },
+//           {
+//             label: "GOVERNORS' INVESTMENT PITCHES",
+//             items: [
+//               {
+//                 name: "HE Caleb Mutfwang",
+//                 role: "Executive Governor, Plateau State",
+//               },
+//               {
+//                 name: "HE Agbu Kefas",
+//                 role: "Executive Governor, Taraba State",
+//               },
+//               {
+//                 name: "HE Alh. Abdulrahman Abdulrazaq",
+//                 role: "Executive Governor, Kwara State",
+//               },
+//               {
+//                 name: "HE Hope Uzodinma",
+//                 role: "Executive Governor, Imo State",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         timeStart: "13:30PM",
+//         timeEnd: "14:15PM",
+//         tag: "PLENARY",
+//         title: "Plenary 1 — Lagos: Africa's Global Gateway",
+//         desc: "Leaders discuss how Lagos is positioning itself as Africa's leading gateway for trade, investment and global economic engagement. This plenary examines the structural conditions that make Lagos uniquely capable of absorbing large-scale, long-term capital commitments, and sets the strategic tone for the summit's deal-making sessions.",
+//         subsections: [
+//           {
+//             label: "OPENING REMARKS",
+//             items: [
+//               {
+//                 name: "Governor Babajide Olusola Sanwo-Olu",
+//                 role: "Executive Governor, Lagos State",
+//               },
+//             ],
+//           },
+//           {
+//             label: "MODERATOR",
+//             items: [{ name: "Mrs. Rolake Akinkugbe-Filani" }],
+//           },
+//           {
+//             label: "PANEL DISCUSSION",
+//             items: [
+//               {
+//                 name: "Mrs. Folashade Kaosarat Ambrose-Medebem",
+//                 role: "Honourable Commissioner, Ministry of Commerce, Cooperatives, Trade and Investment, Lagos State Government",
+//               },
+//               {
+//                 name: "Lord Marland",
+//                 role: "Commonwealth Enterprise and Investment Council (CWEIC)",
+//               },
+//               { name: "Engr. Jani Ibrahim", role: "President, NACCIMA" },
+//               {
+//                 name: "Princess Zahrah Mohammend Audu",
+//                 role: "Director General, PEBEC",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         timeStart: "14:30PM",
+//         timeEnd: "15:30PM",
+//         tag: "LUNCH",
+//         title: "Networking Lunch",
+//         desc: "Invitation-Only Sectoral Working Lunches running in parallel.",
+//         subsections: [],
+//       },
+//       {
+//         timeStart: "15:30PM",
+//         timeEnd: "16:30PM",
+//         tag: "PLENARY",
+//         title: "Plenary 2 — The Future of Technology & Innovation",
+//         desc: "This session explores how emerging technologies and innovation ecosystems are shaping the next generation of African enterprise and economic transformation. With Lagos hosting Africa's most active startup ecosystem, panelists examine the convergence of artificial intelligence, digital infrastructure and fintech as drivers of inclusive growth. The discussion will identify the talent, regulatory and capital conditions needed to scale Lagos' technology sector to global competitiveness.",
+//         subsections: [
+//           {
+//             label: "OPENING REMARKS",
+//             items: [
+//               {
+//                 name: "Mr. Tosin Eniolorunda",
+//                 role: "Managing Director/CEO, Moniepoint MFB",
+//               },
+//             ],
+//           },
+//           {
+//             label: "MODERATOR",
+//             items: [
+//               {
+//                 name: "Mr. Zaki Cooper",
+//                 role: "Co-Founder and Director, Integra",
+//               },
+//             ],
+//           },
+//           {
+//             label: "PANEL DISCUSSION",
+//             items: [
+//               {
+//                 name: "Mr. Olugbenga Agboola",
+//                 role: "Managing Director/CEO, Flutterwave",
+//               },
+//               {
+//                 name: "Mr. Tubosun Alake",
+//                 role: "Honourable Commissioner, Ministry of Innovation, Science & Technology, Lagos State Government",
+//               },
+//               { name: "Lord Christopher Geidt", role: "Director, Burstock" },
+//               {
+//                 name: "Mr. Kayode Adeleke",
+//                 role: "Managing Director/CEO, Russel Smith 3D Printing & Manufacturing Company",
+//               },
+//               {
+//                 name: "Mr. Mitchell Elegbe",
+//                 role: "Founder and Group CEO, Interswitch",
+//               },
+//               {
+//                 name: "Mrs. Olatomiwa Williams",
+//                 role: "Chief Growth & AI Officer (Middle East & Africa), Microsoft",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         timeStart: "16:30PM",
+//         timeEnd: "17:30PM",
+//         tag: "PLENARY",
+//         title: "Plenary 3 — Unlocking Investment",
+//         desc: "Investors, financial institutions and policymakers examine the partnerships and financing models needed to unlock long-term economic growth across Africa. This plenary focuses on the mechanics of capital deployment: blended finance structures, development finance institution co-investment frameworks, and the conditions under which commercial capital follows public commitment. Panel lists will address the specific barriers to financial close on large infrastructure and urban development transactions in Lagos.",
+//         subsections: [
+//           {
+//             label: "OPENING REMARKS",
+//             items: [
+//               {
+//                 name: "Mr. Aig Aigboje Imoukhuede",
+//                 role: "Co-Chair, Lagos International Financial Centre [LIFC]",
+//               },
+//             ],
+//           },
+//           {
+//             label: "MODERATOR",
+//             items: [
+//               {
+//                 name: "Mrs. Temi Marcella",
+//                 role: "Managing Director, Alvarez Capital",
+//               },
+//             ],
+//           },
+//           {
+//             label: "PANEL DISCUSSION",
+//             items: [
+//               {
+//                 name: "Mrs. Adeola Ukhola",
+//                 role: "Country Manager, British International Investment",
+//               },
+//               {
+//                 name: "Mr Banji Fehintola",
+//                 role: "Executive Board Member and Executive Director, Financial Services, Africa Finance Corporation",
+//               },
+//               {
+//                 name: "Mr. Olusegun Alebiosu",
+//                 role: "Managing Director/CEO, First Bank of Nigeria Plc",
+//               },
+//               {
+//                 name: "Mr. Abubakar Suleiman",
+//                 role: "Managing Director/CEO, Sterling Bank",
+//               },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         timeStart: "17:30PM",
+//         timeEnd: "17:45PM",
+//         tag: "PLENARY",
+//         title: "Closing Plenary",
+//         desc: "",
+//         subsections: [
+//           {
+//             label: "PANEL DISCUSSION",
+//             items: [
+//               {
+//                 name: "Lagos International Financial Centre",
+//                 role: "Video Presentation",
+//               },
+//               {
+//                 name: "Mr. Aig Aigboje Imoukhuede",
+//                 role: "Co-Chair, Lagos International Financial Centre [LIFC]",
+//               },
+//             ],
+//           },
+//           {
+//             label: "CLOSING REMARKS",
+//             items: [
+//               { name: "Governor Babajide Olusola Sanwo-Olu of Lagos State" },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         timeStart: "19:00PM",
+//         timeEnd: "LATE",
+//         tag: "GALA",
+//         title: "Gala Dinner & Networking Reception",
+//         desc: "",
+//         subsections: [
+//           {
+//             label: "HOSTED BY",
+//             items: [
+//               {
+//                 name: "Dr. Kadri Obafemi Hamzat",
+//                 role: "Deputy Governor of Lagos State",
+//               },
+//               { name: "Lagos Fashion Show" },
+//               { name: "Falana" },
+//               { name: "Chamber Orchestra" },
+//             ],
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     label: "DAY 2",
+//     date: "9TH JUNE",
+//     sessions: [
+//       {
+//         timeStart: "09:00AM",
+//         timeEnd: "10:30AM",
+//         tag: "PLENARY",
+//         title: "High-Level Panels: Infrastructure & Energy",
+//         desc: "Deep dive into Lagos' pipeline of bankable infrastructure and energy projects with sector leaders, DFIs and institutional investors.",
+//         subsections: [
+//           {
+//             label: "PANELLISTS",
+//             items: [
+//               {
+//                 name: "Engr. Jani Ibrahim",
+//                 role: "Minister of Power, Federal Republic of Nigeria",
+//               },
+//               // {
+//               //   name: "Mr. Tom Cartledge",
+//               //   role: "Chief Executive Officer, Actis",
+//               // },
+//             ],
+//           },
+//         ],
+//       },
+//       {
+//         timeStart: "11:00AM",
+//         timeEnd: "01:00PM",
+//         tag: "DEAL ROOM",
+//         title: "Deal Rooms & Investment Showcases",
+//         desc: "Curated one-on-one meetings between project sponsors and qualified investors with pre-matched sessions and due-diligence support.",
+//         subsections: [],
+//       },
+//       {
+//         timeStart: "02:30PM",
+//         timeEnd: "04:30PM",
+//         tag: "PANEL",
+//         title: "AfCFTA & Lagos Business Opportunities",
+//         desc: "How Lagos businesses can leverage the AfCFTA for continental expansion through export-ready sectors, rules of origin and cross-border payments.",
+//         subsections: [],
+//       },
+//       {
+//         timeStart: "07:00PM",
+//         timeEnd: "LATE",
+//         tag: "NETWORKING",
+//         title: "Music & Networking Evening",
+//         desc: "Live performances and informal networking with delegates, investors and partners.",
+//         subsections: [],
+//       },
+//     ],
+//   },
+//   {
+//     label: "DAY 3",
+//     date: "10TH JUNE",
+//     sessions: [
+//       {
+//         timeStart: "08:00AM",
+//         timeEnd: "05:00PM",
+//         tag: "SITE TOUR",
+//         title: "Industrial & Infrastructure Site Tour",
+//         desc: "A curated full-day tour of flagship industrial and infrastructure assets including the Tolaram/Lagos Free Zone, Lekki Free Trade Zone, Dangote Fertilizer Plant, Dangote Petroleum Refinery and Russell Smith 3D Printing & Manufacturing Factory.",
+//         subsections: [],
+//       },
+//     ],
+//   },
+// ];
+
+
 const days = [
   {
     label: "DAY 1",
@@ -14,150 +422,55 @@ const days = [
       {
         timeStart: "09:30AM",
         timeEnd: "11:30AM",
-        tag: "ARRIVAL",
-        title: "Arrival, Registration & Tea Break",
-        desc: "This session establishes political clarity, strategic alignment and macroeconomic confidence for the summit. The keynote address situates Lagos within Nigeria's broader economic trajectory and affirms its continental role as Africa's primary gateway for trade, capital and innovation. The session opens with a cultural performance celebrating Lagos as a living symbol of African enterprise.",
+        tag: "OPENING",
+        title: "Opening Ceremony",
+        desc:
+          "Official opening ceremony of Invest Lagos 3.0, bringing together government leaders, investors, business executives and development partners to set the tone for the summit.",
         subsections: [
           {
             label: "MASTERS OF CEREMONY",
-            plain: true,
             items: [
-              { name: "Mrs. Rolake Akinkugbe Filani" },
-              { name: "Mr. Zaki Cooper" },
-            ],
-          },
-          {
-            label: "OPENING PERFORMANCE / SPOKEN WORD",
-            items: [{ name: "Terra Kulture" }],
-          },
-          {
-            label: "WELCOME ADDRESS",
-            items: [
-              {
-                name: "Mrs. Folashade Kaosarat Bada Ambrose-Medebem",
-                role: "Honourable Commissioner, Ministry of Commerce, Cooperatives, Trade & Investment, Lagos State Government",
-              },
-            ],
-          },
-          {
-            label: "OPENING REMARKS",
-            items: [
-              {
-                name: "Lord Marland",
-                role: "Chair, Commonwealth Enterprise & Investment Council (CWEIC)",
-              },
-            ],
-          },
-          {
-            label: "GOODWILL MESSAGES",
-            items: [
-              {
-                name: "Mrs. Kanayo Awani",
-                role: "Executive Vice President, Afreximbank",
-              },
-              {
-                name: "Senator Daisy Danjuma",
-                role: "Executive Chairman, JAPETRO",
-              },
-              {
-                name: "His Excellency, Wamkele Mene",
-                role: "Secretary-General, African Continental Free Trade Area, AfCTA",
-              },
-            ],
-          },
-          {
-            label: "SPECIAL ADDRESS",
-            items: [
-              {
-                name: "Hon. Shirley Botchwey",
-                role: "Secretary-General, The Commonwealth",
-              },
-            ],
-          },
-          {
-            label: "OPENING ADDRESS",
-            items: [
-              {
-                name: "Mr. Babajide Olusola Sanwo-Olu",
-                role: "Executive Governor, Lagos State",
-              },
-            ],
-          },
-          {
-            label: "KEYNOTE ADDRESS",
-            items: [
-              {
-                name: "Asiwaju Bola Ahmed Tinubu, GCFR",
-                role: "President of the Federal Republic of Nigeria",
-              },
+              { name: "Ms. Mojibade Sosanya" },
+              { name: "Mr. Mark Eddo" },
             ],
           },
         ],
       },
+
       {
         timeStart: "11:30AM",
         timeEnd: "12:30PM",
-        tag: "TOUR",
-        title: "Governors' Walk-through Pavilion",
-        desc: "Guided Tour of the Pavilion and Exhibition. The President and Governor of Lagos State, accompanied by selected VIP Guests, will tour the exhibition. Delegates are invited to observe.",
-        subsections: [],
-      },
-      {
-        timeStart: "12:30PM",
-        timeEnd: "13:30PM",
         tag: "PANEL",
         title: "Panel 1 — Governors' Investment Showcase",
-        desc: "A high-visibility structured platform in which participating State Governors present targeted investment opportunities within their states, framed for an audience of investors, development finance institutions and private sector decision-makers. This format is designed to maximize deal-ready engagement, deliver focused pitches and drive bilateral conversations during the Deal Room sessions that follow.",
-        subsections: [
-          {
-            label: "OPENING REMARKS",
-            items: [
-              {
-                name: "Dr. Jumoke Oduwole",
-                role: "Hon. Minister of Trade & Investment",
-              },
-            ],
-          },
-          {
-            label: "MODERATORS",
-            items: [{ name: "Ms. Zain Asher", role: "CNN" }],
-          },
-          {
-            label: "GOVERNORS' INVESTMENT PITCHES",
-            items: [
-              {
-                name: "HE Caleb Mutfwang",
-                role: "Executive Governor, Plateau State",
-              },
-              {
-                name: "HE Agbu Kefas",
-                role: "Executive Governor, Taraba State",
-              },
-              {
-                name: "HE Alh. Abdulrahman Abdulrazaq",
-                role: "Executive Governor, Kwara State",
-              },
-              {
-                name: "HE Hope Uzodinma",
-                role: "Executive Governor, Imo State",
-              },
-            ],
-          },
-        ],
+        desc:
+          "The Nigerian Economy and Opportunities for Sub-national Economic Acceleration.",
+        subsections: [],
       },
+
       {
-        timeStart: "13:30PM",
-        timeEnd: "14:15PM",
+        timeStart: "12:30PM",
+        timeEnd: "01:30PM",
+        tag: "TOUR",
+        title: "Governors' Pavilion Walk-through",
+        desc:
+          "Guided walk-through of the Governors' Pavilion and investment exhibition.",
+        subsections: [],
+      },
+
+      {
+        timeStart: "01:30PM",
+        timeEnd: "02:30PM",
         tag: "PLENARY",
         title: "Plenary 1 — Lagos: Africa's Global Gateway",
-        desc: "Leaders discuss how Lagos is positioning itself as Africa's leading gateway for trade, investment and global economic engagement. This plenary examines the structural conditions that make Lagos uniquely capable of absorbing large-scale, long-term capital commitments, and sets the strategic tone for the summit's deal-making sessions.",
+        desc:
+          "Leaders discuss Lagos as Africa’s leading gateway for trade, investment and global economic engagement.",
         subsections: [
           {
             label: "OPENING REMARKS",
             items: [
               {
-                name: "Governor Babajide Olusola Sanwo-Olu",
-                role: "Executive Governor, Lagos State",
+                name: "Her Excellency Dr. Jumoke Oduwole",
+                role: "Hon. Minister for Trade & Investment",
               },
             ],
           },
@@ -168,245 +481,288 @@ const days = [
           {
             label: "PANEL DISCUSSION",
             items: [
-              {
-                name: "Mrs. Folashade Kaosarat Ambrose-Medebem",
-                role: "Honourable Commissioner, Ministry of Commerce, Cooperatives, Trade and Investment, Lagos State Government",
-              },
-              {
-                name: "Lord Marland",
-                role: "Commonwealth Enterprise and Investment Council (CWEIC)",
-              },
+              { name: "Mrs. Folashade Ambrose-Medebem", role: "HC, MCCTI" },
               { name: "Engr. Jani Ibrahim", role: "President, NACCIMA" },
+              { name: "Princess Zahrah Mohammed Audu", role: "DG, PEBEC" },
               {
-                name: "Princess Zahrah Mohammend Audu",
-                role: "Director General, PEBEC",
+                name: "Mr. Yann Gilbert",
+                role: "European Business Chamber, Nigeria",
               },
             ],
           },
         ],
       },
+
       {
-        timeStart: "14:30PM",
-        timeEnd: "15:30PM",
+        timeStart: "02:30PM",
+        timeEnd: "03:30PM",
         tag: "LUNCH",
         title: "Networking Lunch",
-        desc: "Invitation-Only Sectoral Working Lunches running in parallel.",
+        desc: "Invitation-only sectoral working lunches running in parallel.",
         subsections: [],
       },
+
       {
-        timeStart: "15:30PM",
-        timeEnd: "16:30PM",
+        timeStart: "03:30PM",
+        timeEnd: "04:30PM",
         tag: "PLENARY",
         title: "Plenary 2 — The Future of Technology & Innovation",
-        desc: "This session explores how emerging technologies and innovation ecosystems are shaping the next generation of African enterprise and economic transformation. With Lagos hosting Africa's most active startup ecosystem, panelists examine the convergence of artificial intelligence, digital infrastructure and fintech as drivers of inclusive growth. The discussion will identify the talent, regulatory and capital conditions needed to scale Lagos' technology sector to global competitiveness.",
+        desc:
+          "Exploring AI, fintech, digital infrastructure and innovation ecosystems shaping Africa’s economic transformation.",
         subsections: [
           {
             label: "OPENING REMARKS",
-            items: [
-              {
-                name: "Mr. Tosin Eniolorunda",
-                role: "Managing Director/CEO, Moniepoint MFB",
-              },
-            ],
+            items: [{ name: "Mr. Tosin Eniolorunda", role: "CEO, Moniepoint MFB" }],
           },
           {
             label: "MODERATOR",
-            items: [
-              {
-                name: "Mr. Zaki Cooper",
-                role: "Co-Founder and Director, Integra",
-              },
-            ],
+            items: [{ name: "Mr. Zaki Cooper" }],
           },
           {
             label: "PANEL DISCUSSION",
             items: [
+              { name: "Mr. Olugbenga Agboola", role: "CEO, Flutterwave" },
               {
-                name: "Mr. Olugbenga Agboola",
-                role: "Managing Director/CEO, Flutterwave",
+                name: "Mr. Tunbosun Alake",
+                role: "Commissioner, Innovation, Science & Technology",
               },
-              {
-                name: "Mr. Tubosun Alake",
-                role: "Honourable Commissioner, Ministry of Innovation, Science & Technology, Lagos State Government",
-              },
-              { name: "Lord Christopher Geidt", role: "Director, Burstock" },
-              {
-                name: "Mr. Kayode Adeleke",
-                role: "Managing Director/CEO, Russel Smith 3D Printing & Manufacturing Company",
-              },
-              {
-                name: "Mr. Mitchell Elegbe",
-                role: "Founder and Group CEO, Interswitch",
-              },
+              { name: "Lord Geidt", role: "Director, Burstock" },
+              { name: "Mr. Kayode Adeleke", role: "CEO, Arridex" },
               {
                 name: "Mrs. Olatomiwa Williams",
-                role: "Chief Growth & AI Officer (Middle East & Africa), Microsoft",
+                role: "Microsoft (MEA AI & Growth)",
               },
             ],
           },
         ],
       },
+
       {
-        timeStart: "16:30PM",
-        timeEnd: "17:30PM",
+        timeStart: "04:30PM",
+        timeEnd: "05:30PM",
         tag: "PLENARY",
         title: "Plenary 3 — Unlocking Investment",
-        desc: "Investors, financial institutions and policymakers examine the partnerships and financing models needed to unlock long-term economic growth across Africa. This plenary focuses on the mechanics of capital deployment: blended finance structures, development finance institution co-investment frameworks, and the conditions under which commercial capital follows public commitment. Panel lists will address the specific barriers to financial close on large infrastructure and urban development transactions in Lagos.",
+        desc:
+          "Examining financing models, DFIs, and capital structures for African growth.",
         subsections: [
           {
             label: "OPENING REMARKS",
-            items: [
-              {
-                name: "Mr. Aig Aigboje Imoukhuede",
-                role: "Co-Chair, Lagos International Financial Centre [LIFC]",
-              },
-            ],
+            items: [{ name: "Mr. Abubakar Suleiman", role: "CEO, Sterling Bank" }],
           },
           {
             label: "MODERATOR",
-            items: [
-              {
-                name: "Mrs. Temi Marcella",
-                role: "Managing Director, Alvarez Capital",
-              },
-            ],
+            items: [{ name: "Temi Marcella", role: "Alcent Capital" }],
           },
           {
             label: "PANEL DISCUSSION",
             items: [
               {
-                name: "Mrs. Adeola Ukhola",
-                role: "Country Manager, British International Investment",
+                name: "Ms. Adeola Ukhola",
+                role: "British International Investment",
               },
               {
-                name: "Mr Banji Fehintola",
-                role: "Executive Board Member and Executive Director, Financial Services, Africa Finance Corporation",
+                name: "Mr. Banji Fehintola",
+                role: "Africa Finance Corporation",
               },
-              {
-                name: "Mr. Olusegun Alebiosu",
-                role: "Managing Director/CEO, First Bank of Nigeria Plc",
-              },
-              {
-                name: "Mr. Abubakar Suleiman",
-                role: "Managing Director/CEO, Sterling Bank",
-              },
+              { name: "Mr. Olusegun Alebiosu", role: "First Bank of Nigeria" },
+              { name: "Mr. Mitchell Elegbe", role: "Interswitch" },
             ],
           },
         ],
       },
+
       {
-        timeStart: "17:30PM",
-        timeEnd: "17:45PM",
-        tag: "PLENARY",
+        timeStart: "05:30PM",
+        timeEnd: "05:45PM",
+        tag: "CLOSING",
         title: "Closing Plenary",
         desc: "",
         subsections: [
           {
-            label: "PANEL DISCUSSION",
+            label: "SPECIAL FEATURE",
             items: [
               {
                 name: "Lagos International Financial Centre",
                 role: "Video Presentation",
               },
               {
-                name: "Mr. Aig Aigboje Imoukhuede",
-                role: "Co-Chair, Lagos International Financial Centre [LIFC]",
+                name: "Mr. Aig Imoukhuede",
+                role: "Co-Chair, Invest Lagos 3.0",
               },
             ],
           },
           {
             label: "CLOSING REMARKS",
             items: [
-              { name: "Governor Babajide Olusola Sanwo-Olu of Lagos State" },
+              {
+                name: "Governor Babajide Sanwo-Olu",
+                role: "Governor, Lagos State",
+              },
             ],
           },
         ],
       },
+
       {
-        timeStart: "19:00PM",
+        timeStart: "07:00PM",
         timeEnd: "LATE",
         tag: "GALA",
-        title: "Gala Dinner & Networking Reception",
-        desc: "",
-        subsections: [
-          {
-            label: "HOSTED BY",
-            items: [
-              {
-                name: "Dr. Kadri Obafemi Hamzat",
-                role: "Deputy Governor of Lagos State",
-              },
-              { name: "Lagos Fashion Show" },
-              { name: "Falana" },
-              { name: "Chamber Orchestra" },
-            ],
-          },
-        ],
+        title: "Private Gala Dinner",
+        desc: "(By Invitation Only)",
+        subsections: [],
       },
     ],
   },
+
   {
     label: "DAY 2",
     date: "9TH JUNE",
     sessions: [
       {
         timeStart: "09:00AM",
-        timeEnd: "10:30AM",
-        tag: "PLENARY",
-        title: "High-Level Panels: Infrastructure & Energy",
-        desc: "Deep dive into Lagos' pipeline of bankable infrastructure and energy projects with sector leaders, DFIs and institutional investors.",
+        timeEnd: "09:30AM",
+        tag: "OPENING",
+        title: "Day Two Opening",
+        desc: "Opening Reflection Session",
         subsections: [
           {
-            label: "PANELLISTS",
+            label: "SPEAKERS",
             items: [
-              {
-                name: "Engr. Jani Ibrahim",
-                role: "Minister of Power, Federal Republic of Nigeria",
-              },
-              // {
-              //   name: "Mr. Tom Cartledge",
-              //   role: "Chief Executive Officer, Actis",
-              // },
+              { name: "Mrs. Folasade Ambrose Medebem", role: "Commissioner" },
+              { name: "Mr. Sam Egube", role: "Deputy Chief of Staff" },
+              { name: "Zain Asher", role: "CNN" },
             ],
           },
         ],
       },
+
+      {
+        timeStart: "09:30AM",
+        timeEnd: "10:30AM",
+        tag: "PLENARY",
+        title: "Plenary 4 — Building the Cities of the Future",
+        desc:
+          "Infrastructure, energy systems and industrial ecosystems shaping African cities.",
+        subsections: [],
+      },
+
+      {
+        timeStart: "10:30AM",
+        timeEnd: "11:00AM",
+        tag: "NETWORKING",
+        title: "Networking Break",
+        desc: "",
+        subsections: [],
+      },
+
       {
         timeStart: "11:00AM",
+        timeEnd: "12:00PM",
+        tag: "PLENARY",
+        title: "Plenary 5 — Global Partnerships for Growth",
+        desc: "International cooperation and cross-border investment.",
+        subsections: [],
+      },
+
+      {
+        timeStart: "12:00PM",
         timeEnd: "01:00PM",
-        tag: "DEAL ROOM",
-        title: "Deal Rooms & Investment Showcases",
-        desc: "Curated one-on-one meetings between project sponsors and qualified investors with pre-matched sessions and due-diligence support.",
-        subsections: [],
-      },
-      {
-        timeStart: "02:30PM",
-        timeEnd: "04:30PM",
-        tag: "PANEL",
-        title: "AfCFTA & Lagos Business Opportunities",
-        desc: "How Lagos businesses can leverage the AfCFTA for continental expansion through export-ready sectors, rules of origin and cross-border payments.",
-        subsections: [],
-      },
-      {
-        timeStart: "07:00PM",
-        timeEnd: "LATE",
         tag: "NETWORKING",
-        title: "Music & Networking Evening",
-        desc: "Live performances and informal networking with delegates, investors and partners.",
+        title: "Networking Break",
+        desc: "",
         subsections: [],
+      },
+
+      {
+        timeStart: "01:00PM",
+        timeEnd: "02:00PM",
+        tag: "PLENARY",
+        title: "Plenary 6 — Talent, Creativity & Culture",
+        desc:
+          "Creative industries as drivers of Africa’s economic growth.",
+        subsections: [],
+      },
+
+      {
+        timeStart: "02:00PM",
+        timeEnd: "02:45PM",
+        tag: "PLENARY",
+        title: "Plenary 7 — Energy and Sustainability",
+        desc: "Power systems, renewable energy and sustainability.",
+        subsections: [],
+      },
+
+      {
+        timeStart: "02:00PM",
+        timeEnd: "02:45PM",
+        tag: "MASTERCLASS",
+        title: "Masterclasses — Music, Film and Fashion",
+        desc: "",
+        subsections: [
+          {
+            label: "SPEAKERS",
+            items: [
+              { name: "Tiwa Savage" },
+              { name: "David Oyelowo OBE" },
+              { name: "Omoyemi Akerele" },
+            ],
+          },
+        ],
+      },
+
+      {
+        timeStart: "02:45PM",
+        timeEnd: "03:00PM",
+        tag: "SHOWCASE",
+        title: "Lagos Fashion Show",
+        desc: "Closing performance",
+        subsections: [],
+      },
+
+      {
+        timeStart: "03:00PM",
+        timeEnd: "03:15PM",
+        tag: "CLOSING",
+        title: "Closing Session",
+        desc: "",
+        subsections: [
+          {
+            label: "PROGRAMME",
+            items: [
+              { name: "MoU Signing", role: "Lagos State & Partners" },
+              {
+                name: "Governor Babajide Sanwo-Olu",
+                role: "Closing Vision",
+              },
+              { name: "Mr. Babatunde Onigbanjo", role: "Vote of Thanks" },
+            ],
+          },
+        ],
       },
     ],
   },
+
   {
     label: "DAY 3",
     date: "10TH JUNE",
     sessions: [
       {
-        timeStart: "08:00AM",
-        timeEnd: "05:00PM",
-        tag: "SITE TOUR",
-        title: "Industrial & Infrastructure Site Tour",
-        desc: "A curated full-day tour of flagship industrial and infrastructure assets including the Tolaram/Lagos Free Zone, Lekki Free Trade Zone, Dangote Fertilizer Plant, Dangote Petroleum Refinery and Russell Smith 3D Printing & Manufacturing Factory.",
+        timeStart: "HALF DAY",
+        timeEnd: "",
+        tag: "SITE VISIT",
+        title: "Arridex Manufacturing Facility Visit",
+        desc:
+          "Advanced manufacturing and asset integrity facility tour.",
+        subsections: [],
+      },
+
+      {
+        timeStart: "FULL DAY",
+        timeEnd: "",
+        tag: "SITE VISIT",
+        title:
+          "Dangote Refinery, Lekki Free Zone & Lagos Port Tour",
+        desc: "Industrial and infrastructure site visits in Ibeju-Lekki.",
         subsections: [],
       },
     ],
@@ -505,7 +861,7 @@ function AgendaTimeline() {
         <div className="mx-auto max-w-310 grid grid-cols-3 divide-x divide-white/15">
           {days.map((day, i) => (
             <button
-              key={day.label}
+              key={day.label-i}
               onClick={() => setActiveDay(i)}
               className={`flex flex-col items-start px-5 py-5 transition sm:px-10 sm:py-7 ${
                 activeDay === i ? "bg-green100" : "hover:bg-white/5"
