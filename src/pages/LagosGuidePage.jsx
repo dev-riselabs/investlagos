@@ -1,6 +1,6 @@
 import ArticleSection from "../components/LagosGuide/ArticleSection";
 import GuideSection from "../components/LagosGuide/GuideSection";
-import HeroSection from "../components/LagosGuide/Herosection";
+import HeroSection from "../components/LagosGuide/HeroSection";
 import StreamSection from "../components/HomePage/StreamSection";
 import FutureSection from "../components/HomePage/FutureSection";
 
