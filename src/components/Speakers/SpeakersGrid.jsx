@@ -65,6 +65,11 @@ const speakers = [
     photo: "/speakers/His Excellency, Dr. Agbu Kefas.png",
   },
   {
+    name: "His Excellency, Prince Dapo Abiodun",
+    title: "Governor of Ogun State",
+    photo: "/speakers/His Excellency Dapo Abiodun.jfif",
+  },
+  {
     name: "His Excellency, Alh. Abdulrahman abdulrazaq",
     title: "Governor of Kwara State",
     photo: "/speakers/AbdulRahman AbdulRasaq 4.jpeg",
@@ -75,7 +80,12 @@ const speakers = [
     photo: "/speakers/His Excellency SEN HOPE UDODIMMA.png",
   },
   {
-    name: "HE Alex Otti",
+    name: "His Excellency, Barr. (Dr.) Peter Ndubuisi Mbah",
+    title: "Governor of Enugu State",
+    photo: "/speakers/His Excellency Peter Mbah.jpg",
+  },
+  {
+    name: "His Excellency Dr. Alex Chioma Otti, OFR,",
     title: "Executive Governor, Abia State",
     photo: "/speakers/images-9.jpeg",
   },
@@ -83,6 +93,11 @@ const speakers = [
     name: "His Excellency, Engineer Abdullahi A. Sule",
     title: "Governor of Nasarawa State",
     photo: "/speakers/Abdullahi-Sule.jpeg",
+  },
+  {
+    name: "His Excellency, Pastor Umo Bassey Eno",
+    title: "Governor of Akwa Ibom State",
+    photo: "/speakers/His Excellency Umo Eno.png",
   },
   
   {
@@ -151,7 +166,6 @@ const speakers = [
     title: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment",
     photo: "/speakers/Mr. Babatunde Onigbanjo.png",
   },
-
   {
     name: "Barrister Festus Keyamo, SAN",
     title: "Honourable Minister for Aviation and Aerospace Development",
