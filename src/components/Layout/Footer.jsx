@@ -28,6 +28,7 @@ const navLinks = [
       { label: "IL 3.0 Programme Flow", path: "/agenda" },
       { label: "Speakers", path: "/speakers" },
       { label: "Administration", path: "/administration" },
+      { label: "Lagos Guide", path: "/lagos-guide" },
     ],
   },
 
