@@ -77,7 +77,7 @@ const speakers = [
   {
     name: "HE Alex Otti",
     title: "Executive Governor, Abia State",
-    photo: "/speakers/Abia-State-Governor-Alex-Otti.jpg.jpeg",
+    photo: "/speakers/images-9.jpeg",
   },
   {
     name: "His Excellency, Engineer Abdullahi A. Sule",
