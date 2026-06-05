@@ -861,7 +861,7 @@ function AgendaTimeline() {
         <div className="mx-auto max-w-310 grid grid-cols-3 divide-x divide-white/15">
           {days.map((day, i) => (
             <button
-              key={day.label-i}
+              key={`${day.title}-${i}`}
               onClick={() => setActiveDay(i)}
               className={`flex flex-col items-start px-5 py-5 transition sm:px-10 sm:py-7 ${
                 activeDay === i ? "bg-green100" : "hover:bg-white/5"
@@ -880,7 +880,7 @@ function AgendaTimeline() {
 
       {/* ── Sessions ── */}
       <div className="px-4 md:px-10 lg:px-20 py-14 lg:py-20">
-        <div className="mx-auto max-w-310 space-y-0">
+        <div  key={activeDay} className="mx-auto max-w-310 space-y-0">
           {current.sessions.map((session, idx) => (
             <Reveal
               key={session.title}
