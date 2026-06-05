@@ -75,6 +75,11 @@ const speakers = [
     photo: "/speakers/His Excellency SEN HOPE UDODIMMA.png",
   },
   {
+    name: "HE Alex Otti",
+    title: "Executive Governor, Abia State",
+    photo: "/speakers/Abia-State-Governor-Alex-Otti.jpg.jpeg",
+  },
+  {
     name: "His Excellency, Engineer Abdullahi A. Sule",
     title: "Governor of Nasarawa State",
     photo: "/speakers/Abdullahi-Sule.jpeg",
