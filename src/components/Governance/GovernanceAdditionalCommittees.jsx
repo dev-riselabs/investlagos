@@ -25,21 +25,24 @@ const MailIcon = () => (
 
 /* ─── DATA: Technical & Programmes Committee ─────────────────────────────── */
 const techBioTop = [
-  
   {
     name: "Dr. Toyosi Akerele-Ogunsiji",
     role: "Co-Chair, Technical and Programmes Committee",
     photo: "/governance-images/Dr. Toyosi Akerele-Ogunsiji.png",
     bio: [
-      "Dr. Toyosi Akerele-Ogunsiji is the Founder of Rise Networks and Rise  Interactive Studios, Africa, and a globally respected multidisciplinary  professional in Artificial Intelligence for Development, Media  Innovation, Youth Development, EdTech and Public Policy. Named  by Forbes as one of the 20 Most Powerful Young Women in Africa  and listed among the Top 30 Global Artificial Intelligence  Ambassadors by Swiss Cognitive, she also serves on the UNDP  #AI4Dev Reference Group. She holds a master’s in public  administration from the Harvard Kennedy School, has completed  Executive Education at the University of Cambridge, University of  New Hampshire and Pan-Atlantic University, an undergrad degree in  Civil Law.",
+      "Dr. Toyosi Akerele-Ogunsiji is a globally respected multidisciplinary professional in artificial intelligence, human capital development, public policy, media innovation and economic transformation. With almost 20years experience across the public, private and social sectors, she designs policies, platforms, and ecosystems that prepare institutions and citizens for the opportunities  and challenges of the Fourth Industrial Revolution.",
 
-      "She earned a PhD in Defence and Strategic Studies from the Nigerian  Defence Academy, where her Dissertation examined the impact of AI  on Nigeria’s national and economic security in the Fourth Industrial  Revolution, highlighting the nexus between emerging technologies,  governance and human behaviour.",
+      "As Founder of Rise Networks, one of Africa’s leading Data and AI for Development organizations, she has spent over two decades advancing digital inclusion, workforce development, and technology driven economic opportunity. Under her leadership, Rise Networks has equipped thousands of young Africans with future-ready skills, serves as Nigeria’s representative in Microsoft’s Global TVET AI Community of Practice, and developed West Africa’s first career guidance chatbot, recognized by the United Nations AI for Good initiative.",
 
-      "At Rise Networks, a foremost Data and AI for Development  organization, she leads efforts to empower Nigerians with world-class  digital skills, foster inclusive opportunities and build a future-ready  workforce. Rise Networks is Nigeria’s representative in the Microsoft  Global TVET AI Community of Practice and built West Africa’s first  career job chatbot, recognized by the UN’s AI for Good initiative.",
+      "Her work extends into AI governance, national security and public sector innovation. Through Rise Networks, she led the UK Government FCDO-commissioned study on Artificial Intelligence for Border Governance and has advised governments, multilateral institutions, and private sector organizations on emerging technologies and development.",
 
-      "She’s led pioneering AI and technology initiatives across Africa and  with her leadership, the organization also executed the landmark UK  Government FCDO-commissioned AI for Border Governance study. ",
+      "From 2020 to 2025, Dr. Akerele-Ogunsiji served as Chairperson of the COVID-19 Task Force and Special Interventions Committee of the Presidential Committee on the Victims of Terrorism Support Fund (VSF), overseeing social protection, economic empowerment, WASH, and post-pandemic recovery programmes valued at over $4 Million. Leading more than 200 professionals, NGOs, and volunteers, she coordinated interventions that strengthened resilience and improved livelihoods across vulnerable communities in Nigeria especially in Northern Nigeria.",
 
-      "Through Rise Interactive Studios, a creative innovation company  working at the intersection of Fil, Music, Culture & Tech, Dr. Toyosi  created and produced MAKEMATION, Africa’s first feature film on  Artificial Intelligence.",
+      "She is also Founder of Rise Interactive Studios, where she produced MAKEMATION, Africa’s first feature film on artificial intelligence, advancing the intersection of culture, storytelling, and technology.",
+
+      "As Co-Chair of the Technical and Programmes Committee for Invest Lagos, Dr. Toyosi supervised the sign and execution strategy of the summit's overall agenda, stakeholder engagement plans, sectoral investment dialogues and knowledge products. She also led the development of the programme's technology and innovation strategy, integration of digital platforms, data tools, investment intelligence systems and technology solutions. Working closely with government, private sector, development and investment partners, she helped to curate high impact conversations and deal pipelines that position Lagos as a globally competitive, investment destination.",
+
+      "A highly sought after international Speaker and Teacher, Dr. Akerele-Ogunsiji serves on the UNDP AI for Development Reference Group. Named by Forbes among Africa’s 20 Most Powerful Young Women and by Swiss Cognitive among the world’s Top 30 AI Ambassadors, studied at the Cambridge University Judge Business School, she holds a master’s in public administration from Harvard Kennedy School, and a PhD in Defence and Strategic Studies from the Nigerian Defence Academy, where her research examined AI’s impact on national and economic security.",
     ],
   },
   {
@@ -76,7 +79,7 @@ const techMembers = [
     name: "Mr. Tubosun Alake",
     role: "Member of the Technical and Programmes Committee",
     photo: "/speakers/Commissioner for Innovation.jpg.jpeg",
-    bio : ['']
+    bio: [""],
   },
   {
     name: "Ms. Ajibola Yewande Ponnle",
