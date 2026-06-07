@@ -147,7 +147,7 @@ export default function SummitAgenda() {
               "Lekki Free Trade Zone",
               "Dangote Fertilizer Plant",
               "Dangote Petroleum Refinery",
-              "Russell Smith 3D Printing & Manufacturing Factory",
+              "Arridex 3D Printing & Manufacturing Factory",
             ].map((location, index) => (
               <div key={location} className="flex items-center gap-4">
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10">
