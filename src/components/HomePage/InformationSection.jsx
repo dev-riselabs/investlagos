@@ -23,8 +23,9 @@ const informations = [
   {
     icon: IoIosCall,
     heading: "HELP Line",
-    title: "+234 8108218640",
+    title: "+234.707.662.3338",
     phones: [
+      "+234 8108218640",
       "+234 9066697266",
       "+234 9064232315",
       "+234 8169374236",
@@ -81,7 +82,7 @@ function InformationSection() {
                       {title}
                     </h4>
                     {phones && (
-                      <div className="flex flex-col gap-1.5">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-x-4">
                         {phones.map((phone) => (
                           <h4
                             key={phone}
