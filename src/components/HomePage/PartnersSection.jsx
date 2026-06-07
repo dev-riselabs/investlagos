@@ -27,7 +27,7 @@ const partners = [
   "/partners/p24.png",
   "/partners/p25.png",
   "/partners/p26.png",
-  "/partners/p27.png",
+  
 ];
 
 function Partners() {
