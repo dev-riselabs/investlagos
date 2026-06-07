@@ -4,6 +4,7 @@ import SpeakersHero from '../components/Speakers/SpeakersHero'
 import SpeakersGrid from '../components/Speakers/SpeakersGrid'
 import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 import { Reveal, Spotlight, MouseTilt } from '../lib/animations'
+import FutureSection from '../components/HomePage/FutureSection'
 
 const SpeakersPage = () => {
   return (
@@ -17,7 +18,7 @@ const SpeakersPage = () => {
         <SpeakersHero />
       </MouseTilt>
       <SpeakersGrid />
-      <SpeakersCTA />
+      <FutureSection />
     </>
   )
 }

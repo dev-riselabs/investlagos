@@ -3,6 +3,8 @@ import SectorCards from "../components/SectorsPage/SectorCards"
 import WhatToExpect from "../components/SectorsPage/WhatToExpect"
 import DealBookSection from "../components/HomePage/DealBookSection"
 import { Reveal, Spotlight } from "../lib/animations"
+import SpeakersCTA from '../components/Speakers/SpeakersCTA'
+import FutureSection from '../components/HomePage/FutureSection'
 
 
 
@@ -20,6 +22,7 @@ export default function SectorsPage() {
       <Spotlight color="rgba(99, 202, 168, 0.20)" size={560}>
         <Reveal direction="up"><DealBookSection /></Reveal>
       </Spotlight>
+      <Reveal direction="up"><FutureSection /></Reveal>
     </>
   )
 }

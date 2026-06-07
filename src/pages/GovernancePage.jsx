@@ -9,6 +9,7 @@ import SpeakersCTA from "../components/Speakers/SpeakersCTA";
 import { Reveal, Spotlight } from "../lib/animations";
 import StreamSection from "../components/HomePage/StreamSection";
 
+
 const GovernancePage = () => {
   return (
     <>
@@ -23,6 +24,7 @@ const GovernancePage = () => {
       <GovernanceAdditionalCommittees />
       <GovernancePartnerships />
       <StreamSection />
+      <SpeakersCTA />
     </>
   );
 };

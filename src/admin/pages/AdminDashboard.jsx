@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FiBell, FiFileText, FiUsers } from 'react-icons/fi'
-import { adminListPublications, adminRegistrationStats } from '../../lib/api'
+import { FiBell, FiBriefcase, FiFileText, FiUsers } from 'react-icons/fi'
+import {
+  adminInvestmentProposalStats,
+  adminListPublications,
+  adminRegistrationStats,
+} from '../../lib/api'
 import { Alert, Card } from '../ui'
 
 function StatCard({ label, value, accent = 'green' }) {
@@ -24,16 +28,22 @@ function StatCard({ label, value, accent = 'green' }) {
 export default function AdminDashboard() {
   const [stats, setStats] = useState(null)
   const [pubCount, setPubCount] = useState(null)
+  const [proposalStats, setProposalStats] = useState(null)
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     let cancelled = false
-    Promise.all([adminRegistrationStats(), adminListPublications({ per_page: 1 })])
-      .then(([statsRes, pubsRes]) => {
+    Promise.all([
+      adminRegistrationStats(),
+      adminListPublications({ per_page: 1 }),
+      adminInvestmentProposalStats(),
+    ])
+      .then(([statsRes, pubsRes, proposalsRes]) => {
         if (cancelled) return
         setStats(statsRes)
         setPubCount(pubsRes?.total ?? 0)
+        setProposalStats(proposalsRes)
       })
       .catch((err) => {
         if (cancelled) return
@@ -54,11 +64,16 @@ export default function AdminDashboard() {
 
       {error && <Alert kind="error">{error}</Alert>}
 
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
         <StatCard label="Publications" value={loading ? '…' : pubCount} />
         <StatCard label="Total registrations" value={loading ? '…' : stats?.total} />
         <StatCard label="In-person" value={loading ? '…' : stats?.in_person} accent="slate" />
         <StatCard label="Deal room" value={loading ? '…' : stats?.deal_room} accent="red" />
+        <StatCard
+          label="Investment proposals"
+          value={loading ? '…' : proposalStats?.total}
+          accent="green"
+        />
       </div>
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -112,6 +127,20 @@ export default function AdminDashboard() {
               </div>
             </Link>
             <Link
+              to="/admin/investment-proposals"
+              className="flex items-center gap-3 rounded-md border border-slate-200 p-4 transition hover:border-green100 hover:bg-green700"
+            >
+              <FiBriefcase className="h-5 w-5 text-green100" />
+              <div>
+                <p className="text-sm font-semibold text-green200">
+                  Review investment proposals
+                </p>
+                <p className="text-xs text-slate-500">
+                  Triage Deal Room project submissions.
+                </p>
+              </div>
+            </Link>
+            <Link
               to="/admin/subscribers"
               className="flex items-center gap-3 rounded-md border border-slate-200 p-4 transition hover:border-green100 hover:bg-green700"
             >
@@ -124,6 +153,42 @@ export default function AdminDashboard() {
           </div>
         </Card>
       </div>
+
+      {proposalStats && (
+        <Card
+          title="Investment proposals by status"
+          action={
+            <Link
+              to="/admin/investment-proposals"
+              className="text-xs font-semibold text-green100 hover:underline"
+            >
+              View all →
+            </Link>
+          }
+        >
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <MiniStat label="Pending" value={proposalStats.pending} tone="yellow" />
+            <MiniStat label="Under review" value={proposalStats.under_review} tone="slate" />
+            <MiniStat label="Approved" value={proposalStats.approved} tone="green" />
+            <MiniStat label="Rejected" value={proposalStats.rejected} tone="red" />
+          </div>
+        </Card>
+      )}
+    </div>
+  )
+}
+
+function MiniStat({ label, value, tone = 'slate' }) {
+  const tones = {
+    slate:  'border-slate-200 bg-slate-50 text-slate-700',
+    green:  'border-green100/30 bg-green100/5 text-green200',
+    red:    'border-red/30 bg-red/5 text-red',
+    yellow: 'border-yellow/40 bg-yellow/10 text-slate-700',
+  }
+  return (
+    <div className={`rounded-md border px-4 py-3 ${tones[tone]}`}>
+      <p className="text-[10px] font-semibold uppercase tracking-wide opacity-70">{label}</p>
+      <p className="mt-1 text-xl font-bold">{value ?? 0}</p>
     </div>
   )
 }

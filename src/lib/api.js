@@ -100,6 +100,29 @@ export function subscribe(formData) {
 }
 
 /**
+ * Submit a contact / feedback message from the Contact page.
+ * Accepts { fullName, email, subject, message }.
+ * Laravel's StoreContactMessageRequest normalizes the keys on its side.
+ */
+export function submitContact(formData) {
+  return request("/contact-messages", { method: "POST", body: formData });
+}
+
+/**
+ * Submit an Investment Project Proposal for the Deal Room. Accepts a plain
+ * camelCase object (or a FormData, for backwards compatibility) — Laravel's
+ * StoreInvestmentProposalRequest normalizes the keys on its side.
+ */
+export function submitInvestmentProposal(formData) {
+  const isForm = typeof FormData !== "undefined" && formData instanceof FormData;
+  return request("/investment-proposals", {
+    method: "POST",
+    body: formData,
+    raw: isForm,
+  });
+}
+
+/**
  * Fetch the public list of publications. Optional filters:
  *   { q, category, year, per_page }
  * Returns Laravel's paginator payload: { data, current_page, last_page, ... }
@@ -227,6 +250,13 @@ export function adminDeleteRegistration(id) {
   return request(`/admin/registrations/${id}`, { method: "DELETE", auth: true });
 }
 
+export function adminConfirmRegistration(id) {
+  return request(`/admin/registrations/${id}/confirm`, {
+    method: "POST",
+    auth: true,
+  });
+}
+
 export function adminRegistrationStats() {
   return request("/admin/registrations/stats", { auth: true });
 }
@@ -249,9 +279,40 @@ export function adminSubscriberStats() {
   return request("/admin/subscribers/stats", { auth: true });
 }
 
+/* ─────────────────── Admin: investment proposals ─────────────────── */
+
+export function adminListInvestmentProposals(params = {}) {
+  return request(`/admin/investment-proposals${buildQuery(params)}`, { auth: true });
+}
+
+export function adminGetInvestmentProposal(id) {
+  return request(`/admin/investment-proposals/${id}`, { auth: true });
+}
+
+export function adminUpdateInvestmentProposal(id, payload) {
+  return request(`/admin/investment-proposals/${id}`, {
+    method: "PUT",
+    body: payload,
+    auth: true,
+  });
+}
+
+export function adminDeleteInvestmentProposal(id) {
+  return request(`/admin/investment-proposals/${id}`, {
+    method: "DELETE",
+    auth: true,
+  });
+}
+
+export function adminInvestmentProposalStats() {
+  return request("/admin/investment-proposals/stats", { auth: true });
+}
+
 export const api = {
   submitRegistration,
   subscribe,
+  submitContact,
+  submitInvestmentProposal,
   fetchPublications,
   fetchPublicationFilters,
   fetchPublication,
@@ -268,9 +329,15 @@ export const api = {
   adminGetRegistration,
   adminUpdateRegistration,
   adminDeleteRegistration,
+  adminConfirmRegistration,
   adminRegistrationStats,
   adminListSubscribers,
   adminGetSubscriber,
   adminDeleteSubscriber,
   adminSubscriberStats,
+  adminListInvestmentProposals,
+  adminGetInvestmentProposal,
+  adminUpdateInvestmentProposal,
+  adminDeleteInvestmentProposal,
+  adminInvestmentProposalStats,
 };

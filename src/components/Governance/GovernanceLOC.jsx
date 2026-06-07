@@ -37,7 +37,7 @@ const locMembers = [
     ],
   },
   {
-    name: "HON Folashade Ambrose Medebem",
+    name: "Mrs. Folashade Ambrose Medebem",
     role: "Co-Chair, Local Organizing Committee",
     photo: "/governance-images/HON Folashade Ambrose Medebem.png",
     bio: [
@@ -51,8 +51,8 @@ const locMembers = [
     ],
   },
   {
-    name: "Babatunde Onigbanjo",
-    role: "Member, Technical & Programmes Committee",
+    name: "Mr. Babatunde Onigbanjo",
+    role: "Permanent Secretary, Ministry of Commerce, Co-operatives, Trade & Investment of Lagos State Government & Member, Technical & Programmes Committee",
     photo: "/governance-images/Babatunde Onigbanjo.png",
     bio: [],
   },
@@ -114,8 +114,8 @@ function LOCCard({ name, role, photo, bio }) {
 /* ─── Main export ────────────────────────────────────────────────────────── */
 const GovernanceLOC = () => {
   return (
-    <section className="bg-white px-4 md:px-10 lg:px-20 py-16 lg:py-24">
-      <div className="mx-auto max-w-310">
+    <section className="bg-white px-4 md:px-10 lg:px-40 py-16 lg:py-24">
+      <div className="mx-auto max-w-280">
         {/* Heading */}
         <div className="mb-12 text-center">
           <h2 className="text-xl font-bold text-green400 font-jost sm:text-2xl lg:text-[28px]">

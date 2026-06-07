@@ -8,27 +8,30 @@ const navLinks = [
   { label: "About", path: "/about" },
 
   {
-    label: "The Summit",
-    path: "/the-summit",
+    label: "THE SUMMIT",
+    path: "#",
     dropdown: true,
     children: [
       { label: "Governance Structure", path: "/governance" },
-      { label: "IL 1.0 & 2.0 Highlights", path: "/the-summit/agenda" },
+      { label: "IL 1.0 & 2.0 Highlights", path: "#" },
       { label: "IL 3.0 Programme Flow", path: "/agenda" },
+      { label: "Speakers", path: "/speakers" },
       { label: "Administration", path: "/administration" },
+      { label: "The Lagos Guide", path: "/lagos-guide" },
     ],
   },
 
   {
     label: "INVESTMENT HUB",
-    path: "/sectors",
+    path: "#",
     dropdown: true,
     children: [
       { label: "Deal Room", path: "/deal-room" },
-      { label: "Future Leaders Corps", path: "/sectors/technology" },
+      { label: "Submit a Project Proposal", path: "/deal-room/proposal" },
+      { label: "Future Leaders Movement", path: "/sectors/technology" },
       {
         label: "Business Exhibition & Cultural Showcase",
-        path: "/sectors/technology",
+        path: "/business-exhibition",
       },
       { label: "Sectors", path: "/sectors" },
       { label: "Incentives", path: "/incentives" },
@@ -37,22 +40,22 @@ const navLinks = [
 
   {
     label: "MEDIA CENTRE",
-    path: "/media",
+    path: "#",
     dropdown: true,
     children: [
-      { label: "Gallery", path: "/media/news" },
-      { label: "Media Kits", path: "/media-kit" },
-      { label: "Press Releases", path: "/media/gallery" },
+      { label: "Gallery", path: "/media/gallery" },
+      { label: "Media Kits", path: "/media/kits" },
+      { label: "Press Releases", path: "#" },
     ],
   },
 
   {
     label: "RESEARCH",
-    path: "/pressroom",
+    path: "#",
     dropdown: true,
     children: [
-      { label: "Policy Centre", path: "/pressroom/reports" },
-      { label: "Data & Insights", path: "/pressroom/publications" },
+      { label: "Policy Centre", path: "/policy_centre" },
+      { label: "Data & Insights", path: "/data-insight" },
       { label: "Publications", path: "/pressroom/publications" },
     ],
   },
@@ -164,24 +167,25 @@ const Navbar = () => {
                 key={l.label}
                 className="relative flex flex-1 items-center group"
               >
-                <NavLink
-                  to={l.path}
-                  className={({ isActive }) =>
-                    `flex w-full items-center justify-center gap-2 py-4 transition text-white! ${
-                      isActive
-                        ? "bg-green text-[#F4C430]"
-                        : "hover:bg-green hover:text-[#F4C430]"
-                    }`
-                  }
-                >
-                  {l.label}
-
-                  {l.dropdown && (
-                    <button className=" opacity-80">
-                      <IoIosArrowDown className="w-4 h-4 text-white" />
-                    </button>
-                  )}
-                </NavLink>
+                {l.dropdown ? (
+                  <button className="flex w-full items-center justify-center gap-2 py-4 text-white hover:bg-green! hover:text-yellow!">
+                    {l.label}
+                    <IoIosArrowDown className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <NavLink
+                    to={l.path}
+                    className={({ isActive }) =>
+                      `flex w-full items-center justify-center py-4 transition ${
+                        isActive
+                          ? "bg-green! text-yellow!"
+                          : "text-white! hover:bg-green! hover:text-yellow!"
+                      }`
+                    }
+                  >
+                    {l.label}
+                  </NavLink>
+                )}
 
                 {/* Dropdown */}
                 {l.dropdown && l.children && (

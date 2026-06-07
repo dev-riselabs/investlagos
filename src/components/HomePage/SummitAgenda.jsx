@@ -39,7 +39,7 @@ const agendaData = [
 export default function SummitAgenda() {
   return (
     <section className="bg-green100 py-20">
-      <div className="px-4 md:px-10 lg:px-20 flex flex-col">
+      <div className="px-4 md:px-10 lg:px-20 flex flex-col max-w-310 mx-auto">
         {/* Header */}
         <div className="mb-14">
           <h2 className="text-3xl md:text-5xl font-bold text-white font-jost">
@@ -147,7 +147,7 @@ export default function SummitAgenda() {
               "Lekki Free Trade Zone",
               "Dangote Fertilizer Plant",
               "Dangote Petroleum Refinery",
-              "Russell Smith 3D Printing & Manufacturing Factory",
+              "Arridex 3D Printing & Manufacturing Factory",
             ].map((location, index) => (
               <div key={location} className="flex items-center gap-4">
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10">

@@ -6,6 +6,8 @@ import DealRoomSectors from '../components/DealRoom/DealRoomSectors'
 import DealRoomProjects from '../components/DealRoom/DealRoomProjects'
 import DealRoomHub from '../components/DealRoom/DealRoomHub'
 import { Reveal, Spotlight } from '../lib/animations'
+import InvestmentSection from '../components/HomePage/InvestmentSection'
+import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 
 const DealRoomPage = () => {
   return (
@@ -20,8 +22,11 @@ const DealRoomPage = () => {
       <Reveal direction="up"><DealRoomSectors /></Reveal>
       <Reveal direction="up"><DealRoomProjects /></Reveal>
       <Spotlight color="rgba(99, 202, 168, 0.20)" size={560}>
-        <Reveal direction="up"><DealRoomHub /></Reveal>
+        <Reveal direction="up"><InvestmentSection/></Reveal>
       </Spotlight>
+      <Reveal direction="up">
+        <SpeakersCTA />
+      </Reveal>
     </>
   )
 }

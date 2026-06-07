@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
-import { FiBell, FiFileText, FiGrid, FiLogOut, FiMenu, FiUsers, FiX } from 'react-icons/fi'
+import { FiBell, FiBriefcase, FiFileText, FiGrid, FiLogOut, FiMenu, FiUsers, FiX } from 'react-icons/fi'
 import { useAuth } from './AuthContext'
 
 const navItems = [
   { to: '/admin', label: 'Dashboard', icon: FiGrid, end: true },
   { to: '/admin/publications', label: 'Publications', icon: FiFileText },
   { to: '/admin/registrations', label: 'Registrations', icon: FiUsers },
+  { to: '/admin/investment-proposals', label: 'Investment Proposals', icon: FiBriefcase },
   { to: '/admin/subscribers', label: 'Subscribers', icon: FiBell },
 ]
 

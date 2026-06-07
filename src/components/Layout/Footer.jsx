@@ -5,6 +5,7 @@ import { FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { LuCircleArrowRight } from "react-icons/lu";
+import { useEffect, useRef, useState } from "react";
 
 const footerLinks = [
   "About",
@@ -13,6 +14,61 @@ const footerLinks = [
   "Media Centre",
   "Research",
   "Contact",
+];
+
+const navLinks = [
+  { label: "About", path: "/about" },
+
+  {
+    label: "The Summit",
+    dropdown: true,
+    children: [
+      { label: "Governance Structure", path: "/governance" },
+      { label: "IL 1.0 & 2.0 Highlights", path: "#" },
+      { label: "IL 3.0 Programme Flow", path: "/agenda" },
+      { label: "Speakers", path: "/speakers" },
+      { label: "Administration", path: "/administration" },
+      { label: "The Lagos Guide", path: "/lagos-guide" },
+    ],
+  },
+
+  {
+    label: "Investment Hub",
+    dropdown: true,
+    children: [
+      { label: "Deal Room", path: "/deal-room" },
+      { label: "Submit a Project Proposal", path: "/deal-room/proposal" },
+      { label: "Future Leaders Movement", path: "/sectors/technology" },
+      {
+        label: "Business Exhibition & Cultural Showcase",
+        path: "/business-exhibition",
+      },
+      { label: "Sectors", path: "/sectors" },
+      { label: "Incentives", path: "/incentives" },
+    ],
+  },
+
+  {
+    label: "Media Center",
+    dropdown: true,
+    children: [
+      { label: "Gallery", path: "/media/gallery" },
+      { label: "Media Kits", path: "/media/kits" },
+      { label: "Press Releases", path: "#" },
+    ],
+  },
+
+  {
+    label: "Research",
+    dropdown: true,
+    children: [
+      { label: "Policy Centre", path: "/policy_centre" },
+      { label: "Data & Insights", path: "/data-insight" },
+      { label: "Publications", path: "/pressroom/publications" },
+    ],
+  },
+
+  { label: "Contact Us", path: "/contact" },
 ];
 
 const socialIcons = [
@@ -39,8 +95,29 @@ const socialIcons = [
 ];
 
 const Footer = () => {
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const navRef = useRef();
+
+  const toggleDropdown = (label) => {
+    setOpenDropdown((prev) => (prev === label ? null : label));
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setOpenDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <footer className=" bg-green100 p-5 sm:p-8 lg:p-14">
+    <footer className=" bg-green100 p-4 sm:p-10 lg:p-20">
       <div className="bg-white rounded-2xl">
         <div className="mx-auto max-w-310 px-6 pt-10 pb-8">
           {/* ── Dark green CTA card ── */}
@@ -69,18 +146,49 @@ const Footer = () => {
           </div>
 
           {/* ── Navigation links ── */}
-          <ul className="mt-8 grid grid-cols-2 sm:grid-cols-none sm:flex sm:flex-row sm:flex-wrap items-center justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc">
-            {footerLinks.map((l) => (
+          <ul
+            ref={navRef}
+            className="mt-8 grid grid-cols-2 sm:grid-cols-none sm:flex sm:flex-row sm:flex-wrap items-center justify-center sm:justify-start gap-x-10 gap-y-3 font-dmSans pb-8 text-sm md:text-base font-medium list-disc"
+          >
+            {navLinks.map((item) => (
               <li
-                key={l}
-                className="marker:text-black hover:marker:text-green ml-3"
+                key={item.label}
+                className="relative marker:text-black hover:marker:text-green ml-3"
               >
-                <Link
-                  to={l}
-                  className=" transition text-black hover:text-green!"
-                >
-                  {l}
-                </Link>
+                {item.children ? (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => toggleDropdown(item.label)}
+                      className="cursor-pointer text-black hover:text-green transition"
+                    >
+                      {item.label}
+                    </button>
+
+                    {openDropdown === item.label && (
+                      <ul className="absolute right-0 sm:left-0 top-full mt-2 min-w-40 sm:min-w-55 rounded-lg bg-white shadow-lg border border-gray-100 z-20">
+                        {item.children.map((child) => (
+                          <li key={child.label}>
+                            <Link
+                              to={child.path}
+                              onClick={() => setOpenDropdown(null)}
+                              className="block px-4 py-3 text-xs text-black hover:bg-gray-50 hover:text-green"
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className="transition text-black hover:text-green"
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -107,21 +215,21 @@ const Footer = () => {
           <ul className="mt-5 space-y-1.5 text-xs text-black text-center sm:text-left font-manrope font-light border-b border-black/20 pb-5 sm:border-b-0 sm:pb-0">
             <li>
               •{" "}
-              <a href="#" className="hover:underline">
+              <Link to="/accessibility" className="hover:underline!">
                 Accessibility
-              </a>
+              </Link>
             </li>
             <li>
               •{" "}
-              <a href="#" className="hover:underline">
+              <Link to="/term-of-service" className="hover:underline!">
                 Terms &amp; Conditions
-              </a>
+              </Link>
             </li>
             <li>
               •{" "}
-              <a href="#" className="hover:underline">
+              <Link to="/privacy-policy" className="hover:underline!">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
           </ul>
 
@@ -136,16 +244,23 @@ const Footer = () => {
             </p>
             <div className="flex flex-col gap-px items-center text-center sm:text-left sm:items-start">
               <p>
-                Ministry of Commerce, Cooperatives, Trade and Investment [MCCTI]
+                Lagos State Ministry of Commerce, Cooperatives, Trade &
+                Investment [MCCTI]
               </p>
-              <p>Lagos State Government,</p>
-              <p>Alausa, Nigeria.</p>
+              <p>Block 8, Room 104, The Secretariat,</p>
+              <p>Alausa, Ikeja, Lagos State Nigeria.</p>
             </div>
             <div className="flex flex-col gap-px items-center text-center sm:text-left sm:items-start border-t border-black/20 pt-5 sm:border-t-0 sm:pt-0">
               <p>Copyright 2026. All Rights Reserved. Invest Lagos</p>
               <p>
                 Website Designed &amp; Developed by{" "}
-                <a href="https://eventsintel.com" target="_blank" className="font-bold">Events Intel</a>
+                <a
+                  href="https://www.riseinteractivestudios.com/"
+                  target="_blank"
+                  className="font-bold"
+                >
+                  Rise Interactive Studios
+                </a>
               </p>
             </div>
           </div>

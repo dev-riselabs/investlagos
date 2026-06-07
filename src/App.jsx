@@ -8,7 +8,7 @@ import ProtectedRoute from "./admin/ProtectedRoute";
 // Site-wide maintenance toggle. When VITE_MAINTENANCE_MODE=true, every
 // public route redirects to /maintenance. Admin routes and /maintenance
 // itself remain reachable.
-const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "false";
+const MAINTENANCE_MODE = import.meta.env.VITE_MAINTENANCE_MODE === "true";
 
 // Route-level code splitting — each page becomes its own async chunk and
 // is only fetched the first time the route is visited. This keeps the
@@ -19,6 +19,9 @@ const IncentivesPage = lazy(() => import("./pages/IncentivesPage"));
 const AgendaPage = lazy(() => import("./pages/AgendaPage"));
 const SpeakersPage = lazy(() => import("./pages/SpeakersPage"));
 const DealRoomPage = lazy(() => import("./pages/DealRoomPage"));
+const InvestmentProposalPage = lazy(
+  () => import("./pages/InvestmentProposalPage"),
+);
 const RegisterPage = lazy(() => import("./pages/RegisterPage"));
 const GovernancePage = lazy(() => import("./pages/GovernancePage"));
 const PublicationsPage = lazy(() => import("./pages/PublicationsPage"));
@@ -29,7 +32,17 @@ const AboutPage = lazy(() => import("./pages/AboutPage"));
 const AdministrationPage = lazy(() => import("./pages/AdministrationPage"));
 const PolicyPage = lazy(() => import("./pages/PolicyPage"));
 const MediaKitPage = lazy(() => import("./pages/MediaKitPage"));
+const GalleryPage = lazy(() => import("./pages/GalleryPage"));
 const MaintenancePage = lazy(() => import("./pages/MaintenancePage"));
+
+const FutureLeadersPage = lazy(() => import("./pages/FutureLeadersPage"));
+const BusinessExhibition = lazy(() => import("./pages/BusinessExhibition"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermService = lazy(() => import("./pages/TermService"));
+const AccessibilityPage = lazy(() => import("./pages/AccessibilityPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const DataInsightPage = lazy(() => import("./pages/DataInsightPage"));
+const LagosGuidePage = lazy(() => import("./pages/LagosGuidePage"));
 
 // Admin console — kept in its own group of chunks; never loaded on
 // the public marketing site.
@@ -42,6 +55,9 @@ const AdminRegistrations = lazy(
   () => import("./admin/pages/AdminRegistrations"),
 );
 const AdminSubscribers = lazy(() => import("./admin/pages/AdminSubscribers"));
+const AdminInvestmentProposals = lazy(
+  () => import("./admin/pages/AdminInvestmentProposals"),
+);
 
 // Lightweight fallback shown while a route chunk is being fetched.
 function RouteFallback() {
@@ -70,8 +86,26 @@ function App() {
                 <Route path="agenda" element={<AgendaPage />} />
                 <Route path="speakers" element={<SpeakersPage />} />
                 <Route path="deal-room" element={<DealRoomPage />} />
+                <Route
+                  path="deal-room/proposal"
+                  element={<InvestmentProposalPage />}
+                />
+                <Route
+                  path="investment-proposal"
+                  element={<InvestmentProposalPage />}
+                />
                 <Route path="register" element={<RegisterPage />} />
                 <Route path="governance" element={<GovernancePage />} />
+                <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="term-of-service" element={<TermService />} />
+                <Route path="accessibility" element={<AccessibilityPage />} />
+                <Route path="contact" element={<ContactPage />} />
+                <Route path="data-insight" element={<DataInsightPage />} />
+                <Route path="lagos-guide" element={<LagosGuidePage />} />
+                <Route
+                  path="business-exhibition"
+                  element={<BusinessExhibition />}
+                />
                 <Route path="publications" element={<PublicationsPage />} />
                 <Route
                   path="publications/:slug"
@@ -82,10 +116,20 @@ function App() {
                   path="the-summit/administration"
                   element={<AdministrationPage />}
                 />
-                <Route path="policy" element={<PolicyPage />} />
-                <Route path="pressroom/reports" element={<PolicyPage />} />
-                <Route path="media-kit" element={<MediaKitPage />} />
+                <Route path="policy_centre" element={<PolicyPage />} />
+                {/* <Route path="pressroom/policy_centre" element={<PolicyPage />} /> */}
+                {/* <Route path="media-kit" element={<MediaKitPage />} /> */}
                 <Route path="media/kits" element={<MediaKitPage />} />
+                <Route path="media/gallery" element={<GalleryPage />} />
+                <Route
+                  path="pressroom/publications"
+                  element={<PublicationsPage />}
+                />
+
+                <Route
+                  path="/sectors/technology"
+                  element={<FutureLeadersPage />}
+                />
                 <Route
                   path="pressroom/publications"
                   element={<PublicationsPage />}
@@ -110,6 +154,10 @@ function App() {
               <Route path="publications" element={<AdminPublications />} />
               <Route path="registrations" element={<AdminRegistrations />} />
               <Route path="subscribers" element={<AdminSubscribers />} />
+              <Route
+                path="investment-proposals"
+                element={<AdminInvestmentProposals />}
+              />
             </Route>
 
             {/* Catch-all: in maintenance mode any unmatched URL is redirected

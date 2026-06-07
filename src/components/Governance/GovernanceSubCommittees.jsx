@@ -26,46 +26,46 @@ const MailIcon = () => (
 /* ─── DATA ───────────────────────────────────────────────────────────────── */
 const financeMembers = [
   {
-    name: "Yomi Oluyomi",
-    role: "Chair",
+    name: "Mr. Abayomi Oluyomi",
+    role: "Honourable Commissioner for Finance of Lagos State Government & Chair, Finance Committee",
     photo: "/governance-images/Yomi Oluyomi.png",
   },
   {
-    name: "Ope George",
-    role: "Member",
+    name: "Mr. Ope George",
+    role: "Honourable Commissioner for Budget and Planning of Lagos State Government & Member, Finance Committee.",
     photo: "/governance-images/Ope George.png",
   },
-  {
-    name: "Biola Alabi",
-    role: "Member",
-    photo: "/governance-images/Biola Alabi.png",
-  },
+  // {
+  //   name: "Ms. Biola Alabi",
+  //   role: "Member",
+  //   photo: "/governance-images/Biola Alabi.png",
+  // },
 ];
 
 const mediaSmallCards = [
   {
-    name: "Gbenga Omotosho",
-    role: "Chair",
+    name: "Mr. Gbenga Omotosho",
+    role: "Honourable Commissioner for Information & Strategy of Lagos State Government & Chair, Media, Publicity & Communications Committee",
     photo: "/governance-images/Gbenga Omotosho.png",
   },
   {
-    name: "Charlotte Bailey",
-    role: "Member, Media and Communications Department",
+    name: "Ms. Charlotte Bailey",
+    role: "Member, Media and Communications Committee",
     photo: "/governance-images/Charlotte Bailey (CWEIC).png",
   },
   {
-    name: "AQ Hamza (CWEIC)",
-    role: "Member, Media and Communications Department",
+    name: "AQ Hamza",
+    role: "Member, Media and Communications Committee",
     photo: "/governance-images/AQ Hamza (CWEIC).png",
   },
   {
-    name: "Pride Azefor (CWEIC)",
-    role: "Member, Media and Communications Department",
+    name: "Mr. Pride Azefor",
+    role: "Member, Media and Communications Committee",
     photo: "/governance-images/Pride Azefor (CWEIC).png",
   },
   {
-    name: "Sean Leno (CWEIC)",
-    role: "Member, Media and Communications Department",
+    name: "Mr. Sean Leno",
+    role: "Member, Media and Communications Committee",
     photo: "/governance-images/Sean Leno.jpeg",
   },
 ];
@@ -88,7 +88,7 @@ const mediaBioCards = [
     ],
   },
   {
-    name: "Mr Gboyega Akosile",
+    name: "Mr. Gboyega Akosile",
     role: "Special Adviser on Media and Publicity to the Governor of Lagos State and Member, Media & Publicity, Communications Committee",
     photo: "/governance-images/Mr Gboyega Akosile.png",
     bio: [
@@ -98,7 +98,7 @@ const mediaBioCards = [
     ],
   },
   {
-    name: "Mr Lami Adekola",
+    name: "Mr. Lami Adekola",
     role: "Member, Media, Communications & Publicity Sub-Committee",
     photo: "/governance-images/Mr Lami Adekola.png",
     bio: [
@@ -136,11 +136,11 @@ const mediaBottomCards = [
 function MemberCard({ name, role, photo }) {
   return (
     <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 w-full h-full">
-      <div className="overflow-hidden rounded-t-xl bg-slate-100 il-card-media">
+      <div className="overflow-hidden rounded-t-xl bg-slate-100 il-card-media max-h-100 h-120">
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-100"
+          className="block w-full object-cover object-top h-full"
           loading="lazy"
         />
       </div>
@@ -175,11 +175,11 @@ function MemberCard({ name, role, photo }) {
 function BioCard({ name, role, photo, bio }) {
   return (
     <article className="flex flex-col il-card shadow-card rounded-xl bg-white ring-1 ring-slate-100 w-full h-full">
-      <div className="overflow-hidden rounded-t-xl bg-slate-100 il-card-media">
+      <div className="overflow-hidden rounded-t-xl bg-slate-100 il-card-media max-h-100 h-120">
         <img
           src={photo}
           alt={name}
-          className="block w-full object-cover object-top max-h-100"
+          className="block w-full object-cover object-top h-full"
           loading="lazy"
         />
       </div>
@@ -226,8 +226,8 @@ function SubSectionHeading({ title }) {
 /* ─── MAIN EXPORT ────────────────────────────────────────────────────────── */
 const GovernanceSubCommittees = () => {
   return (
-    <section className="bg-white px-4 md:px-10 lg:px-20 py-12 lg:py-16">
-      <div className="mx-auto max-w-310 space-y-20">
+    <section className="bg-white px-4 md:px-10 lg:px-40 py-12 lg:py-16">
+      <div className="mx-auto max-w-280 space-y-20">
         {/* Finance Sub-Committee */}
         <div>
           <SubSectionHeading title="Finance Sub-Committee" />

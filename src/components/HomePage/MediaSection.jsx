@@ -27,7 +27,7 @@ const news = [
   {
     id: 3,
     category: "COMMERCE",
-    image: "/Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy.png",
+    image: "/meeting.jpg",
     title:
       "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
     description:
@@ -38,10 +38,20 @@ const news = [
   {
     id: 4,
     category: "COMMERCE",
-    image: "/meeting.jpg",
-    title: "Another Investment Story",
+    image: "/Lagos tops.PNG",
+    title: "Lagos tops Nigeria’s ease of doing business rankings",
     description: "Additional article for demonstrating carousel movement.",
     border: "border-green-500",
+    url:"https://punchng.com/lagos-tops-nigerias-ease-of-doing-business-rankings/"
+  },
+  {
+    id: 5,
+    category: "COMMERCE",
+    image: "/Federal-Capital-Territory-FCT (1).webp",
+    title: "Lagos Emerges As Best-Performing State In 2025 Performance Index",
+    description: "LAGOS – Lagos State has emerged Nigeria’s best-performing sub-national in the 2025 State Performance Index (pSPI), leading other states by wide margins across all sectors.",
+    border: "border-green-500",
+    url:"https://share.google/0245XBY4K0ZkuHrf7"
   },
 ];
 
@@ -67,7 +77,7 @@ export default function MediaCenter() {
 
   return (
     <section className="bg-slate500 py-20">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 md:px-10 lg:px-20">
         {/* Header */}
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div className="font-jost">
@@ -119,9 +129,9 @@ export default function MediaCenter() {
                       {item.description}
                     </p>
 
-                    <button className="text-sm font-medium text-green100 hover:text-green font-jost mt-auto">
+                    <a href={item.url} target="_blank" className="text-sm font-medium text-green200 hover:text-green font-jost mt-auto">
                       Read Story →
-                    </button>
+                    </a>
                   </div>
                 </article>
               </div>
