@@ -761,7 +761,7 @@ const days = [
         timeEnd: "",
         tag: "SITE VISIT",
         title:
-          "Dangote Refinery, Lekki Free Zone & Lagos Port Tour",
+          "Dangote Refinery, Dangote Fertilizer Plant, Lagos Free Zone, Lekki Free Trade zone, Lekki Deep Sea Port",
         desc: "Industrial and infrastructure site visits in Ibeju-Lekki.",
         subsections: [],
       },

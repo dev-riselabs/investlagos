@@ -251,11 +251,7 @@ function HotelsSection() {
     <section className="px-4 md:px-10 lg:px-20 py-15 md:py-20">
       <div className="mx-auto max-w-310 flex flex-col">
         <p className="text-sm font-jost text-black500 mb-8">
-          To ensure that our guest get the best of the Invest Lagos 3.0 and
-          enjoy the city of Lagos, we are recommending the following hotels,
-          which are close to and at most a 10-minute drive to the venue of the
-          summit. We are also offering special discounts for Invest Lagos 3.0
-          guests at some of the hotels
+           To ensure that our delegates and guests enjoy the very best of Invest Lagos 3.0 and experience the warmth, hospitality, and vibrancy of Lagos, we have curated a selection of premium hotels conveniently located within approximately 10 minutes of the summit venue.
         </p>
         {/* island hostels */}
         <div className="flex flex-col gap-12 mb-20">
