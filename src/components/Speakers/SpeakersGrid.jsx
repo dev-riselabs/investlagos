@@ -122,6 +122,11 @@ const speakers = [
     photo: "/speakers/Mr. Abubakar Suleiman.png",
   },
   {
+    name: "Mr. James Clinton",
+    title: "Managing Director, EV Mass Transit",
+    photo: "/speakers/Mr. James Clinton.jpeg",
+  },
+  {
     name: "Mrs. Toke Benson-Awoyinka",
     title: "Honourable Commissioner for Tourism, Arts and Culture",
     photo: "/speakers/Commissioner for Tourism.png",
@@ -140,6 +145,11 @@ const speakers = [
     name: "Lord Christopher Geidt",
     title: "Director, Burstock",
     photo: "/speakers/Lord Christopher Geidt.png",
+  },
+  {
+    name: "Mr. Jacky Amprou",
+    title: "Country Director, Agence Francaise de Developpement [AFD], Nigeria",
+    photo: "/speakers/Mr. Jacky Amprou.png",
   },
   {
     name: "Madam Elsie Attafuah",
@@ -171,12 +181,22 @@ const speakers = [
     title: "Honourable Minister for Aviation and Aerospace Development",
     photo: "/speakers/kanyo-fetus.jpeg",
   },
+  {
+    name: "Barrister Ismaeel Ahmed",
+    title: "Chairman Presidential Initiative on CNG/EV",
+    photo: "/speakers/Barr. Ismaeel Ahmed.jpeg",
+  },
 
 
   {
     name: "Mr. Massimo de luca",
     title: "European Union Head of Cooperation",
     photo: "/speakers/Massimo de luca.png",
+  },
+  {
+    name: "Mr. Alex Milne",
+    title: "Director of Partnerships and Policy, Africa Speciality Risks",
+    photo: "/speakers/Mr. Alex Milne.jpeg",
   },
   {
     name: "Mr. Sameh Shenouda",
@@ -213,6 +233,21 @@ const speakers = [
     title: "Vice President, Adani Group",
     photo: "/speakers/Mr. Shahzad Athar.png",
   },
+  {
+    name: "Mr. Yann Gilbert",
+    title: "The President of European Business Chamber, Nigeria",
+    photo: "/speakers/Mr. Yann Gilbert.jpeg",
+  },
+  {
+    name: "Mr. Banji Fehintola",
+    title: "Executive Board Member and Executive Director, Financial Services",
+    photo: "/speakers/Mr. Banji Fehintola.jpeg",
+  },
+  {
+    name: "Dr. Valentine Obi",
+    title: "Founder & Group CEO, eTranzact",
+    photo: "/speakers/Dr. Valentine Obi.jpeg",
+  },
   // {
   //   name: "Mr. Tom Cartledge",
   //   title: "CEO, Benoy",
@@ -227,6 +262,11 @@ const speakers = [
     name: "Mrs. Adesuwa Ladoja",
     title: "CEO, Lagos Free Zone",
     photo: "/speakers/Mrs. Adesuwa Ladoja.jpg",
+  },
+  {
+    name: "Mr. Abiodun Ogunleye",
+    title: "Honourable Commissioner for Energy, Lagos State",
+    photo: "/speakers/Mr. Abiodun Ogunleye.jpeg",
   },
   {
     name: "Mr. Tosin Eniolorunda",
@@ -244,6 +284,11 @@ const speakers = [
     photo: "/speakers/Kayode Adeleke 2.jpeg",
   },
   {
+    name: "Mr. Haresh Aswani",
+    title: "Managing Director for Africa, Tolaram Group",
+    photo: "/speakers/Mr. Haresh Aswani_2.jpeg",
+  },
+  {
     name: "Ms. Mojibade Sosanya, LadyMc",
     title: "Host/Anchor",
     photo: "/speakers/Mojibade Sosanya.jpeg",
@@ -253,15 +298,30 @@ const speakers = [
     title: "Chief Investment Officer, Chapel Hill Denham",
     photo: "/speakers/Mrs. Rolake AkinkugbeFilani.png",
   },
-  // {
-  //   name: "Mrs. Keke Hammond",
-  //   title: "Co-Founder/COO, Flytime Promotions Africa",
-  //   photo: "/speakers/Mrs. Keke Hammond .png",
-  // },
+  {
+  name: "Mr. Mark Eddo",
+  title: "Master of Ceremony",
+  photo: "/speakers/Mr. Mark Eddo.jpeg",
+},
+  {
+    name: "Mrs. Keke Hammond",
+    title: "Co-Founder/COO, Flytime Promotions Africa",
+    photo: "/speakers/Mrs. Keke Hammond_2.jpeg",
+  },
     {
     name: "Mr. Osahon Akpata",
     title: "CEO CANEX Creations, Afreximbank",
     photo: "/speakers/Mr. Osahon Akpata.png",
+  },
+    {
+    name: "Ms. Khanyi Mashimbye",
+    title: "Manager, Creatives, Afreximbank",
+    photo: "/speakers/Ms. Khanyi Mashimbye.jpeg",
+  },
+  {
+    name: "Princess Zahrah Mohammed Audu",
+    title: "Director General, PEBEC",
+    photo: "/speakers/Princess Zahrah Mohammed_3.jpeg",
   },
   {
     name: "Ms. Zain Asher",
