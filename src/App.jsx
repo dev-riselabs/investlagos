@@ -1,5 +1,11 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { lazy, Suspense, useEffect } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import LandingPageLayout from "./layout/Landing_Page_Layout";
 import { AuthProvider } from "./admin/AuthContext";
@@ -68,11 +74,24 @@ function RouteFallback() {
   );
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
         <Suspense fallback={<RouteFallback />}>
+          <ScrollToTop />
           <Routes>
             {/* Standalone maintenance page (no site chrome) — always reachable */}
             <Route path="/maintenance" element={<MaintenancePage />} />
