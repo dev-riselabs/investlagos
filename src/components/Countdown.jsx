@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
 
 const EVENT_MONTH = 5; // June (0-based)
-const START_DAY = 9;
-const END_DAY = 11;
+const START_DAY = 8;
+const END_DAY = 10;
 
 const getEventStatus = (date) => {
   const year = date.getFullYear();
 
-  const start = new Date(year, EVENT_MONTH, START_DAY);
-  const end = new Date(year, EVENT_MONTH, END_DAY);
-  const after = new Date(year, EVENT_MONTH, 10);
+  const start = new Date(year, EVENT_MONTH, START_DAY, 9, 0, 0); // June 8, 9AM
+  const end = new Date(year, EVENT_MONTH, END_DAY, 23, 59, 59); // June 10 end of day
 
   if (date >= start && date <= end) {
     return "LIVE";
   }
 
-  if (date >= after) {
+  if (date > end) {
     return "ENDED";
   }
 
@@ -24,10 +23,10 @@ const getEventStatus = (date) => {
 
 const getTargetDate = () => {
   const now = new Date();
-  let target = new Date(now.getFullYear(), EVENT_MONTH, START_DAY);
+  let target = new Date(now.getFullYear(), EVENT_MONTH, START_DAY, 9, 0, 0);
 
   if (now > target) {
-    target = new Date(now.getFullYear() + 1, EVENT_MONTH, START_DAY);
+    target = new Date(now.getFullYear() + 1, EVENT_MONTH, START_DAY, 9, 0, 0);
   }
 
   return target;
@@ -74,39 +73,31 @@ export default function CountdownTimer() {
   if (status === "ENDED") {
     return (
       <div className="flex items-center gap-3 sm:gap-6 text-center font-jost text-green100">
-      <div>
-        <p className="text-4xl md:text-5xl font-bold">
-          00
-        </p>
-        <span className="text-[10px] font-medium">Days</span>
+        <div>
+          <p className="text-4xl md:text-5xl font-bold">00</p>
+          <span className="text-[10px] font-medium">Days</span>
+        </div>
+
+        <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
+
+        <div>
+          <p className="text-4xl md:text-5xl font-bold">00</p>
+          <span className="text-[10px] font-medium">Hours</span>
+        </div>
+        <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
+
+        <div>
+          <p className="text-4xl md:text-5xl font-bold">00</p>
+          <span className="text-[10px] font-medium">Mins</span>
+        </div>
+
+        <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
+
+        <div>
+          <p className="text-4xl md:text-5xl font-bold">00</p>
+          <span className="text-[10px] font-medium">Secs</span>
+        </div>
       </div>
-
-      <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
-
-      <div>
-        <p className="text-4xl md:text-5xl font-bold">
-          00
-        </p>
-        <span className="text-[10px] font-medium">Hours</span>
-      </div>
-      <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
-
-      <div>
-        <p className="text-4xl md:text-5xl font-bold">
-          00
-        </p>
-        <span className="text-[10px] font-medium">Mins</span>
-      </div>
-
-      <div className="w-1 sm:w-2 h-1 sm:h-2 bg-green100 rounded-full"></div>
-
-      <div>
-        <p className="text-4xl md:text-5xl font-bold">
-          00
-        </p>
-        <span className="text-[10px] font-medium">Secs</span>
-      </div>
-    </div>
     );
   }
 
