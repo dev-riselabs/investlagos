@@ -232,7 +232,7 @@ import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 //               { name: "Lord Christopher Geidt", role: "Director, Burstock" },
 //               {
 //                 name: "Mr. Kayode Adeleke",
-//                 role: "Managing Director/CEO, Russel Smith 3D Printing & Manufacturing Company",
+//                 role: "Managing Director/CEO, Arridex 3D Printing & Manufacturing Company",
 //               },
 //               {
 //                 name: "Mr. Mitchell Elegbe",
@@ -406,7 +406,7 @@ import SpeakersCTA from '../components/Speakers/SpeakersCTA'
 //         timeEnd: "05:00PM",
 //         tag: "SITE TOUR",
 //         title: "Industrial & Infrastructure Site Tour",
-//         desc: "A curated full-day tour of flagship industrial and infrastructure assets including the Tolaram/Lagos Free Zone, Lekki Free Trade Zone, Dangote Fertilizer Plant, Dangote Petroleum Refinery and Russell Smith 3D Printing & Manufacturing Factory.",
+//         desc: "A curated full-day tour of flagship industrial and infrastructure assets including the Tolaram/Lagos Free Zone, Lekki Free Trade Zone, Dangote Fertilizer Plant, Dangote Petroleum Refinery and Arridex 3D Printing & Manufacturing Factory.",
 //         subsections: [],
 //       },
 //     ],

@@ -280,7 +280,7 @@ const speakers = [
   },
   {
     name: "Mr. Kayode Adeleke",
-    title: "Chief Executive Officer, Russel Smith 3D Printing & Manufacturing Company",
+    title: "Chief Executive Officer, Arridex 3D Printing & Manufacturing Company",
     photo: "/speakers/Kayode Adeleke 2.jpeg",
   },
   {
