@@ -5,12 +5,13 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const sessions = [
   {
     id: 1,
-    speaker: "/Folashade.png",
+    speaker: "/Sanwolu.png",
   },
   {
     id: 2,
-    speaker: "/Sanwolu.png",
+    speaker: "/Folashade.png",
   },
+  
   {
     id: 3,
     speaker: "/Marland.png",
