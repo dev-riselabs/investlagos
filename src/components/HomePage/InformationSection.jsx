@@ -25,14 +25,14 @@ const informations = [
     heading: "HELP Line",
     title: "+234.707.662.3338",
     phones: [
-      "+234 8108218640",
-      "+234 9066697266",
-      "+234 9064232315",
-      "+234 8169374236",
-      "+234 8144331262",
-      "+234 8161142385",
-      "+234 8164495419",
-      "+234 8147638085",
+      "+234.810.821.8640",
+      "+234.906.669.7266",
+      "+234.906.423.2315",
+      "+234.816.937.4236",
+      "+234.814.433.1262",
+      "+234.816.114.2385",
+      "+234.816.449.5419",
+      "+234.814.763.8085",
     ],
     sub: "",
     link: "CALL us",
@@ -78,9 +78,22 @@ function InformationSection() {
                     </span>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h4 className="text-white text-lg md:text-xl font-medium font-jost">
-                      {title}
-                    </h4>
+                    {link === "Email us" ? (
+                      <h4 className="text-white text-lg md:text-xl font-medium font-jost">
+                        <a href={`mailto:${title}`}>{title}</a>
+                      </h4>
+                    ) : link === "CALL us" ? (
+                      <h4 className="text-white text-lg md:text-xl font-medium font-jost">
+                        <a href={`tel:${title.replace(/[.\s]/g, "")}`}>
+                          {title}
+                        </a>
+                      </h4>
+                    ) : (
+                      <h4 className="text-white text-lg md:text-xl font-medium font-jost">
+                        {title}
+                      </h4>
+                    )}
+
                     {phones && (
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-x-4">
                         {phones.map((phone) => (
@@ -88,7 +101,9 @@ function InformationSection() {
                             key={phone}
                             className="text-white text-lg md:text-xl font-medium font-jost"
                           >
-                            {phone}
+                            <a href={`tel:${phone.replace(/[.\s]/g, "")}`}>
+                              {phone}
+                            </a>
                           </h4>
                         ))}
                       </div>

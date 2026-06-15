@@ -35,13 +35,6 @@ export const speakers = [
     accent: "bg-red-500",
   },
   {
-    id: 5,
-    name: "Asiwaju Bola Ahmed Tinubu, GCFR",
-    title: "President of the Federal Republic of Nigeria",
-    image: "/speakers/Asiwaju Bola Ahmed Tinubu, GCFR.png",
-    accent: "bg-red-500",
-  },
-  {
     id: 6,
     name: "Dr. Olajumoke Omoniyi Oduwole",
     title: "Minister of Industry, Trade and Investment",
