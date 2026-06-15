@@ -2,12 +2,23 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 const news = [
+  // {
+  //   id: 1,
+  //   category: "COMMERCE",
+  //   image: "/Sanwoolu and CWEIC.jpeg",
+  //   title:
+  //     "CWEIC CEO And Lagos State Governor Announce Lagos Trade And Investment Summit",
+  //   description:
+  //     "Lagos State Government has unveiled its much-awaited Lagos Investment Deal Book, an unprecedented compendium of de-risked projects.",
+  //   border: "border-red-500",
+  //   url: "https://www.cweic.org/cweic-ceo-and-lagos-state-governor-announce-lagos-trade-and-investment-summit/",
+  // },
   {
     id: 1,
     category: "COMMERCE",
-    image: "/Sanwoolu and CWEIC.jpeg",
+    image: "/AB_DossierCover_Lagos.jpg",
     title:
-      "CWEIC CEO And Lagos State Governor Announce Lagos Trade And Investment Summit",
+      "Special Report: Invest in Lagos 3.0",
     description:
       "Lagos State Government has unveiled its much-awaited Lagos Investment Deal Book, an unprecedented compendium of de-risked projects.",
     border: "border-red-500",
@@ -16,27 +27,48 @@ const news = [
   {
     id: 2,
     category: "COMMERCE",
-    image: "/Century Economy.png",
+    image: "/435524-busy-lagos-street.png",
     title:
-      "Lagos pitches investment opportunities at summit",
+      "African Cities Are the Next Frontier of Global Growth | Opinion",
     description:
       "Lagos State Government has unveiled its much-awaited Lagos Investment Deal Book, an unprecedented compendium of de-risked projects.",
     border: "border-blue-500",
-    url:"https://guardian.ng/business-services/lagos-pitches-investment-opportunities-at-summit/"
+    url:"https://www.newsweek.com/african-cities-are-the-next-frontier-of-global-growth-opinion-12031439"
   },
+  // {
+  //   id: 2,
+  //   category: "COMMERCE",
+  //   image: "/Century Economy.png",
+  //   title:
+  //     "Lagos pitches investment opportunities at summit",
+  //   description:
+  //     "Lagos State Government has unveiled its much-awaited Lagos Investment Deal Book, an unprecedented compendium of de-risked projects.",
+  //   border: "border-blue-500",
+  //   url:"https://guardian.ng/business-services/lagos-pitches-investment-opportunities-at-summit/"
+  // },
   {
     id: 3,
     category: "COMMERCE",
-    image: "/meeting.jpg",
+    image: "/lasg__logo.png",
     title:
-      "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
+      "Lagos targets $300bn economy through new investments",
     description:
       "Lagos State Government has unveiled its much-awaited Lagos Investment Deal Book, an unprecedented compendium of de-risked projects.",
     border: "border-yellow-400",
-    url:"https://lagosstate.gov.ng/news/all/view/686ece795e4c9d6cecaf061e",
+    url:"https://thisnigeria.com/lagos-targets-300bn-economy-through-new-investments/",
   },
+  
   {
     id: 4,
+    category: "COMMERCE",
+    image: "/amzat-lagos-offers-policy-stability-to-drive-.jpg",
+    title: "Hamzat: Lagos offers policy stability to drive long-term investment",
+    description: "Additional article for demonstrating carousel movement.",
+    border: "border-green-500",
+    url:"https://www.cnbcafrica.com/media/7781098433132/hamzat-lagos-offers-policy-stability-to-drive-long-term-investment"
+  },
+  {
+    id: 5,
     category: "COMMERCE",
     image: "/Lagos tops.PNG",
     title: "Lagos tops Nigeria’s ease of doing business rankings",
@@ -45,13 +77,24 @@ const news = [
     url:"https://punchng.com/lagos-tops-nigerias-ease-of-doing-business-rankings/"
   },
   {
-    id: 5,
+    id: 6,
     category: "COMMERCE",
     image: "/Federal-Capital-Territory-FCT (1).webp",
     title: "Lagos Emerges As Best-Performing State In 2025 Performance Index",
     description: "LAGOS – Lagos State has emerged Nigeria’s best-performing sub-national in the 2025 State Performance Index (pSPI), leading other states by wide margins across all sectors.",
     border: "border-green-500",
     url:"https://share.google/0245XBY4K0ZkuHrf7"
+  },
+  {
+    id: 7,
+    category: "COMMERCE",
+    image: "/meeting.jpg",
+    title:
+      "Lagos Unveils Investment Deal Book, Bold Vision for a 21st-Century Economy",
+    description:
+      "Lagos State Government has unveiled its much-awaited Lagos Investment Deal Book, an unprecedented compendium of de-risked projects.",
+    border: "border-yellow-400",
+    url:"https://lagosstate.gov.ng/news/all/view/686ece795e4c9d6cecaf061e",
   },
 ];
 
