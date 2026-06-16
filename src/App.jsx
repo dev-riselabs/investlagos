@@ -49,6 +49,9 @@ const AccessibilityPage = lazy(() => import("./pages/AccessibilityPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const DataInsightPage = lazy(() => import("./pages/DataInsightPage"));
 const LagosGuidePage = lazy(() => import("./pages/LagosGuidePage"));
+const ExpressionOfInterestPage = lazy(
+  () => import("./pages/ExpressionOfInterestPage"),
+);
 
 // Admin console — kept in its own group of chunks; never loaded on
 // the public marketing site.
@@ -121,6 +124,10 @@ function App() {
                 <Route path="contact" element={<ContactPage />} />
                 <Route path="data-insight" element={<DataInsightPage />} />
                 <Route path="lagos-guide" element={<LagosGuidePage />} />
+                <Route
+                  path="expression-of-interest"
+                  element={<ExpressionOfInterestPage />}
+                />
                 <Route
                   path="business-exhibition"
                   element={<BusinessExhibition />}

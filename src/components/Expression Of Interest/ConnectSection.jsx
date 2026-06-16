@@ -1,0 +1,32 @@
+import { FaPlay } from "react-icons/fa6";
+
+function ConnectSection() {
+  return (
+    <section className="px-4 md:px-10 lg:px-20 py-10 md:py-20 flex justify-center bg-green100">
+      <div className="max-w-4xl flex flex-col items-center gap-6">
+        <h2 className="text-2xl font-medium font-jost text-white sm:text-4xl">
+          Connect with the Administrative Secretariat
+        </h2>
+        <p className="font-jost font-medium text-center text-sm md:text-lg leading-7 text-white">
+          Reach out to the Invest Lagos 3.0 Secretariat for enquiries,
+          stakeholder engagement, delegate support, partnerships and summit
+          information. Our team is available to provide guidance and assistance
+          throughout your Invest Lagos journey.
+        </p>
+        <a
+          className={`p-1.5 md:p-2.5 pl-4 md:px-8 flex items-center gap-2 md:gap-4 rounded-sm bg-red `}
+        >
+          <span className={`text-xs font-jost font-bold text-white`}>
+            Contact
+          </span>
+
+          <div className="bg-white/20 backdrop-blur-md backdrop-brightness-100 rounded-sm flex w-8 h-8 md:w-9 md:h-9 items-center justify-center ">
+            <FaPlay className={`w-4 h-4 md:w-5 md:h-5 text-white`} />
+          </div>
+        </a>
+      </div>
+    </section>
+  );
+}
+
+export default ConnectSection;
