@@ -16,9 +16,12 @@ const MediaKitHero = () => {
           Media Kits
         </h1>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-white sm:text-base">
-          Access a Media Kit including news, capacity, logos, branding assets
+          Access the official Invest Lagos Media Kit for detailed resources created to support editorial coverage, 
+          reporting and broadcast content. The Media Kit provides journalists, 
+          media partners, content creators and stakeholders with access to key information and downloadable assets related to the summit.
+          {/* Access a Media Kit including news, capacity, logos, branding assets
           and where speaker information and more downloadable press to support
-          editorial and reportage coverage of Invest Lagos 3.0.
+          editorial and reportage coverage of Invest Lagos 3.0. */}
         </p>
       </div>
     </section>
