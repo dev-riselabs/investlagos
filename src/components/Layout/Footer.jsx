@@ -65,6 +65,7 @@ const navLinks = [
       { label: "Policy Centre", path: "/policy_centre" },
       { label: "Data & Insights", path: "/data-insight" },
       { label: "Publications", path: "/pressroom/publications" },
+      { label: "Expression Of Interest", path: "/expression-of-interest" },
     ],
   },
 

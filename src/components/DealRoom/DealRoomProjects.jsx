@@ -176,7 +176,7 @@ const DealRoomProjects = () => {
       </section>
 
       {/* Project cards */}
-      <section className="bg-slate-50 px-6 py-12 lg:py-14">
+      <section className="bg-slate-50 px-4 md:px-10 lg:px-20 py-12 lg:py-14">
         <div className="mx-auto grid max-w-310 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
             <Reveal key={p.title} direction="up" delay={i * 110} distance={28}>
