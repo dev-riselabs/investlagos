@@ -1,11 +1,61 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { FaCloudUploadAlt } from "react-icons/fa";
+import { MdDeleteForever } from "react-icons/md";
 
 function FormSection() {
   const [activeStep, setActiveStep] = useState(1);
+  const [companyProfile, setCompanyProfile] = useState("");
+  const companyProfileRef = useRef(null);
+  const [pitchDeck, setPitchDeck] = useState("");
+  const pitchDeckRef = useRef(null);
+  const [productBrochure, setProductBrochure] = useState("");
+  const productBrochureRef = useRef(null);
 
   function handleActiveStepChange(step) {
     setActiveStep(step);
+  }
+
+  function handleFileChange(e, name) {
+    if (name === "company-profile") {
+      if (e.target.files && e.target.files.length > 0) {
+        setCompanyProfile(e.target.files[0]);
+      }
+    }
+    if (name === "pitch-deck") {
+      if (e.target.files && e.target.files.length > 0) {
+        setPitchDeck(e.target.files[0]);
+      }
+    }
+    if (name === "product-brochure") {
+      if (e.target.files && e.target.files.length > 0) {
+        setProductBrochure(e.target.files[0]);
+      }
+    }
+  }
+
+  const handleClick = (name) => {
+    if (name === "company-profile") {
+      companyProfileRef.current?.click();
+    }
+    if (name === "pitch-deck") {
+      pitchDeckRef.current?.click();
+    }
+    if (name === "product-brochure") {
+      productBrochureRef.current?.click();
+    }
+  };
+
+  function handleFileDelete(name) {
+    if (name === "company-profile") {
+      setCompanyProfile("");
+    }
+    if (name === "pitch-deck") {
+      setPitchDeck("");
+    }
+    if (name === "product-brochure") {
+      setProductBrochure("");
+    }
   }
 
   return (
@@ -208,6 +258,7 @@ function FormSection() {
                 </div>
 
                 <button
+                  type="button"
                   onClick={() => handleActiveStepChange(2)}
                   className="mt-8 self-end py-3 px-4 rounded-md bg-green100 text-white flex items-center gap-2"
                 >
@@ -529,6 +580,7 @@ function FormSection() {
 
               <div className="flex justify-between items-center">
                 <button
+                  type="button"
                   onClick={() => handleActiveStepChange(1)}
                   className="mt-8 self-end py-3 px-4 rounded-md text-black flex items-center gap-2 font-black"
                 >
@@ -536,6 +588,7 @@ function FormSection() {
                   Back
                 </button>
                 <button
+                  type="button"
                   onClick={() => handleActiveStepChange(3)}
                   className="mt-8 self-end py-3 px-4 rounded-md bg-green100 text-white flex items-center gap-2"
                 >
@@ -639,6 +692,123 @@ function FormSection() {
                 />
               </div>
 
+              <div className="flex flex-col gap-2">
+                <label htmlFor="" className="text-slate950 font-jost text-sm">
+                  Company Profile (PDF)
+                </label>
+                <button
+                  type="button"
+                  className="border border-zinc rounded-md text-sm font-jost bg-zinc100 text-blue200 py-2.5 px-3 min-h-27 flex flex-col gap-4 items-center"
+                >
+                  <input
+                    ref={companyProfileRef}
+                    onChange={(e) => handleFileChange(e, "company-profile")}
+                    type="file"
+                    name=""
+                    id=""
+                    className="hidden"
+                  />
+                  <span onClick={() => handleClick("company-profile")}>
+                    <FaCloudUploadAlt className="text-blue200 w-10 h-10" />
+                  </span>
+                  <span className="text-xs font-semibold font-jost text-black600">
+                    Click to upload or drag and drop
+                  </span>
+                  <span className="text-[10px] font-jost text-black600">
+                    PDF,PNG,DOC,DOCX[MAX. 5MB]
+                  </span>
+                </button>
+                {companyProfile && (
+                  <div className="flex items-center justify-between gap-3">
+                    <span>{companyProfile.name}</span>
+                    <button
+                      type="button"
+                      onClick={() => handleFileDelete("company-profile")}
+                    >
+                      <MdDeleteForever className="w-5 h-5 text-red" />
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label htmlFor="" className="text-slate950 font-jost text-sm">
+                  Pitch Deck
+                </label>
+                <button
+                  type="button"
+                  className="border border-zinc rounded-md text-sm font-jost bg-zinc100 text-blue200 py-2.5 px-3 min-h-27 flex flex-col gap-4 items-center"
+                >
+                  <input
+                    ref={pitchDeckRef}
+                    onChange={(e) => handleFileChange(e, "pitch-deck")}
+                    type="file"
+                    name=""
+                    id=""
+                    className="hidden"
+                  />
+                  <span onClick={() => handleClick("pitch-deck")}>
+                    <FaCloudUploadAlt className="text-blue200 w-10 h-10" />
+                  </span>
+                  <span className="text-xs font-semibold font-jost text-black600">
+                    Click to upload or drag and drop
+                  </span>
+                  <span className="text-[10px] font-jost text-black600">
+                    PDF,PNG,DOC,DOCX[MAX. 5MB]
+                  </span>
+                </button>
+                {pitchDeck && (
+                  <div className="flex items-center justify-between gap-3">
+                    <span>{pitchDeck.name}</span>
+                    <button
+                      type="button"
+                      onClick={() => handleFileDelete("pitch-deck")}
+                    >
+                      <MdDeleteForever className="w-5 h-5 text-red" />
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label htmlFor="" className="text-slate950 font-jost text-sm">
+                  Product Brochure
+                </label>
+                <button
+                  type="button"
+                  className="border border-zinc rounded-md text-sm font-jost bg-zinc100 text-blue200 py-2.5 px-3 min-h-27 flex flex-col gap-4 items-center"
+                >
+                  <input
+                    ref={productBrochureRef}
+                    onChange={(e) => handleFileChange(e, "product-brochure")}
+                    type="file"
+                    name=""
+                    id=""
+                    className="hidden"
+                  />
+                  <span onClick={() => handleClick("product-brochure")}>
+                    <FaCloudUploadAlt className="text-blue200 w-10 h-10" />
+                  </span>
+                  <span className="text-xs font-semibold font-jost text-black600">
+                    Click to upload or drag and drop
+                  </span>
+                  <span className="text-[10px] font-jost text-black600">
+                    PDF,PNG,DOC,DOCX[MAX. 5MB]
+                  </span>
+                </button>
+                {productBrochure && (
+                  <div className="flex items-center justify-between gap-3">
+                    <span>{productBrochure.name}</span>
+                    <button
+                      type="button"
+                      onClick={() => handleFileDelete("product-brochure")}
+                    >
+                      <MdDeleteForever className="w-5 h-5 text-red" />
+                    </button>
+                  </div>
+                )}
+              </div>
+
               <div className="flex flex-col gap-4">
                 <h4 className="text-black700 font-jost text-lg font-bold">
                   SUBMISSION INSTRUCTIONS
@@ -684,6 +854,7 @@ function FormSection() {
 
               <div className="flex justify-between items-center">
                 <button
+                  type="button"
                   onClick={() => handleActiveStepChange(2)}
                   className="mt-8 self-end py-3 px-4 rounded-md text-black flex items-center gap-2 font-black"
                 >
