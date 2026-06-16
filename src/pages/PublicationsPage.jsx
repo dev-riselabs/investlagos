@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdSearch, IoIosArrowDown } from "react-icons/io";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiBookOpen } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
 import { fetchPublications, fetchPublicationFilters } from "../lib/api";
 import { slugify, FALLBACK_PUBLICATION_CONTENT } from "../lib/publications";
@@ -61,6 +61,18 @@ const RAW_FALLBACK_PUBLICATIONS = [
     desc: "Official summit outcomes, communiqués, key takeaways, thought leadership pieces and resources from past Invest Lagos engagements.",
     accent: "bg-yellow",
   },
+];
+
+const publicationTitles = [
+  {
+    title: "Lagos State Deal Book for Invest Lagos 3.0",
+    link: "/Lagos State Deal Book for Invest Lagos 3.0.pdf",
+  },
+  {
+    title: "MultiState Deal Book for Invest Lagos 3.0",
+    link: "/MultiState Deal Book for Invest Lagos 3.0.pdf",
+  },
+  { title: "This Day Style Magazine", link: "/TDSM_0614.pdf" },
 ];
 
 export const fallbackPublications = RAW_FALLBACK_PUBLICATIONS.map((p) => ({
@@ -259,6 +271,28 @@ function PublicationsGrid({ items, loading, error }) {
   );
 }
 
+function PolicyBriefCard({ title, link }) {
+  return (
+    <article className="flex items-start gap-4 rounded-lg bg-white p-6 shadow-sm ring-1 ring-slate250 il-card">
+      <span
+        className={`inline-flex h-11 md:h-16 w-11 md:w-16 shrink-0 items-center justify-center rounded-md bg-linear-to-br from-green750/30 to-orange/20`}
+      >
+        <FiBookOpen className="h-6 w-6 md:h-7 md:w-7 text-blue100" />
+      </span>
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4 ">
+          <h3 className="text-base font-bold text-black100">{title}</h3>
+        </div>
+        <button className="border border-blue100 rounded-md px-5 py-2 text-blue100 font-jost text-xs font-black self-start">
+          <a href={link} download>
+            Download
+          </a>
+        </button>
+      </div>
+    </article>
+  );
+}
+
 function PublicationsDealBook() {
   return (
     <section className="dealbook-bg flex flex-col gap-6 px-4 py-10 md:flex-row md:items-center md:gap-10 md:px-10 md:py-14 lg:px-20">
@@ -410,6 +444,15 @@ export default function PublicationsPage() {
           error={error}
         />
       </Reveal>
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-3 contact-touch-bg bg-[#F7F8FA] px-4 md:px-10 lg:px-20 py-14 lg:py-20">
+        {publicationTitles.map((data) => (
+          <PolicyBriefCard
+            key={data.title}
+            title={data.title}
+            link={data.link}
+          />
+        ))}
+      </div>
       <Reveal direction="up">
         <PublicationsDealBook />
       </Reveal>
