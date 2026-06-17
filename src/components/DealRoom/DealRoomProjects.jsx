@@ -1,30 +1,89 @@
 import { Reveal, MouseTilt } from "../../lib/animations";
 import { IoMdSearch } from "react-icons/io";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
+import { FaNairaSign } from "react-icons/fa6";
 
 const projects = [
   {
-    title: "Power Grid Investment",
-    subtitle: "This is a good deal",
-    tags: ["Nigeria", "Energy", "Development"],
-    required: "$100K",
-    raised: "$50K",
+    id: 1,
+    title: "Madewell — Cement Plant (Cross River)",
+    tags: ["Manufacturing"],
+    value: "884,000,000,000",
     image: "/Green Africa Investment.png",
+    stage: "Discussion",
   },
   {
-    title: "Payment gateways",
-    subtitle: "This is a good deal",
-    tags: ["Nigeria", "Technology", "Development"],
-    required: "$100K",
-    raised: "$50K",
+    id: 2,
+    title: "NNPC–Edo Condensate Refinery",
+    tags: ["Energy & Power"],
+    value: "469,200,000,000",
     image: "/Green Africa Investment.png",
+    stage: "Discussion",
   },
   {
-    title: "Green Africa Investment",
-    subtitle: "This is a good deal",
-    tags: ["Nigeria", "Energy", "Development"],
-    required: "$100K",
-    raised: "$50K",
+    id: 3,
+    title: "NEXIM Regional Sealink Project",
+    tags: ["Infrastructure & Transport"],
+    value: "272,000,000,000",
     image: "/Green Africa Investment.png",
+    stage: "Discussion",
+  },
+  {
+    id: 4,
+    title: "Akwa Ibom Deep Sea Port (Ibom Port)",
+    tags: ["Infrastructure & Transport"],
+    value: "5,712,000,000,000",
+    image: "/Green Africa Investment.png",
+    stage: "Discussion",
+  },
+  {
+    id: 5,
+    title: "UTM Offshore — FLNG Facility (Yoho Field)",
+    tags: ["Energy & Power"],
+    value: "2,039,999,999,998",
+    image: "/Green Africa Investment.png",
+    stage: "Discussion",
+  },
+  {
+    id: 6,
+    title: "OmniRetail — B2B FMCG & Embedded Finance",
+    tags: ["Infrastructure & Transport"],
+    value: "40,800,000,000",
+    image: "/Green Africa Investment.png",
+    stage: "Discussion",
+  },
+  {
+    id: 7,
+    title: "Mdaas Global — Diagnostics Network Expansion",
+    tags: ["Healthcare"],
+    value: "13,600,000,000",
+    image: "/Green Africa Investment.png",
+    stage: "Discussion",
+  },
+  {
+    id: 8,
+    title: "Agroeknor — Superfoods Export Scale-Up",
+    tags: ["Agricultures & Agribussiness"],
+    value: "13,600,000,000",
+    image: "/Green Africa Investment.png",
+    stage: "Discussion",
+  },
+  {
+    id: 9,
+    title: "Modern Halal Abattoir",
+    tags: ["Agricultures & Agribussiness"],
+    value: "25,840,000,000",
+    image: "/Green Africa Investment.png",
+    stage: "Closed Won",
+  },
+  {
+    id: 10,
+    title: "Jari Bola Waste-to Wealth Facility",
+    tags: ["Energy & Power"],
+    value: "68,000,000,000",
+    image: "/Green Africa Investment.png",
+    stage: "Discussion",
   },
 ];
 
@@ -74,7 +133,75 @@ function FilterPill({ label }) {
   );
 }
 
-function ProjectCard({ title, subtitle, tags, required, raised, image }) {
+function ConfirmedDeals() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: "start",
+    loop: true,
+    containScroll: "trimSnaps",
+  });
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollTo = useCallback(
+    (index) => emblaApi?.scrollTo(index),
+    [emblaApi],
+  );
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    };
+
+    emblaApi.on("select", onSelect);
+    onSelect();
+
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
+
+  return (
+    <section className="">
+      {/* Top */}
+      {/* <span className="text-sm text-white/80 font-inter">
+          {selectedIndex + 1} of {projects.length}
+        </span> */}
+
+      {/* Carousel */}
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="min-w-full flex pl-0 md:min-w-[50%] md:pr-5 lg:min-w-[33.333%] lg:pr-6"
+            >
+              <ProjectCard {...project} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Dots */}
+      <div className="mt-10 flex justify-center">
+        <div className="flex gap-3 rounded-full bg-black/10 px-5 py-3">
+          {projects.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={`h-2.5 w-2.5 rounded-full transition ${
+                selectedIndex === index ? "bg-green500" : "bg-white/60"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProjectCard({ title, tags, value, stage, image }) {
   return (
     <article className="overflow-hidden rounded-xl bg-white shadow-card border border-slate250 il-card">
       {/* Image */}
@@ -109,23 +236,23 @@ function ProjectCard({ title, subtitle, tags, required, raised, image }) {
           {title}
         </h3>
 
-        {/* Subtitle */}
-        <p className="mt-1 text-sm text-violet font-jost">{subtitle}</p>
-
         {/* Required / Raised */}
         <div className="mt-4 space-y-1.5 border-t border-slate-100 pt-4">
           <div className="flex items-center justify-between text-sm font-jost">
-            <span className="text-violet">Required:</span>
-            <span className="font-semibold text-black300">{required}</span>
+            <span className="text-violet">Value:</span>
+            <span className="font-semibold text-black300 flex gap-1 items-center">
+              <FaNairaSign />
+              {value}
+            </span>
           </div>
           <div className="flex items-center justify-between text-sm font-jost">
-            <span className="text-violet">Raised:</span>
-            <span className="font-bold text-green850">{raised}</span>
+            <span className="text-violet">Stage:</span>
+            <span className="font-bold text-green850">{stage}</span>
           </div>
         </div>
 
         {/* View Details */}
-        <div className="mt-4 border-t border-slate-100 pt-4">
+        {/* <div className="mt-4 border-t border-slate-100 pt-4">
           <button
             type="button"
             className="flex items-center font-jost gap-2 text-base text-black300 hover:text-green100 transition"
@@ -145,7 +272,7 @@ function ProjectCard({ title, subtitle, tags, required, raised, image }) {
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
     </article>
   );
@@ -176,16 +303,8 @@ const DealRoomProjects = () => {
       </section>
 
       {/* Project cards */}
-      <section className="bg-slate-50 px-4 md:px-10 lg:px-20 py-12 lg:py-14">
-        <div className="mx-auto grid max-w-310 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p, i) => (
-            <Reveal key={p.title} direction="up" delay={i * 110} distance={28}>
-              <MouseTilt intensity={5}>
-                <ProjectCard {...p} />
-              </MouseTilt>
-            </Reveal>
-          ))}
-        </div>
+      <section className=" px-4 md:px-10 lg:px-20 py-12 lg:py-14">
+        <ConfirmedDeals />
       </section>
     </>
   );
