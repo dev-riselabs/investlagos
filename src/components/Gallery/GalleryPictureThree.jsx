@@ -192,6 +192,51 @@ const galleryImages = [
       "/Extra/DSC09049.jpg",
     ],
   },
+  {
+    title: "plenary",
+    img: [
+      "/plenary/DSC01538.jpg",
+      "/plenary/DSC01569.jpg",
+      "/plenary/DSC01603.jpg",
+      "/plenary/DSC02019.jpg",
+      "/plenary/DSC02199.jpg",
+      "/plenary/DSC02296.jpg",
+      "/plenary/DSC02342.jpg",
+      "/plenary/DSC02485.jpg",
+      "/plenary/DSC02824.jpg",
+      "/plenary/DSC02931.jpg",
+      "/plenary/DSC02962.jpg",
+      "/plenary/DSC02967.jpg",
+      "/plenary/DSC03037.jpg",
+      "/plenary/DSC03179.jpg",
+      "/plenary/DSC04604.jpg",
+      "/plenary/DSC04970.jpg",
+      "/plenary/DSC05010.jpg",
+      "/plenary/DSC05140.jpg",
+      "/plenary/DSC07185.jpg",
+      "/plenary/DSC07743.jpg",
+      "/plenary/DSC07749.jpg",
+      "/plenary/DSC08323.jpg",
+      "/plenary/DSC08335.jpg",
+      "/plenary/DSC09222.jpg",
+      "/plenary/DSC09296.jpg",
+      "/plenary/DSC09349.jpg",
+      "/plenary/DSC09405.jpg",
+      "/plenary/DSC09641.jpg",
+      "/plenary/INVESTLAGOS_230.JPG",
+      "/plenary/INVESTLAGOS_240.JPG",
+      "/plenary/INVESTLAGOS_293.JPG",
+      "/plenary/INVESTLAGOS_294.JPG",
+      "/plenary/INVESTLAGOS_302.JPG",
+      "/plenary/INVESTLAGOS_304.JPG",
+      "/plenary/INVESTLAGOS_314.JPG",
+      "/plenary/INVESTLAGOS_317.JPG",
+      "/plenary/INVESTLAGOS_319.JPG",
+      "/plenary/INVESTLAGOS_340.JPG",
+      "/plenary/INVESTLAGOS_341.JPG",
+      "/plenary/INVESTLAGOS_344.JPG",
+    ],
+  },
 ];
 const GalleryPictureThree = () => {
   const [filterState, setFilterState] = useState("arrival");
@@ -223,6 +268,7 @@ const GalleryPictureThree = () => {
           <option value="arrival">Arrival</option>
           <option value="keynote">Keynote</option>
           <option value="welcome-cermony">Welcome Cermony</option>
+          <option value="plenary">Plenary Session</option>
           <option value="governor address">Governors Address</option>
           <option value="governor forum">Governors Forum</option>
           <option value="governor activities">Governor Activities</option>
