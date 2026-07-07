@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import { MdClose } from "react-icons/md";
 const galleryImages = [
   {
     title: "lca",
@@ -187,7 +189,24 @@ const galleryImages = [
 ];
 const GalleryPicture = () => {
   const [filterState, setFilterState] = useState("lca");
+  const [selectedImage, setSelectedImage] = useState(null);
   let currentImages = galleryImages.find((img) => img.title === filterState);
+
+  function handleFilterChange(value) {
+    setFilterState(value);
+  }
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [selectedImage]);
 
   function handleFilterChange(value) {
     setFilterState(value);
@@ -202,9 +221,7 @@ const GalleryPicture = () => {
     "",
   ];
 
-
   return (
-   
     <section className=" px-4 md:px-10 lg:px-20 py-15 md:py-20">
       <div className="flex flex-col gap-8 mx-auto max-w-310 ">
         <select
@@ -233,10 +250,37 @@ const GalleryPicture = () => {
                 bentoClasses[i % bentoClasses.length]
               }`}
             >
-              <img src={img} alt="" className="w-full h-full object-cover" />
+              <img
+                onClick={() => setSelectedImage(img)}
+                src={img}
+                alt=""
+                className="w-full h-full object-cover"
+              />
             </div>
           ))}
         </div>
+        {selectedImage &&
+          createPortal(
+            <div
+              className="fixed inset-0 z-9999 flex items-center justify-center bg-black/1 backdrop-blur-xs backdrop-brightness-95 p-4"
+              onClick={() => setSelectedImage(null)}
+            >
+              <img
+                src={selectedImage}
+                alt=""
+                className="max-w-[90vw] max-h-[90vh] object-contain "
+                onClick={(e) => e.stopPropagation()}
+              />
+
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-5 right-5 text-black"
+              >
+                <MdClose className="w-8 h-8" />
+              </button>
+            </div>,
+            document.body,
+          )}
       </div>
     </section>
   );

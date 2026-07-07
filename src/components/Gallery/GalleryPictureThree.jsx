@@ -312,19 +312,19 @@ const GalleryPictureThree = () => {
         {selectedImage &&
           createPortal(
             <div
-              className="fixed inset-0 z-9999 flex items-center justify-center bg-black/80 p-4"
+              className="fixed inset-0 z-9999 flex items-center justify-center bg-black/2 backdrop-blur-xs backdrop-brightness-95 p-4"
               onClick={() => setSelectedImage(null)}
             >
               <img
                 src={selectedImage}
                 alt=""
-                className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
+                className="max-w-[90vw] max-h-[90vh] object-contain"
                 onClick={(e) => e.stopPropagation()}
               />
 
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-5 right-5 text-white"
+                className="absolute top-5 right-5 text-black"
               >
                 <MdClose className="w-8 h-8" />
               </button>
