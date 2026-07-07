@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import { MdClose } from "react-icons/md";
 const galleryImages = [
   {
     title: "arrivals",
@@ -240,7 +242,20 @@ const galleryImages = [
 ];
 const GalleryPictureThree = () => {
   const [filterState, setFilterState] = useState("arrivals");
+  const [selectedImage, setSelectedImage] = useState(null);
   let currentImages = galleryImages.find((img) => img.title === filterState);
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [selectedImage]);
 
   function handleFilterChange(value) {
     setFilterState(value);
@@ -268,14 +283,16 @@ const GalleryPictureThree = () => {
           <option value="arrivals">Arrivals</option>
           <option value="keynotes">Keynotes</option>
           <option value="welcome-ceremony">Welcome Ceremony</option>
-          <option value="plenary">Plenary Session</option>
-          <option value="governor address">Lagos State Governor's Address</option>
+          <option value="plenary">Plenary Sessions</option>
+          <option value="governor address">
+            Lagos State Governor's Address
+          </option>
           <option value="governor forum">Governors' Showcase</option>
           <option value="governor activities">Governor Activities</option>
           <option value="private gala">Gala Dinner</option>
           <option value="extra">Extras</option>
         </select>
-        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[250px] gap-4 md:grid-flow-dense">
+        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[350px] gap-4 md:grid-flow-dense">
           {currentImages.img.map((img, i) => (
             <div
               key={i}
@@ -283,10 +300,37 @@ const GalleryPictureThree = () => {
                 bentoClasses[i % bentoClasses.length]
               }`}
             >
-              <img src={img} alt="" className="w-full h-full object-cover object-top" />
+              <img
+                onClick={() => setSelectedImage(img)}
+                src={img}
+                alt=""
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           ))}
         </div>
+        {selectedImage &&
+          createPortal(
+            <div
+              className="fixed inset-0 z-9999 flex items-center justify-center bg-black/80 p-4"
+              onClick={() => setSelectedImage(null)}
+            >
+              <img
+                src={selectedImage}
+                alt=""
+                className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
+                onClick={(e) => e.stopPropagation()}
+              />
+
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-5 right-5 text-white"
+              >
+                <MdClose className="w-8 h-8" />
+              </button>
+            </div>,
+            document.body,
+          )}
       </div>
     </section>
   );
