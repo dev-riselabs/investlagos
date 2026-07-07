@@ -239,7 +239,7 @@ const galleryImages = [
   },
 ];
 const GalleryPictureThree = () => {
-  const [filterState, setFilterState] = useState("arrival");
+  const [filterState, setFilterState] = useState("arrivals");
   let currentImages = galleryImages.find((img) => img.title === filterState);
 
   function handleFilterChange(value) {
@@ -283,7 +283,7 @@ const GalleryPictureThree = () => {
                 bentoClasses[i % bentoClasses.length]
               }`}
             >
-              <img src={img} alt="" className="w-full h-full object-cover" />
+              <img src={img} alt="" className="w-full h-full object-cover object-top" />
             </div>
           ))}
         </div>
