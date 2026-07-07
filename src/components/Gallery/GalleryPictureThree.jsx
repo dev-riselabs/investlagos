@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 const galleryImages = [
   {
-    title: "arrival",
+    title: "arrivals",
     img: [
       "/Arrival/INVESTLAGOS_46.JPG",
       "/Arrival/INVESTLAGOS_58.JPG",
@@ -15,7 +15,7 @@ const galleryImages = [
     ],
   },
   {
-    title: "keynote",
+    title: "keynotes",
     img: [
       "/Keynotes/INVESTLAGOS_155.JPG",
       "/Keynotes/INVESTLAGOS_164.JPG",
@@ -28,7 +28,7 @@ const galleryImages = [
     ],
   },
   {
-    title: "welcome-cermony",
+    title: "welcome-ceremony",
     img: [
       "/Welcome Ceremony/INVESTLAGOS_118.JPG",
       "/Welcome Ceremony/INVESTLAGOS_119.JPG",
@@ -265,15 +265,15 @@ const GalleryPictureThree = () => {
           onChange={(e) => handleFilterChange(e.target.value)}
           className="self-end text-black300 border border-slate900 rounded-md px-3 py-2 font-jost text-sm max-w-80 w-full"
         >
-          <option value="arrival">Arrival</option>
-          <option value="keynote">Keynote</option>
-          <option value="welcome-cermony">Welcome Cermony</option>
+          <option value="arrivals">Arrivals</option>
+          <option value="keynotes">Keynotes</option>
+          <option value="welcome-ceremony">Welcome Ceremony</option>
           <option value="plenary">Plenary Session</option>
-          <option value="governor address">Governors Address</option>
-          <option value="governor forum">Governors Forum</option>
+          <option value="governor address">Lagos State Governor's Address</option>
+          <option value="governor forum">Governors' Showcase</option>
           <option value="governor activities">Governor Activities</option>
-          <option value="private gala">Private Gala</option>
-          <option value="extra">Extra</option>
+          <option value="private gala">Gala Dinner</option>
+          <option value="extra">Extras</option>
         </select>
         <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[250px] gap-4 md:grid-flow-dense">
           {currentImages.img.map((img, i) => (
